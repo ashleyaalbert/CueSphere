@@ -22,8 +22,10 @@ import {Socket} from "phoenix"
 import {LiveSocket} from "phoenix_live_view"
 import topbar from "../vendor/topbar"
 
+let liveSocketPath = process.env.NODE_ENV === "production" ? "/csci379-s25-a/live" : "/live";
+
 let csrfToken = document.querySelector("meta[name='csrf-token']").getAttribute("content")
-let liveSocket = new LiveSocket("/live", Socket, {
+let liveSocket = new LiveSocket(liveSocketPath, Socket, {
   longPollFallbackMs: 2500,
   params: {_csrf_token: csrfToken}
 })
