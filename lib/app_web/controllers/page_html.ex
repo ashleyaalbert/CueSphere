@@ -7,4 +7,11 @@ defmodule AppWeb.PageHTML do
   use AppWeb, :html
 
   embed_templates "page_html/*"
+
+  defp slug_to_semester(slug) do
+    slug
+    |> String.capitalize()
+    |> String.replace("_", " ")
+  end
+  
 end

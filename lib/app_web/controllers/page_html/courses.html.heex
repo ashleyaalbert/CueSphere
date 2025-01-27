@@ -1,0 +1,18 @@
+<table>
+  <thead>
+    <tr>
+      <th>Semester</th>
+      <th>Courses</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr :for={course <- @courses}>
+      <td>{course.semester}</td>
+      <td>
+        <ul>
+          <li :for={name <- course.name}>{name}</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>

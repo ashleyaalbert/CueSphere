@@ -18,6 +18,8 @@ defmodule AppWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
+    get "/courses", PageController, :courses
+    get "/courses/:slug", PageController, :courses
   end
 
   # Other scopes may use custom stacks.
