@@ -1,18 +1,37 @@
-<table>
+<%!-- <table>
   <thead>
     <tr>
       <th>Semester</th>
-      <th>Courses</th>
+      <th>Course</th>
     </tr>
   </thead>
   <tbody>
-    <tr :for={course <- @courses}>
-      <td>{course.semester}</td>
-      <td>
-        <ul>
-          <li :for={name <- course.name}>{name}</li>
-        </ul>
-      </td>
+    <tr :for={{course, name} <- Enum.flat_map(@courses, fn course -> Enum.map(course.name, &{course.semester, &1}) end)}>
+      <td>{course}</td>
+      <td>{name}</td>
     </tr>
   </tbody>
-</table>
+</table> --%>
+
+<div class="max-w-6xl mx-auto p-6">
+  <h1 class="text-2xl font-bold text-gray-900 mb-4">Ashley's Courses</h1>
+
+  <table class="min-w-full table-auto border-collapse border border-gray-200 shadow-lg rounded-lg overflow-hidden">
+    <thead class="bg-gray-100">
+      <tr>
+        <th class="px-4 py-2 text-left text-sm font-semibold text-gray-700">Semester</th>
+        <th class="px-4 py-2 text-left text-sm font-semibold text-gray-700">Course</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= for {course, name} <- Enum.flat_map(@courses, fn course -> Enum.map(course.name, &{course.semester, &1}) end) do %>
+        <tr class="bg-white border-b hover:bg-gray-50">
+          <td class="px-4 py-3 text-sm text-gray-800"><%= course %></td>
+          <td class="px-4 py-3 text-sm text-gray-600"><%= name %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+

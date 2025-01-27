@@ -8,10 +8,10 @@ defmodule AppWeb.PageHTML do
 
   embed_templates "page_html/*"
 
-  defp slug_to_semester(slug) do
+  def slug_to_semester(slug) do
     slug
     |> String.capitalize()
     |> String.replace("_", " ")
   end
-  
+
 end
