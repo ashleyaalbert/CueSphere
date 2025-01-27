@@ -48,14 +48,11 @@ if config_env() == :prod do
       You can generate one by calling: mix phx.gen.secret
       """
 
-  host = System.get_env("PHX_HOST") || "example.com"
-  port = String.to_integer(System.get_env("PORT") || "4000")
-
   config :app, :dns_cluster_query, System.get_env("DNS_CLUSTER_QUERY")
 
   config :app, AppWeb.Endpoint,
     url: [
-      host: "www.eg.bucknell.edu",
+      host: "eg.bucknell.edu",
       path: "/csci379-25s-a",
       port: 443,
       scheme: "https"],
