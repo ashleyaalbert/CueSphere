@@ -20,6 +20,9 @@ defmodule AppWeb.Router do
     get "/", PageController, :home
     get "/courses", PageController, :courses
     get "/courses/:slug", PageController, :courses
+    get "/planets", PlanetController, :planets
+    get "/planets/random", PlanetController, :random
+    get "/planets/:id", PlanetController, :index
   end
 
   # Other scopes may use custom stacks.
