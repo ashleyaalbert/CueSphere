@@ -3,14 +3,13 @@ defmodule AppWeb.PlanetController do
 
   alias App.Planets
 
-  # TODO
   #random
   def random(conn, _params) do
     planet = Enum.random(Planets.list())
     render(conn, :show, planet: planet)
   end
 
-  # id first
+  #id first
   def index(conn, %{"id" => id}) do
     planet = Planets.get(String.to_integer(id))
     render(conn, :show, planet: planet)

@@ -20,6 +20,14 @@ defmodule AppWeb.PageControllerTest do
     refute html_response(conn, 200) =~ "Fall 2024"
   end
 
+  test "GET /courses/ivalid", %{conn: conn} do
+    conn = get(conn, ~p"/courses/invalid")
+    refute html_response(conn, 200) =~ "Ashley's Courses"
+    refute html_response(conn, 200) =~ "Spring 2025"
+    refute html_response(conn, 200) =~ "Fall 2024"
+    assert html_response(conn, 200) =~ "This appears to be an invalid semester!"
+  end
+
   # test "GET /courses/invalid", %{conn: conn} do
   #   assert_raise ArgumentError, fn ->
   #     get(conn, ~p"/courses/invalid")
