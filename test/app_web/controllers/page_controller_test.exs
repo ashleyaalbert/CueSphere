@@ -1,11 +1,6 @@
 defmodule AppWeb.PageControllerTest do
   use AppWeb.ConnCase
 
-  test "GET /", %{conn: conn} do
-    conn = get(conn, ~p"/")
-    assert html_response(conn, 200) =~ "Peace of mind from prototype to production"
-  end
-
   test "GET /courses", %{conn: conn} do
     conn = get(conn, ~p"/courses")
     assert html_response(conn, 200) =~ "Ashley's Courses"
@@ -28,9 +23,37 @@ defmodule AppWeb.PageControllerTest do
     assert html_response(conn, 200) =~ "This appears to be an invalid semester!"
   end
 
-  # test "GET /courses/invalid", %{conn: conn} do
-  #   assert_raise ArgumentError, fn ->
-  #     get(conn, ~p"/courses/invalid")
-  #   end
-  # end
+  describe "/ contains" do
+    setup %{conn: conn} do
+      conn = get(conn, ~p"/")
+    end
+
+    test "typography", %{conn: conn} do
+      assert html = html_response(conn, 200)
+      assert html =~ "<h1"
+      assert html =~ "<p"
+      assert html =~ "<span"
+    end
+
+    test "a list", %{conn: conn} do
+      assert html = html_response(conn, 200) =~ "<li"
+    end
+
+    test "an image", %{conn: conn} do
+      assert html_response(conn, 200) =~ "<img"
+    end
+
+    test "links to /planets and /courses", %{conn: conn} do
+      assert html_response(conn, 200) =~ "<a "
+      assert html_response(conn, 200) =~ "href=\"courses"
+      assert html_response(conn, 200) =~ "href=\"planets"
+    end
+
+    test "styling", %{conn: conn} do
+      assert html_response(conn, 200) =~ "bg-"
+      assert html_response(conn, 200) =~ "rounded"
+      assert html_response(conn, 200) =~ "text-"
+      assert html_response(conn, 200) =~ "border"
+    end
+  end
 end
