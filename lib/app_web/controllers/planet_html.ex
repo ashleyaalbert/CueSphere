@@ -1,8 +1,8 @@
 defmodule AppWeb.PlanetHTML do
   @moduledoc """
-  This module contains pages rendered by PageController.
+  This module contains pages rendered by PlanetController.
 
-  See the `page_html` directory for all templates available.
+  See the `planet_html` directory for all templates available.
   """
   use AppWeb, :html
 
