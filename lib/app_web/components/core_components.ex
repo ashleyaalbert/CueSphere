@@ -242,32 +242,32 @@ defmodule AppWeb.CoreComponents do
   #   """
   # end
 
-  @doc """
-  Renders an input with label and error messages.
+  # @doc """
+  # Renders an input with label and error messages.
 
-  A `Phoenix.HTML.FormField` may be passed as argument,
-  which is used to retrieve the input name, id, and values.
-  Otherwise all attributes may be passed explicitly.
+  # A `Phoenix.HTML.FormField` may be passed as argument,
+  # which is used to retrieve the input name, id, and values.
+  # Otherwise all attributes may be passed explicitly.
 
-  ## Types
+  # ## Types
 
-  This function accepts all HTML input types, considering that:
+  # This function accepts all HTML input types, considering that:
 
-    * You may also set `type="select"` to render a `<select>` tag
+  #   * You may also set `type="select"` to render a `<select>` tag
 
-    * `type="checkbox"` is used exclusively to render boolean values
+  #   * `type="checkbox"` is used exclusively to render boolean values
 
-    * For live file uploads, see `Phoenix.Component.live_file_input/1`
+  #   * For live file uploads, see `Phoenix.Component.live_file_input/1`
 
-  See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input
-  for more information. Unsupported types, such as hidden and radio,
-  are best written directly in your templates.
+  # See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input
+  # for more information. Unsupported types, such as hidden and radio,
+  # are best written directly in your templates.
 
-  ## Examples
+  # ## Examples
 
-      <.input field={@form[:email]} type="email" />
-      <.input name="my-input" errors={["oh no!"]} />
-  """
+  #     <.input field={@form[:email]} type="email" />
+  #     <.input name="my-input" errors={["oh no!"]} />
+  # """
   attr :id, :any, default: nil
   attr :name, :any
   attr :label, :string, default: nil
