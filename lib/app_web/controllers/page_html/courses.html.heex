@@ -1,17 +1,12 @@
-<%!-- <table>
-  <thead>
-    <tr>
-      <th>Semester</th>
-      <th>Course</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr :for={{course, name} <- Enum.flat_map(@courses, fn course -> Enum.map(course.name, &{course.semester, &1}) end)}>
-      <td>{course}</td>
-      <td>{name}</td>
-    </tr>
-  </tbody>
-</table> --%>
+ <nav class="bg-gray-800 p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-white text-xl font-bold">Ashley Albert</h1>
+      <div class="space-x-4">
+        <a href={~p"/planets"} class="text-gray-300 hover:text-white">Planets</a>
+        <a href={~p"/"} class="text-gray-300 hover:text-white">Home</a>
+      </div>
+    </div>
+  </nav>
 
 <div class="max-w-6xl mx-auto p-6">
   <h1 class="text-2xl font-bold text-gray-900 mb-4">Ashley's Courses</h1>

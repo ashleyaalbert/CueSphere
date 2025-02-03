@@ -1,27 +1,52 @@
-<h1>Ashley Albert</h1>
-<p>I am a Computer Science major graduating on May 18, 2025 from Bucknell University. Fun Fact:  I was born in Lewisburg, PA (which means I was always meant to come to Bucknell...right?). In my free time I enjoy spending time with family and friends or shooting pool!</p>
-<img src="/images/SeniorPortrait.jpg" alt="High school senior portrait of Ashley Albert, female, blonde hair worn down, black off the shoulder drape, gold small cross necklace">
-<ol>
-  <li>Python</li>
-  <li>JavaScript</li>
-  <li>Java</li>
-  <li>C</li>
-  <li>R</li>
-  <li>Haskell</li>
-  <li>Prolog</li>
-  <li>C#</li>
-  <li>C++</li>
-  <li>PHP</li>
-  <li>RISC-V</li>
-  <li>HTML</li>
-  <li>CSS</li>
-</ol>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ashley Albert</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900">
 
-<nav class="bg-gray-800 p-4">
-  <div class="container mx-auto flex justify-between items-center">
-    <div class="space-x-4">
-      <a href={~p"/planets"} class="text-gray-300 hover:text-white">Planets</a>
-      <a href={~p"/courses"} class="text-gray-300 hover:text-white">Courses</a>
+  <nav class="bg-gray-800 p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-white text-xl font-bold">Ashley Albert</h1>
+      <div class="space-x-4">
+        <a href={~p"/planets"} class="text-gray-300 hover:text-white">Planets</a>
+        <a href={~p"/courses"} class="text-gray-300 hover:text-white">Courses</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mx-auto px-4 py-8">
+    <div class="bg-white shadow-lg rounded-xl p-6 md:p-10 text-center">
+      <img src="/images/SeniorPortrait.jpg" alt="High school senior portrait of Ashley Albert"
+           class="w-48 h-48 mx-auto rounded-full border-4 border-gray-300 shadow-md object-cover">
+      <p class="mt-6 text-lg md:text-xl">
+        <strong>About Me:</strong>  I am a Computer Science major graduating on May 18, 2025 from Bucknell University. I grew up in Coal Township, PA and went to Our Lady of Lourdes Regional School. In my free time, I enjoy spending time with family and friends or shooting pool! My favorite song to listen to is The Sweet Escape by Gwen Stefani.<br><br>
+        <strong>Fun Fact:</strong>  I was born in Lewisburg, PA (which means I was always meant to come to Bucknell...right?).
+      </p>
+    </div>
+
+    <div class="mt-8 bg-white shadow-lg rounded-xl p-6 md:p-10">
+      <h2 class="text-2xl font-semibold text-center text-gray-700">Programming Languages</h2>
+      <ol class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4 text-center">
+        <li class="bg-gray-200 rounded-lg py-2">Python</li>
+        <li class="bg-gray-200 rounded-lg py-2">JavaScript</li>
+        <li class="bg-gray-200 rounded-lg py-2">Java</li>
+        <li class="bg-gray-200 rounded-lg py-2">C</li>
+        <li class="bg-gray-200 rounded-lg py-2">R</li>
+        <li class="bg-gray-200 rounded-lg py-2">Haskell</li>
+        <li class="bg-gray-200 rounded-lg py-2">Prolog</li>
+        <li class="bg-gray-200 rounded-lg py-2">C#</li>
+        <li class="bg-gray-200 rounded-lg py-2">C++</li>
+        <li class="bg-gray-200 rounded-lg py-2">PHP</li>
+        <li class="bg-gray-200 rounded-lg py-2">RISC-V</li>
+        <li class="bg-gray-200 rounded-lg py-2">HTML</li>
+        <li class="bg-gray-200 rounded-lg py-2">CSS</li>
+      </ol>
     </div>
   </div>
-</nav>
+
+</body>
+</html>
+
