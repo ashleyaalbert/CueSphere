@@ -26,34 +26,35 @@ defmodule AppWeb.PageControllerTest do
   describe "/ contains" do
     setup %{conn: conn} do
       conn = get(conn, ~p"/")
+      html = html_response(conn, 200)
+      %{html: html}
     end
 
-    test "typography", %{conn: conn} do
-      assert html = html_response(conn, 200)
+    test "typography", %{html: html} do
       assert html =~ "<h1"
       assert html =~ "<p"
       assert html =~ "<span"
     end
 
-    test "a list", %{conn: conn} do
-      assert html = html_response(conn, 200) =~ "<li"
+    test "a list", %{html: html} do
+      assert html =~ "<li"
     end
 
-    test "an image", %{conn: conn} do
-      assert html_response(conn, 200) =~ "<img"
+    test "an image", %{html: html} do
+      assert html =~ "<img"
     end
 
-    test "links to /planets and /courses", %{conn: conn} do
-      assert html_response(conn, 200) =~ "<a "
-      assert html_response(conn, 200) =~ "href=\"courses"
-      assert html_response(conn, 200) =~ "href=\"planets"
+    test "links to /planets and /courses", %{html: html} do
+      assert html =~ "<a "
+      assert html =~ "href=\"/courses"
+      assert html =~ "href=\"/planets"
     end
 
-    test "styling", %{conn: conn} do
-      assert html_response(conn, 200) =~ "bg-"
-      assert html_response(conn, 200) =~ "rounded"
-      assert html_response(conn, 200) =~ "text-"
-      assert html_response(conn, 200) =~ "border"
+    test "styling", %{html: html} do
+      assert html =~ "bg-"
+      assert html =~ "rounded"
+      assert html =~ "text-"
+      assert html =~ "border"
     end
   end
 end
