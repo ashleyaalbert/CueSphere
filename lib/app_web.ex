@@ -84,6 +84,7 @@ defmodule AppWeb do
     quote do
       # Translation
       use Gettext, backend: AppWeb.Gettext
+      use AppWeb.Components.UI
 
       # HTML escaping functionality
       import Phoenix.HTML
