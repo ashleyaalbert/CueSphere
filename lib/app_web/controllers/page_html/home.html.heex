@@ -10,8 +10,6 @@
   <nav class="bg-gray-800 p-4">
     <div class="container mx-auto flex justify-between items-center">
       <h1 class="text-white text-xl font-bold">Ashley Albert</h1>
-      <.button>Button</.button>
-      <.badge color="pink" large>Badge</.badge>
       <div class="space-x-4">
         <a href={~p"/planets"} class="text-gray-300 hover:text-white">Planets</a>
         <a href={~p"/courses"} class="text-gray-300 hover:text-white">Courses</a>
@@ -59,6 +57,24 @@
         <li class="bg-gray-200 rounded-lg py-2">
         <span class="font-semibold" style="color: #001F3F;">CSS</span></li>
       </ol>
+    </div>
+  </div>
+
+  <div class="container mx-auto px-4 py-8 text-center">
+    <h2 class="text-2xl font-semibold text-gray-700 mb-4">Badges & Buttons</h2>
+
+    <div class="flex flex-wrap justify-center gap-4 mb-4">
+      <.button>Basic Button</.button>
+    </div>
+    <div class="flex flex-wrap justify-center gap-2">
+      <.badge color="default" large>default</.badge>
+      <.badge color="dark">dark</.badge>
+      <.badge color="red" large>red</.badge>
+      <.badge color="green">green</.badge>
+      <.badge color="yellow" large>yellow</.badge>
+      <.badge color="indigo">indigo</.badge>
+      <.badge color="purple" large>purple</.badge>
+      <.badge color="pink">pink</.badge>
     </div>
   </div>
 
