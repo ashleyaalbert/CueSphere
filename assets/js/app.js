@@ -30,6 +30,30 @@ let liveSocket = new LiveSocket(liveSocketPath, Socket, {
   params: {_csrf_token: csrfToken}
 })
 
+
+// adds or removes the 'dark' class from <html> based on the `theme` in localStorage,
+// if given, or default preference otherwise.
+function set_theme() {
+  if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark')
+  } else {
+    document.documentElement.classList.remove('dark')
+  }
+}
+
+// Exposes function to toggle dark mode on and off.
+window.toggleDarkMode = () => {
+  if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    localStorage.theme = 'light'
+  } else {
+    localStorage.theme = 'dark'
+  }
+  set_theme()
+}
+
+// set theme on page load
+set_theme()
+
 // Show progress bar on live navigation and form submits
 topbar.config({barColors: {0: "#29d"}, shadowColor: "rgba(0, 0, 0, .3)"})
 window.addEventListener("phx:page-loading-start", _info => topbar.show(300))
