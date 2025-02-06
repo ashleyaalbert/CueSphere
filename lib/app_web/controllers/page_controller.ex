@@ -10,7 +10,7 @@ defmodule AppWeb.PageController do
   def home(conn, _params) do
     # The home page is often custom made,
     # so skip the default app layout.
-    render(conn, :home, layout: false)
+    render(conn, :home)
   end
 
   def courses(conn, %{"slug" => slug}) when slug in ["spring_2025", "fall_2024"] do
@@ -20,7 +20,7 @@ defmodule AppWeb.PageController do
       @courses
       |> Enum.filter(fn course -> course.semester == semester end)
 
-    render(conn, :courses, courses: filtered_courses, layout: false)
+    render(conn, :courses, courses: filtered_courses)
   end
 
   def courses(conn, %{"slug" => slug}) when slug not in ["spring_2025", "fall_2024"] do
@@ -28,7 +28,7 @@ defmodule AppWeb.PageController do
   end
 
   def courses(conn, _) do
-    render(conn, :courses, courses: @courses, layout: false)
+    render(conn, :courses, courses: @courses)
   end
 
   # defp slug_to_semester(slug) do

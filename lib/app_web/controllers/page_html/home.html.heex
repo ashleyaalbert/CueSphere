@@ -5,63 +5,53 @@
   <title>Ashley Albert</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 text-gray-900">
-
-  <nav class="bg-gray-800 p-4">
-    <div class="container mx-auto flex justify-between items-center">
-      <h1 class="text-white text-xl font-bold">Ashley Albert</h1>
-      <div class="space-x-4">
-        <a href={~p"/planets"} class="text-gray-300 hover:text-white">Planets</a>
-        <a href={~p"/courses"} class="text-gray-300 hover:text-white">Courses</a>
-      </div>
-    </div>
-  </nav>
-
+<body class="bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
   <div class="container mx-auto px-4 py-8">
-    <div class="bg-white shadow-lg rounded-xl p-6 md:p-10 text-center">
+    <div class="bg-white shadow-lg rounded-xl p-6 md:p-10 text-center dark:bg-gray-800 dark:text-gray-200">
       <img src={~p"/images/SeniorPortrait.jpg"} alt="High school senior portrait of Ashley Albert"
-           class="w-48 h-48 mx-auto rounded-full border-4 border-gray-300 shadow-md object-cover">
+           class="w-48 h-48 mx-auto rounded-full border-4 border-gray-300 shadow-md object-cover
+           dark:border-gray-500">
       <p class="mt-6 text-lg md:text-xl">
         <strong>About Me:</strong>  I am a Computer Science major graduating on May 18, 2025 from Bucknell University. I grew up in Coal Township, PA and went to Our Lady of Lourdes Regional School. In my free time, I enjoy spending time with family and friends or shooting pool! My favorite song to listen to is The Sweet Escape by Gwen Stefani.<br><br>
         <strong>Fun Fact:</strong>  I was born in Lewisburg, PA (which means I was always meant to come to Bucknell...right?).
       </p>
     </div>
 
-    <div class="mt-8 bg-white shadow-lg rounded-xl p-6 md:p-10">
-      <h2 class="text-2xl font-semibold text-center text-gray-700">Programming Languages</h2>
+    <div class="mt-8 bg-white shadow-lg rounded-xl p-6 md:p-10 dark:bg-gray-800 dark:text-gray-200">
+      <h2 class="text-2xl font-semibold text-center text-gray-700 dark:text-white">Programming Languages</h2>
       <ol class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4 text-center">
-        <li class="bg-gray-200 rounded-lg py-2">
-        <span class="font-semibold" style="color: #001F3F;">Python</span></li>
-        <li class="bg-gray-200 rounded-lg py-2">
-        <span class="font-semibold" style="color: #001F3F;">JavaScript</span></li>
-        <li class="bg-gray-200 rounded-lg py-2">
-        <span class="font-semibold" style="color: #001F3F;">Java</span></li>
-        <li class="bg-gray-200 rounded-lg py-2">
-        <span class="font-semibold" style="color: #001F3F;">C</span></li>
-        <li class="bg-gray-200 rounded-lg py-2">
-        <span class="font-semibold" style="color: #001F3F;">R</span></li>
-        <li class="bg-gray-200 rounded-lg py-2">
-        <span class="font-semibold" style="color: #001F3F;">Haskell</span></li>
-        <li class="bg-gray-200 rounded-lg py-2">
-        <span class="font-semibold" style="color: #001F3F;">Prolog</span></li>
-        <li class="bg-gray-200 rounded-lg py-2">
-        <span class="font-semibold" style="color: #001F3F;">C#</span></li>
-        <li class="bg-gray-200 rounded-lg py-2">
-        <span class="font-semibold" style="color: #001F3F;">C++</span></li>
-        <li class="bg-gray-200 rounded-lg py-2">
-        <span class="font-semibold" style="color: #001F3F;">PHP</span></li>
-        <li class="bg-gray-200 rounded-lg py-2">
-        <span class="font-semibold" style="color: #001F3F;">RISC-V</span></li>
-        <li class="bg-gray-200 rounded-lg py-2">
-        <span class="font-semibold" style="color: #001F3F;">HTML</span></li>
-        <li class="bg-gray-200 rounded-lg py-2">
-        <span class="font-semibold" style="color: #001F3F;">CSS</span></li>
+        <li class="bg-gray-200 rounded-lg py-2 dark:bg-gray-500">
+        <span class="font-semibold text-blue-900 dark:text-gray-300">Python</span></li>
+        <li class="bg-gray-200 rounded-lg py-2 dark:bg-gray-500">
+        <span class="font-semibold text-blue-900 dark:text-gray-300">JavaScript</span></li>
+        <li class="bg-gray-200 rounded-lg py-2 dark:bg-gray-500">
+        <span class="font-semibold text-blue-900 dark:text-gray-300">Java</span></li>
+        <li class="bg-gray-200 rounded-lg py-2 dark:bg-gray-500">
+        <span class="font-semibold text-blue-900 dark:text-gray-300">C</span></li>
+        <li class="bg-gray-200 rounded-lg py-2 dark:bg-gray-500">
+        <span class="font-semibold text-blue-900 dark:text-gray-300">R</span></li>
+        <li class="bg-gray-200 rounded-lg py-2 dark:bg-gray-500">
+        <span class="font-semibold text-blue-900 dark:text-gray-300">Haskell</span></li>
+        <li class="bg-gray-200 rounded-lg py-2 dark:bg-gray-500">
+        <span class="font-semibold text-blue-900 dark:text-gray-300">Prolog</span></li>
+        <li class="bg-gray-200 rounded-lg py-2 dark:bg-gray-500">
+        <span class="font-semibold text-blue-900 dark:text-gray-300">C#</span></li>
+        <li class="bg-gray-200 rounded-lg py-2 dark:bg-gray-500">
+        <span class="font-semibold text-blue-900 dark:text-gray-300">C++</span></li>
+        <li class="bg-gray-200 rounded-lg py-2 dark:bg-gray-500">
+        <span class="font-semibold text-blue-900 dark:text-gray-300">PHP</span></li>
+        <li class="bg-gray-200 rounded-lg py-2 dark:bg-gray-500">
+        <span class="font-semibold text-blue-900 dark:text-gray-300">RISC-V</span></li>
+        <li class="bg-gray-200 rounded-lg py-2 dark:bg-gray-500">
+        <span class="font-semibold text-blue-900 dark:text-gray-300">HTML</span></li>
+        <li class="bg-gray-200 rounded-lg py-2 dark:bg-gray-500">
+        <span class="font-semibold text-blue-900 dark:text-gray-300">CSS</span></li>
       </ol>
     </div>
   </div>
 
-  <div class="container mx-auto px-4 py-8 text-center">
-    <h2 class="text-2xl font-semibold text-gray-700 mb-4">Badges & Buttons</h2>
+  <%!-- <div class="container mx-auto px-4 py-8 text-center">
+    <h2 class="text-2xl font-semibold mb-4 text-gray-700 dark:text-gray-300">Badges & Buttons</h2>
 
     <div class="flex flex-wrap justify-center gap-4 mb-4">
       <.button onclick="toggleDarkMode()">Toggle Dark Mode</.button>
@@ -75,8 +65,10 @@
       <.badge color="indigo">indigo</.badge>
       <.badge color="purple" large>purple</.badge>
       <.badge color="pink">pink</.badge>
+      <.pill color="red">Minecraft</.pill>
+      <.tag color="red">Error Tag</.tag>
     </div>
-  </div>
+  </div> --%>
 
 </body>
 </html>

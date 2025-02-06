@@ -10,7 +10,9 @@ defmodule AppWeb.Components.UI do
     quote do
       import AppWeb.Components.UI.{
         Button,
-        Badge
+        Badge,
+        Pill,
+        Tag
       }
     end
   end
