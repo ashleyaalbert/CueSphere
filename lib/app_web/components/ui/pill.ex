@@ -9,7 +9,8 @@ defmodule AppWeb.Components.UI.Pill do
       <.pill>Active</.pill>
       <.pill class="ml-2">Inactive</.pill>
   """
-  attr :color, :string, default: "default", values: ~w(default red green yellow indigo purple pink)
+  attr :large, :boolean, default: false
+  attr :color, :string, default: "default", values: ~w(default red green yellow indigo purple pink dark)
   attr :type, :string, default: "pill"
   attr :class, :string, default: nil
   attr :rest, :global, include: ~w(disabled form name value)
@@ -21,6 +22,8 @@ defmodule AppWeb.Components.UI.Pill do
     <span
       class={[
         "py-2.5 px-5 me-2 mb-2 font-medium text-sm rounded-full inline-flex items-center focus:outline-none",
+        @large == true && "text-sm",
+        @large == false && "text-xs",
         @color == "default" &&
           "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
         @color == "red" &&
@@ -35,6 +38,8 @@ defmodule AppWeb.Components.UI.Pill do
           "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
         @color == "pink" &&
           "bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-300",
+        @color == "dark" &&
+          "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300",
         @class
       ]}
       {@rest}

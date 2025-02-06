@@ -9,6 +9,7 @@ defmodule AppWeb.Components.UI.Tag do
       <.tag>Tag Name</.tag>
       <.tag class="custom-class">Custom Tag</.tag>
   """
+  attr :large, :boolean, default: false
   attr :color, :string, default: "default", values: ~w(default dark red green yellow indigo purple pink)
   attr :class, :string, default: nil
   attr :rest, :global, include: ~w(disabled form name value)
@@ -20,6 +21,8 @@ defmodule AppWeb.Components.UI.Tag do
     <span
       class={[
         "py-1 px-3 text-xs font-medium rounded-full",
+        @large == true && "text-sm",
+        @large == false && "text-xs",
         @color == "default" &&
           "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
         @color == "red" &&
