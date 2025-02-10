@@ -10,6 +10,8 @@ defmodule AppWeb.PageController do
   def home(conn, _params) do
     # The home page is often custom made,
     # so skip the default app layout.
+    #IO.inspect(App.Planets.list_planets())
+    #IO.inspect(App.Planets.list_planets(:sorted_by_name))
     render(conn, :home)
   end
 

@@ -5,6 +5,10 @@ defmodule App.Planets do
   - `distance` is the relative distance to the Sun compared to Earth's distance to the sun.
   - `orbital_period` is the time it takes for a planet to orbit the sun (in Earth years)
   """
+  import Ecto.Query, warn: false
+
+  alias App.Repo
+  alias App.Planets.Planet
 
   @planets [
     %{id: 1, name: "Mercury", distance: 0.39, orbital_period: 0.24},
@@ -16,6 +20,19 @@ defmodule App.Planets do
     %{id: 7, name: "Uranus", distance: 19.18, orbital_period: 84.01},
     %{id: 8, name: "Neptune", distance: 30.06, orbital_period: 164.8}
   ]
+
+  def create_planet(attrs) do
+    %Planet{}
+    |> Planet.changeset(attrs)
+    |> Repo.insert()
+  end
+
+  def list_planets, do: Repo.all(Planet)
+
+  def list_planets(:sorted_by_name) do
+    from(p in Planet, order_by: p.name)
+    |> Repo.all()
+  end
 
   def list, do: @planets
 
