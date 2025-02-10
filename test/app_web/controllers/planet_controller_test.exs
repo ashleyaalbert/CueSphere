@@ -11,14 +11,14 @@ defmodule AppWeb.PlanetControllerTest do
 
   test "GET /planets/random", %{conn: conn} do
     conn = get(conn, ~p"/planets/random")
-    planets = App.Planets.list()
+    planets = App.Planets.list_planets()
     refute html_response(conn, 200) =~ "All Planets' Details"
     assert html_response(conn, 200)
     assert Enum.any?(planets, fn planet -> html_response(conn, 200) =~ planet.name end)
   end
 
   test "GET /planets/:id", %{conn: conn} do
-    planet = List.first(App.Planets.list())
+    planet = List.first(App.Planets.list_planets())
     assert planet
     conn = get(conn, ~p"/planets/#{planet.id}")
     assert html_response(conn, 200) =~ planet.name

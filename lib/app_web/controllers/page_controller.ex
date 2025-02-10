@@ -12,6 +12,7 @@ defmodule AppWeb.PageController do
     # so skip the default app layout.
     #IO.inspect(App.Planets.list_planets())
     #IO.inspect(App.Planets.list_planets(:sorted_by_name))
+    #IO.inspect(App.Planets.get_random_planet())
     render(conn, :home)
   end
 

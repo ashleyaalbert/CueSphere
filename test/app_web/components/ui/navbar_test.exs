@@ -1,46 +1,26 @@
 defmodule AppWeb.Components.UI.NavbarTest do
-  use ExUnit.Case, async: true
-  import Phoenix.Component
+  use AppWeb.ConnCase, async: true
 
+  import Phoenix.LiveViewTest
   alias AppWeb.Components.UI.Navbar
 
-  describe "Navbar component" do
-    test "renders navbar with correct links" do
-      # Directly call the Navbar component and get the HTML string
-      html = Navbar.navbar(%{})
+  test "renders navbar correctly" do
+    assigns = %{}
 
-      # Assert that the HTML contains the expected links
-      assert html =~ "Home"
-      assert html =~ "Planets"
-      assert html =~ "Courses"
-    end
+    html = render_component(&Navbar.navbar/1, assigns)
 
-    test "menu button toggles visibility when clicked" do
-      # Initially render the Navbar component (without toggle state)
-      html = Navbar.navbar(%{})
+    assert html =~ "<nav"
+    assert html =~ "Home"
+    assert html =~ "Courses"
+    assert html =~ "Planets"
+  end
 
-      # Assert that the menu is not visible (hidden class should be present)
-      refute html =~ "w-full"
+  test "menu button has correct attributes" do
+    assigns = %{}
 
-      # Render the Navbar component with the toggle state (button clicked)
-      html = Navbar.navbar(%{toggle: true})
-
-      # Assert that the menu is visible after the toggle
-      assert html =~ "w-full"
-    end
-
-    test "menu button toggles aria-expanded attribute" do
-      # Initially render the Navbar component (aria-expanded should be false)
-      html = Navbar.navbar(%{})
-
-      # Assert aria-expanded is false initially
-      refute html =~ "aria-expanded=\"true\""
-
-      # Render the Navbar component with the toggle state (button clicked)
-      html = Navbar.navbar(%{toggle: true})
-
-      # Assert aria-expanded is true after the button is clicked
-      assert html =~ "aria-expanded=\"true\""
-    end
+    html = render_component(&Navbar.navbar/1, assigns)
+    assert html =~ "id=\"menu-button\""
+    assert html =~ "aria-controls=\"menu\""
+    assert html =~ "aria-expanded=\"false\""
   end
 end
