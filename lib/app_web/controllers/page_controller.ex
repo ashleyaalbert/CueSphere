@@ -20,6 +20,7 @@ defmodule AppWeb.PageController do
       @courses
       |> Enum.filter(fn course -> course.semester == semester end)
 
+    ~p"/"
     render(conn, :courses, courses: filtered_courses)
   end
 

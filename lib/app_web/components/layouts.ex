@@ -10,5 +10,10 @@ defmodule AppWeb.Layouts do
   """
   use AppWeb, :html
 
+  use Phoenix.VerifiedRoutes,
+        endpoint: AppWeb.Endpoint,
+        router: AppWeb.Router,
+        statics: AppWeb.static_paths()
+
   embed_templates "layouts/*"
 end

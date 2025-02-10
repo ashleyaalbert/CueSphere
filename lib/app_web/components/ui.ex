@@ -12,7 +12,9 @@ defmodule AppWeb.Components.UI do
         Button,
         Badge,
         Pill,
-        Tag
+        Tag,
+        Navbar,
+        Modal
       }
     end
   end
