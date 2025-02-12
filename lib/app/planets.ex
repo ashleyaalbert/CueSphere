@@ -65,13 +65,13 @@ defmodule App.Planets do
 
   # when testing do MIX_ENV=test mix run priv/repo/seeds.exs
 
-  @doc """
-  Returns a string containing all planet names, sorted alphabetically in ascending order, separated by semicolon.
 
-  ## Examples
-      Planets.names()
-      "Earth, Jupiter, Mars, ..."
-  """
+  # Returns a string containing all planet names, sorted alphabetically in ascending order, separated by semicolon.
+
+  # ## Examples
+  #     Planets.names()
+  #     "Earth, Jupiter, Mars, ..."
+
   # def names do
   #   :sorted_by_name
   #   |> list_planets()
@@ -79,12 +79,12 @@ defmodule App.Planets do
   #   |> Enum.join(", ")
   # end
 
-  @doc """
-  Returns a planet by id.
+
+  #Returns a planet by id.
 
   ## Examples
-      Planets.get(1)
-      %{id: 1, name: "Mercury", distance: 0.39, orbital_period: 0.24}
-  """
+      #Planets.get(1)
+      #%{id: 1, name: "Mercury", distance: 0.39, orbital_period: 0.24}
+
   #def get(id), do: Enum.find(@planets, &(&1.id == id))
 end
