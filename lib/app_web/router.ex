@@ -18,11 +18,12 @@ defmodule AppWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
-    get "/courses", PageController, :courses
-    get "/courses/:slug", PageController, :courses
+    # get "/courses", PageController, :courses
+    # get "/courses/:slug", PageController, :courses
     get "/planets", PlanetController, :planets
     get "/planets/random", PlanetController, :random
     get "/planets/:id", PlanetController, :index
+    resources "/courses", CourseController
   end
 
   # Other scopes may use custom stacks.
