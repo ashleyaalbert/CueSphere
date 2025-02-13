@@ -13,7 +13,9 @@ defmodule AppWeb.PageController do
     #IO.inspect(App.Planets.list_planets())
     #IO.inspect(App.Planets.list_planets(:sorted_by_name))
     #IO.inspect(App.Planets.get_random_planet())
+    #changeset = App.Notification.Message.changeset(%App.Notification.Message{}, %{})
     render(conn, :home)
+    #render(conn, :home, message_changeset: changeset, action: Routes.message_path(conn, :create))
   end
 
   def courses(conn, %{"slug" => slug}) when slug in ["spring_2025", "fall_2024"] do

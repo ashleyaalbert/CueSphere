@@ -8,6 +8,7 @@ defmodule AppWeb.Router do
     plug :put_root_layout, html: {AppWeb.Layouts, :root}
     plug :protect_from_forgery
     plug :put_secure_browser_headers
+    plug AppWeb.CustomPlug
   end
 
   pipeline :api do
@@ -24,6 +25,7 @@ defmodule AppWeb.Router do
     get "/planets/random", PlanetController, :random
     get "/planets/:id", PlanetController, :index
     resources "/courses", CourseController
+    #post "/messages", MessageController, :create
   end
 
   # Other scopes may use custom stacks.
