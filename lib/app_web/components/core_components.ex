@@ -19,7 +19,6 @@ defmodule AppWeb.CoreComponents do
 
   alias Phoenix.LiveView.JS
 
-
   # Renders a modal.
 
   # ## Examples
@@ -34,7 +33,6 @@ defmodule AppWeb.CoreComponents do
   #     <.modal id="confirm" on_cancel={JS.navigate(~p"/posts")}>
   #       This is another modal.
   #     </.modal>
-
 
   # attr :id, :string, required: true
   # attr :show, :boolean, default: false
@@ -202,7 +200,7 @@ defmodule AppWeb.CoreComponents do
   def simple_form(assigns) do
     ~H"""
     <.form :let={f} for={@for} as={@as} {@rest}>
-      <div class="mt-10 space-y-8 bg-white">
+      <div class="">
         {render_slot(@inner_block, f)}
         <div :for={action <- @actions} class="mt-2 flex items-center justify-between gap-6">
           {render_slot(action, f)}
@@ -220,6 +218,7 @@ defmodule AppWeb.CoreComponents do
       <.button>Send!</.button>
       <.button phx-click="go" class="ml-2">Send!</.button>
   """
+
   # attr :type, :string, default: nil
   # attr :class, :string, default: nil
   # attr :rest, :global, include: ~w(disabled form name value)
@@ -370,15 +369,17 @@ defmodule AppWeb.CoreComponents do
   # All other inputs text, datetime-local, url, password, etc. are handled here...
   def input(assigns) do
     ~H"""
-    <div>
-      <.label for={@id}>{@label}</.label>
+    <div class="mb-5">
+      <.label for={@id}>
+        {@label}
+      </.label>
       <input
         type={@type}
         name={@name}
         id={@id}
         value={Phoenix.HTML.Form.normalize_value(@type, @value)}
         class={[
-          "mt-2 block w-full rounded-lg text-zinc-900 focus:ring-0 sm:text-sm sm:leading-6",
+          "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500",
           @errors == [] && "border-zinc-300 focus:border-zinc-400",
           @errors != [] && "border-rose-400 focus:border-rose-400"
         ]}
@@ -397,7 +398,7 @@ defmodule AppWeb.CoreComponents do
 
   def label(assigns) do
     ~H"""
-    <label for={@for} class="block text-sm font-semibold leading-6 text-zinc-800">
+    <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for={@for}>
       {render_slot(@inner_block)}
     </label>
     """

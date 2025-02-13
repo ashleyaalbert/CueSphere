@@ -25,15 +25,15 @@
   </div>
 </header> --%>
 <nav class="bg-gray-800 p-4 dark:bg-gray-300">
-    <div class="container mx-auto flex justify-between items-center">
-      <h1 class="text-white text-xl font-bold dark:text-black">Ashley Albert</h1>
+  <div class="container mx-auto flex justify-between items-center">
+    <h1 class="text-white text-xl font-bold dark:text-black">Ashley Albert</h1>
 
-      <%!-- dark mode --%>
-      <div class="flex items-center md:order-2 space-x-2 rtl:space-x-reverse px-2">
+    <%!-- dark mode --%>
+    <div class="flex items-center md:order-2 space-x-2 rtl:space-x-reverse px-2">
       <%!-- navbar --%>
-        <.navbar />
+      <.navbar />
 
-        <%!-- <.button phx-click="open-modal">Contact me</.button>
+      <%!-- <.button phx-click="open-modal">Contact me</.button>
         <.modal heading="My Form">
         <.simple_form :let={f} for={@message_changeset} action={~p"/messages"} class="mb-6">
           <.error :if={@changeset.action}>
@@ -48,36 +48,50 @@
         </.simple_form>
         </.modal> --%>
 
-        <button
-          type="button"
-          onclick="toggleDarkMode()"
-          class="[
+      <button
+        type="button"
+        onclick="toggleDarkMode()"
+        class="[
             items-center w-10 h-10 justify-center text-normal font-medium
           text-gray-700 rounded-lg hover:text-blue-700 focus-visible:z-10
             focus-visible:ring-2 focus-visible:ring-gray-300 dark:focus-visible:ring-gray-500
             focus:outline-none dark:text-gray-400 dark:border-gray-600
             dark:hover:text-white,
             @user_id && 'hidden sm:flex'
-            ]">
+            ]"
+      >
         <svg
           data-toggle-icon="moon"
           class="W-4 h-4 dark:hidden"
           aria-hidden="true"
           fill="currentColor"
-          viewBox="0 0 18 20">
-        <path d="M17.8 13.75a1 1 0 0 0-.859-.5A7.488 7.488 0 0 1 10.52 2a1 1 0 0 0 0-.969A1.035 1.035 0 0 0 9.687.5h-.113a9.5 9.5 0 1 0 8.222 14.247 1 1 0 0 0 .004-.997Z"></path></svg>
+          viewBox="0 0 18 20"
+        >
+          <path d="M17.8 13.75a1 1 0 0 0-.859-.5A7.488 7.488 0 0 1 10.52 2a1 1 0 0 0 0-.969A1.035 1.035 0 0 0 9.687.5h-.113a9.5 9.5 0 1 0 8.222 14.247 1 1 0 0 0 .004-.997Z">
+          </path>
+        </svg>
         <svg
           data-toggle-icon="sun"
           class="hidden dark:block w-4 h-4"
           aria-hidden="true"
           fill="currentColor"
-          viewBox="0 0 20 20">
-        <path d="M10 15a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0-11a1 1 0 0 0 1-1V1a1 1 0 0 0-2 0v2a1 1 0 0 0 1 1Zm0 12a1 1 0 0 0-1 1v2a1 1 0 1 0 2 0v-2a1 1 0 0 0-1-1ZM4.343 5.757a1 1 0 0 0 1.414-1.414L4.343 2.929a1 1 0 0 0-1.414 1.414l1.414 1.414Zm11.314 8.486a1 1 0 0 0-1.414 1.414l1.414 1.414a1 1 0 0 0 1.414-1.414l-1.414-1.414ZM4 10a1 1 0 0 0-1-1H1a1 1 0 0 0 0 2h2a1 1 0 0 0 1-1Zm15-1h-2a1 1 0 1 0 0 2h2a1 1 0 0 0 0-2ZM4.343 14.243l-1.414 1.414a1 1 0 1 0 1.414 1.414l1.414-1.414a1 1 0 0 0-1.414-1.414ZM14.95 6.05a1 1 0 0 0 .707-.293l1.414-1.414a1 1 0 1 0-1.414-1.414l-1.414 1.414a1 1 0 0 0 .707 1.707Z">
-          </path></svg>
-        </button>
-      </div>
+          viewBox="0 0 20 20"
+        >
+          <path d="M10 15a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0-11a1 1 0 0 0 1-1V1a1 1 0 0 0-2 0v2a1 1 0 0 0 1 1Zm0 12a1 1 0 0 0-1 1v2a1 1 0 1 0 2 0v-2a1 1 0 0 0-1-1ZM4.343 5.757a1 1 0 0 0 1.414-1.414L4.343 2.929a1 1 0 0 0-1.414 1.414l1.414 1.414Zm11.314 8.486a1 1 0 0 0-1.414 1.414l1.414 1.414a1 1 0 0 0 1.414-1.414l-1.414-1.414ZM4 10a1 1 0 0 0-1-1H1a1 1 0 0 0 0 2h2a1 1 0 0 0 1-1Zm15-1h-2a1 1 0 1 0 0 2h2a1 1 0 0 0 0-2ZM4.343 14.243l-1.414 1.414a1 1 0 1 0 1.414 1.414l1.414-1.414a1 1 0 0 0-1.414-1.414ZM14.95 6.05a1 1 0 0 0 .707-.293l1.414-1.414a1 1 0 1 0-1.414-1.414l-1.414 1.414a1 1 0 0 0 .707 1.707Z">
+          </path>
+        </svg>
+      </button>
+
+      <button
+        type="button"
+        phx-click={AppWeb.Components.UI.Modal.open_modal()}
+        class="block text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5"
+      >
+        Toggle Modal
+      </button>
     </div>
-  </nav>
+  </div>
+</nav>
 
 <main class="px-4 py-20 sm:px-6 lg:px-8">
   <div class="mx-auto max-w-2xl">
@@ -86,4 +100,53 @@
   </div>
 </main>
 
-
+<.modal heading="Contact us" backdrop="static" small>
+  <.simple_form
+    :let={form}
+    for={@message_changeset}
+    action={~p"/messages"}
+    class="mb-6"
+    method="POST"
+  >
+    <div class="mb-6">
+      <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+        Your email
+      </label>
+      <.input
+        field={form[:email]}
+        type="text"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        label="Email Address"
+      />
+    </div>
+    <div class="mb-6">
+      <label for="subject" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+        Subject
+      </label>
+      <input
+        type="text"
+        id="subject"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        placeholder="Let us know how we can help you"
+        required
+      />
+    </div>
+    <div class="mb-6">
+      <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+        Your message
+      </label>
+      <textarea
+        id="message"
+        rows="4"
+        class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        placeholder="Your message..."
+      ></textarea>
+    </div>
+    <button
+      type="submit"
+      class="text-white bg-blue-700 hover:bg-blue-800 w-full focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 block"
+    >
+      Send message
+    </button>
+  </.simple_form>
+</.modal>

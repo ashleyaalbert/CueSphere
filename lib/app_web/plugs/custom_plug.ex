@@ -1,4 +1,4 @@
-defmodule AppWeb.CustomPlug do
+defmodule AppWeb.Plugs.CustomPlug do
   import Plug.Conn
 
   alias App.Notification
