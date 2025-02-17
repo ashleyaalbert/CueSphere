@@ -11,7 +11,7 @@ defmodule AppWeb.MessageController do
 
   def new(conn, _params) do
     changeset = Notification.change_message(%Message{})
-    render(conn, :new, changeset: changeset)
+    render(conn, :new, message_changeset: changeset)
   end
 
   def create(conn, %{"message" => message_params}) do
@@ -22,7 +22,8 @@ defmodule AppWeb.MessageController do
         |> redirect(to: ~p"/messages/#{message}")
 
       {:error, %Ecto.Changeset{} = changeset} ->
-        render(conn, :new, changeset: changeset)
+        IO.inspect(changeset, label: "Changeset Error")
+        render(conn, :new, message_changeset: changeset)
     end
   end
 
@@ -31,25 +32,25 @@ defmodule AppWeb.MessageController do
     render(conn, :show, message: message)
   end
 
-  def edit(conn, %{"id" => id}) do
-    message = Notification.get_message!(id)
-    changeset = Notification.change_message(message)
-    render(conn, :edit, message: message, changeset: changeset)
-  end
+  # def edit(conn, %{"id" => id}) do
+  #   message = Notification.get_message!(id)
+  #   changeset = Notification.change_message(message)
+  #   render(conn, :edit, message: message, message_changeset: changeset)
+  # end
 
-  def update(conn, %{"id" => id, "message" => message_params}) do
-    message = Notification.get_message!(id)
+  # def update(conn, %{"id" => id, "message" => message_params}) do
+  #   message = Notification.get_message!(id)
 
-    case Notification.update_message(message, message_params) do
-      {:ok, message} ->
-        conn
-        |> put_flash(:info, "Message updated successfully.")
-        |> redirect(to: ~p"/messages/#{message}")
+  #   case Notification.update_message(message, message_params) do
+  #     {:ok, message} ->
+  #       conn
+  #       |> put_flash(:info, "Message updated successfully.")
+  #       |> redirect(to: ~p"/messages/#{message}")
 
-      {:error, %Ecto.Changeset{} = changeset} ->
-        render(conn, :edit, message: message, changeset: changeset)
-    end
-  end
+  #     {:error, %Ecto.Changeset{} = changeset} ->
+  #       render(conn, :edit, message: message, message_changeset: changeset)
+  #   end
+  # end
 
   def delete(conn, %{"id" => id}) do
     message = Notification.get_message!(id)

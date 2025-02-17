@@ -67,11 +67,11 @@ defmodule App.Notification do
       {:error, %Ecto.Changeset{}}
 
   """
-  def update_message(%Message{} = message, attrs) do
-    message
-    |> Message.changeset(attrs)
-    |> Repo.update()
-  end
+  # def update_message(%Message{} = message, attrs) do
+  #   message
+  #   |> Message.changeset(attrs)
+  #   |> Repo.update()
+  # end
 
   @doc """
   Deletes a message.

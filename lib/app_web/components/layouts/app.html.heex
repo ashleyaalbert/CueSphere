@@ -24,6 +24,7 @@
     </div>
   </div>
 </header> --%>
+
 <nav class="bg-gray-800 p-4 dark:bg-gray-300">
   <div class="container mx-auto flex justify-between items-center">
     <h1 class="text-white text-xl font-bold dark:text-black">Ashley Albert</h1>
@@ -32,21 +33,6 @@
     <div class="flex items-center md:order-2 space-x-2 rtl:space-x-reverse px-2">
       <%!-- navbar --%>
       <.navbar />
-
-      <%!-- <.button phx-click="open-modal">Contact me</.button>
-        <.modal heading="My Form">
-        <.simple_form :let={f} for={@message_changeset} action={~p"/messages"} class="mb-6">
-          <.error :if={@changeset.action}>
-            Oops, something went wrong! Please check the errors below.
-          </.error>
-          <.input field={f[:email]} type="text" label="Email" />
-          <.input field={f[:subject]} type="text" label="Subject" />
-          <.input field={f[:message]} type="text" label="Message" />
-          <:actions>
-          <.button>Save Message</.button>
-          </:actions>
-        </.simple_form>
-        </.modal> --%>
 
       <button
         type="button"
@@ -57,7 +43,9 @@
             focus-visible:ring-2 focus-visible:ring-gray-300 dark:focus-visible:ring-gray-500
             focus:outline-none dark:text-gray-400 dark:border-gray-600
             dark:hover:text-white,
-            @user_id && 'hidden sm:flex'
+            @
+
+            user_id && 'hidden sm:flex'
             ]"
       >
         <svg
@@ -87,7 +75,7 @@
         phx-click={AppWeb.Components.UI.Modal.open_modal()}
         class="block text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5"
       >
-        Toggle Modal
+        Contact Us
       </button>
     </div>
   </div>
@@ -101,52 +89,15 @@
 </main>
 
 <.modal heading="Contact us" backdrop="static" small>
-  <.simple_form
-    :let={form}
-    for={@message_changeset}
-    action={~p"/messages"}
-    class="mb-6"
-    method="POST"
-  >
-    <div class="mb-6">
-      <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-        Your email
-      </label>
-      <.input
-        field={form[:email]}
-        type="text"
-        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-        label="Email Address"
-      />
-    </div>
-    <div class="mb-6">
-      <label for="subject" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-        Subject
-      </label>
-      <input
-        type="text"
-        id="subject"
-        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-        placeholder="Let us know how we can help you"
-        required
-      />
-    </div>
-    <div class="mb-6">
-      <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-        Your message
-      </label>
-      <textarea
-        id="message"
-        rows="4"
-        class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-        placeholder="Your message..."
-      ></textarea>
-    </div>
-    <button
-      type="submit"
-      class="text-white bg-blue-700 hover:bg-blue-800 w-full focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 block"
-    >
-      Send message
-    </button>
-  </.simple_form>
+ <.simple_form :let={f} for={@message_changeset} action={~p"/messages"} class="mb-6">
+  <.error :if={@message_changeset.action}>
+    Oops, something went wrong! Please check the errors below.
+  </.error>
+  <.input field={f[:email]} type="text" label="Email" />
+  <.input field={f[:subject]} type="text" label="Subject" />
+  <.input field={f[:message]} type="text" label="Message" />
+  <:actions>
+    <.button type="submit"> Save Message </.button>
+  </:actions>
+</.simple_form>
 </.modal>

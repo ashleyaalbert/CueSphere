@@ -21,11 +21,11 @@ defmodule App.NotificationTest do
     end
 
     test "create_message/1 with valid data creates a message" do
-      valid_attrs = %{message: "some message", email: "some email", subject: "some subject"}
+      valid_attrs = %{message: "some message", email: "some@email", subject: "some subject"}
 
       assert {:ok, %Message{} = message} = Notification.create_message(valid_attrs)
       assert message.message == "some message"
-      assert message.email == "some email"
+      assert message.email == "some@email"
       assert message.subject == "some subject"
     end
 
@@ -33,21 +33,21 @@ defmodule App.NotificationTest do
       assert {:error, %Ecto.Changeset{}} = Notification.create_message(@invalid_attrs)
     end
 
-    test "update_message/2 with valid data updates the message" do
-      message = message_fixture()
-      update_attrs = %{message: "some updated message", email: "some updated email", subject: "some updated subject"}
+    # test "update_message/2 with valid data updates the message" do
+    #   message = message_fixture()
+    #   update_attrs = %{message: "some updated message", email: "some updated email", subject: "some updated subject"}
 
-      assert {:ok, %Message{} = message} = Notification.update_message(message, update_attrs)
-      assert message.message == "some updated message"
-      assert message.email == "some updated email"
-      assert message.subject == "some updated subject"
-    end
+    #   assert {:ok, %Message{} = message} = Notification.update_message(message, update_attrs)
+    #   assert message.message == "some updated message"
+    #   assert message.email == "some updated email"
+    #   assert message.subject == "some updated subject"
+    # end
 
-    test "update_message/2 with invalid data returns error changeset" do
-      message = message_fixture()
-      assert {:error, %Ecto.Changeset{}} = Notification.update_message(message, @invalid_attrs)
-      assert message == Notification.get_message!(message.id)
-    end
+    # test "update_message/2 with invalid data returns error changeset" do
+    #   message = message_fixture()
+    #   assert {:error, %Ecto.Changeset{}} = Notification.update_message(message, @invalid_attrs)
+    #   assert message == Notification.get_message!(message.id)
+    # end
 
     test "delete_message/1 deletes the message" do
       message = message_fixture()

@@ -25,7 +25,10 @@ defmodule AppWeb.Router do
     get "/planets/random", PlanetController, :random
     get "/planets/:id", PlanetController, :index
     resources "/courses", CourseController
-    post "/messages", MessageController, :create
+    # post "/messages", MessageController, :create
+    # get "/messages", MessageController, :index
+    resources "/messages", MessageController
+    #live "/thermostat", ThermostatLive
   end
 
   # Other scopes may use custom stacks.

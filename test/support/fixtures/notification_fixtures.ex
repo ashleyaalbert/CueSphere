@@ -11,7 +11,7 @@ defmodule App.NotificationFixtures do
     {:ok, message} =
       attrs
       |> Enum.into(%{
-        email: "some email",
+        email: "some@email",
         message: "some message",
         subject: "some subject"
       })
