@@ -73,18 +73,18 @@ defmodule App.Notification do
   #   |> Repo.update()
   # end
 
-  @doc """
-  Deletes a message.
+  # @ doc """
+  # Deletes a message.
 
-  ## Examples
+  # ## Examples
 
-      iex> delete_message(message)
-      {:ok, %Message{}}
+  #     iex> delete_message(message)
+  #     {:ok, %Message{}}
 
-      iex> delete_message(message)
-      {:error, %Ecto.Changeset{}}
+  #     iex> delete_message(message)
+  #     {:error, %Ecto.Changeset{}}
 
-  """
+  # """
   def delete_message(%Message{} = message) do
     Repo.delete(message)
   end

@@ -38,6 +38,19 @@ defmodule AppWeb.Components.UI.Navbar do
             <li>
               <.link href="/courses" class="block px-4 py-2 text-gray-300 rounded-md hover:bg-gray-700 hover:text-white dark:text-gray-900 dark:hover:bg-gray-400 dark:hover:text-black transition-all">Courses</.link>
             </li>
+            <li>
+              <.link href="/messages" class="block px-4 py-2 text-gray-300 rounded-md hover:bg-gray-700 hover:text-white dark:text-gray-900 dark:hover:bg-gray-400 dark:hover:text-black transition-all">Messages</.link>
+            </li>
+            <li>
+              <button
+                type="button"
+                phx-click={AppWeb.Components.UI.Modal.open_modal()}
+                class="block px-4 py-2 text-gray-300 rounded-md hover:bg-gray-700 hover:text-white dark:text-gray-900 dark:hover:bg-gray-400 dark:hover:text-black transition-all"
+              >
+                Contact Us
+              </button>
+            </li>
+
           </ol>
         </div>
       </div>

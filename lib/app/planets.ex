@@ -34,6 +34,11 @@ defmodule App.Planets do
     |> Repo.all()
   end
 
+  def list_planets({column, order}) when order in [:asc, :desc] do
+    from(p in Planet, order_by: [{^order, field(p, ^column)}])
+    |> Repo.all()
+  end
+
   #def list, do: @planets
 
   # def list(:sorted_by_name) do

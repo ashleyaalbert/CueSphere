@@ -1,8 +1,21 @@
-<.header>
-  New Message
-  <:subtitle>Use this form to manage message records in your database.</:subtitle>
-</.header>
+<div class="dark:bg-gray-900 dark:text-white p-6">
+  <.header>
+    <div class="dark:text-white">
+      New Message
+    </div>
+  <:subtitle>
+    <div class="dark:text-white">
+      Use this form to manage message records in your database.
+    </div>
+  <br>
+  </:subtitle>
+  </.header>
 
-<.message_form changeset={@message_changeset} action={~p"/messages"} />
+  <.message_form changeset={@message_changeset} action={~p"/messages"} />
 
-<.back navigate={~p"/messages"}>Back to messages</.back>
+  <.back navigate={~p"/messages"}>
+    <div class="dark:text-white">
+      Back to messages
+    </div></.back>
+</div>
+
