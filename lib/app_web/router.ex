@@ -28,8 +28,8 @@ defmodule AppWeb.Router do
     # post "/messages", MessageController, :create
     # get "/messages", MessageController, :index
     resources "/messages", MessageController
-    #live "/thermostat", ThermostatLive
-    live "/live/planets", AppWeb.PlanetsLive
+    # live "/thermostat", ThermostatLive
+    live "/live/planets", PlanetsLive
   end
 
   # Other scopes may use custom stacks.

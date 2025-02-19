@@ -1,5 +1,10 @@
 defmodule AppWeb.ThermostatLive do
+  alias App.Notification
   use AppWeb, :live_view
+
+  alias Notification
+  alias App.Notification
+  alias App.Notification.Message
 
   def render(assigns) do
     ~H"""
@@ -11,8 +16,12 @@ defmodule AppWeb.ThermostatLive do
   end
 
   def mount(_params, _session, socket) do
-    temperature = 70 # Let's assume a fixed temperature for now
-    {:ok, assign(socket, :temperature, temperature)}
+    # Let's assume a fixed temperature for now
+    temperature = 70
+    {:ok,
+     socket
+     |> assign(:temperature, temperature)
+     |> assign(:message_changeset, Notification.change_message(%Message{}))}
   end
 
   def handle_event("change_temperature", %{"direction" => "down"}, socket) do

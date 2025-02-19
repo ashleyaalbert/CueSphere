@@ -36,6 +36,9 @@ defmodule AppWeb.Components.UI.Navbar do
               <.link href="/planets" class="block px-4 py-2 text-gray-300 rounded-md hover:bg-gray-700 hover:text-white dark:text-gray-900 dark:hover:bg-gray-400 dark:hover:text-black transition-all">Planets</.link>
             </li>
             <li>
+              <.link href="/live/planets" class="block px-4 py-2 text-gray-300 rounded-md hover:bg-gray-700 hover:text-white dark:text-gray-900 dark:hover:bg-gray-400 dark:hover:text-black transition-all">Planets Live</.link>
+            </li>
+            <li>
               <.link href="/courses" class="block px-4 py-2 text-gray-300 rounded-md hover:bg-gray-700 hover:text-white dark:text-gray-900 dark:hover:bg-gray-400 dark:hover:text-black transition-all">Courses</.link>
             </li>
             <li>
