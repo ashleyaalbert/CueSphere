@@ -21,7 +21,7 @@ defmodule AppWeb.PageControllerTest do
     refute html_response(conn, 200) =~ "Spring 2025"
     refute html_response(conn, 200) =~ "Fall 2024"
     assert html_response(conn, 200) =~ "This appears to be an invalid semester!"
-  end
+ end
 
   describe "/ contains" do
     setup %{conn: conn} do

@@ -11,9 +11,9 @@ defmodule App.PlanetsTest do
 
   describe "list_planets" do
     setup do
-      Repo.insert!(%Planet{id: 1, name: "B", distance: 1.0, orbital_period: 1.0})
-      Repo.insert!(%Planet{id: 2, name: "A", distance: 1.0, orbital_period: 1.0})
-      %{}
+      Repo.insert!(%Planet{id: 1, name: "A", distance: 1.0, orbital_period: 1.0})
+      Repo.insert!(%Planet{id: 2, name: "B", distance: 2.0, orbital_period: 2.0})
+      :ok
     end
 
     test "/0 returns all planets" do
@@ -25,7 +25,28 @@ defmodule App.PlanetsTest do
     test "/1 lists planets sorted alphabetically" do
       assert [%Planet{name: "A"}, %Planet{name: "B"}] = Planets.list_planets(:sorted_by_name)
     end
+
+    test "sorts planets by name ascending" do
+      assert [%Planet{name: "A"}, %Planet{name: "B"}] =
+               Planets.list_planets({:name, :asc})
+    end
+
+    test "sorts planets by name descending" do
+      assert [%Planet{name: "B"}, %Planet{name: "A"}] =
+               Planets.list_planets({:name, :desc})
+    end
+
+    test "sorts planets by orbital_period ascending" do
+      assert [%Planet{orbital_period: 1.0}, %Planet{orbital_period: 2.0}] =
+               Planets.list_planets({:orbital_period, :asc})
+    end
+
+    test "sorts planets by orbital_period descending" do
+      assert [%Planet{orbital_period: 2.0}, %Planet{orbital_period: 1.0}] =
+               Planets.list_planets({:orbital_period, :desc})
+    end
   end
+
 
   test "create_planet/1 creates a planet with valid inputs" do
     assert [] = Planets.list_planets()

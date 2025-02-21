@@ -19,17 +19,18 @@ defmodule AppWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
-    # get "/courses", PageController, :courses
-    # get "/courses/:slug", PageController, :courses
+    get "/courses", PageController, :courses
+    get "/courses/:slug", PageController, :courses
     get "/planets", PlanetController, :planets
     get "/planets/random", PlanetController, :random
     get "/planets/:id", PlanetController, :index
-    resources "/courses", CourseController
+    #resources "/courses", CourseController
     # post "/messages", MessageController, :create
     # get "/messages", MessageController, :index
     resources "/messages", MessageController
     # live "/thermostat", ThermostatLive
     live "/live/planets", PlanetsLive
+    live "/facemash", FacemashLive
   end
 
   # Other scopes may use custom stacks.

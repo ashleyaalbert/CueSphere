@@ -10,7 +10,7 @@ defmodule AppWeb.MessageControllerTest do
   describe "index" do
     test "lists all messages", %{conn: conn} do
       conn = get(conn, ~p"/messages")
-      assert html_response(conn, 200) =~ "Listing Messages"
+      assert html_response(conn, 200) =~ "All Messages"
     end
   end
 

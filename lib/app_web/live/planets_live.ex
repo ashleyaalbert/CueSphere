@@ -9,8 +9,8 @@ defmodule AppWeb.PlanetsLive do
     {:ok,
      assign(socket,
        message_changeset: Notification.change_message(%Message{}),
-       planets: Planets.list_planets(:sorted_by_name),
-       sort_by: :name,
+       planets: Planets.list_planets(),
+       sort_by: :id,
        sort_order: :asc
      )}
   end

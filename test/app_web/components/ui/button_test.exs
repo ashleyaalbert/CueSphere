@@ -48,7 +48,7 @@ defmodule AppWeb.Components.UI.ButtonTest do
 
     assert html =~ "type=\"submit"
     assert html =~ "py-2.5 px-5 me-2 mb-2"
-    assert html =~ "text-gray-900 bg-white border border-gray-200"
+    assert html =~ "text-gray-900 bg-gray-200 border border-gray-400"
     assert html =~ "</button>"
   end
 end
