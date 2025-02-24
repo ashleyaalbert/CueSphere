@@ -42,6 +42,9 @@ defmodule AppWeb.Components.UI.Navbar do
               <.link href="/courses" class="block px-4 py-2 text-gray-300 rounded-md hover:bg-gray-700 hover:text-white dark:text-gray-900 dark:hover:bg-gray-400 dark:hover:text-black transition-all">Courses</.link>
             </li>
             <li>
+              <.link href="/facemash" class="block px-4 py-2 text-gray-300 rounded-md hover:bg-gray-700 hover:text-white dark:text-gray-900 dark:hover:bg-gray-400 dark:hover:text-black transition-all" aria-current="page">Destinations</.link>
+            </li>
+            <li>
               <.link href="/messages" class="block px-4 py-2 text-gray-300 rounded-md hover:bg-gray-700 hover:text-white dark:text-gray-900 dark:hover:bg-gray-400 dark:hover:text-black transition-all">Messages</.link>
             </li>
             <li>
