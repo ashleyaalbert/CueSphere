@@ -22,7 +22,7 @@ import {Socket} from "phoenix"
 import {LiveSocket} from "phoenix_live_view"
 import topbar from "../vendor/topbar"
 
-let liveSocketPath = process.env.NODE_ENV === "production" ? "/csci379-s25-a/live" : "/live";
+let liveSocketPath = process.env.NODE_ENV === "production" ? "/csci379-25s-a/live" : "/live";
 
 let csrfToken = document.querySelector("meta[name='csrf-token']").getAttribute("content")
 let liveSocket = new LiveSocket(liveSocketPath, Socket, {

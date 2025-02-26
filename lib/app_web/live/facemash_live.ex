@@ -2,8 +2,6 @@ defmodule AppWeb.FacemashLive do
   use AppWeb, :live_view
 
   alias AppWeb.Components.Live.{RateComponent, PollComponent}
-  alias App.Notification
-  alias App.Notification.Message
 
   def render(assigns) do
     ~H"""
@@ -13,14 +11,13 @@ defmodule AppWeb.FacemashLive do
   end
 
   def mount(_params, _session, socket) do
-    changeset = Notification.change_message(%Message{})
     images = Enum.map(1..10, &AppWeb.Endpoint.static_path("/images/facemash/#{&1}.jpg"))
 
     initial_votes = List.duplicate(0, length(images))
 
     current_images = Enum.take_random(images, 2)
 
-    {:ok, assign(socket, images: images, current_images: current_images, votes: initial_votes, total_votes: 0, message_changeset: changeset)}
+    {:ok, assign(socket, images: images, current_images: current_images, votes: initial_votes, total_votes: 0)}
   end
 
   def handle_event("rate", %{"image" => image_url}, socket) do
