@@ -45,9 +45,6 @@ defmodule AppWeb.Components.UI.Navbar do
               <.link href="/facemash" class="block px-4 py-2 text-gray-300 rounded-md hover:bg-gray-700 hover:text-white dark:text-gray-900 dark:hover:bg-gray-400 dark:hover:text-black transition-all" aria-current="page">Destinations</.link>
             </li>
             <li>
-              <.link href="/messages" class="block px-4 py-2 text-gray-300 rounded-md hover:bg-gray-700 hover:text-white dark:text-gray-900 dark:hover:bg-gray-400 dark:hover:text-black transition-all">Messages</.link>
-            </li>
-            <li>
               <button
                 type="button"
                 phx-click={AppWeb.Components.UI.Modal.open_modal()}
@@ -57,6 +54,37 @@ defmodule AppWeb.Components.UI.Navbar do
               </button>
             </li>
 
+            <%= if @current_user do %>
+              <li>
+              <.link href="/messages" class="block px-4 py-2 text-gray-300 rounded-md hover:bg-gray-700 hover:text-white dark:text-gray-900 dark:hover:bg-gray-400 dark:hover:text-black transition-all">Messages</.link>
+            </li>
+              <li>
+                <.link href="/users/settings"
+                  class="block px-4 py-2 text-gray-300 rounded-md hover:bg-gray-700 hover:text-white dark:text-gray-900 dark:hover:bg-gray-400 dark:hover:text-black transition-all"
+                >
+                Settings
+                </.link>
+              </li>
+              <li>
+                <.link href="/users/log_out" method="delete"
+                  class="block px-4 py-2 text-gray-300 rounded-md hover:bg-gray-700 hover:text-white dark:text-gray-900 dark:hover:bg-gray-400 dark:hover:text-black transition-all" > Log out </.link>
+              </li>
+              <li class="block px-4 py-2 text-gray-300 rounded-md dark:text-gray-900 transition-all">
+                {@current_user.email}
+              </li>
+            <% else %>
+            <li>
+              <.link href="/messages/new" class="block px-4 py-2 text-gray-300 rounded-md hover:bg-gray-700 hover:text-white dark:text-gray-900 dark:hover:bg-gray-400 dark:hover:text-black transition-all">Messages</.link>
+            </li>
+              <li>
+                <.link href="/users/register"
+                  class="block px-4 py-2 text-gray-300 rounded-md hover:bg-gray-700 hover:text-white dark:text-gray-900 dark:hover:bg-gray-400 dark:hover:text-black transition-all" > Register </.link>
+              </li>
+              <li>
+                <.link href="/users/log_in" class="block px-4 py-2 text-gray-300 rounded-md hover:bg-gray-700 hover:text-white dark:text-gray-900 dark:hover:bg-gray-400 dark:hover:text-black transition-all"
+                > Log in </.link>
+              </li>
+            <% end %>
           </ol>
         </div>
       </div>

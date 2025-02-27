@@ -5,6 +5,7 @@ defmodule AppWeb.UserSettingsLive do
 
   def render(assigns) do
     ~H"""
+    <div class="bg-white dark:bg-gray-900 p-6">
     <.header class="text-center">
       Account Settings
       <:subtitle>Manage your account email address and password settings</:subtitle>
@@ -29,7 +30,7 @@ defmodule AppWeb.UserSettingsLive do
             required
           />
           <:actions>
-            <.button type="submit" phx-disable-with="Changing...">Change Email</.button>
+            <.button color="alternative" type="submit" phx-disable-with="Changing...">Change Email</.button>
           </:actions>
         </.simple_form>
       </div>
@@ -65,10 +66,28 @@ defmodule AppWeb.UserSettingsLive do
             required
           />
           <:actions>
-            <.button type="submit" phx-disable-with="Changing...">Change Password</.button>
+            <.button color="alternative" type="submit" phx-disable-with="Changing...">Change Password</.button>
           </:actions>
         </.simple_form>
       </div>
+      <div>
+          <.simple_form
+            for={@profile_form}
+            id="profile_form"
+            phx-submit="update_profile"
+            phx-change="validate_profile"
+          >
+            <.input field={@profile_form[:name]} type="text" label="Full Name" required />
+            <.input field={@profile_form[:birthday]} type="date" label="Birthday" required />
+            <:actions>
+              <.button color="alternative" type="submit" phx-disable-with="Updating...">
+                Update Profile
+              </.button>
+            </:actions>
+          </.simple_form>
+        </div>
+
+    </div>
     </div>
     """
   end
@@ -90,6 +109,7 @@ defmodule AppWeb.UserSettingsLive do
     user = socket.assigns.current_user
     email_changeset = Accounts.change_user_email(user)
     password_changeset = Accounts.change_user_password(user)
+    profile_changeset = Accounts.change_user_profile(user)
 
     socket =
       socket
@@ -98,9 +118,32 @@ defmodule AppWeb.UserSettingsLive do
       |> assign(:current_email, user.email)
       |> assign(:email_form, to_form(email_changeset))
       |> assign(:password_form, to_form(password_changeset))
+      |> assign(:profile_form, to_form(profile_changeset))
       |> assign(:trigger_submit, false)
 
     {:ok, socket}
+  end
+
+  def handle_event("validate_profile", %{"user" => user_params}, socket) do
+    profile_form =
+      socket.assigns.current_user
+      |> Accounts.change_user_profile(user_params)
+      |> Map.put(:action, :validate)
+      |> to_form()
+
+    {:noreply, assign(socket, profile_form: profile_form)}
+  end
+
+  def handle_event("update_profile", %{"user" => user_params}, socket) do
+    user = socket.assigns.current_user
+
+    case Accounts.update_user_profile(user, user_params) do
+      {:ok, _updated_user} ->
+        {:noreply, socket |> put_flash(:info, "Profile updated successfully.")}
+
+      {:error, changeset} ->
+        {:noreply, assign(socket, :profile_form, to_form(changeset))}
+    end
   end
 
   def handle_event("validate_email", params, socket) do

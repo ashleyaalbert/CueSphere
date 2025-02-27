@@ -14,7 +14,7 @@ defmodule AppWeb.UserForgotPasswordLive do
       <.simple_form for={@form} id="reset_password_form" phx-submit="send_email">
         <.input field={@form[:email]} type="email" placeholder="Email" required />
         <:actions>
-          <.button type="submit" phx-disable-with="Sending..." class="w-full">
+          <.button color="alternative" type="submit" phx-disable-with="Sending..." class="w-full">
             Send password reset instructions
           </.button>
         </:actions>

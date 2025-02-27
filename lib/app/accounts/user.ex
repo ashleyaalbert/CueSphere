@@ -8,6 +8,8 @@ defmodule App.Accounts.User do
     field :hashed_password, :string, redact: true
     field :current_password, :string, virtual: true, redact: true
     field :confirmed_at, :utc_datetime
+    field :name, :string
+    field :birthday, :date
 
     timestamps(type: :utc_datetime)
   end
@@ -37,9 +39,11 @@ defmodule App.Accounts.User do
   """
   def registration_changeset(user, attrs, opts \\ []) do
     user
-    |> cast(attrs, [:email, :password])
+    |> cast(attrs, [:email, :password, :name, :birthday])
     |> validate_email(opts)
     |> validate_password(opts)
+    |> validate_required([:name, :birthday])
+    |> validate_format(:name, ~r/^[A-Za-z ]+$/, message: "only letters and spaces allowed")
   end
 
   defp validate_email(changeset, opts) do
@@ -157,5 +161,11 @@ defmodule App.Accounts.User do
     else
       add_error(changeset, :current_password, "is not valid")
     end
+  end
+
+  def profile_changeset(user, attrs) do
+    user
+    |> cast(attrs, [:name, :birthday])
+    |> validate_required([:name, :birthday])
   end
 end

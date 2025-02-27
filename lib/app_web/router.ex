@@ -30,7 +30,7 @@ defmodule AppWeb.Router do
     # resources "/courses", CourseController
     # post "/messages", MessageController, :create
     # get "/messages", MessageController, :index
-    resources "/messages", MessageController
+    resources "/messages", MessageController, only: [:create, :new, :show]
     # live "/thermostat", ThermostatLive
     live "/live/planets", PlanetsLive
     # live "/facemash", FacemashLive
@@ -86,6 +86,7 @@ defmodule AppWeb.Router do
       ] do
       live "/users/settings", UserSettingsLive, :edit
       live "/users/settings/confirm_email/:token", UserSettingsLive, :confirm_email
+      resources "/messages", MessageController, only: [:delete, :index]
     end
   end
 
