@@ -8,10 +8,12 @@ defmodule AppWeb.Components.Live.PollComponent do
         <div class="text-xl font-bold mb-2 mt-4">
           Total Votes: <%= @total_votes %>
         </div>
-        <.button color="alternative" class="px-4 py-2 bg-blue-600 text-white rounded-md"
-                phx-click="toggle_results" phx-target={@myself}>
-          <%= if @show_results, do: "Hide Results", else: "Show Results" %>
+        <%= if @total_votes > 0 do %>
+          <.button color="alternative" class="px-4 py-2 bg-blue-600 text-white rounded-md"
+                  phx-click="toggle_results" phx-target={@myself}>
+            <%= if @show_results, do: "Hide Results", else: "Show Results" %>
         </.button>
+        <% end %>
       </div>
 
       <%= if @show_results do %>

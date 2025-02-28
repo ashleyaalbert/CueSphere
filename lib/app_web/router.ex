@@ -32,7 +32,7 @@ defmodule AppWeb.Router do
     # get "/messages", MessageController, :index
     resources "/messages", MessageController, only: [:create, :new, :show]
     # live "/thermostat", ThermostatLive
-    live "/live/planets", PlanetsLive
+    # live "/live/planets", PlanetsLive
     # live "/facemash", FacemashLive
   end
 
@@ -81,24 +81,13 @@ defmodule AppWeb.Router do
     pipe_through [:browser, :require_authenticated_user]
 
     live_session :require_authenticated_user,
-      on_mount: [{AppWeb.UserAuth, :ensure_authenticated},
-                 {AppWeb.UserAuth, :add_message_changeset}
+      on_mount: [
+        {AppWeb.UserAuth, :ensure_authenticated},
+        {AppWeb.UserAuth, :add_message_changeset}
       ] do
       live "/users/settings", UserSettingsLive, :edit
       live "/users/settings/confirm_email/:token", UserSettingsLive, :confirm_email
       resources "/messages", MessageController, only: [:delete, :index]
-    end
-  end
-
-  scope "/", AppWeb do
-    pipe_through([:browser])
-
-    live_session :public_live,
-      on_mount: [
-        {AppWeb.UserAuth, :add_message_changeset}
-      ] do
-      live("/live/thermostat", ThermostatLive)
-      live("/facemash", FacemashLive)
     end
   end
 
@@ -108,7 +97,13 @@ defmodule AppWeb.Router do
     delete "/users/log_out", UserSessionController, :delete
 
     live_session :current_user,
-      on_mount: [{AppWeb.UserAuth, :mount_current_user}] do
+      on_mount: [
+        {AppWeb.UserAuth, :mount_current_user},
+        {AppWeb.UserAuth, :add_message_changeset}
+      ] do
+      live("/live/thermostat", ThermostatLive)
+      live("/facemash", FacemashLive)
+      live("/live/planets", PlanetsLive)
       live "/users/confirm/:token", UserConfirmationLive, :edit
       live "/users/confirm", UserConfirmationInstructionsLive, :new
     end
