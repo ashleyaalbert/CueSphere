@@ -1,6 +1,11 @@
 defmodule AppWeb.Components.UI.Navbar do
   use Phoenix.Component
 
+  use Phoenix.VerifiedRoutes,
+    endpoint: AppWeb.Endpoint,
+    router: AppWeb.Router,
+    statics: AppWeb.static_paths()
+
   alias Phoenix.LiveView.JS
 
   @doc """
@@ -19,30 +24,75 @@ defmodule AppWeb.Components.UI.Navbar do
         <button
           id="menu-button"
           type="button"
-          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 transition-all focus:outline-none dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-0" aria-controls="menu"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 transition-all focus:outline-none dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-0"
+          aria-controls="menu"
           aria-expanded="false"
-          phx-click={toggle_menu()}>
+          phx-click={toggle_menu()}
+        >
           <span class="sr-only">Open main menu</span>
-            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-            </svg>
+          <svg
+            class="w-5 h-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 17 14"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15"
+            />
+          </svg>
         </button>
-          <div class="hidden w-full md:block md:w-auto bg-gray-900 dark:bg-gray-200 rounded-lg p-2 md:p-0 mt-4 md:mt-0" id="menu" phx-click-away={close_menu()}>
-            <ol class="font-medium flex flex-col p-4 md:p-0 mt-4 border-0 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 text-gray-300 dark:text-gray-900">
+        <div
+          class="hidden w-full md:block md:w-auto bg-gray-900 dark:bg-gray-200 rounded-lg p-2 md:p-0 mt-4 md:mt-0"
+          id="menu"
+          phx-click-away={close_menu()}
+        >
+          <ol class="font-medium flex flex-col p-4 md:p-0 mt-4 border-0 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 text-gray-300 dark:text-gray-900">
             <li>
-              <.link href="/" class="block px-4 py-2 text-gray-300 rounded-md hover:bg-gray-700 hover:text-white dark:text-gray-900 dark:hover:bg-gray-400 dark:hover:text-black transition-all" aria-current="page">Home</.link>
+              <.link
+                href={~p"/"}
+                class="block px-4 py-2 text-gray-300 rounded-md hover:bg-gray-700 hover:text-white dark:text-gray-900 dark:hover:bg-gray-400 dark:hover:text-black transition-all"
+                aria-current="page"
+              >
+                Home
+              </.link>
             </li>
             <li>
-              <.link href="/planets" class="block px-4 py-2 text-gray-300 rounded-md hover:bg-gray-700 hover:text-white dark:text-gray-900 dark:hover:bg-gray-400 dark:hover:text-black transition-all">Planets</.link>
+              <.link
+                href={~p"/planets"}
+                class="block px-4 py-2 text-gray-300 rounded-md hover:bg-gray-700 hover:text-white dark:text-gray-900 dark:hover:bg-gray-400 dark:hover:text-black transition-all"
+              >
+                Planets
+              </.link>
             </li>
             <li>
-              <.link href="/live/planets" class="block px-4 py-2 text-gray-300 rounded-md hover:bg-gray-700 hover:text-white dark:text-gray-900 dark:hover:bg-gray-400 dark:hover:text-black transition-all">Planets Live</.link>
+              <.link
+                href={~p"/live/planets"}
+                class="block px-4 py-2 text-gray-300 rounded-md hover:bg-gray-700 hover:text-white dark:text-gray-900 dark:hover:bg-gray-400 dark:hover:text-black transition-all"
+              >
+                Planets Live
+              </.link>
             </li>
             <li>
-              <.link href="/courses" class="block px-4 py-2 text-gray-300 rounded-md hover:bg-gray-700 hover:text-white dark:text-gray-900 dark:hover:bg-gray-400 dark:hover:text-black transition-all">Courses</.link>
+              <.link
+                href={~p"/courses"}
+                class="block px-4 py-2 text-gray-300 rounded-md hover:bg-gray-700 hover:text-white dark:text-gray-900 dark:hover:bg-gray-400 dark:hover:text-black transition-all"
+              >
+                Courses
+              </.link>
             </li>
             <li>
-              <.link href="/facemash" class="block px-4 py-2 text-gray-300 rounded-md hover:bg-gray-700 hover:text-white dark:text-gray-900 dark:hover:bg-gray-400 dark:hover:text-black transition-all" aria-current="page">Destinations</.link>
+              <.link
+                href={~p"/facemash"}
+                class="block px-4 py-2 text-gray-300 rounded-md hover:bg-gray-700 hover:text-white dark:text-gray-900 dark:hover:bg-gray-400 dark:hover:text-black transition-all"
+                aria-current="page"
+              >
+                Destinations
+              </.link>
             </li>
             <li>
               <button
@@ -56,33 +106,57 @@ defmodule AppWeb.Components.UI.Navbar do
 
             <%= if @current_user do %>
               <li>
-              <.link href="/messages" class="block px-4 py-2 text-gray-300 rounded-md hover:bg-gray-700 hover:text-white dark:text-gray-900 dark:hover:bg-gray-400 dark:hover:text-black transition-all">Messages</.link>
-            </li>
-              <li>
-                <.link href="/users/settings"
+                <.link
+                  href={~p"/messages"}
                   class="block px-4 py-2 text-gray-300 rounded-md hover:bg-gray-700 hover:text-white dark:text-gray-900 dark:hover:bg-gray-400 dark:hover:text-black transition-all"
                 >
-                Settings
+                  Messages
                 </.link>
               </li>
               <li>
-                <.link href="/users/log_out" method="delete"
-                  class="block px-4 py-2 text-gray-300 rounded-md hover:bg-gray-700 hover:text-white dark:text-gray-900 dark:hover:bg-gray-400 dark:hover:text-black transition-all" > Log out </.link>
+                <.link
+                  href={~p"/users/settings"}
+                  class="block px-4 py-2 text-gray-300 rounded-md hover:bg-gray-700 hover:text-white dark:text-gray-900 dark:hover:bg-gray-400 dark:hover:text-black transition-all"
+                >
+                  Settings
+                </.link>
+              </li>
+              <li>
+                <.link
+                  href={~p"/users/log_out"}
+                  method="delete"
+                  class="block px-4 py-2 text-gray-300 rounded-md hover:bg-gray-700 hover:text-white dark:text-gray-900 dark:hover:bg-gray-400 dark:hover:text-black transition-all"
+                >
+                  Log out
+                </.link>
               </li>
               <li class="block px-4 py-2 text-gray-300 rounded-md dark:text-gray-900 transition-all">
                 {@current_user.email}
               </li>
             <% else %>
-            <li>
-              <.link href="/messages/new" class="block px-4 py-2 text-gray-300 rounded-md hover:bg-gray-700 hover:text-white dark:text-gray-900 dark:hover:bg-gray-400 dark:hover:text-black transition-all">Messages</.link>
-            </li>
               <li>
-                <.link href="/users/register"
-                  class="block px-4 py-2 text-gray-300 rounded-md hover:bg-gray-700 hover:text-white dark:text-gray-900 dark:hover:bg-gray-400 dark:hover:text-black transition-all" > Register </.link>
+                <.link
+                  href={~p"/messages/new"}
+                  class="block px-4 py-2 text-gray-300 rounded-md hover:bg-gray-700 hover:text-white dark:text-gray-900 dark:hover:bg-gray-400 dark:hover:text-black transition-all"
+                >
+                  Messages
+                </.link>
               </li>
               <li>
-                <.link href="/users/log_in" class="block px-4 py-2 text-gray-300 rounded-md hover:bg-gray-700 hover:text-white dark:text-gray-900 dark:hover:bg-gray-400 dark:hover:text-black transition-all"
-                > Log in </.link>
+                <.link
+                  href={~p"/users/register"}
+                  class="block px-4 py-2 text-gray-300 rounded-md hover:bg-gray-700 hover:text-white dark:text-gray-900 dark:hover:bg-gray-400 dark:hover:text-black transition-all"
+                >
+                  Register
+                </.link>
+              </li>
+              <li>
+                <.link
+                  href={~p"/users/log_in"}
+                  class="block px-4 py-2 text-gray-300 rounded-md hover:bg-gray-700 hover:text-white dark:text-gray-900 dark:hover:bg-gray-400 dark:hover:text-black transition-all"
+                >
+                  Log in
+                </.link>
               </li>
             <% end %>
           </ol>
@@ -103,5 +177,4 @@ defmodule AppWeb.Components.UI.Navbar do
     |> JS.add_class("hidden", to: "#menu")
     |> JS.set_attribute({"aria-expanded", "false"}, to: "#menu-button")
   end
-
 end
