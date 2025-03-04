@@ -107,6 +107,7 @@ defmodule AppWeb.Router do
       live("/live/planets", PlanetsLive)
       live "/users/confirm/:token", UserConfirmationLive, :edit
       live "/users/confirm", UserConfirmationInstructionsLive, :new
+
       live "/topics", TopicLive.Index, :index
       live "/topics/:slug", TopicLive.Show, :show
     end
