@@ -14,7 +14,8 @@ defmodule AppWeb.Components.UI do
         Pill,
         Tag,
         Navbar,
-        Modal
+        Modal,
+        Icon
       }
     end
   end

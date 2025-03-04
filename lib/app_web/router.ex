@@ -28,8 +28,6 @@ defmodule AppWeb.Router do
     get "/planets/random", PlanetController, :random
     get "/planets/:id", PlanetController, :index
     # resources "/courses", CourseController
-    # post "/messages", MessageController, :create
-    # get "/messages", MessageController, :index
     resources "/messages", MessageController, only: [:create, :new, :show]
     # live "/thermostat", ThermostatLive
     # live "/live/planets", PlanetsLive
@@ -88,6 +86,9 @@ defmodule AppWeb.Router do
       live "/users/settings", UserSettingsLive, :edit
       live "/users/settings/confirm_email/:token", UserSettingsLive, :confirm_email
       resources "/messages", MessageController, only: [:delete, :index]
+      live "/topics/new", TopicLive.Index, :new
+      live "/topics/:slug/edit", TopicLive.Index, :edit
+      live "/topics/:slug/show/edit", TopicLive.Show, :edit
     end
   end
 
@@ -106,6 +107,8 @@ defmodule AppWeb.Router do
       live("/live/planets", PlanetsLive)
       live "/users/confirm/:token", UserConfirmationLive, :edit
       live "/users/confirm", UserConfirmationInstructionsLive, :new
+      live "/topics", TopicLive.Index, :index
+      live "/topics/:slug", TopicLive.Show, :show
     end
   end
 end

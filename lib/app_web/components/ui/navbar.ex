@@ -7,6 +7,7 @@ defmodule AppWeb.Components.UI.Navbar do
     statics: AppWeb.static_paths()
 
   alias Phoenix.LiveView.JS
+  alias AppWeb.Components.UI.Modal
 
   @doc """
   Renders a navbar.
@@ -19,151 +20,89 @@ defmodule AppWeb.Components.UI.Navbar do
 
   def navbar(assigns) do
     ~H"""
-    <nav class="bg-border-gray-800 dark:bg-gray-300">
-      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <button
-          id="menu-button"
-          type="button"
-          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 transition-all focus:outline-none dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-0"
-          aria-controls="menu"
-          aria-expanded="false"
-          phx-click={toggle_menu()}
-        >
-          <span class="sr-only">Open main menu</span>
-          <svg
-            class="w-5 h-5"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 17 14"
-          >
-            <path
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M1 1h15M1 7h15M1 13h15"
-            />
-          </svg>
-        </button>
-        <div
-          class="hidden w-full md:block md:w-auto bg-gray-900 dark:bg-gray-200 rounded-lg p-2 md:p-0 mt-4 md:mt-0"
-          id="menu"
-          phx-click-away={close_menu()}
-        >
-          <ol class="font-medium flex flex-col p-4 md:p-0 mt-4 border-0 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 text-gray-300 dark:text-gray-900">
-            <li>
-              <.link
-                href={~p"/"}
-                class="block px-4 py-2 text-gray-300 rounded-md hover:bg-gray-700 hover:text-white dark:text-gray-900 dark:hover:bg-gray-400 dark:hover:text-black transition-all"
-                aria-current="page"
-              >
-                Home
-              </.link>
-            </li>
-            <li>
-              <.link
-                href={~p"/planets"}
-                class="block px-4 py-2 text-gray-300 rounded-md hover:bg-gray-700 hover:text-white dark:text-gray-900 dark:hover:bg-gray-400 dark:hover:text-black transition-all"
-              >
-                Planets
-              </.link>
-            </li>
-            <li>
-              <.link
-                href={~p"/live/planets"}
-                class="block px-4 py-2 text-gray-300 rounded-md hover:bg-gray-700 hover:text-white dark:text-gray-900 dark:hover:bg-gray-400 dark:hover:text-black transition-all"
-              >
-                Planets Live
-              </.link>
-            </li>
-            <li>
-              <.link
-                href={~p"/courses"}
-                class="block px-4 py-2 text-gray-300 rounded-md hover:bg-gray-700 hover:text-white dark:text-gray-900 dark:hover:bg-gray-400 dark:hover:text-black transition-all"
-              >
-                Courses
-              </.link>
-            </li>
-            <li>
-              <.link
-                href={~p"/facemash"}
-                class="block px-4 py-2 text-gray-300 rounded-md hover:bg-gray-700 hover:text-white dark:text-gray-900 dark:hover:bg-gray-400 dark:hover:text-black transition-all"
-                aria-current="page"
-              >
-                Destinations
-              </.link>
-            </li>
-            <li>
-              <button
-                type="button"
-                phx-click={AppWeb.Components.UI.Modal.open_modal()}
-                class="block px-4 py-2 text-gray-300 rounded-md hover:bg-gray-700 hover:text-white dark:text-gray-900 dark:hover:bg-gray-400 dark:hover:text-black transition-all"
-              >
-                Contact Us
-              </button>
-            </li>
+  <nav class="bg-gray-800 dark:bg-gray-300">
+    <div class="max-w-screen-xl flex items-center justify-between mx-auto p-4">
 
-            <%= if @current_user do %>
-              <li>
-                <.link
-                  href={~p"/messages"}
-                  class="block px-4 py-2 text-gray-300 rounded-md hover:bg-gray-700 hover:text-white dark:text-gray-900 dark:hover:bg-gray-400 dark:hover:text-black transition-all"
-                >
-                  Messages
-                </.link>
-              </li>
-              <li>
-                <.link
-                  href={~p"/users/settings"}
-                  class="block px-4 py-2 text-gray-300 rounded-md hover:bg-gray-700 hover:text-white dark:text-gray-900 dark:hover:bg-gray-400 dark:hover:text-black transition-all"
-                >
-                  Settings
-                </.link>
-              </li>
-              <li>
-                <.link
-                  href={~p"/users/log_out"}
-                  method="delete"
-                  class="block px-4 py-2 text-gray-300 rounded-md hover:bg-gray-700 hover:text-white dark:text-gray-900 dark:hover:bg-gray-400 dark:hover:text-black transition-all"
-                >
-                  Log out
-                </.link>
-              </li>
-              <li class="block px-4 py-2 text-gray-300 rounded-md dark:text-gray-900 transition-all">
-                {@current_user.email}
-              </li>
-            <% else %>
-              <li>
-                <.link
-                  href={~p"/messages/new"}
-                  class="block px-4 py-2 text-gray-300 rounded-md hover:bg-gray-700 hover:text-white dark:text-gray-900 dark:hover:bg-gray-400 dark:hover:text-black transition-all"
-                >
-                  Messages
-                </.link>
-              </li>
-              <li>
-                <.link
-                  href={~p"/users/register"}
-                  class="block px-4 py-2 text-gray-300 rounded-md hover:bg-gray-700 hover:text-white dark:text-gray-900 dark:hover:bg-gray-400 dark:hover:text-black transition-all"
-                >
-                  Register
-                </.link>
-              </li>
-              <li>
-                <.link
-                  href={~p"/users/log_in"}
-                  class="block px-4 py-2 text-gray-300 rounded-md hover:bg-gray-700 hover:text-white dark:text-gray-900 dark:hover:bg-gray-400 dark:hover:text-black transition-all"
-                >
-                  Log in
-                </.link>
-              </li>
-            <% end %>
-          </ol>
-        </div>
+      <!-- Mobile Menu Button -->
+      <button
+        id="menu-button"
+        type="button"
+        class="md:hidden p-2 w-10 h-10 text-gray-500 rounded-lg hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700"
+        aria-controls="menu"
+        aria-expanded="false"
+        phx-click={toggle_menu()}
+      >
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+        </svg>
+      </button>
+
+      <!-- Navigation Links -->
+      <div id="menu" class="hidden w-full md:flex md:items-center">
+        <ol class="flex flex-col md:flex-row md:space-x-8 text-gray-300 dark:text-gray-900">
+
+          <!-- Home Dropdown -->
+          <li class="relative group">
+            <.link href={~p"/"} class="px-4 py-2 block hover:bg-gray-700 dark:hover:bg-gray-400 rounded-md transition-all">Home</.link>
+            <ul class="hidden group-hover:block group-hover:delay-150 md:absolute md:left-0 md:bg-gray-800 md:dark:bg-gray-300 md:mt-1 md:w-44 md:rounded-md md:shadow-lg md:border md:border-gray-700 md:dark:border-gray-400
+              md:p-0 p-2 bg-gray-900 dark:bg-gray-200 rounded-md md:shadow-none">
+              <li><.link href={~p"/courses"} class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">Courses</.link></li>
+              <li><.link href={~p"/facemash"} class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">Destinations</.link></li>
+            </ul>
+          </li>
+
+          <!-- Planets Dropdown -->
+          <li class="relative group">
+            <.link href={~p"/planets"} class="px-4 py-2 block hover:bg-gray-700 dark:hover:bg-gray-400 rounded-md transition-all">Planets</.link>
+            <ul class="hidden group-hover:block group-hover:delay-150 md:absolute md:left-0 md:bg-gray-800 md:dark:bg-gray-300 md:mt-1 md:w-44 md:rounded-md md:shadow-lg md:border md:border-gray-700 md:dark:border-gray-400
+              md:p-0 p-2 bg-gray-900 dark:bg-gray-200 rounded-md md:shadow-none">
+              <li><.link href={~p"/live/planets"} class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">Planets Live</.link></li>
+            </ul>
+          </li>
+
+          <!-- Contact Us Dropdown -->
+          <li class="relative group">
+            <button
+              type="button"
+              phx-click={Modal.show_modal("contact-modal")}
+              class="px-4 py-2 block hover:bg-gray-700 dark:hover:bg-gray-400 rounded-md transition-all"
+            >
+              Contact Us
+            </button>
+            <ul class="hidden group-hover:block group-hover:delay-150 md:absolute md:left-0 md:bg-gray-800 md:dark:bg-gray-300 md:mt-1 md:w-44 md:rounded-md md:shadow-lg md:border md:border-gray-700 md:dark:border-gray-400
+              md:p-0 p-2 bg-gray-900 dark:bg-gray-200 rounded-md md:shadow-none">
+              <li><.link href={~p"/messages"} class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">Messages</.link></li>
+            </ul>
+          </li>
+
+          <!-- User Authentication Dropdown -->
+          <%= if @current_user do %>
+            <li class="relative group">
+              <.link href="#" class="px-4 py-2 block hover:bg-gray-700 dark:hover:bg-gray-400 rounded-md transition-all">
+                <%= @current_user.email %>
+              </.link>
+              <ul class="hidden group-hover:block group-hover:delay-150 md:absolute md:left-0 md:bg-gray-800 md:dark:bg-gray-300 md:mt-1 md:w-44 md:rounded-md md:shadow-lg md:border md:border-gray-700 md:dark:border-gray-400
+                md:p-0 p-2 bg-gray-900 dark:bg-gray-200 rounded-md md:shadow-none">
+                <li><.link href={~p"/users/settings"} class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">Settings</.link></li>
+                <li><.link href={~p"/users/log_out"} method="delete" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">Log out</.link></li>
+              </ul>
+            </li>
+          <% else %>
+            <li class="relative group">
+              <.link href={~p"/users/log_in"} class="px-4 py-2 block hover:bg-gray-700 dark:hover:bg-gray-400 rounded-md transition-all">Log in</.link>
+              <ul class="hidden group-hover:block group-hover:delay-150 md:absolute md:left-0 md:bg-gray-800 md:dark:bg-gray-300 md:mt-1 md:w-44 md:rounded-md md:shadow-lg md:border md:border-gray-700 md:dark:border-gray-400
+                md:p-0 p-2 bg-gray-900 dark:bg-gray-200 rounded-md md:shadow-none">
+                <li><.link href={~p"/users/register"} class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">Register</.link></li>
+              </ul>
+            </li>
+          <% end %>
+
+        </ol>
       </div>
-    </nav>
-    """
+    </div>
+  </nav>
+  """
   end
 
   defp toggle_menu do

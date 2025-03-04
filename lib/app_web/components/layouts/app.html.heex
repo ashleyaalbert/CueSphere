@@ -80,7 +80,7 @@
   </div>
 </main>
 
-<.modal heading="Contact us" backdrop="static" small>
+<.modal id="contact-modal" heading="Contact us" backdrop="static">
  <.simple_form :let={f} for={@message_changeset} action={~p"/messages"} class="mb-6">
   <%!-- <.error :if={@message_changeset.action}>
     Oops, something went wrong! Please check the errors below.
