@@ -1,7 +1,7 @@
 <.header>
   Listing Pages
   <:actions>
-    <.link patch={~p"/topics/#{@topic.slug}/pages/:id"}>
+    <.link patch={~p"/topics/#{@topic.slug}/pages/new"}>
       <.button>New Page</.button>
     </.link>
   </:actions>
@@ -10,15 +10,15 @@
 <.table
   id="pages"
   rows={@streams.pages}
-  row_click={fn {_id, page} -> JS.navigate(~p"/topics/#{page.topic.slug}/pages/#{page.id || :new}") end}
+  row_click={fn {_id, page} -> JS.navigate(~p"/topics/#{@topic.slug}/pages/#{page.id || :new}") end}
 >
   <:col :let={{_id, page}} label="Content">{page.content}</:col>
 
   <:action :let={{_id, page}}>
     <div class="sr-only">
-      <.link navigate={~p"/topics/#{page.topic.slug}/pages/#{page.id || :new}"}>Show</.link>
+      <.link navigate={~p"/topics/#{@topic.slug}/pages/#{page.id || :new}"}>Show</.link>
     </div>
-    <.link patch={~p"/topics/#{page.topic.slug}/pages/#{page.id}/edit"}>Edit</.link>
+    <.link patch={~p"/topics/#{@topic.slug}/pages/#{page.id}/edit"}>Edit</.link>
   </:action>
   <:action :let={{id, page}}>
     <.link
@@ -30,6 +30,8 @@
   </:action>
 </.table>
 
+<.back navigate={~p"/topics/#{@topic.slug}"}>Back to topic</.back>
+
 <.modal id="page-modal" :if={@live_action in [:new, :edit]}>
   <.live_component
     module={AppWeb.PageLive.FormComponent}
@@ -37,6 +39,6 @@
     title={@page_title}
     action={@live_action}
     page={@page}
-    patch={~p"/topics/#{@topic.slug}/pages"}
+    patch={~p"/topics/#{@topic.slug}/pages/new"}
   />
 </.modal>
