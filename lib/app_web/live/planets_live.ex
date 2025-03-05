@@ -28,6 +28,14 @@ defmodule AppWeb.PlanetsLive do
     {:noreply, assign(socket, planets: sorted_planets, sort_by: column, sort_order: new_order)}
   end
 
+  def handle_event(event, params, socket) do
+    AppWeb.LiveHelper.handle_event(event, params, socket)
+  end
+
+  def handle_info(message, socket) do
+    AppWeb.LiveHelper.handle_info(message, socket)
+  end
+
   def render(assigns) do
     ~H"""
     <div class="max-w-4xl mx-auto mt-5">

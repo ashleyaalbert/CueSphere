@@ -1,0 +1,42 @@
+<.header>
+  Listing Pages
+  <:actions>
+    <.link patch={~p"/topics/#{@topic.slug}/pages/:id"}>
+      <.button>New Page</.button>
+    </.link>
+  </:actions>
+</.header>
+
+<.table
+  id="pages"
+  rows={@streams.pages}
+  row_click={fn {_id, page} -> JS.navigate(~p"/topics/#{page.topic.slug}/pages/#{page.id || :new}") end}
+>
+  <:col :let={{_id, page}} label="Content">{page.content}</:col>
+
+  <:action :let={{_id, page}}>
+    <div class="sr-only">
+      <.link navigate={~p"/topics/#{page.topic.slug}/pages/#{page.id || :new}"}>Show</.link>
+    </div>
+    <.link patch={~p"/topics/#{page.topic.slug}/pages/#{page.id}/edit"}>Edit</.link>
+  </:action>
+  <:action :let={{id, page}}>
+    <.link
+      phx-click={JS.push("delete", value: %{id: page.id}) |> hide("##{id}")}
+      data-confirm="Are you sure?"
+    >
+      Delete
+    </.link>
+  </:action>
+</.table>
+
+<.modal id="page-modal" :if={@live_action in [:new, :edit]}>
+  <.live_component
+    module={AppWeb.PageLive.FormComponent}
+    id={@page.id || :new}
+    title={@page_title}
+    action={@live_action}
+    page={@page}
+    patch={~p"/topics/#{@topic.slug}/pages"}
+  />
+</.modal>

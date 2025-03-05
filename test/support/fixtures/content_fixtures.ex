@@ -23,4 +23,18 @@ defmodule App.ContentFixtures do
 
     topic
   end
+
+  @doc """
+  Generate a page.
+  """
+  def page_fixture(attrs \\ %{}) do
+    {:ok, page} =
+      attrs
+      |> Enum.into(%{
+        content: "some content"
+      })
+      |> App.Content.create_page()
+
+    page
+  end
 end

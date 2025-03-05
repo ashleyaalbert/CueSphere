@@ -37,11 +37,19 @@ defmodule AppWeb.TopicLive.Index do
     {:noreply, stream_insert(socket, :topics, topic)}
   end
 
+  def handle_info(message, socket) do
+    AppWeb.LiveHelper.handle_info(message, socket)
+  end
+
   @impl true
-  def handle_event("delete", %{"id" => id}, socket) do
-    topic = Content.get_topic!(id)
+  def handle_event("delete", %{"slug" => slug}, socket) do
+    topic = Content.get_topic_by_slug!(slug)
     {:ok, _} = Content.delete_topic(topic)
 
     {:noreply, stream_delete(socket, :topics, topic)}
+  end
+
+  def handle_event(event, params, socket) do
+    AppWeb.LiveHelper.handle_event(event, params, socket)
   end
 end

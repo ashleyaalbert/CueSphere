@@ -86,9 +86,18 @@ defmodule AppWeb.Router do
       live "/users/settings", UserSettingsLive, :edit
       live "/users/settings/confirm_email/:token", UserSettingsLive, :confirm_email
       resources "/messages", MessageController, only: [:delete, :index]
+
+      live "/topics", TopicLive.Index, :index
       live "/topics/new", TopicLive.Index, :new
       live "/topics/:slug/edit", TopicLive.Index, :edit
       live "/topics/:slug/show/edit", TopicLive.Show, :edit
+      live "/topics/:slug", TopicLive.Show, :show
+
+      live "/topics/:slug/pages", PageLive.Index, :index
+      live "/topics/:slug/pages/:id", PageLive.Show, :show
+      live "/topics/:slug/pages/:id/edit", PageLive.Show, :edit
+      # live "/topics/:slug/:page_id/edit", PageLive.Show, :edit
+      live "/topics/:slug/pages/new", PageLive.Index, :new
     end
   end
 
@@ -108,8 +117,7 @@ defmodule AppWeb.Router do
       live "/users/confirm/:token", UserConfirmationLive, :edit
       live "/users/confirm", UserConfirmationInstructionsLive, :new
 
-      live "/topics", TopicLive.Index, :index
-      live "/topics/:slug", TopicLive.Show, :show
+
     end
   end
 end

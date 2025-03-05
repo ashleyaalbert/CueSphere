@@ -9,11 +9,22 @@ defmodule AppWeb.TopicLive.Show do
   end
 
   @impl true
-  def handle_params(%{"slug" => slug}, _, socket) do
+  def handle_params(%{"slug" => slug, "id" => id}, _, socket) do
+    topic = Content.get_topic_by_slug!(slug)
+    page = Content.get_page!(id)
     {:noreply,
      socket
      |> assign(:page_title, page_title(socket.assigns.live_action))
-     |> assign(:topic, Content.get_topic_by_slug!(slug))}
+     |> assign(:topic, topic)
+     |> assign(:page, page)}
+  end
+
+  def handle_params(%{"slug" => slug}, _, socket) do
+    topic = Content.get_topic_by_slug!(slug)
+    {:noreply,
+     socket
+     |> assign(:page_title, page_title(socket.assigns.live_action))
+     |> assign(:topic, topic)}
   end
 
   defp page_title(:show), do: "Show Topic"

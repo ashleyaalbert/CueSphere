@@ -31,4 +31,12 @@ defmodule AppWeb.ThermostatLive do
   def handle_event("change_temperature", %{"direction" => "up"}, socket) do
     {:noreply, update(socket, :temperature, &(&1 + 1))}
   end
+
+  def handle_event(event, params, socket) do
+    AppWeb.LiveHelper.handle_event(event, params, socket)
+  end
+
+  def handle_info(message, socket) do
+    AppWeb.LiveHelper.handle_info(message, socket)
+  end
 end

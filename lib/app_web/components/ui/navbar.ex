@@ -73,6 +73,7 @@ defmodule AppWeb.Components.UI.Navbar do
             <ul class="hidden group-hover:block group-hover:delay-150 md:absolute md:left-0 md:bg-gray-800 md:dark:bg-gray-300 md:mt-1 md:w-44 md:rounded-md md:shadow-lg md:border md:border-gray-700 md:dark:border-gray-400
               md:p-0 p-2 bg-gray-900 dark:bg-gray-200 rounded-md md:shadow-none">
               <li><.link href={~p"/messages"} class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">Messages</.link></li>
+              <li><.link href={~p"/topics"} class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">Topics</.link></li>
             </ul>
           </li>
 
@@ -85,7 +86,7 @@ defmodule AppWeb.Components.UI.Navbar do
               <ul class="hidden group-hover:block group-hover:delay-150 md:absolute md:left-0 md:bg-gray-800 md:dark:bg-gray-300 md:mt-1 md:w-44 md:rounded-md md:shadow-lg md:border md:border-gray-700 md:dark:border-gray-400
                 md:p-0 p-2 bg-gray-900 dark:bg-gray-200 rounded-md md:shadow-none">
                 <li><.link href={~p"/users/settings"} class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">Settings</.link></li>
-                <li><.link href={~p"/users/log_out"} method="delete" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">Log out</.link></li>
+                <li><.link id="logout-button" href={~p"/users/log_out"} method="DELETE" phx-hook="LogoutButton" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">Log out</.link></li>
               </ul>
             </li>
           <% else %>

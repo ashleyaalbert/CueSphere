@@ -5,6 +5,7 @@ defmodule App.Content.Topic do
   schema "topics" do
     field :title, :string
     field :slug, :string
+    has_many :pages, App.Content.Page
   end
 
   @doc false

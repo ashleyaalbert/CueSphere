@@ -27,7 +27,8 @@ let liveSocketPath = process.env.NODE_ENV === "production" ? "/csci379-25s-a/liv
 let csrfToken = document.querySelector("meta[name='csrf-token']").getAttribute("content")
 let liveSocket = new LiveSocket(liveSocketPath, Socket, {
   longPollFallbackMs: 2500,
-  params: {_csrf_token: csrfToken}
+  params: {_csrf_token: csrfToken},
+  hooks: Hooks
 })
 
 
@@ -68,3 +69,13 @@ liveSocket.connect()
 // >> liveSocket.disableLatencySim()
 window.liveSocket = liveSocket
 
+let Hooks = {}; // this may already be here
+
+Hooks.LogoutButton = {
+  mounted() {
+    this.handleEvent("logout", () => {
+      let btn = document.getElementById("logout-button");
+      if (btn) btn.click();
+    });
+  }
+};

@@ -39,4 +39,12 @@ defmodule AppWeb.FacemashLive do
         {:noreply, assign(socket, votes: votes, total_votes: total_votes, current_images: new_images)}
     end
   end
+
+  def handle_event(event, params, socket) do
+    AppWeb.LiveHelper.handle_event(event, params, socket)
+  end
+
+  def handle_info(message, socket) do
+    AppWeb.LiveHelper.handle_info(message, socket)
+  end
 end
