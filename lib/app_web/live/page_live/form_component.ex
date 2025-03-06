@@ -19,17 +19,18 @@ defmodule AppWeb.PageLive.FormComponent do
         phx-change="validate"
         phx-submit="save"
       >
-        <.input field={@form[:topic_id]} type="select" value={@topic.id} />
-        <.input field={@form[:content]} type="text" label="Content" />
-        <!-- Topic Dropdown -->
+
         <.input
           field={@form[:topic_id]}
           type="select"
           label="Topic"
-          options={Enum.map(@topics, &{&1.name, &1.id})}
+          options={Enum.map(@topics, &{&1.title, &1.id})}
         />
+
+        <.input field={@form[:content]} type="text" label="Content" />
+
         <:actions>
-          <.button phx-disable-with="Saving...">Save Page</.button>
+          <.button type="submit" phx-disable-with="Saving...">Save Page</.button>
         </:actions>
       </.simple_form>
     </div>
@@ -66,7 +67,7 @@ defmodule AppWeb.PageLive.FormComponent do
         {:noreply,
          socket
          |> put_flash(:info, "Page updated successfully")
-         |> push_patch(to: socket.assigns.patch)}
+         |> push_patch(to: socket.assigns.page)}
 
       {:error, %Ecto.Changeset{} = changeset} ->
         {:noreply, assign(socket, form: to_form(changeset))}
@@ -81,7 +82,7 @@ defmodule AppWeb.PageLive.FormComponent do
         {:noreply,
          socket
          |> put_flash(:info, "Page created successfully")
-         |> push_patch(to: socket.assigns.patch)}
+         |> push_patch(to: socket.assigns.page)}
 
       {:error, %Ecto.Changeset{} = changeset} ->
         {:noreply, assign(socket, form: to_form(changeset))}

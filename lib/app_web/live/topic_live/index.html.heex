@@ -34,9 +34,9 @@
 </.table>
 
 <.modal
-  :if={@live_action in [:new, :edit]}
-  id="topic-modal"
   show
+  id="topic-modal"
+  :if={@live_action in [:new, :edit]}
   on_cancel={JS.patch(~p"/topics")}
 >
   <.live_component

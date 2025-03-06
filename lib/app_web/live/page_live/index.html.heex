@@ -32,13 +32,18 @@
 
 <.back navigate={~p"/topics/#{@topic.slug}"}>Back to topic</.back>
 
-<.modal id="page-modal" :if={@live_action in [:new, :edit]}>
+<.modal
+  show
+  id="page-modal"
+  :if={@live_action in [:new, :edit]}
+  on_cancel={JS.patch(~p"/topics/#{@topic.slug}/pages")}
+>
   <.live_component
     module={AppWeb.PageLive.FormComponent}
-    id={@page.id || :new}
+    id={@page && @page.id || :new}
     title={@page_title}
     action={@live_action}
     page={@page}
-    patch={~p"/topics/#{@topic.slug}/pages/new"}
+    patch={~p"/topics/#{@topic.slug}/pages"}
   />
 </.modal>

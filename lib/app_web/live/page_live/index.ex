@@ -5,23 +5,27 @@ defmodule AppWeb.PageLive.Index do
   alias App.Content.Page
 
   @impl true
-  def mount(_params, _session, socket) do
-    {:ok, stream(socket, :pages, Content.list_pages())}
+  # def mount(_params, _session, socket) do
+  #   {:ok, stream(socket, :pages, Content.list_pages())}
+  # end
+
+  def mount(%{"slug" => slug}, _session, socket) do
+    topic = Content.get_topic_by_slug!(slug)  # Get the topic
+    pages = Content.list_pages_by_topic(topic.id)  # Fetch only pages for this topic
+
+    {:ok, stream(assign(socket, topic: topic), :pages, pages)}
   end
 
-  def handle_params(%{"slug" => slug}, _, socket) do
+  @impl true
+  def handle_params(%{"slug" => slug} = params, _, socket) do
     topic = Content.get_topic_by_slug!(slug)
     pages = Content.list_pages_by_topic(topic.id)
 
     {:noreply,
      socket
      |> assign(:topic, topic)
-     |> stream(:pages, pages)}
-  end
-
-  @impl true
-  def handle_params(params, _url, socket) do
-    {:noreply, apply_action(socket, socket.assigns.live_action, params)}
+     |> stream(:pages, pages)
+     |> apply_action(socket.assigns.live_action, params)}
   end
 
   defp apply_action(socket, :edit, %{"id" => id}) do

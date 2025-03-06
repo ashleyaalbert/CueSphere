@@ -94,10 +94,10 @@ defmodule AppWeb.Router do
       live "/topics/:slug", TopicLive.Show, :show
 
       live "/topics/:slug/pages", PageLive.Index, :index
+      live "/topics/:slug/pages/new", PageLive.Index, :new
       live "/topics/:slug/pages/:id", PageLive.Show, :show
       live "/topics/:slug/pages/:id/edit", PageLive.Show, :edit
       # live "/topics/:slug/:page_id/edit", PageLive.Show, :edit
-      live "/topics/:slug/pages/new", PageLive.Index, :new
     end
   end
 
