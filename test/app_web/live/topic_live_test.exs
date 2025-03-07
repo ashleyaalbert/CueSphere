@@ -3,18 +3,20 @@ defmodule AppWeb.TopicLiveTest do
 
   import Phoenix.LiveViewTest
   import App.ContentFixtures
+  import App.AccountsFixtures
 
   @create_attrs %{title: "some title", slug: "some slug"}
   @update_attrs %{title: "some updated title", slug: "some updated slug"}
   @invalid_attrs %{title: nil, slug: nil}
 
   defp create_topic(_) do
+    user = user_fixture()
     topic = topic_fixture()
-    %{topic: topic}
+    %{user: user, topic: topic}
   end
 
   describe "Index" do
-    setup [:create_topic]
+    setup [:register_and_log_in_user, :create_topic]
 
     test "lists all topics", %{conn: conn, topic: topic} do
       {:ok, _index_live, html} = live(conn, ~p"/topics")
@@ -49,10 +51,10 @@ defmodule AppWeb.TopicLiveTest do
     test "updates topic in listing", %{conn: conn, topic: topic} do
       {:ok, index_live, _html} = live(conn, ~p"/topics")
 
-      assert index_live |> element("#topics-#{topic.id} a", "Edit") |> render_click() =~
+      assert index_live |> element("#topics-#{topic.slug} a", "Edit") |> render_click() =~
                "Edit Topic"
 
-      assert_patch(index_live, ~p"/topics/#{topic}/edit")
+      assert_patch(index_live, ~p"/topics/#{topic.slug}/edit")
 
       assert index_live
              |> form("#topic-form", topic: @invalid_attrs)
@@ -72,16 +74,16 @@ defmodule AppWeb.TopicLiveTest do
     test "deletes topic in listing", %{conn: conn, topic: topic} do
       {:ok, index_live, _html} = live(conn, ~p"/topics")
 
-      assert index_live |> element("#topics-#{topic.id} a", "Delete") |> render_click()
-      refute has_element?(index_live, "#topics-#{topic.id}")
+      assert index_live |> element("#topics-#{topic.slug} a", "Delete") |> render_click()
+      refute has_element?(index_live, "#topics-#{topic.slug}")
     end
   end
 
   describe "Show" do
-    setup [:create_topic]
+    setup [:register_and_log_in_user, :create_topic]
 
     test "displays topic", %{conn: conn, topic: topic} do
-      {:ok, _show_live, html} = live(conn, ~p"/topics/#{topic}")
+      {:ok, _show_live, html} = live(conn, ~p"/topics/#{topic.slug}")
 
       assert html =~ "Show Topic"
       assert html =~ topic.title

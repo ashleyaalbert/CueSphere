@@ -21,8 +21,9 @@ defmodule AppWeb.TopicLive.FormComponent do
       >
         <.input field={@form[:slug]} type="text" label="Slug" />
         <.input field={@form[:title]} type="text" label="Title" />
+
         <:actions>
-          <.button type="submit" phx-disable-with="Saving...">Save Topic</.button>
+          <.button type="submit" color="alternative" phx-disable-with="Saving...">Save Topic</.button>
         </:actions>
       </.simple_form>
     </div>

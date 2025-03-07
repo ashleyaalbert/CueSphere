@@ -124,6 +124,11 @@ defmodule App.Content do
     |> Repo.all()
   end
 
+  # def list_pages_by_topic_slug(slug) do
+  #   topic = Repo.get_by!(Topic, slug: slug)
+  #   Repo.all(from p in Page, where: p.topic_id == ^topic.id)
+  # end
+
   @doc """
   Gets a single page.
 

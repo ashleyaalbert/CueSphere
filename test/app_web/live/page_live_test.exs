@@ -3,18 +3,20 @@ defmodule AppWeb.PageLiveTest do
 
   import Phoenix.LiveViewTest
   import App.ContentFixtures
+  import App.AccountsFixtures
 
   @create_attrs %{content: "some content"}
   @update_attrs %{content: "some updated content"}
   @invalid_attrs %{content: nil}
 
   defp create_page(_) do
+    user = user_fixture()
     page = page_fixture()
-    %{page: page}
+    %{user: user, page: page}
   end
 
   describe "Index" do
-    setup [:create_page]
+    setup [:register_and_log_in_user, :create_page]
 
     test "lists all pages", %{conn: conn, page: page} do
       {:ok, _index_live, html} = live(conn, ~p"/pages")
@@ -49,7 +51,7 @@ defmodule AppWeb.PageLiveTest do
     test "updates page in listing", %{conn: conn, page: page} do
       {:ok, index_live, _html} = live(conn, ~p"/pages")
 
-      assert index_live |> element("#pages-#{page.id} a", "Edit") |> render_click() =~
+      assert index_live |> element("#pages-#{page.slug} a", "Edit") |> render_click() =~
                "Edit Page"
 
       assert_patch(index_live, ~p"/pages/#{page}/edit")
@@ -72,13 +74,13 @@ defmodule AppWeb.PageLiveTest do
     test "deletes page in listing", %{conn: conn, page: page} do
       {:ok, index_live, _html} = live(conn, ~p"/pages")
 
-      assert index_live |> element("#pages-#{page.id} a", "Delete") |> render_click()
-      refute has_element?(index_live, "#pages-#{page.id}")
+      assert index_live |> element("#pages-#{page.slug} a", "Delete") |> render_click()
+      refute has_element?(index_live, "#pages-#{page.slug}")
     end
   end
 
   describe "Show" do
-    setup [:create_page]
+    setup [:register_and_log_in_user, :create_page]
 
     test "displays page", %{conn: conn, page: page} do
       {:ok, _show_live, html} = live(conn, ~p"/pages/#{page}")

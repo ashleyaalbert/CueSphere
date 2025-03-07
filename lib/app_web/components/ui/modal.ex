@@ -94,7 +94,7 @@ defmodule AppWeb.Components.UI.Modal do
         aria-hidden="true"
       />
       <%!-- Modal --%>
-      <div class={"relative p-4 w-full #{@size_class} max-h-full"}>
+      <div class={"relative p-4 w-full #{@size_class} max-h-full bg-white dark:bg-gray-700 dark:text-white"}>
         <%!-- Modal Content --%>
         <.focus_wrap
           id={"#{@id}-container"}

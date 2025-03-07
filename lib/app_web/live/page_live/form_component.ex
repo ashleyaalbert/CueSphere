@@ -30,7 +30,7 @@ defmodule AppWeb.PageLive.FormComponent do
         <.input field={@form[:content]} type="text" label="Content" />
 
         <:actions>
-          <.button type="submit" phx-disable-with="Saving...">Save Page</.button>
+          <.button type="submit" color="alternative" phx-disable-with="Saving...">Save Page</.button>
         </:actions>
       </.simple_form>
     </div>
@@ -67,7 +67,7 @@ defmodule AppWeb.PageLive.FormComponent do
         {:noreply,
          socket
          |> put_flash(:info, "Page updated successfully")
-         |> push_patch(to: socket.assigns.page)}
+         |> push_patch(to: socket.assigns.patch)}
 
       {:error, %Ecto.Changeset{} = changeset} ->
         {:noreply, assign(socket, form: to_form(changeset))}
@@ -82,7 +82,7 @@ defmodule AppWeb.PageLive.FormComponent do
         {:noreply,
          socket
          |> put_flash(:info, "Page created successfully")
-         |> push_patch(to: socket.assigns.page)}
+         |> push_patch(to: socket.assigns.patch)}
 
       {:error, %Ecto.Changeset{} = changeset} ->
         {:noreply, assign(socket, form: to_form(changeset))}

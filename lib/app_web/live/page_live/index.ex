@@ -5,10 +5,6 @@ defmodule AppWeb.PageLive.Index do
   alias App.Content.Page
 
   @impl true
-  # def mount(_params, _session, socket) do
-  #   {:ok, stream(socket, :pages, Content.list_pages())}
-  # end
-
   def mount(%{"slug" => slug}, _session, socket) do
     topic = Content.get_topic_by_slug!(slug)  # Get the topic
     pages = Content.list_pages_by_topic(topic.id)  # Fetch only pages for this topic

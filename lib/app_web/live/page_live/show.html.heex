@@ -3,7 +3,7 @@
   <:subtitle>This is a page record from your database.</:subtitle>
   <:actions>
     <.link patch={~p"/topics/#{@topic.slug}/pages/#{@page.id || :new}/edit"} phx-click={JS.push_focus()}>
-      <.button>Edit page</.button>
+      <.button color="alternative">Edit page</.button>
     </.link>
   </:actions>
 </.header>

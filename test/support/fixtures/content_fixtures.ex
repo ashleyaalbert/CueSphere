@@ -17,7 +17,8 @@ defmodule App.ContentFixtures do
       attrs
       |> Enum.into(%{
         slug: unique_topic_slug(),
-        title: "some title"
+        title: "some title",
+        description: "A test topic description"
       })
       |> App.Content.create_topic()
 

@@ -4,10 +4,6 @@ defmodule AppWeb.PageLive.Show do
   alias App.Content
 
   @impl true
-  # def mount(_params, _session, socket) do
-  #   {:ok, socket}
-  # end
-
   def mount(%{"slug" => slug, "id" => page_id}, _session, socket) do
     topic = Content.get_topic_by_slug!(slug)
     page = Content.get_page!(page_id)

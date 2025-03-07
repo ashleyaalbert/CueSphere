@@ -97,7 +97,6 @@ defmodule AppWeb.Router do
       live "/topics/:slug/pages/new", PageLive.Index, :new
       live "/topics/:slug/pages/:id", PageLive.Show, :show
       live "/topics/:slug/pages/:id/edit", PageLive.Show, :edit
-      # live "/topics/:slug/:page_id/edit", PageLive.Show, :edit
     end
   end
 
@@ -116,8 +115,6 @@ defmodule AppWeb.Router do
       live("/live/planets", PlanetsLive)
       live "/users/confirm/:token", UserConfirmationLive, :edit
       live "/users/confirm", UserConfirmationInstructionsLive, :new
-
-
     end
   end
 end
