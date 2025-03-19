@@ -29,6 +29,15 @@ defmodule AppWeb.PageLive.FormComponent do
 
         <.input field={@form[:content]} type="text" label="Content" />
 
+
+        <%!-- <fieldset>
+          <legend>Tags</legend>
+          <.inputs_for field={@form[:tags]} as={tag_form}>
+           <.input field={tag_form[:name]} label="Tag Name" />
+          </.inputs_for>
+        </fieldset> --%>
+
+
         <:actions>
           <.button type="submit" color="alternative" phx-disable-with="Saving...">Save Page</.button>
         </:actions>

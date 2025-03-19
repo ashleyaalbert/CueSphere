@@ -27,17 +27,8 @@ defmodule AppWeb.Router do
     get "/planets", PlanetController, :planets
     get "/planets/random", PlanetController, :random
     get "/planets/:id", PlanetController, :index
-    # resources "/courses", CourseController
     resources "/messages", MessageController, only: [:create, :new, :show]
-    # live "/thermostat", ThermostatLive
-    # live "/live/planets", PlanetsLive
-    # live "/facemash", FacemashLive
   end
-
-  # Other scopes may use custom stacks.
-  # scope "/api", AppWeb do
-  #   pipe_through :api
-  # end
 
   # Enable LiveDashboard and Swoosh mailbox preview in development
   if Application.compile_env(:app, :dev_routes) do
@@ -115,6 +106,8 @@ defmodule AppWeb.Router do
       live("/live/planets", PlanetsLive)
       live "/users/confirm/:token", UserConfirmationLive, :edit
       live "/users/confirm", UserConfirmationInstructionsLive, :new
+      live "/chat", ChatLive, :chat
+      live "/chat/join", ChatLive, :join
     end
   end
 end

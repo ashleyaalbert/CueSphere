@@ -74,6 +74,7 @@ defmodule AppWeb.Components.UI.Navbar do
               md:p-0 p-2 bg-gray-900 dark:bg-gray-200 rounded-md md:shadow-none">
               <li><.link href={~p"/messages"} class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">Messages</.link></li>
               <li><.link href={~p"/topics"} class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">Topics</.link></li>
+              <li><.link href={~p"/chat"} class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">Chat</.link></li>
             </ul>
           </li>
 
@@ -112,9 +113,9 @@ defmodule AppWeb.Components.UI.Navbar do
     |> JS.toggle_attribute({"aria-expanded", "true", "false"}, to: "#menu-button")
   end
 
-  defp close_menu do
-    %JS{}
-    |> JS.add_class("hidden", to: "#menu")
-    |> JS.set_attribute({"aria-expanded", "false"}, to: "#menu-button")
-  end
+  # defp close_menu do
+  #   %JS{}
+  #   |> JS.add_class("hidden", to: "#menu")
+  #   |> JS.set_attribute({"aria-expanded", "false"}, to: "#menu-button")
+  # end
 end

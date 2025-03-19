@@ -22,11 +22,29 @@ import {Socket} from "phoenix"
 import {LiveSocket} from "phoenix_live_view"
 import topbar from "../vendor/topbar"
 
+let Hooks = {}; // this may already be here
+
+Hooks.LogoutButton = {
+  mounted() {
+    this.handleEvent("logout", () => {
+      let btn = document.getElementById("logout-button");
+      if (btn) btn.click();
+    });
+  }
+};
+
+Hooks.AutoScroll = {
+  updated() {
+    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+  }
+};
+
+
 let liveSocketPath = process.env.NODE_ENV === "production" ? "/csci379-25s-a/live" : "/live";
 
 let csrfToken = document.querySelector("meta[name='csrf-token']").getAttribute("content")
 let liveSocket = new LiveSocket(liveSocketPath, Socket, {
-  longPollFallbackMs: 2500,
+  //longPollFallbackMs: 2500,
   params: {_csrf_token: csrfToken},
   hooks: Hooks
 })
@@ -69,13 +87,19 @@ liveSocket.connect()
 // >> liveSocket.disableLatencySim()
 window.liveSocket = liveSocket
 
-let Hooks = {}; // this may already be here
+// let Hooks = {}; // this may already be here
 
-Hooks.LogoutButton = {
-  mounted() {
-    this.handleEvent("logout", () => {
-      let btn = document.getElementById("logout-button");
-      if (btn) btn.click();
-    });
-  }
-};
+// Hooks.LogoutButton = {
+//   mounted() {
+//     this.handleEvent("logout", () => {
+//       let btn = document.getElementById("logout-button");
+//       if (btn) btn.click();
+//     });
+//   }
+// };
+
+// Hooks.AutoScroll = {
+//   updated() {
+//     window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+//   }
+// };

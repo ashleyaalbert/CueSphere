@@ -15,7 +15,8 @@ defmodule AppWeb.Components.UI do
         Tag,
         Navbar,
         Modal,
-        Icon
+        Icon,
+        Input
       }
     end
   end
