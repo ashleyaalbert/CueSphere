@@ -199,7 +199,6 @@ end
   # triggered at all sockets by a broadcast from any socket.
   @impl true
   def handle_info(message, socket) do
-    IO.inspect(message, label: "RECEIVED MESSAGE")
     {:noreply, stream(socket, :messages, [message])}
   end
 

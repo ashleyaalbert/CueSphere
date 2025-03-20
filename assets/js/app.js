@@ -86,20 +86,3 @@ liveSocket.connect()
 // >> liveSocket.enableLatencySim(1000)  // enabled for duration of browser session
 // >> liveSocket.disableLatencySim()
 window.liveSocket = liveSocket
-
-// let Hooks = {}; // this may already be here
-
-// Hooks.LogoutButton = {
-//   mounted() {
-//     this.handleEvent("logout", () => {
-//       let btn = document.getElementById("logout-button");
-//       if (btn) btn.click();
-//     });
-//   }
-// };
-
-// Hooks.AutoScroll = {
-//   updated() {
-//     window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
-//   }
-// };

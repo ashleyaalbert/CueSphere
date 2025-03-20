@@ -418,9 +418,6 @@ defmodule AppWeb.CoreComponents do
   #   """
   # end
 
-  @doc """
-  Renders a header with title.
-  """
   attr :class, :string, default: nil
 
   slot :inner_block, required: true
