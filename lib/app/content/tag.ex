@@ -6,7 +6,6 @@ defmodule App.Content.Tag do
     field :name, :string
 
     many_to_many :pages, App.Content.Page, join_through: "pages_tags"
-
   end
 
   @doc false
@@ -15,6 +14,5 @@ defmodule App.Content.Tag do
     |> cast(attrs, [:name])
     |> validate_required([:name])
     |> unique_constraint(:name)
-    |> cast_assoc(:tags, with: &App.Content.Tag.changeset/2)
   end
 end

@@ -6,7 +6,7 @@ defmodule App.Content do
   import Ecto.Query, warn: false
   alias App.Repo
 
-  alias App.Content.Topic
+  alias App.Content.{Page, Tag, Topic}
 
   @doc """
   Returns the list of topics.
@@ -104,8 +104,6 @@ defmodule App.Content do
     Topic.changeset(topic, attrs)
   end
 
-  alias App.Content.Page
-
   @doc """
   Returns the list of pages.
 
@@ -120,7 +118,7 @@ defmodule App.Content do
   end
 
   def list_pages_by_topic(topic_id) do
-    from(p in Page, where: p.topic_id == ^topic_id)
+    from(p in Page, where: p.topic_id == ^topic_id, preload: :tags)
     |> Repo.all()
   end
 
@@ -143,7 +141,7 @@ defmodule App.Content do
       ** (Ecto.NoResultsError)
 
   """
-  def get_page!(id), do: Repo.get!(Page, id)
+  def get_page!(id), do: Repo.get!(from(p in Page, preload: :tags), id)
 
   @doc """
   Creates a page.
@@ -209,8 +207,6 @@ defmodule App.Content do
   def change_page(%Page{} = page, attrs \\ %{}) do
     Page.changeset(page, attrs)
   end
-
-  alias App.Content.Tag
 
   @doc """
   Returns the list of tags.

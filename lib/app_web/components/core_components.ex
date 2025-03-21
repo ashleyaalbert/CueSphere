@@ -17,6 +17,8 @@ defmodule AppWeb.CoreComponents do
   use Phoenix.Component
   use Gettext, backend: AppWeb.Gettext
 
+  import AppWeb.Components.UI.Icon
+
   alias Phoenix.LiveView.JS
 
   # Renders a modal.
@@ -487,7 +489,11 @@ defmodule AppWeb.CoreComponents do
           phx-update={match?(%Phoenix.LiveView.LiveStream{}, @rows) && "stream"}
           class="relative divide-y divide-zinc-100 border-t border-zinc-200 text-sm leading-6 text-zinc-700"
         >
-          <tr :for={row <- @rows} id={@row_id && @row_id.(row)} class="group hover:bg-gray-200 dark:hover:bg-gray-600">
+          <tr
+            :for={row <- @rows}
+            id={@row_id && @row_id.(row)}
+            class="group hover:bg-gray-200 dark:hover:bg-gray-600"
+          >
             <td
               :for={{col, i} <- Enum.with_index(@col)}
               phx-click={@row_click && @row_click.(row)}
@@ -569,32 +575,32 @@ defmodule AppWeb.CoreComponents do
     """
   end
 
-  @doc """
-  Renders a [Heroicon](https://heroicons.com).
+  # @doc """
+  # Renders a [Heroicon](https://heroicons.com).
 
-  Heroicons come in three styles – outline, solid, and mini.
-  By default, the outline style is used, but solid and mini may
-  be applied by using the `-solid` and `-mini` suffix.
+  # Heroicons come in three styles – outline, solid, and mini.
+  # By default, the outline style is used, but solid and mini may
+  # be applied by using the `-solid` and `-mini` suffix.
 
-  You can customize the size and colors of the icons by setting
-  width, height, and background color classes.
+  # You can customize the size and colors of the icons by setting
+  # width, height, and background color classes.
 
-  Icons are extracted from the `deps/heroicons` directory and bundled within
-  your compiled app.css by the plugin in your `assets/tailwind.config.js`.
+  # Icons are extracted from the `deps/heroicons` directory and bundled within
+  # your compiled app.css by the plugin in your `assets/tailwind.config.js`.
 
-  ## Examples
+  # ## Examples
 
-      <.icon name="hero-x-mark-solid" />
-      <.icon name="hero-arrow-path" class="ml-1 w-3 h-3 animate-spin" />
-  """
-  attr :name, :string, required: true
-  attr :class, :string, default: nil
+  #     <.icon name="hero-x-mark-solid" />
+  #     <.icon name="hero-arrow-path" class="ml-1 w-3 h-3 animate-spin" />
+  # """
+  # attr :name, :string, required: true
+  # attr :class, :string, default: nil
 
-  def icon(%{name: "hero-" <> _} = assigns) do
-    ~H"""
-    <span class={[@name, @class]} />
-    """
-  end
+  # def icon(%{name: "hero-" <> _} = assigns) do
+  #   ~H"""
+  #   <span class={[@name, @class]} />
+  #   """
+  # end
 
   ## JS Commands
 

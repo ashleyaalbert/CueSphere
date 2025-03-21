@@ -19,7 +19,6 @@ defmodule AppWeb.PageLive.FormComponent do
         phx-change="validate"
         phx-submit="save"
       >
-
         <.input
           field={@form[:topic_id]}
           type="select"
@@ -29,6 +28,24 @@ defmodule AppWeb.PageLive.FormComponent do
 
         <.input field={@form[:content]} type="text" label="Content" />
 
+        <.inputs_for :let={ef} field={@form[:tags]}>
+          <input type="hidden" name="page[tags_sort][]" value={ef.index} />
+          <.input type="text" field={ef[:name]} placeholder="name" />
+          <button
+            type="button"
+            name="page[tags_drop][]"
+            value={ef.index}
+            phx-click={JS.dispatch("change")}
+          >
+            <.icon name="x" class="w-6 h-6 relative top-2" />
+          </button>
+        </.inputs_for>
+
+        <input type="hidden" name="page[tags_drop][]" />
+
+        <button type="button" name="page[tags_sort][]" value="new" phx-click={JS.dispatch("change")}>
+          add Tag
+        </button>
 
         <%!-- <fieldset>
           <legend>Tags</legend>
@@ -36,7 +53,6 @@ defmodule AppWeb.PageLive.FormComponent do
            <.input field={tag_form[:name]} label="Tag Name" />
           </.inputs_for>
         </fieldset> --%>
-
 
         <:actions>
           <.button type="submit" color="alternative" phx-disable-with="Saving...">Save Page</.button>
@@ -49,6 +65,7 @@ defmodule AppWeb.PageLive.FormComponent do
   @impl true
   def update(%{page: page} = assigns, socket) do
     topics = Content.list_topics()
+
     {:ok,
      socket
      |> assign(assigns)
