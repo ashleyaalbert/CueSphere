@@ -10,7 +10,21 @@
 
 <.list>
   <:item title="Name">{@item.name}</:item>
-  <:item title="Attributes">{@item.attributes}</:item>
+  <%!-- <:item title="Attributes">
+  <div data-attributes={Jason.encode!(@item.attributes)}></div>
+  <%!-- {@item.attributes} --%>
+  <%!-- </:item> --%> --%>
+  <:item title="Attributes">
+    <!-- Check if attributes is a map, then display a calculated value -->
+    <%= if is_map(@item.attributes) do %>
+      <!-- Display sum of true values as 1 and false as 0 -->
+      <%= Enum.reduce(@item.attributes, 0, fn {_, value}, acc ->
+        if value, do: acc + 1, else: acc
+      end) %>
+    <% else %>
+      <span>Invalid attributes format</span>
+    <% end %>
+  </:item>
 </.list>
 
 <.back navigate={~p"/items"}>Back to items</.back>
