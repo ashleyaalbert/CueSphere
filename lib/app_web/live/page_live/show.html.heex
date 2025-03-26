@@ -10,6 +10,15 @@
 
 <.list>
   <:item title="Content">{@page.content}</:item>
+  <:item title="Tags">
+    <div class="flex space-x-2">
+      <%= for tag <- @page.tags do %>
+        <.badge large>
+          <%= tag.name %>
+        </.badge>
+      <% end %>
+    </div>
+  </:item>
 </.list>
 
 <.back navigate={~p"/topics/#{@topic.slug}/pages"}>Back to pages</.back>

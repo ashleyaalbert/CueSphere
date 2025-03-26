@@ -181,6 +181,12 @@ defmodule AppWeb.Components.UI.Icon do
     """
   end
 
+  def icon(%{name: "hero-" <> _} = assigns) do
+    ~H"""
+    <span class={[@name, @class]} />
+    """
+  end
+
   def icon(%{name: name} = assigns) do
     assigns = assign(assigns, :icon_name, name)
     ~H"""

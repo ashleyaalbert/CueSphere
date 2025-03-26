@@ -190,6 +190,12 @@ defmodule AppWeb.UserAuth do
      end)}
   end
 
+  def on_mount(:put_locale, _params, session, socket) do
+    Gettext.put_locale(session["locale"])
+    socket = Phoenix.Component.assign_new(socket, :locale, fn -> session["locale"] end)
+    {:cont, socket}
+  end
+
   defp mount_current_user(socket, session) do
     Phoenix.Component.assign_new(socket, :current_user, fn ->
       if user_token = session["user_token"] do

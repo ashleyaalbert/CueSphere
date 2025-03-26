@@ -301,4 +301,8 @@ defmodule App.Content do
   def change_tag(%Tag{} = tag, attrs \\ %{}) do
     Tag.changeset(tag, attrs)
   end
+
+  def preload_tags(page) do
+    App.Repo.preload(page, :tags)
+  end
 end

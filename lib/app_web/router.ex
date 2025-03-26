@@ -2,10 +2,12 @@ defmodule AppWeb.Router do
   use AppWeb, :router
 
   import AppWeb.UserAuth
+  import AppWeb.LocaleController, only: [put_locale: 2]
 
   pipeline :browser do
     plug :accepts, ["html"]
     plug :fetch_session
+    plug :put_locale
     plug :fetch_live_flash
     plug :put_root_layout, html: {AppWeb.Layouts, :root}
     plug :protect_from_forgery
@@ -28,6 +30,7 @@ defmodule AppWeb.Router do
     get "/planets/random", PlanetController, :random
     get "/planets/:id", PlanetController, :index
     resources "/messages", MessageController, only: [:create, :new, :show]
+    put "/locale/:locale", LocaleController, :update
   end
 
   # Enable LiveDashboard and Swoosh mailbox preview in development
@@ -55,7 +58,8 @@ defmodule AppWeb.Router do
     live_session :redirect_if_user_is_authenticated,
       on_mount: [
         {AppWeb.UserAuth, :redirect_if_user_is_authenticated},
-        {AppWeb.UserAuth, :add_message_changeset}
+        {AppWeb.UserAuth, :add_message_changeset},
+        {AppWeb.UserAuth, :put_locale}
       ] do
       live "/users/register", UserRegistrationLive, :new
       live "/users/log_in", UserLoginLive, :new
@@ -72,7 +76,8 @@ defmodule AppWeb.Router do
     live_session :require_authenticated_user,
       on_mount: [
         {AppWeb.UserAuth, :ensure_authenticated},
-        {AppWeb.UserAuth, :add_message_changeset}
+        {AppWeb.UserAuth, :add_message_changeset},
+        {AppWeb.UserAuth, :put_locale}
       ] do
       live "/users/settings", UserSettingsLive, :edit
       live "/users/settings/confirm_email/:token", UserSettingsLive, :confirm_email
@@ -88,6 +93,10 @@ defmodule AppWeb.Router do
       live "/topics/:slug/pages/new", PageLive.Index, :new
       live "/topics/:slug/pages/:id", PageLive.Show, :show
       live "/topics/:slug/pages/:id/edit", PageLive.Show, :edit
+
+      #live "/tournaments/add", PlayLive, :add
+
+
     end
   end
 
@@ -99,7 +108,8 @@ defmodule AppWeb.Router do
     live_session :current_user,
       on_mount: [
         {AppWeb.UserAuth, :mount_current_user},
-        {AppWeb.UserAuth, :add_message_changeset}
+        {AppWeb.UserAuth, :add_message_changeset},
+        {AppWeb.UserAuth, :put_locale}
       ] do
       live("/live/thermostat", ThermostatLive)
       live("/facemash", FacemashLive)
@@ -108,6 +118,23 @@ defmodule AppWeb.Router do
       live "/users/confirm", UserConfirmationInstructionsLive, :new
       live "/chat", ChatLive, :chat
       live "/chat/join", ChatLive, :join
+
+      #live "/about", GeneralLive, :about
+      #live "/facts", GeneralLive, :facts
+      #live "/fargo_rate", GeneralLive, :fargo
+      #live "/purchase", GeneralLive, :purchase
+
+      #live "/tutorials", LearnLive, :tutorials
+      #live "/drills", LearnLive, :drills
+      #live "/books", LearnLive, :books
+      #live "/movies", LearnLive, :movies
+
+      #live "/rules", PlayLive, :rules
+      #live "/games", PlayLive, :dgames
+      #live "/leagues", PlayLive, :leagues
+      #live "/tournaments", PlayLive, :tournaments
+
+
     end
   end
 end

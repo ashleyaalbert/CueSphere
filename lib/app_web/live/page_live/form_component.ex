@@ -26,33 +26,28 @@ defmodule AppWeb.PageLive.FormComponent do
           options={Enum.map(@topics, &{&1.title, &1.id})}
         />
 
-        <.input field={@form[:content]} type="text" label="Content" />
+        <.input field={@form[:content]} type="text" label="Content" class="mb-4"/>
+
+        <button type="button" name="page[tags_sort][]" value="new" phx-click={JS.dispatch("change")}>
+          Add Tag
+        </button>
 
         <.inputs_for :let={ef} field={@form[:tags]}>
-          <input type="hidden" name="page[tags_sort][]" value={ef.index} />
-          <.input type="text" field={ef[:name]} placeholder="name" />
-          <button
-            type="button"
-            name="page[tags_drop][]"
-            value={ef.index}
-            phx-click={JS.dispatch("change")}
-          >
-            <.icon name="x" class="w-6 h-6 relative top-2" />
-          </button>
+          <div class="flex items-center space-x-2">
+            <button
+              type="button"
+              name="page[tags_drop][]"
+              value={ef.index}
+              phx-click={JS.dispatch("change")}
+              class="text-red-500"
+            >
+              <.icon name="x" class="w-6 h-6" />
+            </button>
+            <.input type="text" field={ef[:name]} placeholder="Tag Name" />
+          </div>
         </.inputs_for>
 
         <input type="hidden" name="page[tags_drop][]" />
-
-        <button type="button" name="page[tags_sort][]" value="new" phx-click={JS.dispatch("change")}>
-          add Tag
-        </button>
-
-        <%!-- <fieldset>
-          <legend>Tags</legend>
-          <.inputs_for field={@form[:tags]} as={tag_form}>
-           <.input field={tag_form[:name]} label="Tag Name" />
-          </.inputs_for>
-        </fieldset> --%>
 
         <:actions>
           <.button type="submit" color="alternative" phx-disable-with="Saving...">Save Page</.button>
