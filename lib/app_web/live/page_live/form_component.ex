@@ -26,28 +26,36 @@ defmodule AppWeb.PageLive.FormComponent do
           options={Enum.map(@topics, &{&1.title, &1.id})}
         />
 
-        <.input field={@form[:content]} type="text" label="Content" class="mb-4"/>
+        <.input field={@form[:content]} type="text" label="Content" class="mb-4" />
 
-        <button type="button" name="page[tags_sort][]" value="new" phx-click={JS.dispatch("change")}>
+        <button
+          :if={@action == :edit}
+          type="button"
+          name="page[page_tags_sort][]"
+          value="new"
+          phx-click={JS.dispatch("change")}
+        >
           Add Tag
         </button>
 
-        <.inputs_for :let={ef} field={@form[:tags]}>
+        <.inputs_for :let={ef} field={@form[:page_tags]}>
           <div class="flex items-center space-x-2">
             <button
               type="button"
-              name="page[tags_drop][]"
+              name="page[page_tags_drop][]"
               value={ef.index}
               phx-click={JS.dispatch("change")}
               class="text-red-500"
             >
               <.icon name="x" class="w-6 h-6" />
             </button>
-            <.input type="text" field={ef[:name]} placeholder="Tag Name" />
+
+            <.input type="hidden" field={ef[:page_id]} value={@page.id} />
+            <.input type="select" field={ef[:tag_id]} options={@tag_options} />
           </div>
         </.inputs_for>
 
-        <input type="hidden" name="page[tags_drop][]" />
+        <input type="hidden" name="page[page_tags_drop][]" />
 
         <:actions>
           <.button type="submit" color="alternative" phx-disable-with="Saving...">Save Page</.button>
@@ -64,6 +72,7 @@ defmodule AppWeb.PageLive.FormComponent do
     {:ok,
      socket
      |> assign(assigns)
+     |> assign(:tag_options, Content.list_tag_options())
      |> assign_new(:form, fn ->
        to_form(Content.change_page(page))
      end)

@@ -6,7 +6,11 @@ defmodule App.Content.Page do
     field :content, :string
     belongs_to :topic, App.Content.Topic
 
-    many_to_many :tags, App.Content.Tag, join_through: "pages_tags"
+    many_to_many :tags, App.Content.Tag, join_through: "pages_tags", on_replace: :delete
+
+    has_many :page_tags, App.Content.PageTag,
+      on_delete: :delete_all,
+      on_replace: :delete
 
     timestamps(type: :utc_datetime)
   end
@@ -17,10 +21,10 @@ defmodule App.Content.Page do
     |> cast(attrs, [:content, :topic_id])
     |> validate_required([:content, :topic_id])
     |> foreign_key_constraint(:topic_id)
-    |> cast_assoc(:tags,
-      with: &App.Content.Tag.changeset/2,
-      sort_param: :tags_sort,
-      drop_param: :tags_drop
+    |> cast_assoc(:page_tags,
+      with: &App.Content.PageTag.changeset/2,
+      sort_param: :page_tags_sort,
+      drop_param: :page_tags_drop
     )
   end
 end

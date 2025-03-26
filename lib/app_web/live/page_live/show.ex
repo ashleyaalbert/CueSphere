@@ -6,7 +6,7 @@ defmodule AppWeb.PageLive.Show do
   @impl true
   def mount(%{"slug" => slug, "id" => page_id}, _session, socket) do
     topic = Content.get_topic_by_slug!(slug)
-    page = Content.get_page!(page_id) |> Content.preload_tags()
+    page = Content.get_page!(page_id)
 
     {:ok, assign(socket, topic: topic, page: page)}
   end

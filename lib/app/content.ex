@@ -141,7 +141,7 @@ defmodule App.Content do
       ** (Ecto.NoResultsError)
 
   """
-  def get_page!(id), do: Repo.get!(from(p in Page, preload: :tags), id)
+  def get_page!(id), do: Repo.get!(from(p in Page, preload: [:tags, :page_tags]), id)
 
   @doc """
   Creates a page.
@@ -219,6 +219,19 @@ defmodule App.Content do
   """
   def list_tags do
     Repo.all(Tag)
+  end
+
+  @doc """
+  Returns the list of tag options.
+
+  ## Examples
+
+      iex> list_tag_optinos()
+      [{"Picknic", 1}, ...]
+
+  """
+  def list_tag_options do
+    Repo.all(from(t in Tag, select: {t.name, t.id}))
   end
 
   @doc """
@@ -303,6 +316,6 @@ defmodule App.Content do
   end
 
   def preload_tags(page) do
-    App.Repo.preload(page, :tags)
+    App.Repo.preload(page, :page_tags)
   end
 end
