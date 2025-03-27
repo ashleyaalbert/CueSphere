@@ -44,4 +44,18 @@ defmodule AppWeb.ItemLive.Index do
 
     {:noreply, stream_delete(socket, :items, item)}
   end
+
+  defp attribute_count(item) do
+    cond do
+      is_integer(item.attributes) ->
+        {:ok, map} = App.Items.AttributesType.load(item.attributes)
+        Map.values(map) |> Enum.count(& &1)
+
+      is_map(item.attributes) ->
+        Map.values(item.attributes) |> Enum.count(& &1)
+
+      true ->
+        0
+    end
+  end
 end

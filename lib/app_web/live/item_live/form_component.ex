@@ -27,8 +27,8 @@ defmodule AppWeb.ItemLive.FormComponent do
           options={App.Items.Item.type_options()}
           label="Type"
         />
-
-        <!-- Render checkboxes for attributes -->
+        
+    <!-- Render checkboxes for attributes -->
         <.input
           :for={i <- 1..8}
           type="checkbox"

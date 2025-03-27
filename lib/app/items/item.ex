@@ -31,7 +31,6 @@ defmodule App.Items.Item do
           if value, do: acc ||| 1 <<< index, else: acc
         end)
 
-      IO.inspect(attrs)
       put_change(changeset, :attributes, attrs)
     end)
   end
