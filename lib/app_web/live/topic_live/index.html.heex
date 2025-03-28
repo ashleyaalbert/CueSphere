@@ -1,4 +1,4 @@
-<.header>
+<.header class="dark:text-white">
   Listing Topics
   <:actions>
     <.link patch={~p"/topics/new"}>
@@ -18,10 +18,11 @@
     <div class="sr-only">
       <.link navigate={~p"/topics/#{topic.slug}"}>Show</.link>
     </div>
-    <.link patch={~p"/topics/#{topic.slug}/edit"}>Edit</.link>
+    <.link class="dark:text-white" patch={~p"/topics/#{topic.slug}/edit"}>Edit</.link>
   </:action>
   <:action :let={{slug, topic}}>
     <.link
+      class="dark:text-white"
       phx-click={JS.push("delete", value: %{slug: topic.slug}) |> hide("##{slug}")}
       data-confirm="Are you sure?"
     >
