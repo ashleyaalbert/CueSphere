@@ -22,11 +22,11 @@ defmodule AppWeb.PageLive.FormComponent do
         <.input
           field={@form[:topic_id]}
           type="select"
-          label="Topic"
+          label={gettext("Topic")}
           options={Enum.map(@topics, &{&1.title, &1.id})}
         />
 
-        <.input field={@form[:content]} type="text" label="Content" class="mb-4" />
+        <.input field={@form[:content]} type="text" label={gettext("Content")} class="mb-4" />
 
         <button
           :if={@action == :edit}
@@ -58,7 +58,7 @@ defmodule AppWeb.PageLive.FormComponent do
         <input type="hidden" name="page[page_tags_drop][]" />
 
         <:actions>
-          <.button type="submit" color="alternative" phx-disable-with="Saving...">{gettext("Save Page")}</.button>
+          <.button type="submit" color="alternative" phx-disable-with={gettext("Saving...")}>{gettext("Save Page")}</.button>
         </:actions>
       </.simple_form>
     </div>

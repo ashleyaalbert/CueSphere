@@ -2,10 +2,10 @@
   <%!-- <.error :if={@changeset.action}>
     Oops, something went wrong! Please check the errors below.
   </.error> --%>
-  <.input field={f[:email]} type="text" label="Email" class="dark:text-white" />
-  <.input field={f[:subject]} type="text" label="Subject" class="dark:text-white" />
-  <.input field={f[:message]} type="text" label="Message" class="dark:text-white" />
+  <.input field={f[:email]} type="text" label={gettext("Email")} class="dark:text-white" />
+  <.input field={f[:subject]} type="text" label={gettext("Subject")} class="dark:text-white" />
+  <.input field={f[:message]} type="text" label={gettext("Message")} class="dark:text-white" />
   <:actions>
-    <.button color="alternative" type="submit">Save Message</.button>
+    <.button color="alternative" type="submit">{gettext("Save Message")}</.button>
   </:actions>
 </.simple_form>

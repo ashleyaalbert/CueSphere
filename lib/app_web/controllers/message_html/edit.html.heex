@@ -1,8 +1,8 @@
 <.header class="dark:text-white">
-  Edit Message {@message.id}
-  <:subtitle>Use this form to manage message records in your database.</:subtitle>
+  {gettext("Edit Message")} {@message.id}
+  <:subtitle>{gettext("Use this form to manage message records in your database.")}</:subtitle>
 </.header>
 
 <.message_form changeset={@changeset} action={~p"/messages/#{@message}"} />
 
-<.back navigate={~p"/messages"}>Back to messages</.back>
+<.back navigate={~p"/messages"}>{gettext("Back to messages")}</.back>

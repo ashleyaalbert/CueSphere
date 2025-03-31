@@ -1,27 +1,27 @@
 <.header>
   <div class="text-black dark:text-white">
-    All Messages
+    {gettext("All Messages")}
   </div>
   <:actions>
     <.link class="dark:text-white" href={~p"/messages/new"}>
-      <.button color="alternative">New Message</.button>
+      <.button color="alternative">{gettext("New Message")}</.button>
     </.link>
   </:actions>
 </.header>
 
 
 <.table id="messages" rows={@messages} row_click={&JS.navigate(~p"/messages/#{&1}")}>
-  <:col :let={message} label="Email"><span class="dark:text-white">{message.email}</span></:col>
-  <:col :let={message} label="Subject"><span class="dark:text-white">{message.subject}</span></:col>
-  <:col :let={message} label="Message"><span class="dark:text-white">{message.message}</span></:col>
+  <:col :let={message} label={gettext("Email")}><span class="dark:text-white">{message.email}</span></:col>
+  <:col :let={message} label={gettext("Subject")}><span class="dark:text-white">{message.subject}</span></:col>
+  <:col :let={message} label={gettext("Message")}><span class="dark:text-white">{message.message}</span></:col>
   <:action :let={message}>
     <div class="sr-only">
-      <.link navigate={~p"/messages/#{message}"} class="dark:text-white">Show</.link>
+      <.link navigate={~p"/messages/#{message}"} class="dark:text-white">{gettext("Show")}</.link>
     </div>
   </:action>
   <:action :let={message}>
-    <.link href={~p"/messages/#{message}"} method="delete" data-confirm="Are you sure?" class="dark:text-white">
-      Delete
+    <.link href={~p"/messages/#{message}"} method="delete" data-confirm={gettext("Are you sure?")} class="dark:text-white">
+      {gettext("Delete")}
     </.link>
   </:action>
 </.table>

@@ -1,12 +1,12 @@
 <.header>
-  Message {@message.id}
-  <:subtitle>This is a message record from your database.</:subtitle>
+  {gettext("Message")} {@message.id}
+  <:subtitle>{gettext("This is a message record from your database.")}</:subtitle>
 </.header>
 
 <.list>
-  <:item title="Email">{@message.email}</:item>
-  <:item title="Subject">{@message.subject}</:item>
-  <:item title="Message">{@message.message}</:item>
+  <:item title={gettext("Email")}>{@message.email}</:item>
+  <:item title={gettext("Subject")}>{@message.subject}</:item>
+  <:item title={gettext("Message")}>{@message.message}</:item>
 </.list>
 
-<.back navigate={~p"/messages"}>Back to messages</.back>
+<.back navigate={~p"/messages"}>{gettext("Back to messages")}</.back>

@@ -45,7 +45,7 @@ defmodule AppWeb.ChatLive do
           phx-submit="send-message"
         >
           <.button phx-click="leave-chat">{gettext("Leave Chat")}</.button>
-          <.input field={@form[:message]} placeholder="Type Message" wrapper_class="sm:flex-1" />
+          <.input field={@form[:message]} placeholder={gettext("Type Message")} wrapper_class="sm:flex-1" />
           <div>
             <.button type="submit" class="w-full">{gettext("Send Message")}</.button>
           </div>
@@ -61,7 +61,7 @@ defmodule AppWeb.ChatLive do
         on_cancel={JS.patch(~p"/chat")}
       >
         <.form for={@username_form} phx-change="change-username" phx-submit="join-chat">
-        <.input field={@username_form[:username]} placeholder="Enter a username" />
+        <.input field={@username_form[:username]} placeholder={gettext("Enter a username")} />
         <.button type="submit" class="w-full">{gettext("Join")}</.button>
       </.form>
       </.modal>

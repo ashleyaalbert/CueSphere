@@ -16,17 +16,17 @@ defmodule AppWeb.UserLoginLive do
       </.header>
 
       <.simple_form for={@form} id="login_form" action={~p"/users/log_in"} phx-update="ignore">
-        <.input field={@form[:email]} type="email" label="Email" required />
-        <.input field={@form[:password]} type="password" label="Password" required />
+        <.input field={@form[:email]} type="email" label={gettext("Email")} required />
+        <.input field={@form[:password]} type="password" label={gettext("Password")} required />
 
         <:actions>
-          <.input field={@form[:remember_me]} type="checkbox" label="Keep me logged in" />
+          <.input field={@form[:remember_me]} type="checkbox" label={gettext("Keep me logged in")} />
           <.link href={~p"/users/reset_password"} class="text-sm font-semibold text-gray-900 dark:text-white">
             {gettext("Forgot your password?")}"
           </.link>
         </:actions>
         <:actions>
-          <.button color="alternative" type="submit" phx-disable-with="Logging in..." class="w-full">
+          <.button color="alternative" type="submit" phx-disable-with={gettext("Logging in...")} class="w-full">
             {gettext("Log in")} <span aria-hidden="true">→</span>
           </.button>
         </:actions>

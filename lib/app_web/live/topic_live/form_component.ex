@@ -19,11 +19,11 @@ defmodule AppWeb.TopicLive.FormComponent do
         phx-change="validate"
         phx-submit="save"
       >
-        <.input field={@form[:slug]} type="text" label="Slug" />
-        <.input field={@form[:title]} type="text" label="Title" />
+        <.input field={@form[:slug]} type="text" label={gettext("Slug")} />
+        <.input field={@form[:title]} type="text" label={gettext("Title")} />
 
         <:actions>
-          <.button type="submit" color="alternative" phx-disable-with="Saving...">{gettext("Save Topic")}</.button>
+          <.button type="submit" color="alternative" phx-disable-with={gettext("Saving...")}>{gettext("Save Topic")}</.button>
         </:actions>
       </.simple_form>
     </div>

@@ -186,6 +186,7 @@ msgstr ""
 msgid "Current temperature:"
 msgstr ""
 
+#: lib/app_web/controllers/message_html/index.html.heex:24
 #: lib/app_web/live/item_live/index.html.heex:28
 #: lib/app_web/live/page_live/index.html.heex:28
 #: lib/app_web/live/topic_live/index.html.heex:29
@@ -467,6 +468,7 @@ msgid "Save Item"
 msgstr ""
 
 #: lib/app_web/components/layouts/app.html.heex:90
+#: lib/app_web/controllers/message_html/message_form.html.heex:9
 #, elixir-autogen, elixir-format
 msgid "Save Message"
 msgstr ""
@@ -501,6 +503,7 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
+#: lib/app_web/controllers/message_html/index.html.heex:19
 #: lib/app_web/live/item_live/index.html.heex:19
 #: lib/app_web/live/page_live/index.html.heex:19
 #: lib/app_web/live/topic_live/index.html.heex:19
@@ -533,6 +536,7 @@ msgstr ""
 msgid "This is a topic record from your database."
 msgstr ""
 
+#: lib/app_web/live/page_live/form_component.ex:25
 #: lib/app_web/live/topic_live/show.html.heex:2
 #, elixir-autogen, elixir-format
 msgid "Topic"
@@ -606,4 +610,185 @@ msgstr ""
 #: lib/app_web/live/user_registration_live.ex:17
 #, elixir-autogen, elixir-format
 msgid "to your account now."
+msgstr ""
+
+#: lib/app_web/controllers/message_html/index.html.heex:3
+#, elixir-autogen, elixir-format, fuzzy
+msgid "All Messages"
+msgstr ""
+
+#: lib/app_web/controllers/message_html/index.html.heex:23
+#: lib/app_web/live/page_live/index.html.heex:26
+#: lib/app_web/live/topic_live/index.html.heex:27
+#, elixir-autogen, elixir-format
+msgid "Are you sure?"
+msgstr ""
+
+#: lib/app_web/controllers/message_html/edit.html.heex:8
+#: lib/app_web/controllers/message_html/new.html.heex:18
+#: lib/app_web/controllers/message_html/show.html.heex:12
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Back to messages"
+msgstr ""
+
+#: lib/app_web/live/user_registration_live.ex:35
+#: lib/app_web/live/user_settings_live.ex:81
+#, elixir-autogen, elixir-format
+msgid "Birthday"
+msgstr ""
+
+#: lib/app_web/live/user_settings_live.ex:33
+#: lib/app_web/live/user_settings_live.ex:69
+#, elixir-autogen, elixir-format
+msgid "Changing..."
+msgstr ""
+
+#: lib/app_web/live/user_settings_live.ex:57
+#, elixir-autogen, elixir-format
+msgid "Confirm new password"
+msgstr ""
+
+#: lib/app_web/components/layouts/app.html.heex:84
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Contact us"
+msgstr ""
+
+#: lib/app_web/live/user_registration_live.ex:40
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Creating account..."
+msgstr ""
+
+#: lib/app_web/live/user_settings_live.ex:28
+#: lib/app_web/live/user_settings_live.ex:63
+#, elixir-autogen, elixir-format
+msgid "Current password"
+msgstr ""
+
+#: lib/app_web/controllers/message_html/edit.html.heex:2
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Edit Message"
+msgstr ""
+
+#: lib/app_web/components/layouts/app.html.heex:86
+#: lib/app_web/controllers/message_html/index.html.heex:14
+#: lib/app_web/controllers/message_html/message_form.html.heex:5
+#: lib/app_web/controllers/message_html/show.html.heex:7
+#: lib/app_web/live/user_login_live.ex:19
+#: lib/app_web/live/user_registration_live.ex:36
+#: lib/app_web/live/user_settings_live.ex:22
+#, elixir-autogen, elixir-format
+msgid "Email"
+msgstr ""
+
+#: lib/app_web/live/chat_live.ex:64
+#, elixir-autogen, elixir-format
+msgid "Enter a username"
+msgstr ""
+
+#: lib/app_web/live/user_registration_live.ex:34
+#: lib/app_web/live/user_settings_live.ex:80
+#, elixir-autogen, elixir-format
+msgid "Full Name"
+msgstr ""
+
+#: lib/app_web/live/user_login_live.ex:23
+#, elixir-autogen, elixir-format
+msgid "Keep me logged in"
+msgstr ""
+
+#: lib/app_web/live/user_login_live.ex:29
+#, elixir-autogen, elixir-format
+msgid "Logging in..."
+msgstr ""
+
+#: lib/app_web/components/layouts/app.html.heex:88
+#: lib/app_web/controllers/message_html/index.html.heex:16
+#: lib/app_web/controllers/message_html/message_form.html.heex:7
+#: lib/app_web/controllers/message_html/show.html.heex:2
+#: lib/app_web/controllers/message_html/show.html.heex:9
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Message"
+msgstr ""
+
+#: lib/app_web/controllers/message_html/index.html.heex:7
+#: lib/app_web/controllers/message_html/new.html.heex:4
+#, elixir-autogen, elixir-format, fuzzy
+msgid "New Message"
+msgstr ""
+
+#: lib/app_web/live/user_settings_live.ex:53
+#, elixir-autogen, elixir-format
+msgid "New password"
+msgstr ""
+
+#: lib/app_web/live/user_login_live.ex:20
+#: lib/app_web/live/user_registration_live.ex:37
+#, elixir-autogen, elixir-format
+msgid "Password"
+msgstr ""
+
+#: lib/app_web/components/layouts/app.html.heex:87
+#: lib/app_web/controllers/message_html/index.html.heex:15
+#: lib/app_web/controllers/message_html/message_form.html.heex:6
+#: lib/app_web/controllers/message_html/show.html.heex:8
+#, elixir-autogen, elixir-format
+msgid "Subject"
+msgstr ""
+
+#: lib/app_web/controllers/message_html/show.html.heex:3
+#, elixir-autogen, elixir-format, fuzzy
+msgid "This is a message record from your database."
+msgstr ""
+
+#: lib/app_web/live/chat_live.ex:48
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Type Message"
+msgstr ""
+
+#: lib/app_web/live/user_settings_live.ex:83
+#, elixir-autogen, elixir-format
+msgid "Updating..."
+msgstr ""
+
+#: lib/app_web/controllers/message_html/edit.html.heex:3
+#: lib/app_web/controllers/message_html/new.html.heex:8
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Use this form to manage message records in your database."
+msgstr ""
+
+#: lib/app_web/components/live/poll_component.ex:31
+#, elixir-autogen, elixir-format
+msgid "votes"
+msgstr ""
+
+#: lib/app_web/live/page_live/form_component.ex:29
+#: lib/app_web/live/page_live/index.html.heex:15
+#: lib/app_web/live/page_live/show.html.heex:12
+#, elixir-autogen, elixir-format
+msgid "Content"
+msgstr ""
+
+#: lib/app_web/live/page_live/form_component.ex:61
+#: lib/app_web/live/topic_live/form_component.ex:26
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Saving..."
+msgstr ""
+
+#: lib/app_web/live/topic_live/form_component.ex:22
+#: lib/app_web/live/topic_live/index.html.heex:15
+#: lib/app_web/live/topic_live/show.html.heex:15
+#, elixir-autogen, elixir-format
+msgid "Slug"
+msgstr ""
+
+#: lib/app_web/live/topic_live/form_component.ex:23
+#: lib/app_web/live/topic_live/index.html.heex:16
+#: lib/app_web/live/topic_live/show.html.heex:16
+#, elixir-autogen, elixir-format
+msgid "Title"
+msgstr ""
+
+#: lib/app_web/live/page_live/show.html.heex:13
+#, elixir-autogen, elixir-format
+msgid "Tags"
 msgstr ""

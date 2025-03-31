@@ -28,7 +28,7 @@ defmodule AppWeb.Components.Live.PollComponent do
                   "width: #{if @total_votes > 0, do: (Enum.at(@votes, index, 0) * 100) / @total_votes, else: 0}%"
                 }></div>
               </div>
-              <span class="text-sm font-semibold"><%= Enum.at(@votes, index, 0) %> votes</span>
+              <span class="text-sm font-semibold"><%= Enum.at(@votes, index, 0) %> {gettext("votes")}</span>
             </li>
           <% end %>
         </ul>

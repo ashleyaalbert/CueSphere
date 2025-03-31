@@ -9,8 +9,8 @@
 </.header>
 
 <.list>
-  <:item title="Content">{@page.content}</:item>
-  <:item title="Tags">
+  <:item title={gettext("Content")}>{@page.content}</:item>
+  <:item title={gettext("Tags")}>
     <div class="flex space-x-2">
       <%= for tag <- @page.tags do %>
         <.badge large>

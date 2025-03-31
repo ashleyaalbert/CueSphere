@@ -19,18 +19,18 @@ defmodule AppWeb.UserSettingsLive do
           phx-submit="update_email"
           phx-change="validate_email"
         >
-          <.input field={@email_form[:email]} type="email" label="Email" required />
+          <.input field={@email_form[:email]} type="email" label={gettext("Email")} required />
           <.input
             field={@email_form[:current_password]}
             name="current_password"
             id="current_password_for_email"
             type="password"
-            label="Current password"
+            label={gettext("Current password")}
             value={@email_form_current_password}
             required
           />
           <:actions>
-            <.button color="alternative" type="submit" phx-disable-with="Changing...">{gettext("Change Email")}</.button>
+            <.button color="alternative" type="submit" phx-disable-with={gettext("Changing...")}>{gettext("Change Email")}</.button>
           </:actions>
         </.simple_form>
       </div>
@@ -50,23 +50,23 @@ defmodule AppWeb.UserSettingsLive do
             id="hidden_user_email"
             value={@current_email}
           />
-          <.input field={@password_form[:password]} type="password" label="New password" required />
+          <.input field={@password_form[:password]} type="password" label={gettext("New password")} required />
           <.input
             field={@password_form[:password_confirmation]}
             type="password"
-            label="Confirm new password"
+            label={gettext("Confirm new password")}
           />
           <.input
             field={@password_form[:current_password]}
             name="current_password"
             type="password"
-            label="Current password"
+            label={gettext("Current password")}
             id="current_password_for_password"
             value={@current_password}
             required
           />
           <:actions>
-            <.button color="alternative" type="submit" phx-disable-with="Changing...">{gettext("Change Password")}</.button>
+            <.button color="alternative" type="submit" phx-disable-with={gettext("Changing...")}>{gettext("Change Password")}</.button>
           </:actions>
         </.simple_form>
       </div>
@@ -77,10 +77,10 @@ defmodule AppWeb.UserSettingsLive do
             phx-submit="update_profile"
             phx-change="validate_profile"
           >
-            <.input field={@profile_form[:name]} type="text" label="Full Name" required />
-            <.input field={@profile_form[:birthday]} type="date" label="Birthday" required />
+            <.input field={@profile_form[:name]} type="text" label={gettext("Full Name")} required />
+            <.input field={@profile_form[:birthday]} type="date" label={gettext("Birthday")} required />
             <:actions>
-              <.button color="alternative" type="submit" phx-disable-with="Updating...">
+              <.button color="alternative" type="submit" phx-disable-with={gettext("Updating...")}>
                 {gettext("Update Profile")}
               </.button>
             </:actions>

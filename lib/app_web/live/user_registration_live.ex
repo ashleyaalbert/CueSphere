@@ -31,13 +31,13 @@ defmodule AppWeb.UserRegistrationLive do
           {gettext("Oops, something went wrong! Please check the errors below.")}
         </.error>
 
-        <.input field={@form[:name]} type="text" label="Full Name" required />
-        <.input field={@form[:birthday]} type="date" label="Birthday" required />
-        <.input field={@form[:email]} type="email" label="Email" required />
-        <.input field={@form[:password]} type="password" label="Password" required />
+        <.input field={@form[:name]} type="text" label={gettext("Full Name")} required />
+        <.input field={@form[:birthday]} type="date" label={gettext("Birthday")} required />
+        <.input field={@form[:email]} type="email" label={gettext("Email")} required />
+        <.input field={@form[:password]} type="password" label={gettext("Password")} required />
 
         <:actions>
-          <.button color="alternative" type="submit" phx-disable-with="Creating account..." class="w-full">{gettext("Create an account")}</.button>
+          <.button color="alternative" type="submit" phx-disable-with={gettext("Creating account...")} class="w-full">{gettext("Create an account")}</.button>
         </:actions>
       </.simple_form>
     </div>
