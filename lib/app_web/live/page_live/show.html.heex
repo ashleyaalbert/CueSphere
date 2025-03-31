@@ -1,9 +1,9 @@
 <.header>
-  Page {@page.id || "New"}
-  <:subtitle>This is a page record from your database.</:subtitle>
+  {gettext("Page")} {@page.id || "New"}
+  <:subtitle>{gettext("This is a page record from your database.")}</:subtitle>
   <:actions>
     <.link patch={~p"/topics/#{@topic.slug}/pages/#{@page.id || :new}/edit"} phx-click={JS.push_focus()}>
-      <.button color="alternative">Edit page</.button>
+      <.button color="alternative">{gettext("Edit page")}</.button>
     </.link>
   </:actions>
 </.header>
@@ -21,7 +21,7 @@
   </:item>
 </.list>
 
-<.back navigate={~p"/topics/#{@topic.slug}/pages"}>Back to pages</.back>
+<.back navigate={~p"/topics/#{@topic.slug}/pages"}>{gettext("Back to pages")}</.back>
 
 <.modal
   id="page-modal"

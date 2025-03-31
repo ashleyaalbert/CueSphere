@@ -8,7 +8,7 @@ defmodule AppWeb.ThermostatLive do
 
   def render(assigns) do
     ~H"""
-    Current temperature:
+    {gettext("Current temperature:")}
     <.button phx-click="change_temperature" phx-value-direction="down">-</.button>
     {@temperature}°F
     <.button phx-click="change_temperature" phx-value-direction="up">+</.button>

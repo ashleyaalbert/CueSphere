@@ -6,7 +6,7 @@ defmodule AppWeb.Components.Live.PollComponent do
     <div class="p-4 bg-white rounded-lg shadow-md mt-4 dark:bg-gray-700 dark:text-white">
       <div class="flex justify-between items-center">
         <div class="text-xl font-bold mb-2 mt-4">
-          Total Votes: <%= @total_votes %>
+          {gettext("Total Votes:")} <%= @total_votes %>
         </div>
         <%= if @total_votes > 0 do %>
           <.button color="alternative" class="px-4 py-2 bg-blue-600 text-white rounded-md"
@@ -17,7 +17,7 @@ defmodule AppWeb.Components.Live.PollComponent do
       </div>
 
       <%= if @show_results do %>
-        <h2 class="text-xl font-bold mb-2 mt-4">Poll Results</h2>
+        <h2 class="text-xl font-bold mb-2 mt-4">{gettext("Poll Results")}</h2>
 
         <ul class="mt-4 space-y-2">
           <%= for {image, index} <- Enum.with_index(@images) do %>

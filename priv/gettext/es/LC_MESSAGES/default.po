@@ -14,39 +14,596 @@ msgstr ""
 #: lib/app_web/components/core_components.ex:483
 #, elixir-autogen, elixir-format
 msgid "Actions"
-msgstr ""
+msgstr "Comportamiento"
 
 #: lib/app_web/components/core_components.ex:160
 #, elixir-autogen, elixir-format
 msgid "Attempting to reconnect"
-msgstr ""
+msgstr "Intentando reconectarse"
 
 #: lib/app_web/components/core_components.ex:151
 #, elixir-autogen, elixir-format
 msgid "Error!"
-msgstr ""
+msgstr "¡Error!"
 
 #: lib/app_web/components/core_components.ex:172
 #, elixir-autogen, elixir-format
 msgid "Hang in there while we get back on track"
-msgstr ""
+msgstr "Aguanta mientras volvemos al buen camino."
 
 #: lib/app_web/components/core_components.ex:167
 #, elixir-autogen, elixir-format
 msgid "Something went wrong!"
-msgstr ""
+msgstr "¡Algo salió mal!"
 
 #: lib/app_web/components/core_components.ex:150
 #, elixir-autogen, elixir-format
 msgid "Success!"
-msgstr ""
+msgstr "¡Éxito!"
 
 #: lib/app_web/components/core_components.ex:155
 #, elixir-autogen, elixir-format
 msgid "We can't find the internet"
-msgstr ""
+msgstr "Nosotros no podemos encontrar internet"
 
 #: lib/app_web/components/core_components.ex:130
 #, elixir-autogen, elixir-format
 msgid "close"
+msgstr "cerca"
+
+#: lib/app_web/controllers/page_html/home.html.heex:20
+#, elixir-autogen, elixir-format
+msgid "About Me:"
+msgstr "Acerca de mí:"
+
+#: lib/app_web/controllers/page_html/home.html.heex:22
+#, elixir-autogen, elixir-format
+msgid "Fun Fact:"
+msgstr "Dato curioso:"
+
+#: lib/app_web/controllers/page_html/home.html.heex:21
+#, elixir-autogen, elixir-format
+msgid "I am a Computer Science major graduating on May 18, 2025 from Bucknell University. I grew up in Coal Township, PA and went to Our Lady of Lourdes Regional School. In my free time, I enjoy spending time with family and friends or shooting pool! My favorite song to listen to is The Sweet Escape by Gwen Stefani."
+msgstr "Soy estudiante de Informática y me graduaré el 18 de mayo de 2025 de la Universidad de Bucknell. Crecí en Coal Township, Pensilvania, y fui a la Escuela Regional Nuestra Señora de Lourdes. En mi tiempo libre, disfruto pasar tiempo con mi familia y amigos o jugar al billar. Mi canción favorita es \"The Sweet Escape\" de Gwen Stefani."
+
+#: lib/app_web/controllers/page_html/home.html.heex:23
+#, elixir-autogen, elixir-format
+msgid "I was born in Lewisburg, PA (which means I was always meant to come to Bucknell...right?)."
+msgstr "Nací en Lewisburg, PA (lo que significa que siempre estuve destinado a venir a Bucknell... ¿verdad?)."
+
+#: lib/app_web/live/user_settings_live.ex:10
+#, elixir-autogen, elixir-format
+msgid "Account Settings"
+msgstr "Configuraciones de la cuenta"
+
+#: lib/app_web/live/page_live/form_component.ex:38
+#, elixir-autogen, elixir-format
+msgid "Add Tag"
+msgstr "Agregar etiqueta"
+
+#: lib/app_web/controllers/planet_html/list.html.heex:12
+#, elixir-autogen, elixir-format
+msgid "All Planets' Details"
+msgstr "Detalles de todos los planetas"
+
+#: lib/app_web/live/user_registration_live.ex:13
+#, elixir-autogen, elixir-format
+msgid "Already registered?"
+msgstr "¿Ya estás registrado?"
+
+#: lib/app_web/controllers/page_html/courses.html.heex:2
+#, elixir-autogen, elixir-format
+msgid "Ashley's Courses"
+msgstr "Cursos de Ashley"
+
+#: lib/app_web/live/item_live/show.html.heex:26
+#, elixir-autogen, elixir-format
+msgid "Back to items"
+msgstr "Volver a los artículos"
+
+#: lib/app_web/live/page_live/show.html.heex:24
+#, elixir-autogen, elixir-format
+msgid "Back to pages"
+msgstr "Volver a las páginas"
+
+#: lib/app_web/live/page_live/index.html.heex:33
+#, elixir-autogen, elixir-format
+msgid "Back to topic"
+msgstr "Volver al tema"
+
+#: lib/app_web/live/topic_live/show.html.heex:19
+#, elixir-autogen, elixir-format
+msgid "Back to topics"
+msgstr "Volver a los temas"
+
+#: lib/app_web/controllers/page_html/home.html.heex:42
+#, elixir-autogen, elixir-format
+msgid "C"
 msgstr ""
+
+#: lib/app_web/controllers/page_html/home.html.heex:54
+#, elixir-autogen, elixir-format
+msgid "C#"
+msgstr ""
+
+#: lib/app_web/controllers/page_html/home.html.heex:57
+#, elixir-autogen, elixir-format
+msgid "C++"
+msgstr ""
+
+#: lib/app_web/controllers/page_html/home.html.heex:69
+#, elixir-autogen, elixir-format
+msgid "CSS"
+msgstr ""
+
+#: lib/app_web/live/user_settings_live.ex:33
+#, elixir-autogen, elixir-format
+msgid "Change Email"
+msgstr "Cambiar correo electrónico"
+
+#: lib/app_web/live/user_settings_live.ex:69
+#, elixir-autogen, elixir-format
+msgid "Change Password"
+msgstr "Cambiar la contraseña"
+
+#: lib/app_web/components/ui/navbar.ex:78
+#, elixir-autogen, elixir-format
+msgid "Chat"
+msgstr "Charlar"
+
+#: lib/app_web/live/user_confirmation_live.ex:9
+#, elixir-autogen, elixir-format
+msgid "Confirm Account"
+msgstr "Confirmar cuenta"
+
+#: lib/app_web/live/user_confirmation_live.ex:14
+#, elixir-autogen, elixir-format
+msgid "Confirm my account"
+msgstr "Confirmar mi cuenta"
+
+#: lib/app_web/components/ui/navbar.ex:72
+#, elixir-autogen, elixir-format
+msgid "Contact Us"
+msgstr "Contacta con nosotros"
+
+#: lib/app_web/controllers/page_html/courses.html.heex:8
+#, elixir-autogen, elixir-format
+msgid "Course"
+msgstr "Curso"
+
+#: lib/app_web/components/ui/navbar.ex:51
+#, elixir-autogen, elixir-format
+msgid "Courses"
+msgstr "Cursos"
+
+#: lib/app_web/live/user_registration_live.ex:40
+#, elixir-autogen, elixir-format
+msgid "Create an account"
+msgstr "Crear una cuenta"
+
+#: lib/app_web/thermostat_live.ex:11
+#, elixir-autogen, elixir-format
+msgid "Current temperature:"
+msgstr "Temperatura actual:"
+
+#: lib/app_web/live/item_live/index.html.heex:28
+#: lib/app_web/live/page_live/index.html.heex:28
+#: lib/app_web/live/topic_live/index.html.heex:29
+#, elixir-autogen, elixir-format
+msgid "Delete"
+msgstr "Borrar"
+
+#: lib/app_web/components/ui/navbar.ex:52
+#, elixir-autogen, elixir-format
+msgid "Destinations"
+msgstr "Destinos"
+
+#: lib/app_web/live/planets_live.ex:58
+#, elixir-autogen, elixir-format
+msgid "Distance"
+msgstr "Distancia"
+
+#: lib/app_web/controllers/planet_html/list.html.heex:19
+#, elixir-autogen, elixir-format
+msgid "Distance to Sun"
+msgstr "Distancia al Sol"
+
+#: lib/app_web/live/user_login_live.ex:10
+#, elixir-autogen, elixir-format
+msgid "Don't have an account?"
+msgstr "¿No tienes una cuenta?"
+
+#: lib/app_web/live/item_live/index.html.heex:21
+#: lib/app_web/live/page_live/index.html.heex:21
+#: lib/app_web/live/topic_live/index.html.heex:21
+#, elixir-autogen, elixir-format
+msgid "Edit"
+msgstr "Editar"
+
+#: lib/app_web/live/item_live/show.html.heex:6
+#, elixir-autogen, elixir-format
+msgid "Edit item"
+msgstr "Editar elemento"
+
+#: lib/app_web/live/page_live/show.html.heex:6
+#, elixir-autogen, elixir-format
+msgid "Edit page"
+msgstr "Editar página"
+
+#: lib/app_web/live/topic_live/show.html.heex:6
+#, elixir-autogen, elixir-format
+msgid "Edit topic"
+msgstr "Editar tema"
+
+#: lib/app_web/live/user_forgot_password_live.ex:10
+#: lib/app_web/live/user_login_live.ex:25
+#, elixir-autogen, elixir-format
+msgid "Forgot your password?"
+msgstr "¿Olvidaste tu contraseña?"
+
+#: lib/app_web/controllers/page_html/home.html.heex:66
+#, elixir-autogen, elixir-format
+msgid "HTML"
+msgstr ""
+
+#: lib/app_web/controllers/page_html/home.html.heex:48
+#, elixir-autogen, elixir-format
+msgid "Haskell"
+msgstr ""
+
+#: lib/app_web/components/ui/navbar.ex:48
+#, elixir-autogen, elixir-format
+msgid "Home"
+msgstr "Hogar"
+
+#: lib/app_web/controllers/planet_html/list.html.heex:17
+#: lib/app_web/live/planets_live.ex:52
+#, elixir-autogen, elixir-format
+msgid "ID"
+msgstr ""
+
+#: lib/app_web/live/item_live/show.html.heex:21
+#, elixir-autogen, elixir-format
+msgid "Invalid attributes format"
+msgstr "Formato de atributos no válido"
+
+#: lib/app_web/live/item_live/show.html.heex:2
+#, elixir-autogen, elixir-format
+msgid "Item"
+msgstr "Artículo"
+
+#: lib/app_web/controllers/page_html/home.html.heex:39
+#, elixir-autogen, elixir-format
+msgid "Java"
+msgstr ""
+
+#: lib/app_web/controllers/page_html/home.html.heex:36
+#, elixir-autogen, elixir-format
+msgid "JavaScript"
+msgstr ""
+
+#: lib/app_web/live/chat_live.ex:65
+#, elixir-autogen, elixir-format
+msgid "Join"
+msgstr "Unirse"
+
+#: lib/app_web/live/chat_live.ex:38
+#, elixir-autogen, elixir-format
+msgid "Join Chat"
+msgstr "Unirse al chat"
+
+#: lib/app_web/live/chat_live.ex:47
+#, elixir-autogen, elixir-format
+msgid "Leave Chat"
+msgstr "Salir del chat"
+
+#: lib/app_web/live/item_live/index.html.heex:2
+#, elixir-autogen, elixir-format
+msgid "Listing Items"
+msgstr "Listado de artículos"
+
+#: lib/app_web/live/page_live/index.html.heex:2
+#, elixir-autogen, elixir-format
+msgid "Listing Pages"
+msgstr "Páginas de listado"
+
+#: lib/app_web/live/topic_live/index.html.heex:2
+#, elixir-autogen, elixir-format
+msgid "Listing Topics"
+msgstr "Listado de temas"
+
+#: lib/app_web/components/ui/navbar.ex:96
+#: lib/app_web/live/user_confirmation_instructions_live.ex:25
+#: lib/app_web/live/user_confirmation_live.ex:20
+#: lib/app_web/live/user_forgot_password_live.ex:24
+#: lib/app_web/live/user_login_live.ex:30
+#: lib/app_web/live/user_registration_live.ex:15
+#: lib/app_web/live/user_reset_password_live.ex:35
+#, elixir-autogen, elixir-format
+msgid "Log in"
+msgstr "Acceso"
+
+#: lib/app_web/live/user_login_live.ex:8
+#, elixir-autogen, elixir-format
+msgid "Log in to account"
+msgstr "Iniciar sesión en la cuenta"
+
+#: lib/app_web/components/ui/navbar.ex:91
+#, elixir-autogen, elixir-format
+msgid "Log out"
+msgstr "Finalizar la sesión"
+
+#: lib/app_web/live/user_settings_live.ex:11
+#, elixir-autogen, elixir-format
+msgid "Manage your account email address and password settings"
+msgstr "Administre la configuración de su dirección de correo electrónico y contraseña de su cuenta"
+
+#: lib/app_web/components/ui/navbar.ex:76
+#, elixir-autogen, elixir-format
+msgid "Messages"
+msgstr "Mensajes"
+
+#: lib/app_web/controllers/planet_html/list.html.heex:18
+#: lib/app_web/live/planets_live.ex:55
+#, elixir-autogen, elixir-format
+msgid "Name"
+msgstr "Nombre"
+
+#: lib/app_web/live/item_live/index.html.heex:5
+#, elixir-autogen, elixir-format
+msgid "New Item"
+msgstr "Nuevo artículo"
+
+#: lib/app_web/live/page_live/index.html.heex:5
+#, elixir-autogen, elixir-format
+msgid "New Page"
+msgstr "Nueva página"
+
+#: lib/app_web/live/topic_live/index.html.heex:5
+#, elixir-autogen, elixir-format
+msgid "New Topic"
+msgstr "Nuevo tema"
+
+#: lib/app_web/live/user_confirmation_instructions_live.ex:10
+#, elixir-autogen, elixir-format
+msgid "No confirmation instructions received?"
+msgstr "¿No recibió instrucciones de confirmación?"
+
+#: lib/app_web/live/user_registration_live.ex:31
+#: lib/app_web/live/user_reset_password_live.ex:18
+#, elixir-autogen, elixir-format
+msgid "Oops, something went wrong! Please check the errors below."
+msgstr "¡Uy, algo salió mal! Por favor, revisa los errores a continuación."
+
+#: lib/app_web/controllers/planet_html/list.html.heex:20
+#: lib/app_web/live/planets_live.ex:61
+#, elixir-autogen, elixir-format
+msgid "Orbital Period"
+msgstr "Periodo orbital"
+
+#: lib/app_web/controllers/page_html/home.html.heex:60
+#, elixir-autogen, elixir-format
+msgid "PHP"
+msgstr ""
+
+#: lib/app_web/live/page_live/show.html.heex:2
+#, elixir-autogen, elixir-format
+msgid "Page"
+msgstr "Página"
+
+#: lib/app_web/components/ui/navbar.ex:58
+#, elixir-autogen, elixir-format
+msgid "Planets"
+msgstr "Planetas"
+
+#: lib/app_web/live/planets_live.ex:44
+#, elixir-autogen, elixir-format
+msgid "Planets List"
+msgstr "Lista de planetas"
+
+#: lib/app_web/components/ui/navbar.ex:61
+#, elixir-autogen, elixir-format
+msgid "Planets Live"
+msgstr "Planetas vivos"
+
+#: lib/app_web/components/live/poll_component.ex:20
+#, elixir-autogen, elixir-format
+msgid "Poll Results"
+msgstr "Resultados de la encuesta"
+
+#: lib/app_web/controllers/page_html/home.html.heex:29
+#, elixir-autogen, elixir-format
+msgid "Programming Languages"
+msgstr "Lenguajes de programación"
+
+#: lib/app_web/controllers/page_html/home.html.heex:51
+#, elixir-autogen, elixir-format
+msgid "Prolog"
+msgstr ""
+
+#: lib/app_web/controllers/page_html/home.html.heex:33
+#, elixir-autogen, elixir-format
+msgid "Python"
+msgstr ""
+
+#: lib/app_web/controllers/page_html/home.html.heex:45
+#, elixir-autogen, elixir-format
+msgid "R"
+msgstr ""
+
+#: lib/app_web/controllers/page_html/home.html.heex:63
+#, elixir-autogen, elixir-format
+msgid "RISC-V"
+msgstr ""
+
+#: lib/app_web/components/ui/navbar.ex:99
+#: lib/app_web/live/user_confirmation_instructions_live.ex:24
+#: lib/app_web/live/user_confirmation_live.ex:19
+#: lib/app_web/live/user_forgot_password_live.ex:23
+#: lib/app_web/live/user_reset_password_live.ex:34
+#, elixir-autogen, elixir-format
+msgid "Register"
+msgstr "Registro"
+
+#: lib/app_web/live/user_registration_live.ex:11
+#, elixir-autogen, elixir-format
+msgid "Register for an account"
+msgstr "Regístrese para obtener una cuenta"
+
+#: lib/app_web/live/user_confirmation_instructions_live.ex:18
+#, elixir-autogen, elixir-format
+msgid "Resend confirmation instructions"
+msgstr "Reenviar instrucciones de confirmación"
+
+#: lib/app_web/live/user_reset_password_live.ex:9
+#: lib/app_web/live/user_reset_password_live.ex:29
+#, elixir-autogen, elixir-format
+msgid "Reset Password"
+msgstr "Restablecer contraseña"
+
+#: lib/app_web/live/item_live/form_component.ex:39
+#, elixir-autogen, elixir-format
+msgid "Save Item"
+msgstr "Save Item"
+
+#: lib/app_web/components/layouts/app.html.heex:90
+#, elixir-autogen, elixir-format
+msgid "Save Message"
+msgstr "Guardar mensaje"
+
+#: lib/app_web/live/page_live/form_component.ex:61
+#, elixir-autogen, elixir-format
+msgid "Save Page"
+msgstr "Guardar página"
+
+#: lib/app_web/live/topic_live/form_component.ex:26
+#, elixir-autogen, elixir-format
+msgid "Save Topic"
+msgstr "Guardar tema"
+
+#: lib/app_web/controllers/page_html/courses.html.heex:7
+#, elixir-autogen, elixir-format
+msgid "Semester"
+msgstr "Semestre"
+
+#: lib/app_web/live/chat_live.ex:50
+#, elixir-autogen, elixir-format
+msgid "Send Message"
+msgstr "Enviar mensaje"
+
+#: lib/app_web/live/user_forgot_password_live.ex:18
+#, elixir-autogen, elixir-format
+msgid "Send password reset instructions"
+msgstr "Enviar instrucciones para restablecer la contraseña"
+
+#: lib/app_web/components/ui/navbar.ex:90
+#, elixir-autogen, elixir-format
+msgid "Settings"
+msgstr "Ajustes"
+
+#: lib/app_web/live/item_live/index.html.heex:19
+#: lib/app_web/live/page_live/index.html.heex:19
+#: lib/app_web/live/topic_live/index.html.heex:19
+#, elixir-autogen, elixir-format
+msgid "Show"
+msgstr "Espectáculo"
+
+#: lib/app_web/live/user_login_live.ex:12
+#, elixir-autogen, elixir-format
+msgid "Sign up"
+msgstr "Inscribirse"
+
+#: lib/app_web/live/planets_live.ex:45
+#, elixir-autogen, elixir-format
+msgid "Sortable list of planets"
+msgstr "Lista ordenable de planetas"
+
+#: lib/app_web/live/item_live/show.html.heex:3
+#, elixir-autogen, elixir-format
+msgid "This is a item record from your database."
+msgstr "Este es un registro de artículo de su base de datos."
+
+#: lib/app_web/live/page_live/show.html.heex:3
+#, elixir-autogen, elixir-format
+msgid "This is a page record from your database."
+msgstr "Este es un registro de página de su base de datos."
+
+#: lib/app_web/live/topic_live/show.html.heex:3
+#, elixir-autogen, elixir-format
+msgid "This is a topic record from your database."
+msgstr "Este es un registro de tema de su base de datos."
+
+#: lib/app_web/live/topic_live/show.html.heex:2
+#, elixir-autogen, elixir-format
+msgid "Topic"
+msgstr "Tema"
+
+#: lib/app_web/components/ui/navbar.ex:77
+#, elixir-autogen, elixir-format
+msgid "Topics"
+msgstr "Temas"
+
+#: lib/app_web/components/live/poll_component.ex:9
+#, elixir-autogen, elixir-format
+msgid "Total Votes:"
+msgstr "Total de votos:"
+
+#: lib/app_web/live/user_settings_live.ex:84
+#, elixir-autogen, elixir-format
+msgid "Update Profile"
+msgstr "Actualizar perfil"
+
+#: lib/app_web/live/item_live/form_component.ex:12
+#, elixir-autogen, elixir-format
+msgid "Use this form to manage item records in your database."
+msgstr "Utilice este formulario para administrar registros de artículos en su base de datos."
+
+#: lib/app_web/live/page_live/form_component.ex:12
+#, elixir-autogen, elixir-format
+msgid "Use this form to manage page records in your database."
+msgstr "Utilice este formulario para administrar registros de páginas en su base de datos."
+
+#: lib/app_web/live/topic_live/form_component.ex:12
+#, elixir-autogen, elixir-format
+msgid "Use this form to manage topic records in your database."
+msgstr "Utilice este formulario para administrar registros de temas en su base de datos."
+
+#: lib/app_web/live/topic_live/show.html.heex:9
+#, elixir-autogen, elixir-format
+msgid "View Pages"
+msgstr "Ver páginas"
+
+#: lib/app_web/live/user_confirmation_instructions_live.ex:11
+#, elixir-autogen, elixir-format
+msgid "We'll send a new confirmation link to your inbox"
+msgstr "Le enviaremos un nuevo enlace de confirmación a su bandeja de entrada."
+
+#: lib/app_web/live/user_forgot_password_live.ex:11
+#, elixir-autogen, elixir-format
+msgid "We'll send a password reset link to your inbox"
+msgstr "Le enviaremos un enlace de restablecimiento de contraseña a su bandeja de entrada."
+
+#: lib/app_web/components/live/rate_component.ex:7
+#, elixir-autogen, elixir-format
+msgid "Where would you rather be?"
+msgstr "¿Donde preferirías estar?"
+
+#: lib/app_web/live/user_login_live.ex:14
+#, elixir-autogen, elixir-format
+msgid "for an account now."
+msgstr "para una cuenta ahora."
+
+#: lib/app_web/live/chat_live.ex:14
+#, elixir-autogen, elixir-format
+msgid "joined the chat"
+msgstr "se unió al chat"
+
+#: lib/app_web/live/chat_live.ex:30
+#, elixir-autogen, elixir-format
+msgid "left the chat"
+msgstr "abandonó el chat"
+
+#: lib/app_web/live/user_registration_live.ex:17
+#, elixir-autogen, elixir-format
+msgid "to your account now."
+msgstr "a tu cuenta ahora."

@@ -8,13 +8,13 @@ defmodule AppWeb.UserRegistrationLive do
     ~H"""
     <div class="mx-auto max-w-sm">
       <.header class="text-center">
-        Register for an account
+        {gettext("Register for an account")}
         <:subtitle>
-          Already registered?
+          {gettext("Already registered?")}
           <.link navigate={~p"/users/log_in"} class="font-semibold text-brand hover:underline">
-            Log in
+            {gettext("Log in")}
           </.link>
-          to your account now.
+          {gettext("to your account now.")}
         </:subtitle>
       </.header>
 
@@ -28,7 +28,7 @@ defmodule AppWeb.UserRegistrationLive do
         method="post"
       >
         <.error :if={@check_errors}>
-          Oops, something went wrong! Please check the errors below.
+          {gettext("Oops, something went wrong! Please check the errors below.")}
         </.error>
 
         <.input field={@form[:name]} type="text" label="Full Name" required />
@@ -37,7 +37,7 @@ defmodule AppWeb.UserRegistrationLive do
         <.input field={@form[:password]} type="password" label="Password" required />
 
         <:actions>
-          <.button color="alternative" type="submit" phx-disable-with="Creating account..." class="w-full">Create an account</.button>
+          <.button color="alternative" type="submit" phx-disable-with="Creating account..." class="w-full">{gettext("Create an account")}</.button>
         </:actions>
       </.simple_form>
     </div>

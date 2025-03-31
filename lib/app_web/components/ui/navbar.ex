@@ -1,5 +1,6 @@
 defmodule AppWeb.Components.UI.Navbar do
   use Phoenix.Component
+  use Gettext, backend: AppWeb.Gettext
 
   use Phoenix.VerifiedRoutes,
     endpoint: AppWeb.Endpoint,
@@ -44,20 +45,20 @@ defmodule AppWeb.Components.UI.Navbar do
 
           <!-- Home Dropdown -->
           <li class="relative group">
-            <.link href={~p"/"} class="px-4 py-2 block hover:bg-gray-700 dark:hover:bg-gray-400 rounded-md transition-all">Home</.link>
+            <.link href={~p"/"} class="px-4 py-2 block hover:bg-gray-700 dark:hover:bg-gray-400 rounded-md transition-all">{gettext("Home")}</.link>
             <ul class="hidden group-hover:block group-hover:delay-150 md:absolute md:left-0 md:bg-gray-800 md:dark:bg-gray-300 md:mt-1 md:w-44 md:rounded-md md:shadow-lg md:border md:border-gray-700 md:dark:border-gray-400
               md:p-0 p-2 bg-gray-900 dark:bg-gray-200 rounded-md md:shadow-none">
-              <li><.link href={~p"/courses"} class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">Courses</.link></li>
-              <li><.link href={~p"/facemash"} class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">Destinations</.link></li>
+              <li><.link href={~p"/courses"} class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Courses")}</.link></li>
+              <li><.link href={~p"/facemash"} class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Destinations")}</.link></li>
             </ul>
           </li>
 
           <!-- Planets Dropdown -->
           <li class="relative group">
-            <.link href={~p"/planets"} class="px-4 py-2 block hover:bg-gray-700 dark:hover:bg-gray-400 rounded-md transition-all">Planets</.link>
+            <.link href={~p"/planets"} class="px-4 py-2 block hover:bg-gray-700 dark:hover:bg-gray-400 rounded-md transition-all">{gettext("Planets")}</.link>
             <ul class="hidden group-hover:block group-hover:delay-150 md:absolute md:left-0 md:bg-gray-800 md:dark:bg-gray-300 md:mt-1 md:w-44 md:rounded-md md:shadow-lg md:border md:border-gray-700 md:dark:border-gray-400
               md:p-0 p-2 bg-gray-900 dark:bg-gray-200 rounded-md md:shadow-none">
-              <li><.link href={~p"/live/planets"} class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">Planets Live</.link></li>
+              <li><.link href={~p"/live/planets"} class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Planets Live")}</.link></li>
             </ul>
           </li>
 
@@ -68,13 +69,13 @@ defmodule AppWeb.Components.UI.Navbar do
               phx-click={Modal.show_modal("contact-modal")}
               class="px-4 py-2 block hover:bg-gray-700 dark:hover:bg-gray-400 rounded-md transition-all"
             >
-              Contact Us
+              {gettext("Contact Us")}
             </button>
             <ul class="hidden group-hover:block group-hover:delay-150 md:absolute md:left-0 md:bg-gray-800 md:dark:bg-gray-300 md:mt-1 md:w-44 md:rounded-md md:shadow-lg md:border md:border-gray-700 md:dark:border-gray-400
               md:p-0 p-2 bg-gray-900 dark:bg-gray-200 rounded-md md:shadow-none">
-              <li><.link href={~p"/messages"} class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">Messages</.link></li>
-              <li><.link href={~p"/topics"} class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">Topics</.link></li>
-              <li><.link href={~p"/chat"} class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">Chat</.link></li>
+              <li><.link href={~p"/messages"} class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Messages")}</.link></li>
+              <li><.link href={~p"/topics"} class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Topics")}</.link></li>
+              <li><.link href={~p"/chat"} class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Chat")}</.link></li>
             </ul>
           </li>
 
@@ -86,16 +87,16 @@ defmodule AppWeb.Components.UI.Navbar do
               </.link>
               <ul class="hidden group-hover:block group-hover:delay-150 md:absolute md:left-0 md:bg-gray-800 md:dark:bg-gray-300 md:mt-1 md:w-44 md:rounded-md md:shadow-lg md:border md:border-gray-700 md:dark:border-gray-400
                 md:p-0 p-2 bg-gray-900 dark:bg-gray-200 rounded-md md:shadow-none">
-                <li><.link href={~p"/users/settings"} class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">Settings</.link></li>
-                <li><.link id="logout-button" href={~p"/users/log_out"} method="DELETE" phx-hook="LogoutButton" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">Log out</.link></li>
+                <li><.link href={~p"/users/settings"} class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Settings")}</.link></li>
+                <li><.link id="logout-button" href={~p"/users/log_out"} method="DELETE" phx-hook="LogoutButton" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Log out")}</.link></li>
               </ul>
             </li>
           <% else %>
             <li class="relative group">
-              <.link href={~p"/users/log_in"} class="px-4 py-2 block hover:bg-gray-700 dark:hover:bg-gray-400 rounded-md transition-all">Log in</.link>
+              <.link href={~p"/users/log_in"} class="px-4 py-2 block hover:bg-gray-700 dark:hover:bg-gray-400 rounded-md transition-all">{gettext("Log in")}</.link>
               <ul class="hidden group-hover:block group-hover:delay-150 md:absolute md:left-0 md:bg-gray-800 md:dark:bg-gray-300 md:mt-1 md:w-44 md:rounded-md md:shadow-lg md:border md:border-gray-700 md:dark:border-gray-400
                 md:p-0 p-2 bg-gray-900 dark:bg-gray-200 rounded-md md:shadow-none">
-                <li><.link href={~p"/users/register"} class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">Register</.link></li>
+                <li><.link href={~p"/users/register"} class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Register")}</.link></li>
               </ul>
             </li>
           <% end %>

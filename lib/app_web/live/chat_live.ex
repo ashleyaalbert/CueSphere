@@ -1,27 +1,9 @@
 defmodule AppWeb.ChatLive do
   use AppWeb, :live_view
 
-  # will render chat, bottom message form and the modal (if liveaction == :join)
   @impl true
   def render(assigns) do
     ~H"""
-      <%!-- <ul id="messages" phx-update="stream" phx-hook="AutoScroll">
-        <li
-          :for={{dom_id, message} <- @streams.messages}
-          id={dom_id}
-          class="p-2 border-b border-gray-300 dark:border-gray-700"
-        >
-          <%= case message.type do %>
-          <% :user_joined -> %>
-            <em><%= message.username %> joined the chat</em>
-          <% :user_left -> %>
-            <em><%= message.username %> left the chat</em>
-          <% :message -> %>
-            <strong><%= message.username %>:</strong> <%= message.message %>
-        <% end %>
-        </li>
-      </ul> --%>
-
       <ul id="messages" phx-update="stream" class="space-y-4 pb-20" phx-hook="AutoScroll">
       <%= for {dom_id, message} <- @streams.messages do %>
         <li id={dom_id}>
@@ -29,7 +11,7 @@ defmodule AppWeb.ChatLive do
             <% %{type: :user_joined, username: username} -> %>
               <div class="text-sm">
                 <span class="font-semibold text-gray-900 dark:text-white"><%= username %></span>
-                <span class="text-gray-500 dark:text-gray-400">joined the chat</span>
+                <span class="text-gray-500 dark:text-gray-400">{gettext("joined the chat")}</span>
               </div>
 
             <% %{type: :message, username: username, message: text} -> %>
@@ -45,7 +27,7 @@ defmodule AppWeb.ChatLive do
             <% %{type: :user_left, username: username} -> %>
               <div class="text-sm">
                 <span class="font-semibold text-gray-900 dark:text-white"><%= username %></span>
-                <span class="text-gray-500 dark:text-gray-400">left the chat</span>
+                <span class="text-gray-500 dark:text-gray-400">{gettext("left the chat")}</span>
               </div>
           <% end %>
         </li>
@@ -53,7 +35,7 @@ defmodule AppWeb.ChatLive do
     </ul>
 
       <div class="fixed bottom-0 left-0 right-0 bg-gray-100 h-auto justify-center dark:bg-gray-800 flex">
-        <.button :if={!@username} patch={~p"/chat/join"}>Join Chat</.button>
+        <.button :if={!@username} patch={~p"/chat/join"}>{gettext("Join Chat")}</.button>
 
         <.form
           :if={@username}
@@ -62,10 +44,10 @@ defmodule AppWeb.ChatLive do
           phx-change="change-message"
           phx-submit="send-message"
         >
-          <.button phx-click="leave-chat">Leave Chat</.button>
+          <.button phx-click="leave-chat">{gettext("Leave Chat")}</.button>
           <.input field={@form[:message]} placeholder="Type Message" wrapper_class="sm:flex-1" />
           <div>
-            <.button type="submit" class="w-full">Send Message</.button>
+            <.button type="submit" class="w-full">{gettext("Send Message")}</.button>
           </div>
         </.form>
       </div>
@@ -80,7 +62,7 @@ defmodule AppWeb.ChatLive do
       >
         <.form for={@username_form} phx-change="change-username" phx-submit="join-chat">
         <.input field={@username_form[:username]} placeholder="Enter a username" />
-        <.button type="submit" class="w-full">Join</.button>
+        <.button type="submit" class="w-full">{gettext("Join")}</.button>
       </.form>
       </.modal>
     """

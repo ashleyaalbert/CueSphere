@@ -41,24 +41,24 @@ defmodule AppWeb.PlanetsLive do
     <div class="max-w-4xl mx-auto mt-5">
       <div class="overflow-hidden bg-white shadow sm:rounded-lg dark:bg-gray-800">
         <div class="px-4 py-5 sm:px-6">
-          <h3 class="text-lg font-medium text-gray-900 dark:text-gray-100">Planets List</h3>
-          <p class="mt-1 max-w-2xl text-sm text-gray-500 dark:text-gray-400">Sortable list of planets</p>
+          <h3 class="text-lg font-medium text-gray-900 dark:text-gray-100">{gettext("Planets List")}</h3>
+          <p class="mt-1 max-w-2xl text-sm text-gray-500 dark:text-gray-400">{gettext("Sortable list of planets")}</p>
         </div>
         <div class="border-t border-gray-200 dark:border-gray-600 overflow-x-auto">
           <table class="w-full divide-y divide-gray-200 dark:divide-gray-600">
             <thead class="bg-gray-50 dark:bg-gray-700">
               <tr>
                 <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400 cursor-pointer" phx-click="sort" phx-value-column="id">
-                  ID {if @sort_by == :id, do: if(@sort_order == :asc, do: "▲", else: "▼")}
+                  {gettext("ID")} {if @sort_by == :id, do: if(@sort_order == :asc, do: "▲", else: "▼")}
                 </th>
                 <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400 cursor-pointer" phx-click="sort" phx-value-column="name">
-                  Name {if @sort_by == :name, do: if(@sort_order == :asc, do: "▲", else: "▼")}
+                  {gettext("Name")} {if @sort_by == :name, do: if(@sort_order == :asc, do: "▲", else: "▼")}
                 </th>
                 <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400 cursor-pointer" phx-click="sort" phx-value-column="distance">
-                  Distance {if @sort_by == :distance, do: if(@sort_order == :asc, do: "▲", else: "▼")}
+                  {gettext("Distance")} {if @sort_by == :distance, do: if(@sort_order == :asc, do: "▲", else: "▼")}
                 </th>
                 <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400 cursor-pointer" phx-click="sort" phx-value-column="orbital_period">
-                  Orbital Period {if @sort_by == :orbital_period, do: if(@sort_order == :asc, do: "▲", else: "▼")}
+                  {gettext("Orbital Period")} {if @sort_by == :orbital_period, do: if(@sort_order == :asc, do: "▲", else: "▼")}
                 </th>
               </tr>
             </thead>

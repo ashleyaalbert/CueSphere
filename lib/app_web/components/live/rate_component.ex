@@ -4,7 +4,7 @@ defmodule AppWeb.Components.Live.RateComponent do
   def render(assigns) do
     ~H"""
     <div class="p-4 bg-white rounded-lg shadow-md dark:bg-gray-700 dark:text-white">
-      <h2 class="text-xl font-bold mb-2 text-center">Where would you rather be?</h2>
+      <h2 class="text-xl font-bold mb-2 text-center">{gettext("Where would you rather be?")}</h2>
       <div class="flex gap-4 justify-center">
         <%= for image <- @current_images do %>
           <div class="text-center">

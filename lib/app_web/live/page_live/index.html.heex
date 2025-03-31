@@ -1,8 +1,8 @@
 <.header class="dark:text-white">
-  Listing Pages
+  {gettext("Listing Pages")}
   <:actions>
     <.link patch={~p"/topics/#{@topic.slug}/pages/new"}>
-      <.button color="alternative">New Page</.button>
+      <.button color="alternative">{gettext("New Page")}</.button>
     </.link>
   </:actions>
 </.header>
@@ -16,21 +16,21 @@
 
   <:action :let={{_id, page}}>
     <div class="sr-only">
-      <.link navigate={~p"/topics/#{@topic.slug}/pages/#{page.id || :new}"}>Show</.link>
+      <.link navigate={~p"/topics/#{@topic.slug}/pages/#{page.id || :new}"}>{gettext("Show")}</.link>
     </div>
-    <.link patch={~p"/topics/#{@topic.slug}/pages/#{page.id}/edit"}>Edit</.link>
+    <.link patch={~p"/topics/#{@topic.slug}/pages/#{page.id}/edit"}>{gettext("Edit")}</.link>
   </:action>
   <:action :let={{id, page}}>
     <.link
       phx-click={JS.push("delete", value: %{id: page.id}) |> hide("##{id}")}
       data-confirm="Are you sure?"
     >
-      Delete
+      {gettext("Delete")}
     </.link>
   </:action>
 </.table>
 
-<.back navigate={~p"/topics/#{@topic.slug}"}>Back to topic</.back>
+<.back navigate={~p"/topics/#{@topic.slug}"}>{gettext("Back to topic")}</.back>
 
 <.modal
   show

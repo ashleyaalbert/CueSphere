@@ -9,7 +9,7 @@ defmodule AppWeb.TopicLive.FormComponent do
     <div>
       <.header>
         {@title}
-        <:subtitle>Use this form to manage topic records in your database.</:subtitle>
+        <:subtitle>{gettext("Use this form to manage topic records in your database.")}</:subtitle>
       </.header>
 
       <.simple_form
@@ -23,7 +23,7 @@ defmodule AppWeb.TopicLive.FormComponent do
         <.input field={@form[:title]} type="text" label="Title" />
 
         <:actions>
-          <.button type="submit" color="alternative" phx-disable-with="Saving...">Save Topic</.button>
+          <.button type="submit" color="alternative" phx-disable-with="Saving...">{gettext("Save Topic")}</.button>
         </:actions>
       </.simple_form>
     </div>

@@ -1,8 +1,8 @@
 <.header class="dark:text-white">
-  Listing Topics
+  {gettext("Listing Topics")}
   <:actions>
     <.link patch={~p"/topics/new"}>
-      <.button color="alternative">New Topic</.button>
+      <.button color="alternative">{gettext("New Topic")}</.button>
     </.link>
   </:actions>
 </.header>
@@ -16,9 +16,9 @@
   <:col :let={{_id, topic}} label="Title">{topic.title}</:col>
   <:action :let={{_id, topic}}>
     <div class="sr-only">
-      <.link navigate={~p"/topics/#{topic.slug}"}>Show</.link>
+      <.link navigate={~p"/topics/#{topic.slug}"}>{gettext("Show")}</.link>
     </div>
-    <.link class="dark:text-white" patch={~p"/topics/#{topic.slug}/edit"}>Edit</.link>
+    <.link class="dark:text-white" patch={~p"/topics/#{topic.slug}/edit"}>{gettext("Edit")}</.link>
   </:action>
   <:action :let={{slug, topic}}>
     <.link
@@ -26,12 +26,9 @@
       phx-click={JS.push("delete", value: %{slug: topic.slug}) |> hide("##{slug}")}
       data-confirm="Are you sure?"
     >
-      Delete
+      {gettext("Delete")}
     </.link>
   </:action>
-  <%!-- <:action :let={{_id, topic}}>
-    <.link patch={~p"/topics/#{topic.slug}/new_page"}>New Page</.link>
-  </:action> --%>
 </.table>
 
 <.modal

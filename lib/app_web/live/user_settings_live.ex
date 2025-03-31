@@ -7,8 +7,8 @@ defmodule AppWeb.UserSettingsLive do
     ~H"""
     <div class="bg-white dark:bg-gray-900 p-6">
     <.header class="text-center">
-      Account Settings
-      <:subtitle>Manage your account email address and password settings</:subtitle>
+      {gettext("Account Settings")}
+      <:subtitle>{gettext("Manage your account email address and password settings")}</:subtitle>
     </.header>
 
     <div class="space-y-12 divide-y">
@@ -30,7 +30,7 @@ defmodule AppWeb.UserSettingsLive do
             required
           />
           <:actions>
-            <.button color="alternative" type="submit" phx-disable-with="Changing...">Change Email</.button>
+            <.button color="alternative" type="submit" phx-disable-with="Changing...">{gettext("Change Email")}</.button>
           </:actions>
         </.simple_form>
       </div>
@@ -66,7 +66,7 @@ defmodule AppWeb.UserSettingsLive do
             required
           />
           <:actions>
-            <.button color="alternative" type="submit" phx-disable-with="Changing...">Change Password</.button>
+            <.button color="alternative" type="submit" phx-disable-with="Changing...">{gettext("Change Password")}</.button>
           </:actions>
         </.simple_form>
       </div>
@@ -81,7 +81,7 @@ defmodule AppWeb.UserSettingsLive do
             <.input field={@profile_form[:birthday]} type="date" label="Birthday" required />
             <:actions>
               <.button color="alternative" type="submit" phx-disable-with="Updating...">
-                Update Profile
+                {gettext("Update Profile")}
               </.button>
             </:actions>
           </.simple_form>

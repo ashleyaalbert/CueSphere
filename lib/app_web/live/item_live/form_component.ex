@@ -9,7 +9,7 @@ defmodule AppWeb.ItemLive.FormComponent do
     <div>
       <.header>
         {@title}
-        <:subtitle>Use this form to manage item records in your database.</:subtitle>
+        <:subtitle>{gettext("Use this form to manage item records in your database.")}</:subtitle>
       </.header>
 
       <.simple_form
@@ -27,8 +27,7 @@ defmodule AppWeb.ItemLive.FormComponent do
           options={App.Items.Item.type_options()}
           label="Type"
         />
-        
-    <!-- Render checkboxes for attributes -->
+
         <.input
           :for={i <- 1..8}
           type="checkbox"
@@ -37,7 +36,7 @@ defmodule AppWeb.ItemLive.FormComponent do
         />
 
         <:actions>
-          <.button type="submit" phx-disable-with="Saving...">Save Item</.button>
+          <.button type="submit" phx-disable-with="Saving...">{gettext("Save Item")}</.button>
         </:actions>
       </.simple_form>
     </div>
