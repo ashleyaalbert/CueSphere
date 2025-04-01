@@ -7,11 +7,11 @@ defmodule AppWeb.UserLoginLive do
       <.header class="text-center">
         {gettext("Log in to account")}
         <:subtitle>
-          {gettext("Don't have an account?")}"
+          {gettext("Don't have an account?")}
           <.link navigate={~p"/users/register"} class="font-semibold text-brand hover:underline">
             {gettext("Sign up")}
           </.link>
-          {gettext("for an account now.")}"
+          {gettext("for an account now.")}
         </:subtitle>
       </.header>
 
@@ -22,7 +22,7 @@ defmodule AppWeb.UserLoginLive do
         <:actions>
           <.input field={@form[:remember_me]} type="checkbox" label={gettext("Keep me logged in")} />
           <.link href={~p"/users/reset_password"} class="text-sm font-semibold text-gray-900 dark:text-white">
-            {gettext("Forgot your password?")}"
+            {gettext("Forgot your password?")}
           </.link>
         </:actions>
         <:actions>
