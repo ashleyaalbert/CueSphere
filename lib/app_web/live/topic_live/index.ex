@@ -16,19 +16,19 @@ defmodule AppWeb.TopicLive.Index do
 
   defp apply_action(socket, :edit, %{"slug" => slug}) do
     socket
-    |> assign(:page_title, "Edit Topic")
+    |> assign(:page_title, gettext("Edit Topic"))
     |> assign(:topic, Content.get_topic_by_slug!(slug))
   end
 
   defp apply_action(socket, :new, _params) do
     socket
-    |> assign(:page_title, "New Topic")
+    |> assign(:page_title, gettext("New Topic"))
     |> assign(:topic, %Topic{})
   end
 
   defp apply_action(socket, :index, _params) do
     socket
-    |> assign(:page_title, "Listing Topics")
+    |> assign(:page_title, gettext("Listing Topics"))
     |> assign(:topic, nil)
   end
 

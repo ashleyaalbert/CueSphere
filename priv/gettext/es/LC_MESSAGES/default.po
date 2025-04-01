@@ -289,6 +289,7 @@ msgid "Join"
 msgstr "Unirse"
 
 #: lib/app_web/live/chat_live.ex:38
+#: lib/app_web/live/chat_live.ex:59
 #, elixir-autogen, elixir-format
 msgid "Join Chat"
 msgstr "Unirse al chat"
@@ -308,6 +309,7 @@ msgstr "Listado de artículos"
 msgid "Listing Pages"
 msgstr "Páginas de listado"
 
+#: lib/app_web/live/topic_live/index.ex:31
 #: lib/app_web/live/topic_live/index.html.heex:2
 #, elixir-autogen, elixir-format
 msgid "Listing Topics"
@@ -360,6 +362,7 @@ msgstr "Nuevo artículo"
 msgid "New Page"
 msgstr "Nueva página"
 
+#: lib/app_web/live/topic_live/index.ex:25
 #: lib/app_web/live/topic_live/index.html.heex:5
 #, elixir-autogen, elixir-format
 msgid "New Topic"
@@ -792,3 +795,49 @@ msgstr "Título"
 #, elixir-autogen, elixir-format
 msgid "Tags"
 msgstr "Etiquetas"
+
+#: lib/app_web/live/topic_live/index.ex:19
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Edit Topic"
+msgstr "Editar tema"
+
+#: lib/app_web/components/live/poll_component.ex:14
+#, elixir-autogen, elixir-format
+msgid "Hide Results"
+msgstr "Ocultar resultados"
+
+#: lib/app_web/components/live/poll_component.ex:14
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Show Results"
+msgstr "Mostrar resultados"
+
+#: lib/app_web/user_auth.ex:170
+#: lib/app_web/user_auth.ex:232
+#, elixir-autogen, elixir-format
+msgid "You must log in to access this page."
+msgstr "Debes iniciar sesión para acceder a esta página."
+
+#: lib/app_web/controllers/user_session_controller.ex:9
+#, elixir-autogen, elixir-format
+msgid "Account created successfully!"
+msgstr "¡Cuenta creada exitosamente!"
+
+#: lib/app_web/controllers/user_session_controller.ex:32
+#, elixir-autogen, elixir-format
+msgid "Invalid email or password"
+msgstr "Correo electrónico o contraseña no válidos"
+
+#: lib/app_web/controllers/user_session_controller.ex:40
+#, elixir-autogen, elixir-format
+msgid "Logged out successfully."
+msgstr "Se cerró sesión exitosamente."
+
+#: lib/app_web/controllers/user_session_controller.ex:15
+#, elixir-autogen, elixir-format
+msgid "Password updated successfully!"
+msgstr "¡Contraseña actualizada exitosamente!"
+
+#: lib/app_web/controllers/user_session_controller.ex:19
+#, elixir-autogen, elixir-format
+msgid "Welcome back!"
+msgstr "¡Bienvenido de nuevo!"

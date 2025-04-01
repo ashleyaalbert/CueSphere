@@ -289,6 +289,7 @@ msgid "Join"
 msgstr ""
 
 #: lib/app_web/live/chat_live.ex:38
+#: lib/app_web/live/chat_live.ex:59
 #, elixir-autogen, elixir-format
 msgid "Join Chat"
 msgstr ""
@@ -308,6 +309,7 @@ msgstr ""
 msgid "Listing Pages"
 msgstr ""
 
+#: lib/app_web/live/topic_live/index.ex:31
 #: lib/app_web/live/topic_live/index.html.heex:2
 #, elixir-autogen, elixir-format
 msgid "Listing Topics"
@@ -360,6 +362,7 @@ msgstr ""
 msgid "New Page"
 msgstr ""
 
+#: lib/app_web/live/topic_live/index.ex:25
 #: lib/app_web/live/topic_live/index.html.heex:5
 #, elixir-autogen, elixir-format
 msgid "New Topic"
@@ -791,4 +794,50 @@ msgstr ""
 #: lib/app_web/live/page_live/show.html.heex:13
 #, elixir-autogen, elixir-format
 msgid "Tags"
+msgstr ""
+
+#: lib/app_web/live/topic_live/index.ex:19
+#, elixir-autogen, elixir-format
+msgid "Edit Topic"
+msgstr ""
+
+#: lib/app_web/components/live/poll_component.ex:14
+#, elixir-autogen, elixir-format
+msgid "Hide Results"
+msgstr ""
+
+#: lib/app_web/components/live/poll_component.ex:14
+#, elixir-autogen, elixir-format
+msgid "Show Results"
+msgstr ""
+
+#: lib/app_web/user_auth.ex:170
+#: lib/app_web/user_auth.ex:232
+#, elixir-autogen, elixir-format
+msgid "You must log in to access this page."
+msgstr ""
+
+#: lib/app_web/controllers/user_session_controller.ex:9
+#, elixir-autogen, elixir-format
+msgid "Account created successfully!"
+msgstr ""
+
+#: lib/app_web/controllers/user_session_controller.ex:32
+#, elixir-autogen, elixir-format
+msgid "Invalid email or password"
+msgstr ""
+
+#: lib/app_web/controllers/user_session_controller.ex:40
+#, elixir-autogen, elixir-format
+msgid "Logged out successfully."
+msgstr ""
+
+#: lib/app_web/controllers/user_session_controller.ex:15
+#, elixir-autogen, elixir-format
+msgid "Password updated successfully!"
+msgstr ""
+
+#: lib/app_web/controllers/user_session_controller.ex:19
+#, elixir-autogen, elixir-format
+msgid "Welcome back!"
 msgstr ""

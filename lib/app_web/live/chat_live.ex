@@ -56,7 +56,7 @@ defmodule AppWeb.ChatLive do
         :if={@live_action == :join}
         id="join-modal"
         show
-        heading="Join Chat"
+        heading={gettext("Join Chat")}
         backdrop="static"
         on_cancel={JS.patch(~p"/chat")}
       >
