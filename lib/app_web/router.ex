@@ -118,6 +118,7 @@ defmodule AppWeb.Router do
       live "/users/confirm", UserConfirmationInstructionsLive, :new
       live "/chat", ChatLive, :chat
       live "/chat/join", ChatLive, :join
+      live "/accessibility", AccessibilityLive
 
       #live "/about", GeneralLive, :about
       #live "/facts", GeneralLive, :facts

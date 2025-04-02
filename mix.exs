@@ -59,6 +59,7 @@ defmodule App.MixProject do
        app: false,
        compile: false,
        depth: 1},
+      {:mdex, "~> 0.2"},
       {:swoosh, "~> 1.5"},
       {:finch, "~> 0.13"},
       {:telemetry_metrics, "~> 1.0"},

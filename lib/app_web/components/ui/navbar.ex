@@ -32,6 +32,7 @@ defmodule AppWeb.Components.UI.Navbar do
         aria-controls="menu"
         aria-expanded="false"
         phx-click={toggle_menu()}
+        tabindex="1"
       >
         <span class="sr-only">Open main menu</span>
         <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
@@ -45,20 +46,20 @@ defmodule AppWeb.Components.UI.Navbar do
 
           <!-- Home Dropdown -->
           <li class="relative group">
-            <.link href={~p"/"} class="px-4 py-2 block hover:bg-gray-700 dark:hover:bg-gray-400 rounded-md transition-all">{gettext("Home")}</.link>
+            <.link href={~p"/"} tabindex="1" class="px-4 py-2 block hover:bg-gray-700 dark:hover:bg-gray-400 rounded-md transition-all">{gettext("Home")}</.link>
             <ul class="hidden group-hover:block group-hover:delay-150 md:absolute md:left-0 md:bg-gray-800 md:dark:bg-gray-300 md:mt-1 md:w-44 md:rounded-md md:shadow-lg md:border md:border-gray-700 md:dark:border-gray-400
               md:p-0 p-2 bg-gray-900 dark:bg-gray-200 rounded-md md:shadow-none">
-              <li><.link href={~p"/courses"} class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Courses")}</.link></li>
-              <li><.link href={~p"/facemash"} class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Destinations")}</.link></li>
+              <li><.link href={~p"/courses"} tabindex="2" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Courses")}</.link></li>
+              <li><.link href={~p"/facemash"} tabindex="3" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Destinations")}</.link></li>
             </ul>
           </li>
 
           <!-- Planets Dropdown -->
           <li class="relative group">
-            <.link href={~p"/planets"} class="px-4 py-2 block hover:bg-gray-700 dark:hover:bg-gray-400 rounded-md transition-all">{gettext("Planets")}</.link>
+            <.link href={~p"/planets"} tabindex="4" class="px-4 py-2 block hover:bg-gray-700 dark:hover:bg-gray-400 rounded-md transition-all">{gettext("Planets")}</.link>
             <ul class="hidden group-hover:block group-hover:delay-150 md:absolute md:left-0 md:bg-gray-800 md:dark:bg-gray-300 md:mt-1 md:w-44 md:rounded-md md:shadow-lg md:border md:border-gray-700 md:dark:border-gray-400
               md:p-0 p-2 bg-gray-900 dark:bg-gray-200 rounded-md md:shadow-none">
-              <li><.link href={~p"/live/planets"} class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Planets Live")}</.link></li>
+              <li><.link href={~p"/live/planets"} tabindex="5" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Planets Live")}</.link></li>
             </ul>
           </li>
 
@@ -68,14 +69,15 @@ defmodule AppWeb.Components.UI.Navbar do
               type="button"
               phx-click={Modal.show_modal("contact-modal")}
               class="px-4 py-2 block hover:bg-gray-700 dark:hover:bg-gray-400 rounded-md transition-all"
+              tabindex="6"
             >
               {gettext("Contact Us")}
             </button>
             <ul class="hidden group-hover:block group-hover:delay-150 md:absolute md:left-0 md:bg-gray-800 md:dark:bg-gray-300 md:mt-1 md:w-44 md:rounded-md md:shadow-lg md:border md:border-gray-700 md:dark:border-gray-400
               md:p-0 p-2 bg-gray-900 dark:bg-gray-200 rounded-md md:shadow-none">
-              <li><.link href={~p"/messages"} class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Messages")}</.link></li>
-              <li><.link href={~p"/topics"} class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Topics")}</.link></li>
-              <li><.link href={~p"/chat"} class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Chat")}</.link></li>
+              <li><.link href={~p"/messages"} tabindex="7" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Messages")}</.link></li>
+              <li><.link href={~p"/topics"} tabindex="8" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Topics")}</.link></li>
+              <li><.link href={~p"/chat"} tabindex="9" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Chat")}</.link></li>
             </ul>
           </li>
 
@@ -87,16 +89,16 @@ defmodule AppWeb.Components.UI.Navbar do
               </.link>
               <ul class="hidden group-hover:block group-hover:delay-150 md:absolute md:left-0 md:bg-gray-800 md:dark:bg-gray-300 md:mt-1 md:w-44 md:rounded-md md:shadow-lg md:border md:border-gray-700 md:dark:border-gray-400
                 md:p-0 p-2 bg-gray-900 dark:bg-gray-200 rounded-md md:shadow-none">
-                <li><.link href={~p"/users/settings"} class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Settings")}</.link></li>
-                <li><.link id="logout-button" href={~p"/users/log_out"} method="DELETE" phx-hook="LogoutButton" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Log out")}</.link></li>
+                <li><.link tabindex="10" href={~p"/users/settings"} class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Settings")}</.link></li>
+                <li><.link id="logout-button" tabindex="11" href={~p"/users/log_out"} method="DELETE" phx-hook="LogoutButton" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Log out")}</.link></li>
               </ul>
             </li>
           <% else %>
             <li class="relative group">
-              <.link href={~p"/users/log_in"} class="px-4 py-2 block hover:bg-gray-700 dark:hover:bg-gray-400 rounded-md transition-all">{gettext("Log in")}</.link>
+              <.link href={~p"/users/log_in"} tabindex="10" class="px-4 py-2 block hover:bg-gray-700 dark:hover:bg-gray-400 rounded-md transition-all">{gettext("Log in")}</.link>
               <ul class="hidden group-hover:block group-hover:delay-150 md:absolute md:left-0 md:bg-gray-800 md:dark:bg-gray-300 md:mt-1 md:w-44 md:rounded-md md:shadow-lg md:border md:border-gray-700 md:dark:border-gray-400
                 md:p-0 p-2 bg-gray-900 dark:bg-gray-200 rounded-md md:shadow-none">
-                <li><.link href={~p"/users/register"} class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Register")}</.link></li>
+                <li><.link href={~p"/users/register"} tabindex="11" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Register")}</.link></li>
               </ul>
             </li>
           <% end %>
