@@ -119,6 +119,8 @@ defmodule AppWeb.Router do
       live "/chat", ChatLive, :chat
       live "/chat/join", ChatLive, :join
       live "/accessibility", AccessibilityLive
+      live "/animations", AnimationsLive
+      # live "/gallery", GalleryLive
 
       #live "/about", GeneralLive, :about
       #live "/facts", GeneralLive, :facts

@@ -22,6 +22,16 @@ defmodule AppWeb.Components.UI.Icon do
     """
   end
 
+  def icon(%{name: "8-ball"} = assigns) do
+    ~H"""
+    <svg class={@class} width="800px" height="800px" viewBox="0 0 64 64" aria-hidden="true" role="img" preserveAspectRatio="xMidYMid meet">
+      <circle cx="32" cy="32" r="30" fill="#000" stroke="#000" stroke-width="2"/>
+      <circle cx="32" cy="32" r="12" fill="#FFF"/>
+      <text x="32" y="37" font-size="16" font-weight="bold" text-anchor="middle" fill="#000">8</text>
+    </svg>
+    """
+  end
+
   def icon(%{name: "chevron"} = assigns) do
     ~H"""
     <svg class={@class} fill="none" viewbox="0 0 10 6" aria-hidden="true">
