@@ -54,12 +54,21 @@ defmodule AppWeb.PlanetsLive do
                 <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400 cursor-pointer" phx-click="sort" phx-value-column="name">
                   {gettext("Name")} {if @sort_by == :name, do: if(@sort_order == :asc, do: "▲", else: "▼")}
                 </th>
-                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400 cursor-pointer" phx-click="sort" phx-value-column="distance">
+                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400 cursor-pointer" phx-click="sort" phx-value-column="moons">
+                  {gettext("Moons")} {if @sort_by == :moons, do: if(@sort_order == :asc, do: "▲", else: "▼")}
+                </th>
+                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400 cursor-pointer" phx-click="sort" phx-value-column="Gravity">
+                  {gettext("Gravity")} {if @sort_by == :gravity, do: if(@sort_order == :asc, do: "▲", else: "▼")}
+                </th>
+                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400 cursor-pointer" phx-click="sort" phx-value-column="day">
+                  {gettext("Day (in hours)")} {if @sort_by == :day, do: if(@sort_order == :asc, do: "▲", else: "▼")}
+                </th>
+                <%!-- <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400 cursor-pointer" phx-click="sort" phx-value-column="distance">
                   {gettext("Distance")} {if @sort_by == :distance, do: if(@sort_order == :asc, do: "▲", else: "▼")}
-                </th>
-                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400 cursor-pointer" phx-click="sort" phx-value-column="orbital_period">
+                </th> --%>
+                <%!-- <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400 cursor-pointer" phx-click="sort" phx-value-column="orbital_period">
                   {gettext("Orbital Period")} {if @sort_by == :orbital_period, do: if(@sort_order == :asc, do: "▲", else: "▼")}
-                </th>
+                </th> --%>
               </tr>
             </thead>
             <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-800 dark:divide-gray-700">
@@ -67,8 +76,11 @@ defmodule AppWeb.PlanetsLive do
                 <tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
                   <td class="px-6 py-4 text-sm text-gray-900 dark:text-gray-200"><%= planet.id %></td>
                   <td class="px-6 py-4 text-sm text-gray-900 dark:text-gray-200"><%= planet.name %></td>
-                  <td class="px-6 py-4 text-sm text-gray-900 dark:text-gray-200"><%= planet.distance %></td>
-                  <td class="px-6 py-4 text-sm text-gray-900 dark:text-gray-200"><%= planet.orbital_period %></td>
+                  <td class="px-6 py-4 text-sm text-gray-900 dark:text-gray-200"><%= planet.moons %></td>
+                  <td class="px-6 py-4 text-sm text-gray-900 dark:text-gray-200"><%= planet.gravity %></td>
+                  <td class="px-6 py-4 text-sm text-gray-900 dark:text-gray-200"><%= planet.day %></td>
+                  <%!-- <td class="px-6 py-4 text-sm text-gray-900 dark:text-gray-200"><%= planet.distance %></td>
+                  <td class="px-6 py-4 text-sm text-gray-900 dark:text-gray-200"><%= planet.orbital_period %></td> --%>
                 </tr>
               <% end %>
             </tbody>
