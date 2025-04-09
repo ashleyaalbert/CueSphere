@@ -1,24 +1,26 @@
+defmodule AppWeb.GalleryLive do
+  use AppWeb, :live_view
 
+  @thumbnails [
+    %{id: 1, thumb: "bar_thumbnail.jpg", full: "bar_fullsize.jpg"},
+    %{id: 2, thumb: "concert_thumbnail.jpg", full: "concert_fullsize.jpg"},
+    %{id: 3, thumb: "cs_thumbnail.jpg", full: "cs_fullsize.jpg"},
+    %{id: 4, thumb: "formal_thumbnail.jpg", full: "formal_fullsize.jpg"},
+    %{id: 5, thumb: "pool_thumbnail.jpg", full: "pool_fullsize.jpg"}
+  ]
 
-# <div class="grid gap-4">
-#     <div>
-#         <img class="h-auto max-w-full rounded-lg" src={~p"images/AlyssaGraduation.jpeg"} alt="A photo of Alyssa and Ashley Albert at Alyssa's 6th grade graduation.">
-#     </div>
-#     <div class="grid grid-cols-5 gap-4">
-#         <div>
-#             <img class="h-auto max-w-full rounded-lg" src={~p"images/BeachPic.jpeg"} alt="">
-#         </div>
-#         <div>
-#             <img class="h-auto max-w-full rounded-lg" src={~p"images/GoatFairPic.jpeg"} alt="">
-#         </div>
-#         <div>
-#             <img class="h-auto max-w-full rounded-lg" src={~p"images/SeniorPortrait.jpg"} alt="">
-#         </div>
-#         # <div>
-#         #     <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg" alt="">
-#         # </div>
-#         # <div>
-#         #     <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg" alt="">
-#         # </div>
-#     </div>
-# </div>
+  def mount(_params, _session, socket) do
+    first_image = List.first(@thumbnails).full
+
+    {:ok,
+     assign(socket,
+       thumbnails: @thumbnails,
+       selected_image: first_image
+     )}
+  end
+
+  def handle_event("select-image", %{"id" => id}, socket) do
+    thumb = Enum.find(@thumbnails, fn t -> Integer.to_string(t.id) == id end)
+    {:noreply, assign(socket, selected_image: thumb.full)}
+  end
+end
