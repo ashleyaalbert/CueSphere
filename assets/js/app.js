@@ -21,6 +21,7 @@ import "phoenix_html"
 import {Socket} from "phoenix"
 import {LiveSocket} from "phoenix_live_view"
 import topbar from "../vendor/topbar"
+import Chart from "chart.js/auto"
 
 let Hooks = {}; // this may already be here
 
@@ -38,6 +39,18 @@ Hooks.AutoScroll = {
     window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
   }
 };
+
+Hooks.Chart = {
+  mounted() {
+    this.el._chart = new Chart(this.el, JSON.parse(this.el.dataset.config));
+  },
+
+  updated() {
+    const new_config = JSON.parse(this.el.dataset.config)
+    this.el._chart.data = new_config.data
+    this.el._chart.update()
+  }
+}
 
 
 let liveSocketPath = process.env.NODE_ENV === "production" ? "/csci379-25s-a/live" : "/live";

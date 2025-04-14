@@ -117,6 +117,9 @@ defmodule AppWeb.Router do
       live "/accessibility", AccessibilityLive
       live "/animations", AnimationsLive
       live "/gallery", GalleryLive
+      live "/charts", ChartsLive
+      live "/minesweeper", MinesweeperLive, :new
+
       live "/about", AboutLive
       live "/facts", FactsLive
       live "/fargo-rate", FargoRateLive

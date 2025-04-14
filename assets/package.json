@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "chart.js": "^4.4.8",
     "flowbite": "^3.1.2",
     "flowbite-typography": "^1.0.5",
     "typography": "^0.16.24"

@@ -8,8 +8,8 @@ defmodule App.Planets do
   import Ecto.Query, warn: false
 
   # alias App.Repo
-  alias App.Planets.Planet
-  alias App.ETS
+  # alias App.Planets.Planet
+  # alias App.ETS
 
   @table :planets
 
