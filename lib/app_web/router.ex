@@ -93,10 +93,6 @@ defmodule AppWeb.Router do
       live "/topics/:slug/pages/new", PageLive.Index, :new
       live "/topics/:slug/pages/:id", PageLive.Show, :show
       live "/topics/:slug/pages/:id/edit", PageLive.Show, :edit
-
-      #live "/tournaments/add", PlayLive, :add
-
-
     end
   end
 
@@ -121,21 +117,18 @@ defmodule AppWeb.Router do
       live "/accessibility", AccessibilityLive
       live "/animations", AnimationsLive
       live "/gallery", GalleryLive
-
-      #live "/about", GeneralLive, :about
-      #live "/facts", GeneralLive, :facts
-      #live "/fargo_rate", GeneralLive, :fargo
-      #live "/purchase", GeneralLive, :purchase
-
-      #live "/tutorials", LearnLive, :tutorials
-      #live "/drills", LearnLive, :drills
-      #live "/books", LearnLive, :books
-      #live "/movies", LearnLive, :movies
-
-      #live "/rules", PlayLive, :rules
-      #live "/games", PlayLive, :dgames
-      #live "/leagues", PlayLive, :leagues
-      #live "/tournaments", PlayLive, :tournaments
+      live "/about", AboutLive
+      live "/facts", FactsLive
+      live "/fargo-rate", FargoRateLive
+      live "/purchase", PurchaseLive
+      live "/tutorials", TutorialsLive
+      live "/drills", DrillsLive
+      live "/books", BooksLive
+      live "/movies", MoviesLive
+      live "/rules", RulesLive
+      live "/games", GamesLive
+      live "/leagues", LeaguesLive
+      live "/tournaments", TournamentsLive
 
       live("/items", ItemLive.Index, :index)
       live("/items/new", ItemLive.Index, :new)
