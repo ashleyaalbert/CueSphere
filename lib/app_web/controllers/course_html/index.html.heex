@@ -14,7 +14,7 @@
     <div>
       <.link navigate={~p"/courses/#{course}"}>Show</.link>
     </div>
-    <.link navigate={~p"/courses/#{course}/edit"}>Edit</.link>
+    <%!-- <.link navigate={~p"/courses/#{course}/edit"}>Edit</.link> --%>
   </:action>
   <:action :let={course}>
     <.link href={~p"/courses/#{course}"} method="delete" data-confirm="Are you sure?">
