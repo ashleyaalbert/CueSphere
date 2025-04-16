@@ -40,15 +40,37 @@ Hooks.AutoScroll = {
   }
 };
 
+// Hooks.Chart = {
+//   mounted() {
+//     this.el._chart = new Chart(this.el, JSON.parse(this.el.dataset.config));
+//   },
+
+//   updated() {
+//     const new_config = JSON.parse(this.el.dataset.config)
+//     this.el._chart.data = new_config.data
+//     this.el._chart.update()
+//   }
+// }
+
 Hooks.Chart = {
   mounted() {
-    this.el._chart = new Chart(this.el, JSON.parse(this.el.dataset.config));
+    this.renderChart();
   },
 
   updated() {
-    const new_config = JSON.parse(this.el.dataset.config)
-    this.el._chart.data = new_config.data
-    this.el._chart.update()
+    this.renderChart();
+  },
+
+  renderChart() {
+    const config = JSON.parse(this.el.dataset.config);
+
+    // If a chart instance already exists on this element, destroy it first
+    if (this.el._chart) {
+      this.el._chart.destroy();
+    }
+
+    // Create a new chart instance
+    this.el._chart = new Chart(this.el.getContext("2d"), config);
   }
 }
 
