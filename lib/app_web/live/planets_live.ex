@@ -57,7 +57,7 @@ defmodule AppWeb.PlanetsLive do
                 <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400 cursor-pointer" phx-click="sort" phx-value-column="moons">
                   {gettext("Moons")} {if @sort_by == :moons, do: if(@sort_order == :asc, do: "▲", else: "▼")}
                 </th>
-                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400 cursor-pointer" phx-click="sort" phx-value-column="Gravity">
+                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400 cursor-pointer" phx-click="sort" phx-value-column="gravity">
                   {gettext("Gravity")} {if @sort_by == :gravity, do: if(@sort_order == :asc, do: "▲", else: "▼")}
                 </th>
                 <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400 cursor-pointer" phx-click="sort" phx-value-column="day">

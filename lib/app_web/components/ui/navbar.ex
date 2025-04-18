@@ -55,18 +55,24 @@ defmodule AppWeb.Components.UI.Navbar do
           </li>
 
           <li class="relative group">
-            <.link href={~p"/planets"} tabindex="4" class="px-4 py-2 block hover:bg-gray-700 dark:hover:bg-gray-400 rounded-md transition-all">{gettext("Learn")}</.link>
+            <.link tabindex="4" class="px-4 py-2 block hover:bg-gray-700 dark:hover:bg-gray-400 rounded-md transition-all">{gettext("Learn")}</.link>
             <ul class="hidden group-hover:block group-hover:delay-150 md:absolute md:left-0 md:bg-gray-800 md:dark:bg-gray-300 md:mt-1 md:w-44 md:rounded-md md:shadow-lg md:border md:border-gray-700 md:dark:border-gray-400
               md:p-0 p-2 bg-gray-900 dark:bg-gray-200 rounded-md md:shadow-none">
-              <li><.link href={~p"/live/planets"} tabindex="5" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Planets Live")}</.link></li>
+              <li><.link href={~p"/tutorials"} tabindex="5" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Tutorials")}</.link></li>
+              <li><.link href={~p"/drills"} tabindex="5" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Drills")}</.link></li>
+              <li><.link href={~p"/books"} tabindex="5" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Books")}</.link></li>
+              <li><.link href={~p"/movies"} tabindex="5" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Movies")}</.link></li>
             </ul>
           </li>
 
           <li class="relative group">
-            <.link href={~p"/planets"} tabindex="4" class="px-4 py-2 block hover:bg-gray-700 dark:hover:bg-gray-400 rounded-md transition-all">{gettext("Play")}</.link>
+            <.link tabindex="4" class="px-4 py-2 block hover:bg-gray-700 dark:hover:bg-gray-400 rounded-md transition-all">{gettext("Play")}</.link>
             <ul class="hidden group-hover:block group-hover:delay-150 md:absolute md:left-0 md:bg-gray-800 md:dark:bg-gray-300 md:mt-1 md:w-44 md:rounded-md md:shadow-lg md:border md:border-gray-700 md:dark:border-gray-400
               md:p-0 p-2 bg-gray-900 dark:bg-gray-200 rounded-md md:shadow-none">
-              <li><.link href={~p"/live/planets"} tabindex="5" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Planets Live")}</.link></li>
+              <li><.link href={~p"/rules"} tabindex="5" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Rules")}</.link></li>
+              <li><.link href={~p"/games"} tabindex="5" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Games")}</.link></li>
+              <li><.link href={~p"/leagues"} tabindex="5" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Leagues")}</.link></li>
+              <li><.link href={~p"/tournaments"} tabindex="5" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Tournaments")}</.link></li>
             </ul>
           </li>
 
