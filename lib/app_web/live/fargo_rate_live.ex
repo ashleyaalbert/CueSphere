@@ -8,7 +8,7 @@ defmodule AppWeb.FargoRateLive do
   def render(assigns) do
     ~H"""
     <div class="p-4">
-    <.form phx-submit="search">
+    <.form for={} phx-submit="search">
       <input name="query" type="text" value={@query} placeholder="Search for a player..." class="border rounded p-2 mr-2" />
       <.button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Search</.button>
     </.form>
