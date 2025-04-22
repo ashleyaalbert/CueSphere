@@ -1,0 +1,74 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+  </head>
+
+  <body class="bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
+    <div class="container mx-auto px-4 py-8">
+      <div class="bg-white shadow-lg rounded-xl p-6 md:p-10 text-center dark:bg-gray-800 dark:text-gray-200">
+        <img
+          src={~p"/images/SeniorPortrait.jpg"}
+          alt="High school senior portrait of Ashley Albert. Ashley is seen smiling with dark blonde hair, pale skin, and is wearing a gold cross necklace with a black off the shoulder drape."
+          class="w-48 h-48 mx-auto rounded-full border-4 border-gray-300 shadow-md object-cover
+           dark:border-gray-500"
+        />
+        <p class="mt-6 text-lg md:text-xl">
+          <strong>{gettext("About Me:")}</strong>
+          {gettext("I am a Computer Science major graduating on May 18, 2025 from Bucknell University. I grew up in Coal Township, PA and went to Our Lady of Lourdes Regional School. In my free time, I enjoy spending time with family and friends or shooting pool! My favorite song to listen to is The Sweet Escape by Gwen Stefani.")}<br /><br />
+          <strong>{gettext("Fun Fact:")}</strong>
+          {gettext("I was born in Lewisburg, PA (which means I was always meant to come to Bucknell...right?).")}
+        </p>
+      </div>
+
+      <div class="mt-8 bg-white shadow-lg rounded-xl p-6 md:p-10 dark:bg-gray-800 dark:text-gray-200">
+        <h2 class="text-2xl font-semibold text-center text-gray-700 dark:text-white">
+          {gettext("Programming Languages")}
+        </h2>
+        <ol class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4 text-center">
+          <li class="bg-gray-200 rounded-lg py-2 dark:bg-gray-500">
+            <span class="font-semibold text-blue-900 dark:text-gray-300">{gettext("Python")}</span>
+          </li>
+          <li class="bg-gray-200 rounded-lg py-2 dark:bg-gray-500">
+            <span class="font-semibold text-blue-900 dark:text-gray-300">{gettext("JavaScript")}</span>
+          </li>
+          <li class="bg-gray-200 rounded-lg py-2 dark:bg-gray-500">
+            <span class="font-semibold text-blue-900 dark:text-gray-300">{gettext("Java")}</span>
+          </li>
+          <li class="bg-gray-200 rounded-lg py-2 dark:bg-gray-500">
+            <span class="font-semibold text-blue-900 dark:text-gray-300">{gettext("C")}</span>
+          </li>
+          <li class="bg-gray-200 rounded-lg py-2 dark:bg-gray-500">
+            <span class="font-semibold text-blue-900 dark:text-gray-300">{gettext("R")}</span>
+          </li>
+          <li class="bg-gray-200 rounded-lg py-2 dark:bg-gray-500">
+            <span class="font-semibold text-blue-900 dark:text-gray-300">{gettext("Haskell")}</span>
+          </li>
+          <li class="bg-gray-200 rounded-lg py-2 dark:bg-gray-500">
+            <span class="font-semibold text-blue-900 dark:text-gray-300">{gettext("Prolog")}</span>
+          </li>
+          <li class="bg-gray-200 rounded-lg py-2 dark:bg-gray-500">
+            <span class="font-semibold text-blue-900 dark:text-gray-300">{gettext("C#")}</span>
+          </li>
+          <li class="bg-gray-200 rounded-lg py-2 dark:bg-gray-500">
+            <span class="font-semibold text-blue-900 dark:text-gray-300">{gettext("C++")}</span>
+          </li>
+          <li class="bg-gray-200 rounded-lg py-2 dark:bg-gray-500">
+            <span class="font-semibold text-blue-900 dark:text-gray-300">{gettext("PHP")}</span>
+          </li>
+          <li class="bg-gray-200 rounded-lg py-2 dark:bg-gray-500">
+            <span class="font-semibold text-blue-900 dark:text-gray-300">{gettext("RISC-V")}</span>
+          </li>
+          <li class="bg-gray-200 rounded-lg py-2 dark:bg-gray-500">
+            <span class="font-semibold text-blue-900 dark:text-gray-300">{gettext("HTML")}</span>
+          </li>
+          <li class="bg-gray-200 rounded-lg py-2 dark:bg-gray-500">
+            <span class="font-semibold text-blue-900 dark:text-gray-300">{gettext("CSS")}</span>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </body>
+</html>
