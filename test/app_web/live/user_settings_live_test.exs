@@ -207,4 +207,90 @@ defmodule AppWeb.UserSettingsLiveTest do
       assert message == "You must log in to access this page."
     end
   end
+
+  describe "update profile form" do
+    setup %{conn: conn} do
+      password = valid_user_password()
+      user = user_fixture(%{password: password})
+      %{conn: log_in_user(conn, user), user: user, password: password}
+    end
+
+    test "validates profile form on change", %{conn: conn} do
+      {:ok, view, _html} = live(conn, ~p"/users/settings")
+
+      view
+      |> element("#profile_form")
+      |> render_change(%{"user" => %{"name" => "New Name"}})
+
+      html = render_change(view, "validate", %{"user" => %{"name" => "New Name"}})
+      assert html =~ "New Name"
+      assert html =~ "can't be blank" # or whatever validation error you expect
+    end
+
+    test "successfully updates profile", %{conn: conn, user: user} do
+      {:ok, view, _html} = live(conn, ~p"/users/settings")
+
+      result =
+        view
+        |> form("#profile_form", %{"user" => %{"name" => "Updated", "birthday" => user.birthday}})
+        |> render_submit()
+
+      assert result =~ "Profile updated successfully"
+    end
+
+    # test "renders errors with invalid data", %{conn: conn} do
+    #   {:ok, view, _html} = live(conn, ~p"/users/settings")
+
+    #   result =
+    #     view
+    #     |> form("#profile_form", %{"user" => %{"email" => "bad email"}})
+    #     |> render_submit()
+
+    #   assert result =~ "must have the @ sign and no spaces"
+    #   assert view.assigns.profile_form.source.action == :update
+    # end
+  end
+
+  describe "update profile form again" do
+    setup %{conn: conn} do
+      password = valid_user_password()
+      user = user_fixture(%{password: password})
+      %{conn: log_in_user(conn, user), user: user}
+    end
+
+    test "successfully updates the profile", %{conn: conn, user: _user} do
+      {:ok, view, _html} = live(conn, ~p"/users/settings")
+
+      result =
+        view
+        |> form("#profile_form", %{"user" => %{"name" => "Updated Name"}})
+        |> render_submit()
+
+      assert result =~ "Profile updated successfully"
+    end
+
+    # test "renders errors when update fails", %{conn: conn} do
+    #   {:ok, view, _html} = live(conn, ~p"/users/settings")
+
+    #   result =
+    #     view
+    #     |> form("#profile_form", %{"user" => %{"email" => "bad email"}})
+    #     |> render_submit()
+
+    #   assert result =~ "must have the @ sign and no spaces"
+    # end
+  end
+
+  test "shows errors when profile update fails", %{conn: conn, user: user} do
+    {:ok, view, _html} = live(conn, ~p"/users/settings")
+
+    # Invalid email format, assuming your changeset validates this
+    result =
+      view
+      |> form("#profile_form", %{"user" => %{"email" => "not an email"}})
+      |> render_submit()
+
+    assert result =~ "must have the @ sign and no spaces"
+    assert result =~ "Change Email" # or whatever heading/label appears on your form
+  end
 end
