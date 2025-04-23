@@ -103,7 +103,7 @@ defmodule AppWeb.Router do
 
     live_session :current_user,
       on_mount: [
-        {AppWeb.UserAuth, :mount_current_user},
+        {AppWeb.UserAuth, :mount_user_id},
         {AppWeb.UserAuth, :add_message_changeset},
         {AppWeb.UserAuth, :put_locale}
       ] do

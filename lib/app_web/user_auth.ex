@@ -78,8 +78,8 @@ defmodule AppWeb.UserAuth do
   def log_out_user(conn) do
     user_token = get_session(conn, :user_token)
     user_token && Accounts.delete_user_session_token(user_token)
-    if conn.assigns.current_user do
-        AppWeb.Endpoint.broadcast("user:#{conn.assigns.current_user.id}", "logout", %{})
+    if conn.assigns.user_id do
+        AppWeb.Endpoint.broadcast("user:#{conn.assigns.user_id.id}", "logout", %{})
       end
     if live_socket_id = get_session(conn, :live_socket_id) do
 
@@ -99,7 +99,7 @@ defmodule AppWeb.UserAuth do
   def fetch_current_user(conn, _opts) do
     {user_token, conn} = ensure_user_token(conn)
     user = user_token && Accounts.get_user_by_session_token(user_token)
-    assign(conn, :current_user, user)
+    assign(conn, :user_id, user)
   end
 
   defp ensure_user_token(conn) do
@@ -117,11 +117,11 @@ defmodule AppWeb.UserAuth do
   end
 
   @doc """
-  Handles mounting and authenticating the current_user in LiveViews.
+  Handles mounting and authenticating the user_id in LiveViews.
 
   ## `on_mount` arguments
 
-    * `:mount_current_user` - Assigns current_user
+    * `:mount_user_id` - Assigns user_id
       to socket assigns based on user_token, or nil if
       there's no user_token or no matching user.
 
@@ -136,12 +136,12 @@ defmodule AppWeb.UserAuth do
   ## Examples
 
   Use the `on_mount` lifecycle macro in LiveViews to mount or authenticate
-  the current_user:
+  the user_id:
 
       defmodule AppWeb.PageLive do
         use AppWeb, :live_view
 
-        on_mount {AppWeb.UserAuth, :mount_current_user}
+        on_mount {AppWeb.UserAuth, :mount_user_id}
         ...
       end
 
@@ -151,12 +151,12 @@ defmodule AppWeb.UserAuth do
         live "/profile", ProfileLive, :index
       end
   """
-  def on_mount(:mount_current_user, _params, session, socket) do
-    {:cont, mount_current_user(socket, session)}
+  def on_mount(:mount_user_id, _params, session, socket) do
+    {:cont, mount_user_id(socket, session)}
   end
 
   def on_mount(:ensure_authenticated, _params, session, socket) do
-    socket = mount_current_user(socket, session)
+    socket = mount_user_id(socket, session)
 
     if socket.assigns.current_user do
 
@@ -175,9 +175,9 @@ defmodule AppWeb.UserAuth do
   end
 
   def on_mount(:redirect_if_user_is_authenticated, _params, session, socket) do
-    socket = mount_current_user(socket, session)
+    socket = mount_user_id(socket, session)
 
-    if socket.assigns.current_user do
+    if socket.assigns.user_id do
       {:halt, Phoenix.LiveView.redirect(socket, to: signed_in_path(socket))}
     else
       {:cont, socket}
@@ -197,8 +197,8 @@ defmodule AppWeb.UserAuth do
     {:cont, socket}
   end
 
-  defp mount_current_user(socket, session) do
-    Phoenix.Component.assign_new(socket, :current_user, fn ->
+  defp mount_user_id(socket, session) do
+    Phoenix.Component.assign_new(socket, :user_id, fn ->
       if user_token = session["user_token"] do
         Accounts.get_user_by_session_token(user_token)
       end

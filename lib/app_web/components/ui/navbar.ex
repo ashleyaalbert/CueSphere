@@ -91,10 +91,10 @@ defmodule AppWeb.Components.UI.Navbar do
             </ul>
           </li>
 
-          <%= if @current_user do %>
+          <%= if @user_id do %>
             <li class="relative group">
               <.link href="#" class="px-4 py-2 block hover:bg-gray-700 dark:hover:bg-gray-400 rounded-md transition-all">
-                <%= @current_user.email %>
+                <%= @user_id.email %>
               </.link>
               <ul class="hidden group-hover:block group-hover:delay-150 md:absolute md:left-0 md:bg-gray-800 md:dark:bg-gray-300 md:mt-1 md:w-44 md:rounded-md md:shadow-lg md:border md:border-gray-700 md:dark:border-gray-400
                 md:p-0 p-2 bg-gray-900 dark:bg-gray-200 rounded-md md:shadow-none">

@@ -94,7 +94,7 @@ defmodule AppWeb.UserSettingsLive do
 
   def mount(%{"token" => token}, _session, socket) do
     socket =
-      case Accounts.update_user_email(socket.assigns.current_user, token) do
+      case Accounts.update_user_email(socket.assigns.user_id, token) do
         :ok ->
           put_flash(socket, :info, "Email changed successfully.")
 
@@ -106,7 +106,7 @@ defmodule AppWeb.UserSettingsLive do
   end
 
   def mount(_params, _session, socket) do
-    user = socket.assigns.current_user
+    user = socket.assigns.user_id
     email_changeset = Accounts.change_user_email(user)
     password_changeset = Accounts.change_user_password(user)
     profile_changeset = Accounts.change_user_profile(user)
@@ -126,7 +126,7 @@ defmodule AppWeb.UserSettingsLive do
 
   def handle_event("validate_profile", %{"user" => user_params}, socket) do
     profile_form =
-      socket.assigns.current_user
+      socket.assigns.user_id
       |> Accounts.change_user_profile(user_params)
       |> Map.put(:action, :validate)
       |> to_form()
@@ -135,7 +135,7 @@ defmodule AppWeb.UserSettingsLive do
   end
 
   def handle_event("update_profile", %{"user" => user_params}, socket) do
-    user = socket.assigns.current_user
+    user = socket.assigns.user_id
 
     case Accounts.update_user_profile(user, user_params) do
       {:ok, _updated_user} ->
@@ -150,7 +150,7 @@ defmodule AppWeb.UserSettingsLive do
     %{"current_password" => password, "user" => user_params} = params
 
     email_form =
-      socket.assigns.current_user
+      socket.assigns.user_id
       |> Accounts.change_user_email(user_params)
       |> Map.put(:action, :validate)
       |> to_form()
@@ -160,7 +160,7 @@ defmodule AppWeb.UserSettingsLive do
 
   def handle_event("update_email", params, socket) do
     %{"current_password" => password, "user" => user_params} = params
-    user = socket.assigns.current_user
+    user = socket.assigns.user_id
 
     case Accounts.apply_user_email(user, password, user_params) do
       {:ok, applied_user} ->
@@ -182,7 +182,7 @@ defmodule AppWeb.UserSettingsLive do
     %{"current_password" => password, "user" => user_params} = params
 
     password_form =
-      socket.assigns.current_user
+      socket.assigns.user_id
       |> Accounts.change_user_password(user_params)
       |> Map.put(:action, :validate)
       |> to_form()
@@ -192,7 +192,7 @@ defmodule AppWeb.UserSettingsLive do
 
   def handle_event("update_password", params, socket) do
     %{"current_password" => password, "user" => user_params} = params
-    user = socket.assigns.current_user
+    user = socket.assigns.user_id
 
     case Accounts.update_user_password(user, password, user_params) do
       {:ok, user} ->
