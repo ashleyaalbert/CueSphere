@@ -87,7 +87,7 @@ defmodule AppWeb.UserAuthTest do
     test "authenticates user from session", %{conn: conn, user: user} do
       user_token = Accounts.generate_user_session_token(user)
       conn = conn |> put_session(:user_token, user_token) |> UserAuth.fetch_current_user([])
-      assert conn.assigns.current_user.id == user.id
+      assert conn.assigns.user_id.id == user.id
     end
 
     test "authenticates user from cookies", %{conn: conn, user: user} do
@@ -102,7 +102,7 @@ defmodule AppWeb.UserAuthTest do
         |> put_req_cookie(@remember_me_cookie, signed_token)
         |> UserAuth.fetch_current_user([])
 
-      assert conn.assigns.current_user.id == user.id
+      assert conn.assigns.user_id.id == user.id
       assert get_session(conn, :user_token) == user_token
 
       assert get_session(conn, :live_socket_id) ==
@@ -113,50 +113,50 @@ defmodule AppWeb.UserAuthTest do
       _ = Accounts.generate_user_session_token(user)
       conn = UserAuth.fetch_current_user(conn, [])
       refute get_session(conn, :user_token)
-      refute conn.assigns.current_user
+      refute conn.assigns.user_id
     end
   end
 
-  describe "on_mount :mount_current_user" do
-    test "assigns current_user based on a valid user_token", %{conn: conn, user: user} do
+  describe "on_mount :mount_user_id" do
+    test "assigns user_id based on a valid user_token", %{conn: conn, user: user} do
       user_token = Accounts.generate_user_session_token(user)
       session = conn |> put_session(:user_token, user_token) |> get_session()
 
       {:cont, updated_socket} =
-        UserAuth.on_mount(:mount_current_user, %{}, session, %LiveView.Socket{})
+        UserAuth.on_mount(:mount_user_id, %{}, session, %LiveView.Socket{})
 
-      assert updated_socket.assigns.current_user.id == user.id
+      assert updated_socket.assigns.user_id.id == user.id
     end
 
-    test "assigns nil to current_user assign if there isn't a valid user_token", %{conn: conn} do
+    test "assigns nil to user_id assign if there isn't a valid user_token", %{conn: conn} do
       user_token = "invalid_token"
       session = conn |> put_session(:user_token, user_token) |> get_session()
 
       {:cont, updated_socket} =
-        UserAuth.on_mount(:mount_current_user, %{}, session, %LiveView.Socket{})
+        UserAuth.on_mount(:mount_user_id, %{}, session, %LiveView.Socket{})
 
-      assert updated_socket.assigns.current_user == nil
+      assert updated_socket.assigns.user_id == nil
     end
 
-    test "assigns nil to current_user assign if there isn't a user_token", %{conn: conn} do
+    test "assigns nil to user_id assign if there isn't a user_token", %{conn: conn} do
       session = conn |> get_session()
 
       {:cont, updated_socket} =
-        UserAuth.on_mount(:mount_current_user, %{}, session, %LiveView.Socket{})
+        UserAuth.on_mount(:mount_user_id, %{}, session, %LiveView.Socket{})
 
-      assert updated_socket.assigns.current_user == nil
+      assert updated_socket.assigns.user_id == nil
     end
   end
 
   describe "on_mount :ensure_authenticated" do
-    test "authenticates current_user based on a valid user_token", %{conn: conn, user: user} do
+    test "authenticates user_id based on a valid user_token", %{conn: conn, user: user} do
       user_token = Accounts.generate_user_session_token(user)
       session = conn |> put_session(:user_token, user_token) |> get_session()
 
       {:cont, updated_socket} =
         UserAuth.on_mount(:ensure_authenticated, %{}, session, %LiveView.Socket{})
 
-      assert updated_socket.assigns.current_user.id == user.id
+      assert updated_socket.assigns.user_id.id == user.id
     end
 
     test "redirects to login page if there isn't a valid user_token", %{conn: conn} do
@@ -169,7 +169,7 @@ defmodule AppWeb.UserAuthTest do
       }
 
       {:halt, updated_socket} = UserAuth.on_mount(:ensure_authenticated, %{}, session, socket)
-      assert updated_socket.assigns.current_user == nil
+      assert updated_socket.assigns.user_id == nil
     end
 
     test "redirects to login page if there isn't a user_token", %{conn: conn} do
@@ -181,7 +181,7 @@ defmodule AppWeb.UserAuthTest do
       }
 
       {:halt, updated_socket} = UserAuth.on_mount(:ensure_authenticated, %{}, session, socket)
-      assert updated_socket.assigns.current_user == nil
+      assert updated_socket.assigns.user_id == nil
     end
   end
 

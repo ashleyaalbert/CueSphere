@@ -78,9 +78,14 @@ defmodule AppWeb.UserAuth do
   def log_out_user(conn) do
     user_token = get_session(conn, :user_token)
     user_token && Accounts.delete_user_session_token(user_token)
-    if conn.assigns.user_id do
-        AppWeb.Endpoint.broadcast("user:#{conn.assigns.user_id.id}", "logout", %{})
-      end
+    # if conn.assigns.user_id do
+    #     AppWeb.Endpoint.broadcast("user:#{conn.assigns.user_id.id}", "logout", %{})
+    #   end
+
+    if user_id = conn.assigns[:user_id] do
+      AppWeb.Endpoint.broadcast("user:#{user_id.id}", "logout", %{})
+    end
+
     if live_socket_id = get_session(conn, :live_socket_id) do
 
       AppWeb.Endpoint.broadcast(live_socket_id, "disconnect", %{})
