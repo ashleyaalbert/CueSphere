@@ -16,16 +16,14 @@ defmodule AppWeb.FargoRateLive do
       <%= if @error do %>
         <p class="text-red-600 mt-4"><%= inspect(@error) %></p>
       <% end %>
-      <%!-- <p class="text-sm text-gray-600 mt-2">Query: <%= @query %></p>
-      <pre class="text-xs text-gray-500 bg-gray-100 p-2 mt-2"><%= inspect(@players) %></pre> --%>
       <table class="mt-4 w-full table-auto border-collapse border border-gray-300">
         <thead>
           <tr>
             <th class="border p-2">First Name</th>
             <th class="border p-2">Last Name</th>
             <th class="border p-2">Fargo Rate</th>
-            <th class="border p-2">Membership ID</th>
             <th class="border p-2">Robustness</th>
+            <th class="border p-2">Membership ID</th>
             <th class="border p-2">Location</th>
           </tr>
         </thead>
@@ -35,18 +33,13 @@ defmodule AppWeb.FargoRateLive do
               <td class="border p-2"><%= player["firstName"] %></td>
               <td class="border p-2"><%= player["lastName"] %></td>
               <td class="border p-2"><%= player["effectiveRating"] %></td>
-              <td class="border p-2"><%= player["membershipId"] %></td>
               <td class="border p-2"><%= player["robustness"] %></td>
+              <td class="border p-2"><%= player["membershipId"] %></td>
               <td class="border p-2"><%= player["location"] || "N/A" %></td>
             </tr>
           <% end %>
         </tbody>
       </table>
-    </div>
-    <div class="mt-4">
-      <.button phx-click="next" class="bg-green-500 text-white px-4 py-2 rounded">
-        Next Page
-      </.button>
     </div>
     """
   end
@@ -111,68 +104,4 @@ defmodule AppWeb.FargoRateLive do
         {:noreply, assign(socket, players: [], error: reason)}
     end
   end
-
-  def handle_event("next", _, %{assigns: %{query: query, last_id: last_id}} = socket) do
-    IO.inspect(query, label: "Query for next page")
-    IO.inspect(last_id, label: "Last ID for next page")
-    case fetch_players_page(query, last_id) do
-      {:ok, %{players: players, last_id: new_last_id}} ->
-        IO.inspect(players, label: "Next page players")
-        {:noreply, assign(socket, players: players, last_id: new_last_id)}
-
-      {:error, reason} ->
-        {:noreply, assign(socket, error: reason)}
-    end
-  end
-
-  # def handle_event("search", _params, socket) do
-  #   query = "Shane Van Boening"
-  #   case fetch_all_players(query) do
-  #     {:ok, players} ->
-  #       IO.inspect(players, label: "Fetched players")
-  #       {:noreply, assign(socket, query: query, players: players, error: nil)}
-
-  #     {:error, reason} ->
-  #       IO.inspect(reason, label: "Fetch error")
-  #       {:noreply, assign(socket, query: query, players: [], error: reason)}
-  #   end
-  # end
-
-  # def search(query) do
-  #   case HTTPoison.get(@url <> URI.encode(query), [], recv_timeout: 5_000) do
-  #     {:ok, %HTTPoison.Response{status_code: 200, body: body}} ->
-  #       case Jason.decode(body) do
-  #         {:ok, %{"value" => players}} ->
-  #           {:ok, players}
-
-  #         {:ok, other} ->
-  #           {:error, "Unexpected JSON structure: #{inspect(other)}"}
-
-  #         {:error, decode_error} ->
-  #           {:error, decode_error}
-  #       end
-
-  #     {:ok, %HTTPoison.Response{status_code: code}} ->
-  #       {:error, "Received status #{code}"}
-
-  #     {:error, error} ->
-  #       {:error, error}
-  #   end
-  # end
-
-  # @impl true
-  # def mount(_params, _session, socket) do
-  #   {:ok, assign(socket, query: "", players: [], error: nil)}
-  # end
-
-  # @impl true
-  # def handle_event("search", %{"query" => query}, socket) do
-  #   case search(query) do
-  #     {:ok, players} ->
-  #       {:noreply, assign(socket, query: query, players: players, error: nil)}
-
-  #     {:error, reason} ->
-  #       {:noreply, assign(socket, query: query, players: [], error: reason)}
-  #   end
-  # end
 end
