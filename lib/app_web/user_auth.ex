@@ -158,9 +158,9 @@ defmodule AppWeb.UserAuth do
   def on_mount(:ensure_authenticated, _params, session, socket) do
     socket = mount_user_id(socket, session)
 
-    if socket.assigns.current_user do
+    if socket.assigns.user_id do
 
-      user_id = socket.assigns.current_user.id
+      user_id = socket.assigns.user_id.id
       Phoenix.PubSub.subscribe(App.PubSub, "user:" <> Integer.to_string(user_id))
 
       {:cont, socket}
@@ -209,7 +209,7 @@ defmodule AppWeb.UserAuth do
   Used for routes that require the user to not be authenticated.
   """
   def redirect_if_user_is_authenticated(conn, _opts) do
-    if conn.assigns[:current_user] do
+    if conn.assigns[:user_id] do
       conn
       |> redirect(to: signed_in_path(conn))
       |> halt()
@@ -225,7 +225,7 @@ defmodule AppWeb.UserAuth do
   they use the application at all, here would be a good place.
   """
   def require_authenticated_user(conn, _opts) do
-    if conn.assigns[:current_user] do
+    if conn.assigns[:user_id] do
       conn
     else
       conn
