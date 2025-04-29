@@ -146,11 +146,6 @@ msgstr ""
 msgid "Change Password"
 msgstr ""
 
-#: lib/app_web/components/ui/navbar.ex:78
-#, elixir-autogen, elixir-format
-msgid "Chat"
-msgstr ""
-
 #: lib/app_web/live/user_confirmation_live.ex:9
 #, elixir-autogen, elixir-format
 msgid "Confirm Account"
@@ -161,7 +156,7 @@ msgstr ""
 msgid "Confirm my account"
 msgstr ""
 
-#: lib/app_web/components/ui/navbar.ex:72
+#: lib/app_web/components/ui/navbar.ex:86
 #, elixir-autogen, elixir-format
 msgid "Contact Us"
 msgstr ""
@@ -169,11 +164,6 @@ msgstr ""
 #: lib/app_web/controllers/page_html/courses.html.heex:8
 #, elixir-autogen, elixir-format
 msgid "Course"
-msgstr ""
-
-#: lib/app_web/components/ui/navbar.ex:51
-#, elixir-autogen, elixir-format
-msgid "Courses"
 msgstr ""
 
 #: lib/app_web/live/user_registration_live.ex:40
@@ -192,16 +182,6 @@ msgstr ""
 #: lib/app_web/live/topic_live/index.html.heex:29
 #, elixir-autogen, elixir-format
 msgid "Delete"
-msgstr ""
-
-#: lib/app_web/components/ui/navbar.ex:52
-#, elixir-autogen, elixir-format
-msgid "Destinations"
-msgstr ""
-
-#: lib/app_web/live/planets_live.ex:58
-#, elixir-autogen, elixir-format
-msgid "Distance"
 msgstr ""
 
 #: lib/app_web/controllers/planet_html/list.html.heex:19
@@ -250,11 +230,6 @@ msgstr ""
 #: lib/app_web/controllers/page_html/home.html.heex:48
 #, elixir-autogen, elixir-format
 msgid "Haskell"
-msgstr ""
-
-#: lib/app_web/components/ui/navbar.ex:48
-#, elixir-autogen, elixir-format
-msgid "Home"
 msgstr ""
 
 #: lib/app_web/controllers/planet_html/list.html.heex:17
@@ -315,7 +290,7 @@ msgstr ""
 msgid "Listing Topics"
 msgstr ""
 
-#: lib/app_web/components/ui/navbar.ex:96
+#: lib/app_web/components/ui/navbar.ex:107
 #: lib/app_web/live/user_confirmation_instructions_live.ex:25
 #: lib/app_web/live/user_confirmation_live.ex:20
 #: lib/app_web/live/user_forgot_password_live.ex:24
@@ -331,7 +306,7 @@ msgstr ""
 msgid "Log in to account"
 msgstr ""
 
-#: lib/app_web/components/ui/navbar.ex:91
+#: lib/app_web/components/ui/navbar.ex:102
 #, elixir-autogen, elixir-format
 msgid "Log out"
 msgstr ""
@@ -341,7 +316,7 @@ msgstr ""
 msgid "Manage your account email address and password settings"
 msgstr ""
 
-#: lib/app_web/components/ui/navbar.ex:76
+#: lib/app_web/components/ui/navbar.ex:90
 #, elixir-autogen, elixir-format
 msgid "Messages"
 msgstr ""
@@ -380,7 +355,6 @@ msgid "Oops, something went wrong! Please check the errors below."
 msgstr ""
 
 #: lib/app_web/controllers/planet_html/list.html.heex:20
-#: lib/app_web/live/planets_live.ex:61
 #, elixir-autogen, elixir-format
 msgid "Orbital Period"
 msgstr ""
@@ -395,19 +369,9 @@ msgstr ""
 msgid "Page"
 msgstr ""
 
-#: lib/app_web/components/ui/navbar.ex:58
-#, elixir-autogen, elixir-format
-msgid "Planets"
-msgstr ""
-
 #: lib/app_web/live/planets_live.ex:44
 #, elixir-autogen, elixir-format
 msgid "Planets List"
-msgstr ""
-
-#: lib/app_web/components/ui/navbar.ex:61
-#, elixir-autogen, elixir-format
-msgid "Planets Live"
 msgstr ""
 
 #: lib/app_web/components/live/poll_component.ex:20
@@ -440,7 +404,7 @@ msgstr ""
 msgid "RISC-V"
 msgstr ""
 
-#: lib/app_web/components/ui/navbar.ex:99
+#: lib/app_web/components/ui/navbar.ex:110
 #: lib/app_web/live/user_confirmation_instructions_live.ex:24
 #: lib/app_web/live/user_confirmation_live.ex:19
 #: lib/app_web/live/user_forgot_password_live.ex:23
@@ -470,7 +434,7 @@ msgstr ""
 msgid "Save Item"
 msgstr ""
 
-#: lib/app_web/components/layouts/app.html.heex:90
+#: lib/app_web/components/layouts/app.html.heex:68
 #: lib/app_web/controllers/message_html/message_form.html.heex:9
 #, elixir-autogen, elixir-format
 msgid "Save Message"
@@ -501,7 +465,7 @@ msgstr ""
 msgid "Send password reset instructions"
 msgstr ""
 
-#: lib/app_web/components/ui/navbar.ex:90
+#: lib/app_web/components/ui/navbar.ex:101
 #, elixir-autogen, elixir-format
 msgid "Settings"
 msgstr ""
@@ -543,11 +507,6 @@ msgstr ""
 #: lib/app_web/live/topic_live/show.html.heex:2
 #, elixir-autogen, elixir-format
 msgid "Topic"
-msgstr ""
-
-#: lib/app_web/components/ui/navbar.ex:77
-#, elixir-autogen, elixir-format
-msgid "Topics"
 msgstr ""
 
 #: lib/app_web/components/live/poll_component.ex:9
@@ -651,7 +610,7 @@ msgstr ""
 msgid "Confirm new password"
 msgstr ""
 
-#: lib/app_web/components/layouts/app.html.heex:84
+#: lib/app_web/components/layouts/app.html.heex:62
 #, elixir-autogen, elixir-format, fuzzy
 msgid "Contact us"
 msgstr ""
@@ -672,7 +631,7 @@ msgstr ""
 msgid "Edit Message"
 msgstr ""
 
-#: lib/app_web/components/layouts/app.html.heex:86
+#: lib/app_web/components/layouts/app.html.heex:64
 #: lib/app_web/controllers/message_html/index.html.heex:14
 #: lib/app_web/controllers/message_html/message_form.html.heex:5
 #: lib/app_web/controllers/message_html/show.html.heex:7
@@ -704,7 +663,7 @@ msgstr ""
 msgid "Logging in..."
 msgstr ""
 
-#: lib/app_web/components/layouts/app.html.heex:88
+#: lib/app_web/components/layouts/app.html.heex:66
 #: lib/app_web/controllers/message_html/index.html.heex:16
 #: lib/app_web/controllers/message_html/message_form.html.heex:7
 #: lib/app_web/controllers/message_html/show.html.heex:2
@@ -730,7 +689,7 @@ msgstr ""
 msgid "Password"
 msgstr ""
 
-#: lib/app_web/components/layouts/app.html.heex:87
+#: lib/app_web/components/layouts/app.html.heex:65
 #: lib/app_web/controllers/message_html/index.html.heex:15
 #: lib/app_web/controllers/message_html/message_form.html.heex:6
 #: lib/app_web/controllers/message_html/show.html.heex:8
@@ -811,8 +770,8 @@ msgstr ""
 msgid "Show Results"
 msgstr ""
 
-#: lib/app_web/user_auth.ex:170
-#: lib/app_web/user_auth.ex:232
+#: lib/app_web/user_auth.ex:175
+#: lib/app_web/user_auth.ex:237
 #, elixir-autogen, elixir-format
 msgid "You must log in to access this page."
 msgstr ""
@@ -840,4 +799,331 @@ msgstr ""
 #: lib/app_web/controllers/user_session_controller.ex:19
 #, elixir-autogen, elixir-format
 msgid "Welcome back!"
+msgstr ""
+
+#: lib/app_web/live/books_live.ex:79
+#, elixir-autogen, elixir-format
+msgid "A Mind for Pool: How To Master The Mental Game"
+msgstr ""
+
+#: lib/app_web/live/books_live.ex:77
+#, elixir-autogen, elixir-format
+msgid "A Mind for Pool: How To Master The Mental Game Book Cover"
+msgstr ""
+
+#: lib/app_web/components/ui/navbar.ex:50
+#, elixir-autogen, elixir-format, fuzzy
+msgid "About"
+msgstr ""
+
+#: lib/app_web/components/ui/navbar.ex:63
+#, elixir-autogen, elixir-format
+msgid "Books"
+msgstr ""
+
+#: lib/app_web/live/books_live.ex:23
+#: lib/app_web/live/books_live.ex:51
+#: lib/app_web/live/books_live.ex:70
+#: lib/app_web/live/books_live.ex:85
+#, elixir-autogen, elixir-format
+msgid "Buy Now"
+msgstr ""
+
+#: lib/app_web/live/books_live.ex:18
+#, elixir-autogen, elixir-format
+msgid "By Jospeh Schmidt — Life Through Pool by Joseph Schmidt uses the game of pool as a powerful metaphor for resilience, mindset, and personal growth. Once a promising pool prodigy, Schmidt's life changed drastically after suffering a severe brain injury from an assault. Initially feeling powerless, he later discovered the transformative power of language and mindset, learning that reframing his internal dialogue could help him regain his abilities and reshape his future.\n          The book explores key themes such as self-control, patience, and discipline, showing how the principles of pool apply to life's challenges. Schmidt emphasizes that success is not just about skill but about the way we think, adapt, and overcome setbacks. Through personal experiences and practical insights, he encourages readers to embrace both victories and failures as opportunities for growth, making Life Through Pool both a guide to mastering the game and a deeper reflection on achieving success in life."
+msgstr ""
+
+#: lib/app_web/live/books_live.ex:62
+#, elixir-autogen, elixir-format
+msgid "By Nicholas Leider - Practical, step-by-step tips for players of all levels\n        From Snooker to Carom to good-old-fashioned 8- or 9-Ball, Pool & Billiards For Dummies reveals the tips, tricks, and rules of play, covering the variety of the ever-popular games that make up pool and billiards. This hands-on guide discusses everything from the rules and strategies of the games to how to set up a pool room to choosing the right equipment, and is accompanied by dozens of photos and line drawings.\n        See how hard to hit the cue ball and where to hit it, the angle to hold the cue stick and how much chalk to use, how to use a bridge, and how to put spin on the ball\n        Includes advanced pool techniques and trick shots for the seasoned pool sharp\n        With Pool & Billiards For Dummies, even a novice can play like a champion!"
+msgstr ""
+
+#: lib/app_web/live/books_live.ex:81
+#, elixir-autogen, elixir-format
+msgid "By Philip B Capelle — Pool is largely a mental game. So if you want to realise your full potential, you have got to eliminate the mental mistakes that are holding you back. A Mind for Pool will show you how to think pool like a champion. In the process you will learn how to: play under pressure; handle troublesome opponents; concentrate fully on every shot; overcome anger; adapt to the playing conditions; complete successfully in leagues, tournaments, and money games; evaluate and improve your game have much more fun; experience a quantum leap in your game."
+msgstr ""
+
+#: lib/app_web/live/books_live.ex:34
+#, elixir-autogen, elixir-format
+msgid "By Ray Martin - World Champion Pool Player Ray \"Cool Cat\" Martin shares his secrets for playing winner's pool in this classic book, which includes an introduction by the author. Written with co-author Rosser Reeves, The 99 Critical Shots in Pool remains one of the most authoritative guides to the game ever written. Over 200 illustrations show the proper form, technique, and approach to shots such as:"
+msgstr ""
+
+#: lib/app_web/live/planets_live.ex:64
+#, elixir-autogen, elixir-format
+msgid "Day (in hours)"
+msgstr ""
+
+#: lib/app_web/live/movies_live.ex:65
+#, elixir-autogen, elixir-format
+msgid "Directed by Hamish Rothwell. Three friends tour the Wellington pub scene, playing pool with ever-increasing stakes. Then they enter a tournament run by vicious crime boss 'Daddy'. Narrator Kirk Torrance (Outrageous Fortune) guides us through their mission to pocket the money. This movie is unavailable to watch online."
+msgstr ""
+
+#: lib/app_web/live/movies_live.ex:49
+#, elixir-autogen, elixir-format
+msgid "Directed by Mars Callahan. A talented pool hustler who has stayed out of the game for years must return to his old ways when his little brother gets involved with his enemy--the very man who held him back from greatness."
+msgstr ""
+
+#: lib/app_web/live/movies_live.ex:33
+#, elixir-autogen, elixir-format
+msgid "Directed by Martin Scorsese. Former pool hustler \"Fast Eddie\" Felson (Paul Newman) decides he wants to return to the game by taking a pupil. He meets talented but green Vincent Lauria (Tom Cruise) and proposes a partnership. As they tour pool halls, Eddie teaches Vincent the tricks of scamming, but he eventually grows frustrated with Vincent's showboat antics, leading to an argument and a falling-out. Eddie takes up playing again and soon crosses paths with Vincent as an opponent."
+msgstr ""
+
+#: lib/app_web/live/movies_live.ex:18
+#, elixir-autogen, elixir-format
+msgid "Directed by Robert Rossen. Hollywood icon Paul Newman stars in this all-time classic about an up-and-coming pool player, “Fast Eddie” Felson, who risks it all in a match with pool champion “Minnesota Fats,” played by Jackie Gleason."
+msgstr ""
+
+#: lib/app_web/components/ui/navbar.ex:62
+#, elixir-autogen, elixir-format
+msgid "Drills"
+msgstr ""
+
+#: lib/app_web/components/ui/navbar.ex:51
+#, elixir-autogen, elixir-format
+msgid "Facts"
+msgstr ""
+
+#: lib/app_web/components/ui/navbar.ex:52
+#: lib/app_web/live/fargo_rate_live.ex:24
+#, elixir-autogen, elixir-format
+msgid "Fargo Rate"
+msgstr ""
+
+#: lib/app_web/live/fargo_rate_live.ex:22
+#, elixir-autogen, elixir-format
+msgid "First Name"
+msgstr ""
+
+#: lib/app_web/components/ui/navbar.ex:73
+#, elixir-autogen, elixir-format
+msgid "Games"
+msgstr ""
+
+#: lib/app_web/components/ui/navbar.ex:47
+#, elixir-autogen, elixir-format
+msgid "General"
+msgstr ""
+
+#: lib/app_web/live/planets_live.ex:61
+#, elixir-autogen, elixir-format
+msgid "Gravity"
+msgstr ""
+
+#: lib/app_web/live/fargo_rate_live.ex:23
+#, elixir-autogen, elixir-format
+msgid "Last Name"
+msgstr ""
+
+#: lib/app_web/components/ui/navbar.ex:74
+#, elixir-autogen, elixir-format
+msgid "Leagues"
+msgstr ""
+
+#: lib/app_web/components/ui/navbar.ex:58
+#, elixir-autogen, elixir-format
+msgid "Learn"
+msgstr ""
+
+#: lib/app_web/live/books_live.ex:16
+#, elixir-autogen, elixir-format
+msgid "Life Through Pool"
+msgstr ""
+
+#: lib/app_web/live/books_live.ex:14
+#, elixir-autogen, elixir-format
+msgid "Life Through Pool Book Cover"
+msgstr ""
+
+#: lib/app_web/live/fargo_rate_live.ex:27
+#, elixir-autogen, elixir-format
+msgid "Location"
+msgstr ""
+
+#: lib/app_web/live/fargo_rate_live.ex:26
+#, elixir-autogen, elixir-format
+msgid "Membership ID"
+msgstr ""
+
+#: lib/app_web/live/planets_live.ex:58
+#, elixir-autogen, elixir-format
+msgid "Moons"
+msgstr ""
+
+#: lib/app_web/components/ui/navbar.ex:64
+#, elixir-autogen, elixir-format
+msgid "Movies"
+msgstr ""
+
+#: lib/app_web/live/movies_live.ex:24
+#, elixir-autogen, elixir-format
+msgid "Not Rated"
+msgstr ""
+
+#: lib/app_web/components/ui/navbar.ex:69
+#, elixir-autogen, elixir-format
+msgid "Play"
+msgstr ""
+
+#: lib/app_web/live/books_live.ex:60
+#, elixir-autogen, elixir-format
+msgid "Pool and Billiards For Dummies"
+msgstr ""
+
+#: lib/app_web/live/books_live.ex:58
+#, elixir-autogen, elixir-format
+msgid "Pool and Billiards For Dummies Book Cover"
+msgstr ""
+
+#: lib/app_web/live/movies_live.ex:47
+#, elixir-autogen, elixir-format
+msgid "Poolhall Junkies"
+msgstr ""
+
+#: lib/app_web/live/movies_live.ex:45
+#, elixir-autogen, elixir-format
+msgid "Poolhall Junkies Movie Poster"
+msgstr ""
+
+#: lib/app_web/components/ui/navbar.ex:53
+#, elixir-autogen, elixir-format
+msgid "Purchase"
+msgstr ""
+
+#: lib/app_web/live/movies_live.ex:39
+#: lib/app_web/live/movies_live.ex:55
+#: lib/app_web/live/movies_live.ex:67
+#, elixir-autogen, elixir-format
+msgid "Rated R"
+msgstr ""
+
+#: lib/app_web/live/books_live.ex:47
+#, elixir-autogen, elixir-format
+msgid "Ray Martin, a Billiards Congress of America Hall of Fame inductee, is one of only seven players in the twentieth century to win three or more world 14.1 titles. He co-wrote this book with Rosser Reeves in 1976."
+msgstr ""
+
+#: lib/app_web/live/books_live.ex:9
+#, elixir-autogen, elixir-format
+msgid "Recommended Billiard Books"
+msgstr ""
+
+#: lib/app_web/live/movies_live.ex:9
+#, elixir-autogen, elixir-format
+msgid "Recommended Billiard Movies"
+msgstr ""
+
+#: lib/app_web/live/fargo_rate_live.ex:25
+#, elixir-autogen, elixir-format
+msgid "Robustness"
+msgstr ""
+
+#: lib/app_web/components/ui/navbar.ex:72
+#, elixir-autogen, elixir-format
+msgid "Rules"
+msgstr ""
+
+#: lib/app_web/live/fargo_rate_live.ex:13
+#, elixir-autogen, elixir-format
+msgid "Search"
+msgstr ""
+
+#: lib/app_web/live/fargo_rate_live.ex:12
+#, elixir-autogen, elixir-format
+msgid "Search for a player..."
+msgstr ""
+
+#: lib/app_web/live/movies_live.ex:63
+#, elixir-autogen, elixir-format
+msgid "Stickmen"
+msgstr ""
+
+#: lib/app_web/live/movies_live.ex:61
+#, elixir-autogen, elixir-format
+msgid "Stickmen Movie Poster"
+msgstr ""
+
+#: lib/app_web/live/books_live.ex:32
+#, elixir-autogen, elixir-format
+msgid "The 99 Critical Shots in Pool: Everything You Need to Know to Learn and Master the Game"
+msgstr ""
+
+#: lib/app_web/live/books_live.ex:30
+#, elixir-autogen, elixir-format
+msgid "The 99 Critical Shots in Pool: Everything You Need to Know to Learn and Master the Game Book Cover"
+msgstr ""
+
+#: lib/app_web/live/books_live.ex:37
+#, elixir-autogen, elixir-format
+msgid "The Center Ball Cheat-the-Pocket"
+msgstr ""
+
+#: lib/app_web/live/movies_live.ex:32
+#, elixir-autogen, elixir-format
+msgid "The Color of Money"
+msgstr ""
+
+#: lib/app_web/live/movies_live.ex:30
+#, elixir-autogen, elixir-format
+msgid "The Color of Money Movie Poster"
+msgstr ""
+
+#: lib/app_web/live/books_live.ex:41
+#, elixir-autogen, elixir-format
+msgid "The Frozen Kiss Shot"
+msgstr ""
+
+#: lib/app_web/live/books_live.ex:38
+#, elixir-autogen, elixir-format
+msgid "The Hook Shot"
+msgstr ""
+
+#: lib/app_web/live/movies_live.ex:16
+#, elixir-autogen, elixir-format
+msgid "The Hustler"
+msgstr ""
+
+#: lib/app_web/live/movies_live.ex:14
+#, elixir-autogen, elixir-format
+msgid "The Hustler Movie Poster"
+msgstr ""
+
+#: lib/app_web/live/books_live.ex:40
+#, elixir-autogen, elixir-format
+msgid "The Jump Shot"
+msgstr ""
+
+#: lib/app_web/live/books_live.ex:42
+#, elixir-autogen, elixir-format
+msgid "The Nudge Shot"
+msgstr ""
+
+#: lib/app_web/live/books_live.ex:39
+#, elixir-autogen, elixir-format
+msgid "The Seven Ball Stop Shot"
+msgstr ""
+
+#: lib/app_web/live/books_live.ex:43
+#, elixir-autogen, elixir-format
+msgid "The Side Pocket By-Pass Shot"
+msgstr ""
+
+#: lib/app_web/components/ui/navbar.ex:75
+#, elixir-autogen, elixir-format
+msgid "Tournaments"
+msgstr ""
+
+#: lib/app_web/components/ui/navbar.ex:61
+#, elixir-autogen, elixir-format
+msgid "Tutorials"
+msgstr ""
+
+#: lib/app_web/live/movies_live.ex:37
+#, elixir-autogen, elixir-format
+msgid "Watch Now $3.99"
+msgstr ""
+
+#: lib/app_web/live/movies_live.ex:22
+#: lib/app_web/live/movies_live.ex:53
+#, elixir-autogen, elixir-format
+msgid "Watch Now Free"
 msgstr ""

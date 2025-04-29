@@ -146,11 +146,6 @@ msgstr "Cambiar correo electrónico"
 msgid "Change Password"
 msgstr "Cambiar la contraseña"
 
-#: lib/app_web/components/ui/navbar.ex:78
-#, elixir-autogen, elixir-format
-msgid "Chat"
-msgstr "Charlar"
-
 #: lib/app_web/live/user_confirmation_live.ex:9
 #, elixir-autogen, elixir-format
 msgid "Confirm Account"
@@ -161,7 +156,7 @@ msgstr "Confirmar cuenta"
 msgid "Confirm my account"
 msgstr "Confirmar mi cuenta"
 
-#: lib/app_web/components/ui/navbar.ex:72
+#: lib/app_web/components/ui/navbar.ex:86
 #, elixir-autogen, elixir-format
 msgid "Contact Us"
 msgstr "Contacta con nosotros"
@@ -170,11 +165,6 @@ msgstr "Contacta con nosotros"
 #, elixir-autogen, elixir-format
 msgid "Course"
 msgstr "Curso"
-
-#: lib/app_web/components/ui/navbar.ex:51
-#, elixir-autogen, elixir-format
-msgid "Courses"
-msgstr "Cursos"
 
 #: lib/app_web/live/user_registration_live.ex:40
 #, elixir-autogen, elixir-format
@@ -193,16 +183,6 @@ msgstr "Temperatura actual:"
 #, elixir-autogen, elixir-format
 msgid "Delete"
 msgstr "Borrar"
-
-#: lib/app_web/components/ui/navbar.ex:52
-#, elixir-autogen, elixir-format
-msgid "Destinations"
-msgstr "Destinos"
-
-#: lib/app_web/live/planets_live.ex:58
-#, elixir-autogen, elixir-format
-msgid "Distance"
-msgstr "Distancia"
 
 #: lib/app_web/controllers/planet_html/list.html.heex:19
 #, elixir-autogen, elixir-format
@@ -251,11 +231,6 @@ msgstr ""
 #, elixir-autogen, elixir-format
 msgid "Haskell"
 msgstr ""
-
-#: lib/app_web/components/ui/navbar.ex:48
-#, elixir-autogen, elixir-format
-msgid "Home"
-msgstr "Hogar"
 
 #: lib/app_web/controllers/planet_html/list.html.heex:17
 #: lib/app_web/live/planets_live.ex:52
@@ -315,7 +290,7 @@ msgstr "Páginas de listado"
 msgid "Listing Topics"
 msgstr "Listado de temas"
 
-#: lib/app_web/components/ui/navbar.ex:96
+#: lib/app_web/components/ui/navbar.ex:107
 #: lib/app_web/live/user_confirmation_instructions_live.ex:25
 #: lib/app_web/live/user_confirmation_live.ex:20
 #: lib/app_web/live/user_forgot_password_live.ex:24
@@ -331,7 +306,7 @@ msgstr "Acceso"
 msgid "Log in to account"
 msgstr "Iniciar sesión en la cuenta"
 
-#: lib/app_web/components/ui/navbar.ex:91
+#: lib/app_web/components/ui/navbar.ex:102
 #, elixir-autogen, elixir-format
 msgid "Log out"
 msgstr "Finalizar la sesión"
@@ -341,7 +316,7 @@ msgstr "Finalizar la sesión"
 msgid "Manage your account email address and password settings"
 msgstr "Administre la configuración de su dirección de correo electrónico y contraseña de su cuenta"
 
-#: lib/app_web/components/ui/navbar.ex:76
+#: lib/app_web/components/ui/navbar.ex:90
 #, elixir-autogen, elixir-format
 msgid "Messages"
 msgstr "Mensajes"
@@ -380,7 +355,6 @@ msgid "Oops, something went wrong! Please check the errors below."
 msgstr "¡Uy, algo salió mal! Por favor, revisa los errores a continuación."
 
 #: lib/app_web/controllers/planet_html/list.html.heex:20
-#: lib/app_web/live/planets_live.ex:61
 #, elixir-autogen, elixir-format
 msgid "Orbital Period"
 msgstr "Periodo orbital"
@@ -395,20 +369,10 @@ msgstr ""
 msgid "Page"
 msgstr "Página"
 
-#: lib/app_web/components/ui/navbar.ex:58
-#, elixir-autogen, elixir-format
-msgid "Planets"
-msgstr "Planetas"
-
 #: lib/app_web/live/planets_live.ex:44
 #, elixir-autogen, elixir-format
 msgid "Planets List"
 msgstr "Lista de planetas"
-
-#: lib/app_web/components/ui/navbar.ex:61
-#, elixir-autogen, elixir-format
-msgid "Planets Live"
-msgstr "Planetas vivos"
 
 #: lib/app_web/components/live/poll_component.ex:20
 #, elixir-autogen, elixir-format
@@ -440,7 +404,7 @@ msgstr ""
 msgid "RISC-V"
 msgstr ""
 
-#: lib/app_web/components/ui/navbar.ex:99
+#: lib/app_web/components/ui/navbar.ex:110
 #: lib/app_web/live/user_confirmation_instructions_live.ex:24
 #: lib/app_web/live/user_confirmation_live.ex:19
 #: lib/app_web/live/user_forgot_password_live.ex:23
@@ -470,7 +434,7 @@ msgstr "Restablecer contraseña"
 msgid "Save Item"
 msgstr "Save Item"
 
-#: lib/app_web/components/layouts/app.html.heex:90
+#: lib/app_web/components/layouts/app.html.heex:68
 #: lib/app_web/controllers/message_html/message_form.html.heex:9
 #, elixir-autogen, elixir-format
 msgid "Save Message"
@@ -501,7 +465,7 @@ msgstr "Enviar mensaje"
 msgid "Send password reset instructions"
 msgstr "Enviar instrucciones para restablecer la contraseña"
 
-#: lib/app_web/components/ui/navbar.ex:90
+#: lib/app_web/components/ui/navbar.ex:101
 #, elixir-autogen, elixir-format
 msgid "Settings"
 msgstr "Ajustes"
@@ -544,11 +508,6 @@ msgstr "Este es un registro de tema de su base de datos."
 #, elixir-autogen, elixir-format
 msgid "Topic"
 msgstr "Tema"
-
-#: lib/app_web/components/ui/navbar.ex:77
-#, elixir-autogen, elixir-format
-msgid "Topics"
-msgstr "Temas"
 
 #: lib/app_web/components/live/poll_component.ex:9
 #, elixir-autogen, elixir-format
@@ -651,7 +610,7 @@ msgstr "Cambio..."
 msgid "Confirm new password"
 msgstr "Confirmar nueva contraseña"
 
-#: lib/app_web/components/layouts/app.html.heex:84
+#: lib/app_web/components/layouts/app.html.heex:62
 #, elixir-autogen, elixir-format, fuzzy
 msgid "Contact us"
 msgstr "Contacta con nosotros"
@@ -672,7 +631,7 @@ msgstr "Contraseña actual"
 msgid "Edit Message"
 msgstr "Editar mensaje"
 
-#: lib/app_web/components/layouts/app.html.heex:86
+#: lib/app_web/components/layouts/app.html.heex:64
 #: lib/app_web/controllers/message_html/index.html.heex:14
 #: lib/app_web/controllers/message_html/message_form.html.heex:5
 #: lib/app_web/controllers/message_html/show.html.heex:7
@@ -704,7 +663,7 @@ msgstr "Mantenme conectado"
 msgid "Logging in..."
 msgstr "Iniciando sesión..."
 
-#: lib/app_web/components/layouts/app.html.heex:88
+#: lib/app_web/components/layouts/app.html.heex:66
 #: lib/app_web/controllers/message_html/index.html.heex:16
 #: lib/app_web/controllers/message_html/message_form.html.heex:7
 #: lib/app_web/controllers/message_html/show.html.heex:2
@@ -730,7 +689,7 @@ msgstr "Nueva contraseña"
 msgid "Password"
 msgstr "Contraseña"
 
-#: lib/app_web/components/layouts/app.html.heex:87
+#: lib/app_web/components/layouts/app.html.heex:65
 #: lib/app_web/controllers/message_html/index.html.heex:15
 #: lib/app_web/controllers/message_html/message_form.html.heex:6
 #: lib/app_web/controllers/message_html/show.html.heex:8
@@ -811,8 +770,8 @@ msgstr "Ocultar resultados"
 msgid "Show Results"
 msgstr "Mostrar resultados"
 
-#: lib/app_web/user_auth.ex:170
-#: lib/app_web/user_auth.ex:232
+#: lib/app_web/user_auth.ex:175
+#: lib/app_web/user_auth.ex:237
 #, elixir-autogen, elixir-format
 msgid "You must log in to access this page."
 msgstr "Debes iniciar sesión para acceder a esta página."
@@ -841,3 +800,330 @@ msgstr "¡Contraseña actualizada exitosamente!"
 #, elixir-autogen, elixir-format
 msgid "Welcome back!"
 msgstr "¡Bienvenido de nuevo!"
+
+#: lib/app_web/live/books_live.ex:79
+#, elixir-autogen, elixir-format
+msgid "A Mind for Pool: How To Master The Mental Game"
+msgstr "Una mente para el billar: Cómo dominar el juego mental"
+
+#: lib/app_web/live/books_live.ex:77
+#, elixir-autogen, elixir-format
+msgid "A Mind for Pool: How To Master The Mental Game Book Cover"
+msgstr "Portada del libro \"Una mente para el billar: Cómo dominar el juego mental\""
+
+#: lib/app_web/components/ui/navbar.ex:50
+#, elixir-autogen, elixir-format, fuzzy
+msgid "About"
+msgstr "Acerca de:"
+
+#: lib/app_web/components/ui/navbar.ex:63
+#, elixir-autogen, elixir-format
+msgid "Books"
+msgstr "Libros"
+
+#: lib/app_web/live/books_live.ex:23
+#: lib/app_web/live/books_live.ex:51
+#: lib/app_web/live/books_live.ex:70
+#: lib/app_web/live/books_live.ex:85
+#, elixir-autogen, elixir-format
+msgid "Buy Now"
+msgstr "Comprar Ahora"
+
+#: lib/app_web/live/books_live.ex:18
+#, elixir-autogen, elixir-format
+msgid "By Jospeh Schmidt — Life Through Pool by Joseph Schmidt uses the game of pool as a powerful metaphor for resilience, mindset, and personal growth. Once a promising pool prodigy, Schmidt's life changed drastically after suffering a severe brain injury from an assault. Initially feeling powerless, he later discovered the transformative power of language and mindset, learning that reframing his internal dialogue could help him regain his abilities and reshape his future.\n          The book explores key themes such as self-control, patience, and discipline, showing how the principles of pool apply to life's challenges. Schmidt emphasizes that success is not just about skill but about the way we think, adapt, and overcome setbacks. Through personal experiences and practical insights, he encourages readers to embrace both victories and failures as opportunities for growth, making Life Through Pool both a guide to mastering the game and a deeper reflection on achieving success in life."
+msgstr "Por Joseph Schmidt — La vida a través del billar, de Joseph Schmidt, utiliza el billar como una poderosa metáfora de la resiliencia, la mentalidad y el crecimiento personal. Schmidt, quien fuera un prometedor prodigio del billar, cambió drásticamente su vida tras sufrir una grave lesión cerebral a causa de una agresión. Al principio, sintiéndose impotente, descubrió el poder transformador del lenguaje y la mentalidad, y aprendió que replantear su diálogo interno podría ayudarle a recuperar sus habilidades y redefinir su futuro. El libro explora temas clave como el autocontrol, la paciencia y la disciplina, mostrando cómo los principios del billar se aplican a los desafíos de la vida. Schmidt enfatiza que el éxito no se trata solo de habilidad, sino de cómo pensamos, nos adaptamos y superamos los reveses. A través de experiencias personales y perspectivas prácticas, anima a los lectores a aceptar tanto las victorias como los fracasos como oportunidades de crecimiento, convirtiendo La vida a través del billar en una guía para dominar el juego y una reflexión más profunda sobre cómo alcanzar el éxito en la vida."
+
+#: lib/app_web/live/books_live.ex:62
+#, elixir-autogen, elixir-format
+msgid "By Nicholas Leider - Practical, step-by-step tips for players of all levels\n        From Snooker to Carom to good-old-fashioned 8- or 9-Ball, Pool & Billiards For Dummies reveals the tips, tricks, and rules of play, covering the variety of the ever-popular games that make up pool and billiards. This hands-on guide discusses everything from the rules and strategies of the games to how to set up a pool room to choosing the right equipment, and is accompanied by dozens of photos and line drawings.\n        See how hard to hit the cue ball and where to hit it, the angle to hold the cue stick and how much chalk to use, how to use a bridge, and how to put spin on the ball\n        Includes advanced pool techniques and trick shots for the seasoned pool sharp\n        With Pool & Billiards For Dummies, even a novice can play like a champion!"
+msgstr "Por Nicholas Leider - Consejos prácticos paso a paso para jugadores de todos los niveles. Desde el snooker hasta la carambola, pasando por el clásico 8 o 9-Ball, Pool & Billiards For Dummies revela consejos, trucos y reglas de juego, cubriendo la variedad de los juegos siempre populares que componen el pool y el billar. Esta guía práctica lo analiza todo, desde las reglas y estrategias de los juegos hasta cómo montar una sala de billar y elegir el equipo adecuado, y está acompañada de docenas de fotos y dibujos. Vea qué tan fuerte y dónde golpear la bola blanca, el ángulo para sostener el taco y cuánta tiza usar, cómo usar un puente y cómo darle efecto a la bola. Incluye técnicas avanzadas de billar y tiros con truco para el experto en billar. Con Pool & Billiards For Dummies, ¡hasta un principiante puede jugar como un campeón!"
+
+#: lib/app_web/live/books_live.ex:81
+#, elixir-autogen, elixir-format
+msgid "By Philip B Capelle — Pool is largely a mental game. So if you want to realise your full potential, you have got to eliminate the mental mistakes that are holding you back. A Mind for Pool will show you how to think pool like a champion. In the process you will learn how to: play under pressure; handle troublesome opponents; concentrate fully on every shot; overcome anger; adapt to the playing conditions; complete successfully in leagues, tournaments, and money games; evaluate and improve your game have much more fun; experience a quantum leap in your game."
+msgstr "Por Philip B. Capelle — El billar es, en gran medida, un juego mental. Así que, si quieres alcanzar tu máximo potencial, debes eliminar los errores mentales que te frenan. Una Mente para el Billar te enseñará a pensar como un campeón. En el proceso, aprenderás a: jugar bajo presión; manejar oponentes problemáticos; concentrarte plenamente en cada golpe; superar la ira; adaptarte a las condiciones de juego; completar con éxito ligas, torneos y partidas con premios; evaluar y mejorar tu juego; divertirte mucho más; y experimentar un salto cualitativo en tu juego."
+
+#: lib/app_web/live/books_live.ex:34
+#, elixir-autogen, elixir-format
+msgid "By Ray Martin - World Champion Pool Player Ray \"Cool Cat\" Martin shares his secrets for playing winner's pool in this classic book, which includes an introduction by the author. Written with co-author Rosser Reeves, The 99 Critical Shots in Pool remains one of the most authoritative guides to the game ever written. Over 200 illustrations show the proper form, technique, and approach to shots such as:"
+msgstr "Por Ray Martin, campeón mundial de billar. Ray \"Cool Cat\" Martin comparte sus secretos para jugar al billar ganador en este libro clásico, que incluye una introducción del autor. Escrito en colaboración con el coautor Rosser Reeves, \"Los 99 Tiros Críticos del Billar\" sigue siendo una de las guías más fiables del juego jamás escritas. Más de 200 ilustraciones muestran la forma, la técnica y el enfoque adecuados para los tiros, como:"
+
+#: lib/app_web/live/planets_live.ex:64
+#, elixir-autogen, elixir-format
+msgid "Day (in hours)"
+msgstr "Día (en horas)"
+
+#: lib/app_web/live/movies_live.ex:65
+#, elixir-autogen, elixir-format
+msgid "Directed by Hamish Rothwell. Three friends tour the Wellington pub scene, playing pool with ever-increasing stakes. Then they enter a tournament run by vicious crime boss 'Daddy'. Narrator Kirk Torrance (Outrageous Fortune) guides us through their mission to pocket the money. This movie is unavailable to watch online."
+msgstr "Dirigida por Hamish Rothwell. Tres amigos recorren los pubs de Wellington, jugando al billar con apuestas cada vez mayores. Luego participan en un torneo organizado por el despiadado jefe mafioso 'Daddy'. El narrador Kirk Torrance (Outrageous Fortune) nos guía en su misión para embolsarse el dinero. Esta película no está disponible en línea."
+
+#: lib/app_web/live/movies_live.ex:49
+#, elixir-autogen, elixir-format
+msgid "Directed by Mars Callahan. A talented pool hustler who has stayed out of the game for years must return to his old ways when his little brother gets involved with his enemy--the very man who held him back from greatness."
+msgstr "Dirigida por Mars Callahan. Un talentoso estafador de billar, que se ha mantenido alejado del juego durante años, debe volver a las andadas cuando su hermano menor se involucra con su enemigo, el mismo hombre que le impidió alcanzar la grandeza."
+
+#: lib/app_web/live/movies_live.ex:33
+#, elixir-autogen, elixir-format
+msgid "Directed by Martin Scorsese. Former pool hustler \"Fast Eddie\" Felson (Paul Newman) decides he wants to return to the game by taking a pupil. He meets talented but green Vincent Lauria (Tom Cruise) and proposes a partnership. As they tour pool halls, Eddie teaches Vincent the tricks of scamming, but he eventually grows frustrated with Vincent's showboat antics, leading to an argument and a falling-out. Eddie takes up playing again and soon crosses paths with Vincent as an opponent."
+msgstr "Dirigida por Martin Scorsese. El exjugador de billar \"Fast Eddie\" Felson (Paul Newman) decide volver al juego con un alumno. Conoce al talentoso pero inexperto Vincent Lauria (Tom Cruise) y le propone una alianza. Mientras recorren los salones de billar, Eddie le enseña a Vincent los trucos del timo, pero con el tiempo se frustra con sus exhibiciones, lo que termina en una discusión y una pelea. Eddie retoma el juego y pronto se encuentra con Vincent como oponente."
+
+#: lib/app_web/live/movies_live.ex:18
+#, elixir-autogen, elixir-format
+msgid "Directed by Robert Rossen. Hollywood icon Paul Newman stars in this all-time classic about an up-and-coming pool player, “Fast Eddie” Felson, who risks it all in a match with pool champion “Minnesota Fats,” played by Jackie Gleason."
+msgstr "Dirigida por Robert Rossen. El ícono de Hollywood, Paul Newman, protagoniza este clásico de todos los tiempos sobre un prometedor jugador de billar, \"Fast Eddie\" Felson, quien lo arriesga todo en una partida contra el campeón de billar \"Minnesota Fats\", interpretado por Jackie Gleason."
+
+#: lib/app_web/components/ui/navbar.ex:62
+#, elixir-autogen, elixir-format
+msgid "Drills"
+msgstr "Taladros"
+
+#: lib/app_web/components/ui/navbar.ex:51
+#, elixir-autogen, elixir-format
+msgid "Facts"
+msgstr "Hechos"
+
+#: lib/app_web/components/ui/navbar.ex:52
+#: lib/app_web/live/fargo_rate_live.ex:24
+#, elixir-autogen, elixir-format
+msgid "Fargo Rate"
+msgstr "Tarifa Fargo"
+
+#: lib/app_web/live/fargo_rate_live.ex:22
+#, elixir-autogen, elixir-format
+msgid "First Name"
+msgstr "Nombre de Pila"
+
+#: lib/app_web/components/ui/navbar.ex:73
+#, elixir-autogen, elixir-format
+msgid "Games"
+msgstr "Juegos"
+
+#: lib/app_web/components/ui/navbar.ex:47
+#, elixir-autogen, elixir-format
+msgid "General"
+msgstr "General"
+
+#: lib/app_web/live/planets_live.ex:61
+#, elixir-autogen, elixir-format
+msgid "Gravity"
+msgstr "Gravedad"
+
+#: lib/app_web/live/fargo_rate_live.ex:23
+#, elixir-autogen, elixir-format
+msgid "Last Name"
+msgstr "Apellido"
+
+#: lib/app_web/components/ui/navbar.ex:74
+#, elixir-autogen, elixir-format
+msgid "Leagues"
+msgstr "Ligas"
+
+#: lib/app_web/components/ui/navbar.ex:58
+#, elixir-autogen, elixir-format
+msgid "Learn"
+msgstr "Aprender"
+
+#: lib/app_web/live/books_live.ex:16
+#, elixir-autogen, elixir-format
+msgid "Life Through Pool"
+msgstr "La Vida a Través del Billar"
+
+#: lib/app_web/live/books_live.ex:14
+#, elixir-autogen, elixir-format
+msgid "Life Through Pool Book Cover"
+msgstr "Portada del libro La Vida a Través del Billar"
+
+#: lib/app_web/live/fargo_rate_live.ex:27
+#, elixir-autogen, elixir-format
+msgid "Location"
+msgstr "Ubicación"
+
+#: lib/app_web/live/fargo_rate_live.ex:26
+#, elixir-autogen, elixir-format
+msgid "Membership ID"
+msgstr "ID de Membresía"
+
+#: lib/app_web/live/planets_live.ex:58
+#, elixir-autogen, elixir-format
+msgid "Moons"
+msgstr "Lunas"
+
+#: lib/app_web/components/ui/navbar.ex:64
+#, elixir-autogen, elixir-format
+msgid "Movies"
+msgstr "Cine"
+
+#: lib/app_web/live/movies_live.ex:24
+#, elixir-autogen, elixir-format
+msgid "Not Rated"
+msgstr "No clasificado"
+
+#: lib/app_web/components/ui/navbar.ex:69
+#, elixir-autogen, elixir-format
+msgid "Play"
+msgstr "Jugar"
+
+#: lib/app_web/live/books_live.ex:60
+#, elixir-autogen, elixir-format
+msgid "Pool and Billiards For Dummies"
+msgstr "Billar y Pool para Principiantes"
+
+#: lib/app_web/live/books_live.ex:58
+#, elixir-autogen, elixir-format
+msgid "Pool and Billiards For Dummies Book Cover"
+msgstr "Portada del libro Billar y Pool para Principiantes"
+
+#: lib/app_web/live/movies_live.ex:47
+#, elixir-autogen, elixir-format
+msgid "Poolhall Junkies"
+msgstr "Adictos a la sala de Billar"
+
+#: lib/app_web/live/movies_live.ex:45
+#, elixir-autogen, elixir-format
+msgid "Poolhall Junkies Movie Poster"
+msgstr "Póster de la película Adictos a la sala de Billar"
+
+#: lib/app_web/components/ui/navbar.ex:53
+#, elixir-autogen, elixir-format
+msgid "Purchase"
+msgstr "Compra"
+
+#: lib/app_web/live/movies_live.ex:39
+#: lib/app_web/live/movies_live.ex:55
+#: lib/app_web/live/movies_live.ex:67
+#, elixir-autogen, elixir-format
+msgid "Rated R"
+msgstr "Clasificado R"
+
+#: lib/app_web/live/books_live.ex:47
+#, elixir-autogen, elixir-format
+msgid "Ray Martin, a Billiards Congress of America Hall of Fame inductee, is one of only seven players in the twentieth century to win three or more world 14.1 titles. He co-wrote this book with Rosser Reeves in 1976."
+msgstr "Ray Martin, miembro del Salón de la Fama del Congreso de Billar de América, es uno de los siete jugadores del siglo XX que han ganado tres o más títulos mundiales de 14.1. Coescribió este libro con Rosser Reeves en 1976."
+
+#: lib/app_web/live/books_live.ex:9
+#, elixir-autogen, elixir-format
+msgid "Recommended Billiard Books"
+msgstr "Libros de Billar Recomendados"
+
+#: lib/app_web/live/movies_live.ex:9
+#, elixir-autogen, elixir-format
+msgid "Recommended Billiard Movies"
+msgstr "Películas de Billar Recomendadas"
+
+#: lib/app_web/live/fargo_rate_live.ex:25
+#, elixir-autogen, elixir-format
+msgid "Robustness"
+msgstr "Robustez"
+
+#: lib/app_web/components/ui/navbar.ex:72
+#, elixir-autogen, elixir-format
+msgid "Rules"
+msgstr "Normas"
+
+#: lib/app_web/live/fargo_rate_live.ex:13
+#, elixir-autogen, elixir-format
+msgid "Search"
+msgstr "Buscar"
+
+#: lib/app_web/live/fargo_rate_live.ex:12
+#, elixir-autogen, elixir-format
+msgid "Search for a player..."
+msgstr "Buscar un jugador ..."
+
+#: lib/app_web/live/movies_live.ex:63
+#, elixir-autogen, elixir-format
+msgid "Stickmen"
+msgstr "Stickmen"
+
+#: lib/app_web/live/movies_live.ex:61
+#, elixir-autogen, elixir-format
+msgid "Stickmen Movie Poster"
+msgstr "Cartel de la película Stickmen"
+
+#: lib/app_web/live/books_live.ex:32
+#, elixir-autogen, elixir-format
+msgid "The 99 Critical Shots in Pool: Everything You Need to Know to Learn and Master the Game"
+msgstr "Los 99 tiros críticos en el billar: todo lo que necesitas saber para aprender y dominar el juego"
+
+#: lib/app_web/live/books_live.ex:30
+#, elixir-autogen, elixir-format
+msgid "The 99 Critical Shots in Pool: Everything You Need to Know to Learn and Master the Game Book Cover"
+msgstr "Los 99 tiros críticos en el billar: Todo lo que necesitas saber para aprender y dominar el juego portada del libro"
+
+#: lib/app_web/live/books_live.ex:37
+#, elixir-autogen, elixir-format
+msgid "The Center Ball Cheat-the-Pocket"
+msgstr "El truco de la bola central: engañar al bolsillo"
+
+#: lib/app_web/live/movies_live.ex:32
+#, elixir-autogen, elixir-format
+msgid "The Color of Money"
+msgstr "El Color del Dinero"
+
+#: lib/app_web/live/movies_live.ex:30
+#, elixir-autogen, elixir-format
+msgid "The Color of Money Movie Poster"
+msgstr "Póster de la película El Color del Dinero"
+
+#: lib/app_web/live/books_live.ex:41
+#, elixir-autogen, elixir-format
+msgid "The Frozen Kiss Shot"
+msgstr "El beso congelado"
+
+#: lib/app_web/live/books_live.ex:38
+#, elixir-autogen, elixir-format
+msgid "The Hook Shot"
+msgstr "El tiro de gancho"
+
+#: lib/app_web/live/movies_live.ex:16
+#, elixir-autogen, elixir-format
+msgid "The Hustler"
+msgstr "El Estafador"
+
+#: lib/app_web/live/movies_live.ex:14
+#, elixir-autogen, elixir-format
+msgid "The Hustler Movie Poster"
+msgstr "Póster de la película El Estafador"
+
+#: lib/app_web/live/books_live.ex:40
+#, elixir-autogen, elixir-format
+msgid "The Jump Shot"
+msgstr "El tiro en suspensión"
+
+#: lib/app_web/live/books_live.ex:42
+#, elixir-autogen, elixir-format
+msgid "The Nudge Shot"
+msgstr "El tiro de empujón"
+
+#: lib/app_web/live/books_live.ex:39
+#, elixir-autogen, elixir-format
+msgid "The Seven Ball Stop Shot"
+msgstr "El tiro de parada de siete bolas"
+
+#: lib/app_web/live/books_live.ex:43
+#, elixir-autogen, elixir-format
+msgid "The Side Pocket By-Pass Shot"
+msgstr "El tiro de derivación del bolsillo lateral"
+
+#: lib/app_web/components/ui/navbar.ex:75
+#, elixir-autogen, elixir-format
+msgid "Tournaments"
+msgstr "Torneos"
+
+#: lib/app_web/components/ui/navbar.ex:61
+#, elixir-autogen, elixir-format
+msgid "Tutorials"
+msgstr "Tutoriales"
+
+#: lib/app_web/live/movies_live.ex:37
+#, elixir-autogen, elixir-format
+msgid "Watch Now $3.99"
+msgstr "Míralo Ahora $3.99"
+
+#: lib/app_web/live/movies_live.ex:22
+#: lib/app_web/live/movies_live.ex:53
+#, elixir-autogen, elixir-format
+msgid "Watch Now Free"
+msgstr "Ver Ahora Gratis"
