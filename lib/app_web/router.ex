@@ -119,6 +119,7 @@ defmodule AppWeb.Router do
       live "/gallery", GalleryLive
       live "/charts", ChartsLive
       live "/minesweeper", MinesweeperLive, :new
+      live "/taskmanager", TaskManagerLive
 
       live "/about", AboutLive
       live "/facts", FactsLive
