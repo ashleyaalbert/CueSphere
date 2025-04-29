@@ -9,8 +9,8 @@ defmodule AppWeb.FargoRateLive do
     ~H"""
     <div class="p-4">
     <.form for={} phx-submit="search">
-      <input name="query" type="text" value={@query} placeholder="Search for a player..." class="border rounded p-2 mr-2" />
-      <.button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Search</.button>
+      <input name="query" type="text" value={@query} placeholder={gettext("Search for a player...")} class="border rounded p-2 mr-2" />
+      <.button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">{gettext("Search")}</.button>
     </.form>
 
       <%= if @error do %>
@@ -19,12 +19,12 @@ defmodule AppWeb.FargoRateLive do
       <table class="mt-4 w-full table-auto border-collapse border border-gray-300">
         <thead>
           <tr>
-            <th class="border p-2">First Name</th>
-            <th class="border p-2">Last Name</th>
-            <th class="border p-2">Fargo Rate</th>
-            <th class="border p-2">Robustness</th>
-            <th class="border p-2">Membership ID</th>
-            <th class="border p-2">Location</th>
+            <th class="border p-2">{gettext("First Name")}</th>
+            <th class="border p-2">{gettext("Last Name")}</th>
+            <th class="border p-2">{gettext("Fargo Rate")}</th>
+            <th class="border p-2">{gettext("Robustness")}</th>
+            <th class="border p-2">{gettext("Membership ID")}</th>
+            <th class="border p-2">{gettext("Location")}</th>
           </tr>
         </thead>
         <tbody>
