@@ -5,7 +5,6 @@ defmodule AppWeb.AboutLive do
   def render(assigns) do
     ~H"""
   <div class="max-w-5xl mx-auto p-6 space-y-12 text-gray-800">
-    <!-- Page Heading -->
     <section>
       <h1 class="text-4xl font-bold mb-4 text-center dark:text-white">About This Project</h1>
     </section>
@@ -31,7 +30,7 @@ defmodule AppWeb.AboutLive do
       </div>
     </section>
 
-    <!-- Life Stories -->
+    <!-- Stories -->
     <section class="bg-gray-50 p-6 rounded-lg shadow-md dark:bg-gray-700 dark:text-white">
       <h2 class="text-2xl font-semibold mb-4">Personal Journey</h2>
 
@@ -94,16 +93,16 @@ defmodule AppWeb.AboutLive do
       </div>
     </section>
 
-    <!-- Photo Gallery -->
+    <!-- Images -->
     <section class="bg-gray-50 p-6 rounded-lg shadow-md dark:bg-gray-700 dark:text-white">
       <h2 class="text-2xl font-semibold mb-4 text-center dark:text-white">Snapshots of My Journey</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <img src="/images/gallery/pool_fullsize.jpg" alt="Ashley with her Shamokin Women's 8-ball Team. They pose for a group photo near a green-cloth pool table with two pool cues making an X on the table and an 8-ball. There is 7 women in this photo including Ashley." class="rounded-lg shadow-md object-cover" />
-        <img src="/images/titleholders.jpg" alt="Ashley and her all otherwise male TAP team, Pocket Punders. Ashley stands in the center holding $2400 fanned out to show the team's win." class="rounded-lg shadow-md object-cover" />
-        <img src="/images/genetti.jpg" alt="Ashley and her father, Bryan, standing infront of a tall Christmas tree with their pool cue cases in the Genetti hotel." class="rounded-lg shadow-md object-cover" />
-        <img src="/images/newcue.jpg" alt="Ashley and her father, Bryan, standing near a grey cloth pool table while holding Ashley's new pool cue. Her new pool cue case also sits on the pool table in front of them." class="rounded-lg shadow-md object-cover" />
-        <img src="/images/nicole.jpg" alt="Ashley and her sister, Alyssa, stand with female pro Nicole Nester in between them in front of a blue cloth pool table at Blue Mountain Billiards." class="rounded-lg shadow-md object-cover" />
-        <img src="/images/westend.jpg" alt="Ashley and her father, Bryan, standing in a corner of the Shamokin West End with the pool cues vertically in hand." class="rounded-lg shadow-md object-cover" />
+        <img src={~p"/images/gallery/pool_fullsize.jpg"} alt="Ashley with her Shamokin Women's 8-ball Team. They pose for a group photo near a green-cloth pool table with two pool cues making an X on the table and an 8-ball. There is 7 women in this photo including Ashley." class="rounded-lg shadow-md object-cover" />
+        <img src={~p"/images/titleholders.jpg"} alt="Ashley and her all otherwise male TAP team, Pocket Punders. Ashley stands in the center holding $2400 fanned out to show the team's win." class="rounded-lg shadow-md object-cover" />
+        <img src={~p"/images/genetti.jpg"} alt="Ashley and her father, Bryan, standing infront of a tall Christmas tree with their pool cue cases in the Genetti hotel." class="rounded-lg shadow-md object-cover" />
+        <img src={~p"/images/newcue.jpg"} alt="Ashley and her father, Bryan, standing near a grey cloth pool table while holding Ashley's new pool cue. Her new pool cue case also sits on the pool table in front of them." class="rounded-lg shadow-md object-cover" />
+        <img src={~p"/images/nicole.jpg"} alt="Ashley and her sister, Alyssa, stand with female pro Nicole Nester in between them in front of a blue cloth pool table at Blue Mountain Billiards." class="rounded-lg shadow-md object-cover" />
+        <img src={~p"/images/westend.jpg"} alt="Ashley and her father, Bryan, standing in a corner of the Shamokin West End with the pool cues vertically in hand." class="rounded-lg shadow-md object-cover" />
       </div>
     </section>
   </div>
