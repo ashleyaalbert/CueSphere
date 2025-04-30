@@ -875,6 +875,7 @@ msgid "Directed by Robert Rossen. Hollywood icon Paul Newman stars in this all-t
 msgstr "Dirigida por Robert Rossen. El ícono de Hollywood, Paul Newman, protagoniza este clásico de todos los tiempos sobre un prometedor jugador de billar, \"Fast Eddie\" Felson, quien lo arriesga todo en una partida contra el campeón de billar \"Minnesota Fats\", interpretado por Jackie Gleason."
 
 #: lib/app_web/components/ui/navbar.ex:62
+#: lib/app_web/live/drills_live.ex:8
 #, elixir-autogen, elixir-format
 msgid "Drills"
 msgstr "Taladros"
@@ -1113,6 +1114,7 @@ msgid "Tournaments"
 msgstr "Torneos"
 
 #: lib/app_web/components/ui/navbar.ex:61
+#: lib/app_web/live/tutorials_live.ex:8
 #, elixir-autogen, elixir-format
 msgid "Tutorials"
 msgstr "Tutoriales"
@@ -1127,3 +1129,223 @@ msgstr "Míralo Ahora $3.99"
 #, elixir-autogen, elixir-format
 msgid "Watch Now Free"
 msgstr "Ver Ahora Gratis"
+
+#: lib/app_web/live/drills_live.ex:14
+#, elixir-autogen, elixir-format
+msgid "13 Balls Half Square"
+msgstr "13 bolas medio cuadrado"
+
+#: lib/app_web/live/about_live.ex:9
+#, elixir-autogen, elixir-format
+msgid "About This Project"
+msgstr "Acerca de este proyecto"
+
+#: lib/app_web/live/tutorials_live.ex:35
+#, elixir-autogen, elixir-format
+msgid "All the basics in 1 minute. How to line up your shot and aim properly."
+msgstr "Todo lo básico en 1 minuto. Cómo alinear el tiro y apuntar correctamente."
+
+#: lib/app_web/live/about_live.ex:90
+#, elixir-autogen, elixir-format
+msgid "Although my father and grandfather have taught me a lot, I have to thank Joe Schmidt and Derek Daya for the training and advice they have been providing me. They both have been working with me for countless hours to improve my game. I am super grateful that they are willing to help me and share their knowledge. I have learned so much from them and I am excited to see how much more I can learn and improve in the future."
+msgstr "Aunque mi padre y mi abuelo me han enseñado mucho, debo agradecer a Joe Schmidt y Derek Daya por la formación y los consejos que me han brindado. Ambos han trabajado conmigo durante incontables horas para mejorar mi juego. Estoy sumamente agradecido de que estén dispuestos a ayudarme y compartir sus conocimientos. He aprendido muchísimo de ellos y me entusiasma ver cuánto más puedo aprender y mejorar en el futuro."
+
+#: lib/app_web/live/about_live.ex:18
+#, elixir-autogen, elixir-format
+msgid "Always Around Pool"
+msgstr "Siempre Cerca del Billar"
+
+#: lib/app_web/live/about_live.ex:101
+#, elixir-autogen, elixir-format
+msgid "Ashley and her all otherwise male TAP team, Pocket Pounders. Ashley stands in the center holding $2400 fanned out to show the team's win."
+msgstr "Ashley y su equipo TAP, Pocket Pounders, compuesto exclusivamente por hombres. Ashley está de pie en el centro con $2400 desplegados para mostrar la victoria del equipo."
+
+#: lib/app_web/live/about_live.ex:105
+#, elixir-autogen, elixir-format
+msgid "Ashley and her father, Bryan, standing in a corner of the Shamokin West End with the pool cues vertically in hand."
+msgstr "Ashley y su padre, Bryan, de pie en un rincón del Shamokin West End con los tacos de billar verticalmente en la mano."
+
+#: lib/app_web/live/about_live.ex:102
+#, elixir-autogen, elixir-format
+msgid "Ashley and her father, Bryan, standing infront of a tall Christmas tree with their pool cue cases in the Genetti hotel."
+msgstr "Ashley y su padre, Bryan, de pie frente a un alto árbol de Navidad con sus estuches de tacos de billar en el hotel Genetti."
+
+#: lib/app_web/live/about_live.ex:103
+#, elixir-autogen, elixir-format
+msgid "Ashley and her father, Bryan, standing near a grey cloth pool table while holding Ashley's new pool cue. Her new pool cue case also sits on the pool table in front of them."
+msgstr "Ashley y su padre, Bryan, de pie junto a una mesa de billar de tela gris, sosteniendo el taco nuevo de Ashley. Su nuevo estuche también está sobre la mesa, frente a ellos."
+
+#: lib/app_web/live/about_live.ex:104
+#, elixir-autogen, elixir-format
+msgid "Ashley and her sister, Alyssa, stand with female pro Nicole Nester in between them in front of a blue cloth pool table at Blue Mountain Billiards."
+msgstr "Ashley y su hermana, Alyssa, están con la jugadora profesional Nicole Nester entre ellas frente a una mesa de billar de tela azul en Blue Mountain Billiards."
+
+#: lib/app_web/live/about_live.ex:100
+#, elixir-autogen, elixir-format
+msgid "Ashley with her Shamokin Women's 8-ball Team. They pose for a group photo near a green-cloth pool table with two pool cues making an X on the table and an 8-ball. There is 7 women in this photo including Ashley."
+msgstr "Ashley con su equipo femenino de bola 8 de Shamokin. Posan para una foto grupal junto a una mesa de billar de tela verde con dos tacos formando una X sobre la mesa y una bola 8. Hay 7 mujeres en esta foto, incluida Ashley."
+
+#: lib/app_web/live/about_live.ex:53
+#, elixir-autogen, elixir-format
+msgid "Blue Mountain Billiards"
+msgstr "Blue Mountain Billiards"
+
+#: lib/app_web/live/about_live.ex:55
+#, elixir-autogen, elixir-format
+msgid "Blue Mountain Billiards is a billiards hall that has at least 16 7' tables. My sister and I have attended multiple tournaments here. We have gained a lot of experiences and played women from all over. Nicole Nester, a female pro, is always here and has become one of our best friends and our biggest role model!"
+msgstr "Blue Mountain Billiards es una sala de billar con al menos 16 mesas de 7 pies. Mi hermana y yo hemos asistido a varios torneos aquí. Hemos adquirido mucha experiencia y hemos jugado con mujeres de todo el mundo. Nicole Nester, una profesional, siempre está aquí y se ha convertido en una de nuestras mejores amigas y nuestro mayor ejemplo a seguir."
+
+#: lib/app_web/live/about_live.ex:67
+#, elixir-autogen, elixir-format
+msgid "Carisle Moose"
+msgstr "Carisle Moose"
+
+#: lib/app_web/live/about_live.ex:60
+#, elixir-autogen, elixir-format
+msgid "Central PA Barbox"
+msgstr "Central PA Barbox"
+
+#: lib/app_web/live/drills_live.ex:35
+#, elixir-autogen, elixir-format
+msgid "Dr. Dave demonstrates the Top 10 most useful drills to test and improve your aim, alignment, and stroke."
+msgstr "El Dr. Dave demuestra los 10 ejercicios más útiles para probar y mejorar su puntería, alineación y golpe."
+
+#: lib/app_web/live/about_live.ex:20
+#, elixir-autogen, elixir-format
+msgid "Growing up, my grandfather had a pool table in the entrance of his home. Both my grandfather and father have always played, and still do play, pool. I learned how to play pool from the both of them from a young age and spent lots of time on my grandfather's Brunswick table. I got my first pool cue around the age of 13 but never took it too seriously. Since I now have two Diamond pool tables in my new home, I became serious about pool again in May 2024. Currently, I play on a few teams and am getting actively trained and guided by some of the best players in the game to reach my full potential."
+msgstr "De niño, mi abuelo tenía una mesa de billar en la entrada de su casa. Tanto mi abuelo como mi padre siempre han jugado, y siguen jugando, al billar. Aprendí a jugar con ellos desde pequeño y pasaba mucho tiempo en la mesa Brunswick de mi abuelo. Tuve mi primer taco de billar alrededor de los 13 años, pero nunca lo tomé demasiado en serio. Como ahora tengo dos mesas de billar Diamond en mi nuevo hogar, volví a tomarme el billar en serio en mayo de 2024. Actualmente, juego en varios equipos y me entreno y me guío activamente con algunos de los mejores jugadores para alcanzar mi máximo potencial."
+
+#: lib/app_web/live/tutorials_live.ex:33
+#, elixir-autogen, elixir-format
+msgid "How to Aim in 1 Minute"
+msgstr "Cómo apuntar en 1 minuto"
+
+#: lib/app_web/live/about_live.ex:76
+#, elixir-autogen, elixir-format
+msgid "I had the privilege of joing the Saint Francis Home Association's women's 8-ball team. We competed every Thursday from October to April (with a few weeks off for holidays). I did contribute a positive amount of points to the team and we finished 19-1. We ended up as first in the league for the fourth year in a row. It was a successful first-year on the team to say the least."
+msgstr "Tuve el privilegio de unirme al equipo femenino de bola 8 de la Asociación de Hogares de San Francisco. Competíamos todos los jueves de octubre a abril (con algunas semanas libres por vacaciones). Aporté una buena cantidad de puntos al equipo y terminamos con un récord de 19-1. Quedamos primeros de la liga por cuarto año consecutivo. Fue un primer año exitoso en el equipo, como mínimo."
+
+#: lib/app_web/live/about_live.ex:83
+#, elixir-autogen, elixir-format
+msgid "I had the privilege of joining a TAP League team with my dad and his friends. We had the second highest amount of wins in the league and won the title holders tournament at the end of April. I did not do great on Saturday or the beginning of Sunday, but I did win my last match which put us into the championship match. My dad won the last match for us to win the championship, but it was a team effort throughout since we had to win 3/5 matches all day Sunday or else we would be eliminated. I got two T-Shirts for free as well as $300 since our team split $2.4k."
+msgstr "Tuve el privilegio de unirme a un equipo de la Liga TAP con mi papá y sus amigos. Tuvimos el segundo mayor número de victorias de la liga y ganamos el torneo de campeones a finales de abril. No me fue muy bien el sábado ni a principios del domingo, pero gané mi último partido, lo que nos clasificó para el campeonato. Mi papá ganó el último partido para que ganáramos el campeonato, pero fue un esfuerzo de equipo de principio a fin, ya que teníamos que ganar 3 de 5 partidos durante todo el domingo o quedaríamos eliminados. Recibí dos camisetas gratis y $300, ya que nuestro equipo se repartió $2400."
+
+#: lib/app_web/live/about_live.ex:69
+#, elixir-autogen, elixir-format
+msgid "I traveled to the Carisle Moose for a cancer benefit tournament. I competed in the women's 8-ball singles. I played very well against a high-ranked player, but lost my matches. It was a great experience and environment, but there was not enough tables for the players. I am happy I supported a good cause, but I am unsure if I will attend again. Side note, the drive home was horrible since it was during a blizzard and I slid a few times driving but arrived home safely eventually."
+msgstr "Viajé al Carisle Moose para un torneo benéfico contra el cáncer. Competí en el individual femenino de bola 8. Jugué muy bien contra una jugadora de alto rango, pero perdí mis partidos. Fue una experiencia y un ambiente fantásticos, pero no había suficientes mesas para los jugadores. Me alegra haber apoyado una buena causa, pero no sé si volveré. Por cierto, el viaje de vuelta a casa fue horrible, ya que había una ventisca y me resbalé varias veces, pero finalmente llegué a casa sana y salva."
+
+#: lib/app_web/live/about_live.ex:62
+#, elixir-autogen, elixir-format
+msgid "In November 2024, my whole family attended the Genetti Hotel in Williamsport, PA for the Central PA Barbox tournament. It was one of my first big tournaments, which I was super nervous for. I played in the women's 8-ball singles and the jack and jill 8-ball doubles with Derek Daya. I did not do great in either event due to my nerves, but I will be ready for this year."
+msgstr "En noviembre de 2024, toda mi familia asistió al Hotel Genetti en Williamsport, Pensilvania, para el torneo Barbox de Central PA. Fue uno de mis primeros grandes torneos, y estaba súper nerviosa. Jugué en el individual femenino de bola 8 y en el dobles de bola 8 con Derek Daya. No me fue muy bien en ninguno de los dos eventos debido a los nervios, pero estaré lista para este año."
+
+#: lib/app_web/live/about_live.ex:88
+#, elixir-autogen, elixir-format
+msgid "Joe and Derek"
+msgstr "Joe y Derek"
+
+#: lib/app_web/live/tutorials_live.ex:14
+#, elixir-autogen, elixir-format
+msgid "Learn to Play Pool in 3 Minutes"
+msgstr "Aprende a jugar al billar en 3 minutos"
+
+#: lib/app_web/live/about_live.ex:35
+#, elixir-autogen, elixir-format
+msgid "Personal Journey"
+msgstr "Viaje personal"
+
+#: lib/app_web/live/tutorials_live.ex:53
+#, elixir-autogen, elixir-format
+msgid "Pool Basics for Beginners Playlist"
+msgstr "Lista de Reproducción de Conceptos Básicos de Billar para Principiantes"
+
+#: lib/app_web/live/drills_live.ex:53
+#, elixir-autogen, elixir-format
+msgid "Pool Drills Playlist"
+msgstr "Lista de Reproducción de Ejercicios de Billar"
+
+#: lib/app_web/live/about_live.ex:46
+#, elixir-autogen, elixir-format
+msgid "Shamokin Moose Doubles"
+msgstr "Shamokin Moose Doubles"
+
+#: lib/app_web/live/about_live.ex:81
+#, elixir-autogen, elixir-format
+msgid "Shamokin TAP League"
+msgstr "Shamokin TAP League"
+
+#: lib/app_web/live/about_live.ex:39
+#, elixir-autogen, elixir-format
+msgid "Shamokin West End"
+msgstr "Shamokin West End"
+
+#: lib/app_web/live/about_live.ex:74
+#, elixir-autogen, elixir-format
+msgid "Shamokin Women's League"
+msgstr "Shamokin Women's League"
+
+#: lib/app_web/live/about_live.ex:98
+#, elixir-autogen, elixir-format
+msgid "Snapshots of My Journey"
+msgstr "Instantáneas de mi viaje"
+
+#: lib/app_web/live/drills_live.ex:56
+#, elixir-autogen, elixir-format
+msgid "Something that you have learned has to be practiced until you can do it automatically. This playlists offers some useful drills that will improve certain parts of your game."
+msgstr "Lo que has aprendido debe practicarse hasta que puedas hacerlo automáticamente. Esta lista de reproducción ofrece ejercicios útiles que mejorarán ciertas áreas de tu juego."
+
+#: lib/app_web/live/about_live.ex:25
+#, elixir-autogen, elixir-format
+msgid "The One and Only"
+msgstr "El único y único"
+
+#: lib/app_web/live/about_live.ex:48
+#, elixir-autogen, elixir-format
+msgid "The Shamokin Moose is where I won my very first tournament (October 2024)! This was a partnered and single-elimination 8-ball doubles event. It was a benefit for a local player for had cancer. This was a great cause that we were happy to contribute to and give all the prize money back to as well."
+msgstr "¡En el Shamokin Moose gané mi primer torneo (Octubre de 2024)! Se trataba de un torneo de dobles de bola 8 con parejas y eliminación simple. Fue a beneficio de un jugador local con cáncer. Fue una gran causa a la que nos alegró contribuir y a la que también reembolsamos el dinero del premio."
+
+#: lib/app_web/live/about_live.ex:41
+#, elixir-autogen, elixir-format
+msgid "The Shamokin West End is the first place I began seriously competing against other players. I began as a 21 year old, thus I was easily the youngest player in the bar, and also one of the only females. Each week I would put myself out there to compete against these men who were typically older and significantly better than me. Even though I have way more losses then wins, I learn a lot from each match and have grown tremendously from this opportunity."
+msgstr "El Shamokin West End fue el primer lugar donde empecé a competir seriamente contra otros jugadores. Empecé con 21 años, así que era fácilmente la jugadora más joven del bar y también una de las pocas mujeres. Cada semana me exponía a competir contra estos hombres, que solían ser mayores y mucho mejores que yo. Aunque tengo muchas más derrotas que victorias, aprendo mucho de cada partido y he crecido enormemente gracias a esta oportunidad."
+
+#: lib/app_web/live/drills_live.ex:16
+#, elixir-autogen, elixir-format
+msgid "This is a medium level drill. Remember if you cannot complete it simply mark your best score and try to beat it every time you practice it!"
+msgstr "Este es un ejercicio de nivel medio. Recuerda que si no puedes completarlo, simplemente marca tu mejor puntuación e intenta superarla cada vez que lo practiques."
+
+#: lib/app_web/live/tutorials_live.ex:10
+#, elixir-autogen, elixir-format
+msgid "This page is intended for beginners to learn the basics of pool. If you are looking for more advanced content, check out the drills page!"
+msgstr "Esta página está diseñada para que los principiantes aprendan los fundamentos del billar. Si buscas contenido más avanzado, ¡consulta la página de ejercicios!"
+
+#: lib/app_web/live/drills_live.ex:10
+#, elixir-autogen, elixir-format
+msgid "This page is intended for moderate to advanced players to elevate their game. If you are looking for more beginner friendly content, check out the tutorials page!"
+msgstr "Esta página está dirigida a jugadores de nivel medio a avanzado que buscan mejorar su juego. Si buscas contenido más accesible para principiantes, ¡consulta la página de tutoriales!"
+
+#: lib/app_web/live/tutorials_live.ex:56
+#, elixir-autogen, elixir-format
+msgid "This playlist contains 14 videos that cover the basics of pool, including grip, stance, stroke, and follow-through. It is perfect for beginners who want to learn the fundamentals of the game."
+msgstr "Esta lista de reproducción contiene 14 videos que cubren los fundamentos del billar, incluyendo el agarre, la postura, el golpe y el seguimiento. Es perfecta para principiantes que desean aprender los fundamentos del juego."
+
+#: lib/app_web/live/tutorials_live.ex:16
+#, elixir-autogen, elixir-format
+msgid "This pool lesson gives a quick introduction to all of the basics from fundamentals to aiming and cue ball control in just three minutes."
+msgstr "Esta lección de billar ofrece una introducción rápida a todos los conceptos básicos, desde los fundamentos hasta la puntería y el control de la bola blanca, en solo tres minutos."
+
+#: lib/app_web/live/about_live.ex:27
+#, elixir-autogen, elixir-format
+msgid "This website is a unique, one and only type of website. This personal project shares my love of pool while being a central information place for all things pool. You can find facts about pool, your Fargo Rate, all the items you possibly need to purchase, tutorials for beginners, drills for more advanced players, books to read, movies to watch, rules of the games, the different games out there, leagues to join, and tournaments to go to."
+msgstr "Este sitio web es único e irrepetible. Este proyecto personal comparte mi pasión por el billar y, al mismo tiempo, es un punto de información central sobre todo lo relacionado con él. Encontrarás información sobre el billar, tu tasa Fargo, todos los artículos que necesitas comprar, tutoriales para principiantes, ejercicios para jugadores más avanzados, libros para leer, películas para ver, las reglas de los juegos, los diferentes juegos disponibles, ligas a las que unirte y torneos a los que asistir."
+
+#: lib/app_web/live/drills_live.ex:33
+#, elixir-autogen, elixir-format
+msgid "Top 10 Aim, Alignment, and Stroke Drills"
+msgstr "Los 10 Mejores Ejercicios de Puntería, Alineación y Golpe"
+
+#: lib/app_web/live/about_live.ex:14
+#, elixir-autogen, elixir-format
+msgid "Why Did I Make a Website About Pool?"
+msgstr "¿Por qué creé un sitio web sobre billar?"
