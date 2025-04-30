@@ -6,7 +6,9 @@ defmodule AppWeb.TutorialsLive do
     ~H"""
     <div class="p-8">
       <h1 class="text-4xl font-bold mb-6 dark:text-white">Tutorials</h1>
-
+      <p class="text-gray-700 mb-4 dark:text-white">
+            This page is intended for beginners to learn the basics of pool. If you are looking for more advanced content, check out the drills page!
+          </p>
       <div class="space-y-10">
         <div>
           <h2 class="text-2xl font-semibold mb-2 dark:text-white">Learn to Play Pool in 3 Minutes</h2>
@@ -55,6 +57,8 @@ defmodule AppWeb.TutorialsLive do
           </p>
           <div class="w-full max-w-4xl" style="position: relative; padding-bottom: 56.25%; height: 0;">
             <iframe
+              width="100%"
+              height="315"
               src="https://www.youtube.com/embed?listType=playlist&list=PLkequvHFHo7FSsW3RroQL822Uoj8hgt9C"
               title="Pool Tutorials Playlist"
               style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
