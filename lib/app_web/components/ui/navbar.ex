@@ -47,32 +47,32 @@ defmodule AppWeb.Components.UI.Navbar do
             <.link href={~p"/"} tabindex="1" class="px-4 py-2 block hover:bg-gray-700 dark:hover:bg-gray-400 rounded-md transition-all">{gettext("General")}</.link>
             <ul class="hidden group-hover:block group-hover:delay-150 md:absolute md:left-0 md:bg-gray-800 md:dark:bg-gray-300 md:mt-1 md:w-44 md:rounded-md md:shadow-lg md:border md:border-gray-700 md:dark:border-gray-400
               md:p-0 p-2 bg-gray-900 dark:bg-gray-200 rounded-md md:shadow-none">
-              <li><.link href={~p"/about"} tabindex="3" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("About")}</.link></li>
-              <li><.link href={~p"/facts"} tabindex="3" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Facts")}</.link></li>
-              <li><.link href={~p"/fargo-rate"} tabindex="3" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Fargo Rate")}</.link></li>
-              <li><.link href={~p"/purchase"} tabindex="3" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Purchase")}</.link></li>
+              <li><.link href={~p"/about"} tabindex="1" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("About")}</.link></li>
+              <li><.link href={~p"/facts"} tabindex="1" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Facts")}</.link></li>
+              <li><.link href={~p"/fargo-rate"} tabindex="1" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Fargo Rate")}</.link></li>
+              <li><.link href={~p"/purchase"} tabindex="1" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Purchase")}</.link></li>
             </ul>
           </li>
 
           <li class="relative group">
-            <.link tabindex="4" class="px-4 py-2 block hover:bg-gray-700 dark:hover:bg-gray-400 rounded-md transition-all">{gettext("Learn")}</.link>
+            <.link tabindex="1" class="px-4 py-2 block hover:bg-gray-700 dark:hover:bg-gray-400 rounded-md transition-all">{gettext("Learn")}</.link>
             <ul class="hidden group-hover:block group-hover:delay-150 md:absolute md:left-0 md:bg-gray-800 md:dark:bg-gray-300 md:mt-1 md:w-44 md:rounded-md md:shadow-lg md:border md:border-gray-700 md:dark:border-gray-400
               md:p-0 p-2 bg-gray-900 dark:bg-gray-200 rounded-md md:shadow-none">
-              <li><.link href={~p"/tutorials"} tabindex="5" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Tutorials")}</.link></li>
-              <li><.link href={~p"/drills"} tabindex="5" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Drills")}</.link></li>
-              <li><.link href={~p"/books"} tabindex="5" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Books")}</.link></li>
-              <li><.link href={~p"/movies"} tabindex="5" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Movies")}</.link></li>
+              <li><.link href={~p"/tutorials"} tabindex="1" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Tutorials")}</.link></li>
+              <li><.link href={~p"/drills"} tabindex="1" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Drills")}</.link></li>
+              <li><.link href={~p"/books"} tabindex="1" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Books")}</.link></li>
+              <li><.link href={~p"/movies"} tabindex="1" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Movies")}</.link></li>
             </ul>
           </li>
 
           <li class="relative group">
-            <.link tabindex="4" class="px-4 py-2 block hover:bg-gray-700 dark:hover:bg-gray-400 rounded-md transition-all">{gettext("Play")}</.link>
+            <.link tabindex="1" class="px-4 py-2 block hover:bg-gray-700 dark:hover:bg-gray-400 rounded-md transition-all">{gettext("Play")}</.link>
             <ul class="hidden group-hover:block group-hover:delay-150 md:absolute md:left-0 md:bg-gray-800 md:dark:bg-gray-300 md:mt-1 md:w-44 md:rounded-md md:shadow-lg md:border md:border-gray-700 md:dark:border-gray-400
               md:p-0 p-2 bg-gray-900 dark:bg-gray-200 rounded-md md:shadow-none">
-              <li><.link href={~p"/rules"} tabindex="5" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Rules")}</.link></li>
-              <li><.link href={~p"/games"} tabindex="5" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Games")}</.link></li>
-              <li><.link href={~p"/leagues"} tabindex="5" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Leagues")}</.link></li>
-              <li><.link href={~p"/tournaments"} tabindex="5" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Tournaments")}</.link></li>
+              <li><.link href={~p"/rules"} tabindex="1" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Rules")}</.link></li>
+              <li><.link href={~p"/games"} tabindex="1" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Games")}</.link></li>
+              <li><.link href={~p"/leagues"} tabindex="1" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Leagues")}</.link></li>
+              <li><.link href={~p"/tournaments"} tabindex="1" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Tournaments")}</.link></li>
             </ul>
           </li>
 
@@ -81,13 +81,13 @@ defmodule AppWeb.Components.UI.Navbar do
               type="button"
               phx-click={Modal.show_modal("contact-modal")}
               class="px-4 py-2 block hover:bg-gray-700 dark:hover:bg-gray-400 rounded-md transition-all"
-              tabindex="6"
+              tabindex="1"
             >
               {gettext("Contact Us")}
             </button>
             <ul class="hidden group-hover:block group-hover:delay-150 md:absolute md:left-0 md:bg-gray-800 md:dark:bg-gray-300 md:mt-1 md:w-44 md:rounded-md md:shadow-lg md:border md:border-gray-700 md:dark:border-gray-400
               md:p-0 p-2 bg-gray-900 dark:bg-gray-200 rounded-md md:shadow-none">
-              <li><.link href={~p"/messages"} tabindex="7" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Messages")}</.link></li>
+              <li><.link href={~p"/messages"} tabindex="1" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Messages")}</.link></li>
             </ul>
           </li>
 
@@ -98,16 +98,16 @@ defmodule AppWeb.Components.UI.Navbar do
               </.link>
               <ul class="hidden group-hover:block group-hover:delay-150 md:absolute md:left-0 md:bg-gray-800 md:dark:bg-gray-300 md:mt-1 md:w-44 md:rounded-md md:shadow-lg md:border md:border-gray-700 md:dark:border-gray-400
                 md:p-0 p-2 bg-gray-900 dark:bg-gray-200 rounded-md md:shadow-none">
-                <li><.link tabindex="10" href={~p"/users/settings"} class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Settings")}</.link></li>
-                <li><.link id="logout-button" tabindex="11" href={~p"/users/log_out"} method="DELETE" phx-hook="LogoutButton" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Log out")}</.link></li>
+                <li><.link tabindex="1" href={~p"/users/settings"} class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Settings")}</.link></li>
+                <li><.link id="logout-button" tabindex="1" href={~p"/users/log_out"} method="DELETE" phx-hook="LogoutButton" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Log out")}</.link></li>
               </ul>
             </li>
           <% else %>
             <li class="relative group">
-              <.link href={~p"/users/log_in"} tabindex="10" class="px-4 py-2 block hover:bg-gray-700 dark:hover:bg-gray-400 rounded-md transition-all">{gettext("Log in")}</.link>
+              <.link href={~p"/users/log_in"} tabindex="1" class="px-4 py-2 block hover:bg-gray-700 dark:hover:bg-gray-400 rounded-md transition-all">{gettext("Log in")}</.link>
               <ul class="hidden group-hover:block group-hover:delay-150 md:absolute md:left-0 md:bg-gray-800 md:dark:bg-gray-300 md:mt-1 md:w-44 md:rounded-md md:shadow-lg md:border md:border-gray-700 md:dark:border-gray-400
                 md:p-0 p-2 bg-gray-900 dark:bg-gray-200 rounded-md md:shadow-none">
-                <li><.link href={~p"/users/register"} tabindex="11" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Register")}</.link></li>
+                <li><.link href={~p"/users/register"} tabindex="1" class="block px-4 py-2 hover:bg-gray-700 dark:hover:bg-gray-400">{gettext("Register")}</.link></li>
               </ul>
             </li>
           <% end %>
