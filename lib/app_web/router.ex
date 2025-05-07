@@ -24,13 +24,15 @@ defmodule AppWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
-    get "/courses", PageController, :courses
-    get "/courses/:slug", PageController, :courses
-    get "/planets", PlanetController, :planets
-    get "/planets/random", PlanetController, :random
-    get "/planets/:id", PlanetController, :index
     resources "/messages", MessageController, only: [:create, :new, :show]
     put "/locale/:locale", LocaleController, :update
+
+    # legacy routes
+    # get "/courses", PageController, :courses
+    # get "/courses/:slug", PageController, :courses
+    # get "/planets", PlanetController, :planets
+    # get "/planets/random", PlanetController, :random
+    # get "/planets/:id", PlanetController, :index
   end
 
   # Enable LiveDashboard and Swoosh mailbox preview in development
@@ -83,16 +85,17 @@ defmodule AppWeb.Router do
       live "/users/settings/confirm_email/:token", UserSettingsLive, :confirm_email
       resources "/messages", MessageController, only: [:delete, :index]
 
-      live "/topics", TopicLive.Index, :index
-      live "/topics/new", TopicLive.Index, :new
-      live "/topics/:slug/edit", TopicLive.Index, :edit
-      live "/topics/:slug/show/edit", TopicLive.Show, :edit
-      live "/topics/:slug", TopicLive.Show, :show
+      # legacy routes, uncomment and remove .tmp
+      # live "/topics", TopicLive.Index, :index
+      # live "/topics/new", TopicLive.Index, :new
+      # live "/topics/:slug/edit", TopicLive.Index, :edit
+      # live "/topics/:slug/show/edit", TopicLive.Show, :edit
+      # live "/topics/:slug", TopicLive.Show, :show
 
-      live "/topics/:slug/pages", PageLive.Index, :index
-      live "/topics/:slug/pages/new", PageLive.Index, :new
-      live "/topics/:slug/pages/:id", PageLive.Show, :show
-      live "/topics/:slug/pages/:id/edit", PageLive.Show, :edit
+      # live "/topics/:slug/pages", PageLive.Index, :index
+      # live "/topics/:slug/pages/new", PageLive.Index, :new
+      # live "/topics/:slug/pages/:id", PageLive.Show, :show
+      # live "/topics/:slug/pages/:id/edit", PageLive.Show, :edit
     end
   end
 
@@ -107,19 +110,8 @@ defmodule AppWeb.Router do
         {AppWeb.UserAuth, :add_message_changeset},
         {AppWeb.UserAuth, :put_locale}
       ] do
-      live("/live/thermostat", ThermostatLive)
-      live("/facemash", FacemashLive)
-      live("/live/planets", PlanetsLive)
       live "/users/confirm/:token", UserConfirmationLive, :edit
       live "/users/confirm", UserConfirmationInstructionsLive, :new
-      live "/chat", ChatLive, :chat
-      live "/chat/join", ChatLive, :join
-      live "/accessibility", AccessibilityLive
-      live "/animations", AnimationsLive
-      live "/gallery", GalleryLive
-      live "/charts", ChartsLive
-      live "/minesweeper", MinesweeperLive, :new
-      live "/taskmanager", TaskManagerLive
 
       live "/about", AboutLive
       live "/facts", FactsLive
@@ -134,12 +126,25 @@ defmodule AppWeb.Router do
       live "/leagues", LeaguesLive
       live "/tournaments", TournamentsLive
 
-      live("/items", ItemLive.Index, :index)
-      live("/items/new", ItemLive.Index, :new)
-      live("/items/:id/edit", ItemLive.Index, :edit)
+      # legacy routes, files need to be removed from legacy folder
+      # also need to remove the .tmp extension
+      # live "/accessibility", AccessibilityLive
+      # live "/animations", AnimationsLive
+      # live "/charts", ChartsLive
+      # live "/chat", ChatLive, :chat
+      # live "/chat/join", ChatLive, :join
+      # live "/facemash", FacemashLive
+      # live "/gallery", GalleryLive
+      # live "/minesweeper", MinesweeperLive, :new
+      # live "/live/planets", PlanetsLive
+      # live "/taskmanager", TaskManagerLive
+      # live "/live/thermostat", ThermostatLive
 
-      live("/items/:id", ItemLive.Show, :show)
-      live("/items/:id/show/edit", ItemLive.Show, :edit)
+      # live "/items", ItemLive.Index, :index
+      # live "/items/new", ItemLive.Index, :new
+      # live "/items/:id/edit", ItemLive.Index, :edit
+      # live "/items/:id", ItemLive.Show, :show
+      # live "/items/:id/show/edit", ItemLive.Show, :edit
     end
   end
 end
