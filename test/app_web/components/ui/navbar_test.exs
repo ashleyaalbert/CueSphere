@@ -10,9 +10,9 @@ defmodule AppWeb.Components.UI.NavbarTest do
     html = render_component(&Navbar.navbar/1, assigns)
 
     assert html =~ "<nav"
-    assert html =~ "Home"
-    assert html =~ "Courses"
-    assert html =~ "Planets"
+    assert html =~ "General"
+    assert html =~ "Learn"
+    assert html =~ "Play"
   end
 
   test "menu button has correct attributes" do
