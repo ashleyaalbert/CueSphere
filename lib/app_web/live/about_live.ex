@@ -1,5 +1,6 @@
 defmodule AppWeb.AboutLive do
   use AppWeb, :live_view
+  import AppWeb.Components.UI.Carousel
 
   @impl true
   def render(assigns) do
@@ -96,14 +97,16 @@ defmodule AppWeb.AboutLive do
     <!-- Images -->
     <section class="bg-gray-50 p-6 rounded-lg shadow-md dark:bg-gray-700 dark:text-white">
       <h2 class="text-2xl font-semibold mb-4 text-center dark:text-white">{gettext("Snapshots of My Journey")}</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <img src={~p"/images/gallery/pool_fullsize.jpg"} alt={gettext("Ashley with her Shamokin Women's 8-ball Team. They pose for a group photo near a green-cloth pool table with two pool cues making an X on the table and an 8-ball. There is 7 women in this photo including Ashley.")} class="rounded-lg shadow-md object-cover" />
+      <%!-- <div class="grid grid-cols-1 sm:grid-cols-2 gap-4"> --%>
+        <%!-- <img src={~p"/images/gallery/pool_fullsize.jpg"} alt={gettext("Ashley with her Shamokin Women's 8-ball Team. They pose for a group photo near a green-cloth pool table with two pool cues making an X on the table and an 8-ball. There is 7 women in this photo including Ashley.")} class="rounded-lg shadow-md object-cover" />
         <img src={~p"/images/titleholders.jpg"} alt={gettext("Ashley and her all otherwise male TAP team, Pocket Pounders. Ashley stands in the center holding $2400 fanned out to show the team's win.")} class="rounded-lg shadow-md object-cover" />
         <img src={~p"/images/genetti.jpg"} alt={gettext("Ashley and her father, Bryan, standing infront of a tall Christmas tree with their pool cue cases in the Genetti hotel.")} class="rounded-lg shadow-md object-cover" />
         <img src={~p"/images/newcue.jpg"} alt={gettext("Ashley and her father, Bryan, standing near a grey cloth pool table while holding Ashley's new pool cue. Her new pool cue case also sits on the pool table in front of them.")} class="rounded-lg shadow-md object-cover" />
         <img src={~p"/images/nicole.jpg"} alt={gettext("Ashley and her sister, Alyssa, stand with female pro Nicole Nester in between them in front of a blue cloth pool table at Blue Mountain Billiards.")} class="rounded-lg shadow-md object-cover" />
-        <img src={~p"/images/westend.jpg"} alt={gettext("Ashley and her father, Bryan, standing in a corner of the Shamokin West End with the pool cues vertically in hand.")} class="rounded-lg shadow-md object-cover" />
-      </div>
+        <img src={~p"/images/westend.jpg"} alt={gettext("Ashley and her father, Bryan, standing in a corner of the Shamokin West End with the pool cues vertically in hand.")} class="rounded-lg shadow-md object-cover" /> --%>
+
+        <.carousel/>
+      <%!-- </div> --%>
     </section>
   </div>
   """

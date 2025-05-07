@@ -10,7 +10,9 @@ module.exports = {
   content: [
     "./js/**/*.js",
     "../lib/app_web.ex",
-    "../lib/app_web/**/*.*ex"
+    "../lib/app_web/**/*.*ex",
+    "./node_modules/flowbite/**/*.js",
+    "./node_modules/flowbite-datepicker/**/*.js"
   ],
   theme: {
     extend: {
@@ -20,6 +22,7 @@ module.exports = {
     },
   },
   plugins: [
+    require('flowbite'),
     require('flowbite-typography'),
     require("@tailwindcss/forms"),
     // Allows prefixing tailwind classes with LiveView classes to add rules

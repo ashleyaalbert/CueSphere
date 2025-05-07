@@ -22,6 +22,8 @@ import {Socket} from "phoenix"
 import {LiveSocket} from "phoenix_live_view"
 import topbar from "../vendor/topbar"
 import Chart from "chart.js/auto"
+import "flowbite";
+import 'flowbite-datepicker';
 
 let Hooks = {}; // this may already be here
 
