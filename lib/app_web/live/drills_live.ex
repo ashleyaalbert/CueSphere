@@ -7,7 +7,7 @@ defmodule AppWeb.DrillsLive do
     <div class="p-8">
       <h1 class="text-4xl font-bold mb-6 dark:text-white">{gettext("Drills")}</h1>
       <p class="text-gray-700 mb-4 dark:text-white">
-          {gettext("This page is intended for moderate to advanced players to elevate their game. If you are looking for more beginner friendly content, check out the tutorials page!")}
+          {gettext("This page is intended for moderate to advanced players to elevate their game. If you are looking for more beginner friendly content, check out the Tutorials page!")}
           </p>
       <div class="space-y-10">
         <div>

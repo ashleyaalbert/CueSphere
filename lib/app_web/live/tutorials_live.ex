@@ -7,7 +7,7 @@ defmodule AppWeb.TutorialsLive do
     <div class="p-8">
       <h1 class="text-4xl font-bold mb-6 dark:text-white">{gettext("Tutorials")}</h1>
       <p class="text-gray-700 mb-4 dark:text-white">
-            {gettext("This page is intended for beginners to learn the basics of pool. If you are looking for more advanced content, check out the drills page!")}
+            {gettext("This page is intended for beginners to learn the basics of pool. If you are looking for more advanced content, check out the Drills page!")}
           </p>
       <div class="space-y-10">
         <div>
