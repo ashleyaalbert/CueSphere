@@ -54,9 +54,30 @@ Hooks.AutoScroll = {
 //   }
 // }
 
+window._live_charts = [];
+
 Hooks.Chart = {
   mounted() {
     this.renderChart();
+    this._onThemeChange = () => this.renderChart();
+    window.addEventListener("theme-changed", this._onThemeChange);
+
+    window._live_charts.push(this);
+  },
+
+  destroyed() {
+    if (this._onThemeChange) {
+      window.removeEventListener("theme-changed", this._onThemeChange);
+    }
+
+    const index = window._live_charts.indexOf(this);
+    if (index > -1) {
+      window._live_charts.splice(index, 1);
+    }
+
+    if (this.el._chart) {
+      this.el._chart.destroy();
+    }
   },
 
   updated() {
@@ -65,6 +86,48 @@ Hooks.Chart = {
 
   renderChart() {
     const config = JSON.parse(this.el.dataset.config);
+    const isDark = document.documentElement.classList.contains("dark");
+    const textColor = isDark ? "#fff" : "#000";
+
+    if (!config.options) config.options = {};
+    if (!config.options.plugins) config.options.plugins = {};
+    if (!config.options.scales) config.options.scales = {};
+
+    config.options.plugins.legend = {
+      ...config.options.plugins.legend,
+      labels: {
+        color: textColor
+      }
+    };
+
+    config.options.plugins.title = {
+      ...config.options.plugins.title,
+      color: textColor
+    };
+
+    config.options.scales.y = {
+      ...config.options.scales.y,
+      ticks: {
+        ...config.options.scales.y?.ticks,
+        color: textColor
+      },
+      title: {
+        ...config.options.scales.y?.title,
+        color: textColor
+      }
+    };
+
+    config.options.scales.x = {
+      ...config.options.scales.x,
+      ticks: {
+        ...config.options.scales.x?.ticks,
+        color: textColor
+      },
+      title: {
+        ...config.options.scales.x?.title,
+        color: textColor
+      }
+    };
 
     // If a chart instance already exists on this element, destroy it first
     if (this.el._chart) {
@@ -105,6 +168,12 @@ window.toggleDarkMode = () => {
     localStorage.theme = 'dark'
   }
   set_theme()
+
+  window.dispatchEvent(new Event("theme-changed"));
+
+  if (window._live_charts) {
+    window._live_charts.forEach(hook => hook.renderChart());
+  }
 }
 
 // set theme on page load

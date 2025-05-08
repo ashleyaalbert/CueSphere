@@ -7,7 +7,7 @@ defmodule AppWeb.FactsLive do
   def render(assigns) do
     ~H"""
     <div class="flex flex-col items-center justify-center w-full h-full p-4">
-      <h1 class="text-2xl font-bold text-gray-900 dark:text-white">{gettext("Billiards Facts and History")}</h1>
+      <h1 class="text-4xl font-bold text-gray-900 dark:text-white">{gettext("Billiards Facts and History")}</h1>
       <p class="mt-4 text-lg text-gray-700 dark:text-gray-300">{gettext("A brief listing of facts and the history of billiards as it evolved over the centuries.")}</p>
       </div>
     <.timeline entries={[
