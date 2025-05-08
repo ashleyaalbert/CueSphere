@@ -3,6 +3,7 @@ defmodule AppWeb.Components.UI.Carousel do
   import Phoenix.VerifiedRoutes
   @endpoint AppWeb.Endpoint
   @router AppWeb.Router
+  use Gettext, backend: AppWeb.Gettext
 
   # The `items` param will be a list of maps with at least a `src` for image and `alt` text
   def carousel(assigns) do
@@ -12,27 +13,27 @@ defmodule AppWeb.Components.UI.Carousel do
         <div class="relative h-72 overflow-hidden rounded-lg md:h-96">
             <!-- Item 1 -->
             <div class="hidden duration-1000 ease-in-out" data-carousel-item>
-                <img src={~p"/images/gallery/pool_fullsize.jpg"} class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Ashley with her Shamokin Women's 8-ball Team. They pose for a group photo near a green-cloth pool table with two pool cues making an X on the table and an 8-ball. There is 7 women in this photo including Ashley.">
+                <img src={~p"/images/gallery/pool_fullsize.jpg"} class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt={gettext("Ashley with her Shamokin Women's 8-ball Team. They pose for a group photo near a green-cloth pool table with two pool cues making an X on the table and an 8-ball. There is 7 women in this photo including Ashley.")}>
             </div>
             <!-- Item 2 -->
             <div class="hidden duration-1000 ease-in-out" data-carousel-item>
-                <img src={~p"/images/titleholders.jpg"} class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Ashley and her all otherwise male TAP team, Pocket Pounders. Ashley stands in the center holding $2400 fanned out to show the team's win.">
+                <img src={~p"/images/titleholders.jpg"} class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt={gettext("Ashley and her all otherwise male TAP team, Pocket Pounders. Ashley stands in the center holding $2400 fanned out to show the team's win.")}>
             </div>
             <!-- Item 3 -->
             <div class="hidden duration-1000 ease-in-out" data-carousel-item>
-                <img src={~p"/images/genetti.jpg"} class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Ashley and her father, Bryan, standing infront of a tall Christmas tree with their pool cue cases in the Genetti hotel.">
+                <img src={~p"/images/genetti.jpg"} class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt={gettext("Ashley and her father, Bryan, standing infront of a tall Christmas tree with their pool cue cases in the Genetti hotel.")}>
             </div>
             <!-- Item 4 -->
             <div class="hidden duration-1000 ease-in-out" data-carousel-item>
-                <img src={~p"/images/newcue.jpg"} class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Ashley and her father, Bryan, standing near a grey cloth pool table while holding Ashley's new pool cue. Her new pool cue case also sits on the pool table in front of them.">
+                <img src={~p"/images/newcue.jpg"} class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt={gettext("Ashley and her father, Bryan, standing near a grey cloth pool table while holding Ashley's new pool cue. Her new pool cue case also sits on the pool table in front of them.")}>
             </div>
             <!-- Item 5 -->
             <div class="hidden duration-1000 ease-in-out" data-carousel-item>
-                <img src={~p"/images/nicole.jpg"} class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Ashley and her sister, Alyssa, stand with female pro Nicole Nester in between them in front of a blue cloth pool table at Blue Mountain Billiards.">
+                <img src={~p"/images/nicole.jpg"} class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt={gettext("Ashley and her sister, Alyssa, stand with female pro Nicole Nester in between them in front of a blue cloth pool table at Blue Mountain Billiards.")}>
             </div>
             <!-- Item 6 -->
             <div class="hidden duration-1000 ease-in-out" data-carousel-item>
-                <img src={~p"/images/westend.jpg"} class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Ashley and her father, Bryan, standing in a corner of the Shamokin West End with the pool cues vertically in hand.">
+                <img src={~p"/images/westend.jpg"} class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt={gettext("Ashley and her father, Bryan, standing in a corner of the Shamokin West End with the pool cues vertically in hand.")}>
             </div>
         </div>
         <!-- Slider indicators -->
