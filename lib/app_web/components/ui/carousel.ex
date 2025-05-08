@@ -13,7 +13,7 @@ defmodule AppWeb.Components.UI.Carousel do
         <div class="relative h-72 overflow-hidden rounded-lg md:h-96">
             <!-- Item 1 -->
             <div class="hidden duration-1000 ease-in-out" data-carousel-item>
-                <img src={~p"/images/gallery/pool_fullsize.jpg"} class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt={gettext("Ashley with her Shamokin Women's 8-ball Team. They pose for a group photo near a green-cloth pool table with two pool cues making an X on the table and an 8-ball. There is 7 women in this photo including Ashley.")}>
+                <img src={~p"/images/gallery/pool_fullsize.jpg"} class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt={gettext("Ashley with her Shamokin Women's 8-ball Team. They pose for a group photo near a green-cloth pool table with two pool cues making an X on the table and an 8-ball. There are 7 women in this photo including Ashley.")}>
             </div>
             <!-- Item 2 -->
             <div class="hidden duration-1000 ease-in-out" data-carousel-item>
