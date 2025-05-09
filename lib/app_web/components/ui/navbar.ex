@@ -52,44 +52,44 @@ defmodule AppWeb.Components.UI.Navbar do
           <ol class="flex flex-col md:flex-row md:space-x-8 text-gray-300 dark:text-gray-900">
             <.dropdown
               id="generalDropdown"
-              label="General"
+              label={gettext("General")}
               items={[
-                %{label: "Home", href: ~p"/"},
-                %{label: "About", href: ~p"/about"},
-                %{label: "Facts", href: ~p"/facts"},
-                %{label: "Fargo Rate", href: ~p"/fargo-rate"},
-                %{label: "Purchase", href: ~p"/purchase"}
+                %{label: gettext("Home"), href: ~p"/"},
+                %{label: gettext("About"), href: ~p"/about"},
+                %{label: gettext("Facts"), href: ~p"/facts"},
+                %{label: gettext("Fargo Rate"), href: ~p"/fargo-rate"},
+                %{label: gettext("Purchase"), href: ~p"/purchase"}
               ]}
             />
 
             <.dropdown
               id="learnDropdown"
-              label="Learn"
+              label={gettext("Learn")}
               items={[
-                %{label: "Tutorials", href: ~p"/tutorials"},
-                %{label: "Drills", href: ~p"/drills"},
-                %{label: "Books", href: ~p"/books"},
-                %{label: "Movies", href: ~p"/movies"}
+                %{label: gettext("Tutorials"), href: ~p"/tutorials"},
+                %{label: gettext("Drills"), href: ~p"/drills"},
+                %{label: gettext("Books"), href: ~p"/books"},
+                %{label: gettext("Movies"), href: ~p"/movies"}
               ]}
             />
 
             <.dropdown
               id="playDropdown"
-              label="Play"
+              label={gettext("Play")}
               items={[
-                %{label: "Rules", href: ~p"/rules"},
-                %{label: "Games", href: ~p"/games"},
-                %{label: "Leagues", href: ~p"/leagues"},
-                %{label: "Tournaments", href: ~p"/tournaments"}
+                %{label: gettext("Rules"), href: ~p"/rules"},
+                %{label: gettext("Games"), href: ~p"/games"},
+                %{label: gettext("Leagues"), href: ~p"/leagues"},
+                %{label: gettext("Tournaments"), href: ~p"/tournaments"}
               ]}
             />
 
             <.dropdown
               id="contactDropdown"
-              label="Contact Us"
+              label={gettext("Contact Us")}
               items={[
-                %{label: "Messages", href: ~p"/messages"},
-                %{label: "Contact Form", phx_click: Modal.show_modal("contact-modal")}
+                %{label: gettext("Messages"), href: ~p"/messages"},
+                %{label: gettext("Contact Us Form"), phx_click: Modal.show_modal("contact-modal")}
               ]}
             />
 
@@ -98,9 +98,9 @@ defmodule AppWeb.Components.UI.Navbar do
                 id="inDropdown"
                 label={@user_id.email}
                 items={[
-                  %{label: "Settings", href: ~p"/users/settings"},
+                  %{label: gettext("Settings"), href: ~p"/users/settings"},
                   %{
-                    label: "Log out",
+                    label: gettext("Log out"),
                     href: ~p"/users/log_out",
                     method: "DELETE",
                     phx_hook: "LogoutButton"
@@ -110,10 +110,10 @@ defmodule AppWeb.Components.UI.Navbar do
             <% else %>
               <.dropdown
                 id="outDropdown"
-                label="Log in"
+                label={gettext("Log in")}
                 items={[
-                  %{label: "Log in", href: ~p"/users/log_in"},
-                  %{label: "Register", href: ~p"/users/register"}
+                  %{label: gettext("Log in"), href: ~p"/users/log_in"},
+                  %{label: gettext("Register"), href: ~p"/users/register"}
                 ]}
               />
             <% end %>
