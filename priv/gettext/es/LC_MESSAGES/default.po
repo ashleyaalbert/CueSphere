@@ -1096,7 +1096,7 @@ msgstr "El billar americano de cuatro bolas es popular en los EE. UU. y luego fu
 #: lib/app_web/components/ui/carousel.ex:20
 #, elixir-autogen, elixir-format
 msgid "Ashley and her all otherwise male TAP team, Pocket Pounders. Ashley stands in the center holding $2400 fanned out to show the team's win."
-msgstr "Ashley y su equipo TAP, Pocket Pounders, compuesto exclusivamente por hombres. Ashley está de pie en el centro con $2400 desplegados para mostrar la victoria del equipo.""
+msgstr "Ashley y su equipo TAP, Pocket Pounders, compuesto exclusivamente por hombres. Ashley está de pie en el centro con $2400 desplegados para mostrar la victoria del equipo."
 
 #: lib/app_web/components/ui/carousel.ex:16
 #, elixir-autogen, elixir-format, fuzzy
