@@ -492,7 +492,7 @@ msgstr "Portada del libro \"Una mente para el billar: Cómo dominar el juego men
 #: lib/app_web/components/ui/navbar.ex:58
 #, elixir-autogen, elixir-format, fuzzy
 msgid "About"
-msgstr "Acerca de:"
+msgstr "Acerca de"
 
 #: lib/app_web/components/ui/navbar.ex:71
 #, elixir-autogen, elixir-format
