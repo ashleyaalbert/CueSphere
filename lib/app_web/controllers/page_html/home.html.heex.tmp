@@ -2,6 +2,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ashley Albert</title>
     <script src="https://cdn.tailwindcss.com">
     </script>
   </head>
@@ -70,5 +71,25 @@
         </ol>
       </div>
     </div>
+
+    <%!-- <div class="container mx-auto px-4 py-8 text-center">
+    <h2 class="text-2xl font-semibold mb-4 text-gray-700 dark:text-gray-300">Badges & Buttons</h2>
+
+    <div class="flex flex-wrap justify-center gap-4 mb-4">
+      <.button onclick="toggleDarkMode()">Toggle Dark Mode</.button>
+    </div>
+    <div class="flex flex-wrap justify-center gap-2">
+      <.badge color="default" large>default</.badge>
+      <.badge color="dark">dark</.badge>
+      <.badge color="red" large>red</.badge>
+      <.badge color="green">green</.badge>
+      <.badge color="yellow" large>yellow</.badge>
+      <.badge color="indigo">indigo</.badge>
+      <.badge color="purple" large>purple</.badge>
+      <.badge color="pink">pink</.badge>
+      <.pill color="red">Minecraft</.pill>
+      <.tag color="red">Error Tag</.tag>
+    </div>
+  </div> --%>
   </body>
 </html>

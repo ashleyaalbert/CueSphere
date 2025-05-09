@@ -9,14 +9,22 @@ defmodule AppWeb.Components.UI do
   defmacro __using__(_) do
     quote do
       import AppWeb.Components.UI.{
-        Button,
+        Accordion,
         Badge,
-        Pill,
-        Tag,
-        Navbar,
-        Modal,
+        Button,
+        Carousel,
+        Datepicker,
+        Dropdowns,
+        Footer,
         Icon,
-        Input
+        Input,
+        Modal,
+        Navbar,
+        Pill,
+        Progressbar,
+        Rating,
+        Tag,
+        Timeline
       }
     end
   end

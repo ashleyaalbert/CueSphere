@@ -11,7 +11,7 @@ defmodule AppWeb.MoviesLive do
       <div class="mt-6 grid grid-cols-1 gap-6">
         <!-- Movie 1 -->
         <div class="flex items-start space-x-4 bg-gray-200 p-4 rounded-lg dark:bg-gray-700">
-          <img src={~p"/images/movie1.jpg"} alt={gettext("The Hustler Movie Poster")} class="w-24 h-32 object-cover rounded-md shadow" />
+          <img src={~p"/images/final/movie1.jpg"} alt={gettext("The Hustler Movie Poster")} class="w-24 h-32 object-cover rounded-md shadow" />
           <div>
             <h3 class="text-lg font-semibold text-blue-900 dark:text-white">{gettext("The Hustler")}</h3>
             <p class="text-sm text-gray-800 dark:text-gray-300 mb-2">
@@ -27,7 +27,7 @@ defmodule AppWeb.MoviesLive do
 
         <!-- Movie 2 -->
         <div class="flex items-start space-x-4 bg-gray-200 p-4 rounded-lg dark:bg-gray-700">
-          <img src={~p"/images/movie2.jpg"} alt={gettext("The Color of Money Movie Poster")} class="w-24 h-32 object-cover rounded-md shadow" />
+          <img src={~p"/images/final/movie2.jpg"} alt={gettext("The Color of Money Movie Poster")} class="w-24 h-32 object-cover rounded-md shadow" />
           <div>
             <h3 class="text-lg font-semibold text-blue-900 dark:text-white">{gettext("The Color of Money")}</h3>
             <p class="text-sm text-gray-800 dark:text-gray-300 mb-2">{gettext("Directed by Martin Scorsese. Former pool hustler \"Fast Eddie\" Felson (Paul Newman) decides he wants to return to the game by taking a pupil. He meets talented but green Vincent Lauria (Tom Cruise) and proposes a partnership. As they tour pool halls, Eddie teaches Vincent the tricks of scamming, but he eventually grows frustrated with Vincent's showboat antics, leading to an argument and a falling-out. Eddie takes up playing again and soon crosses paths with Vincent as an opponent.")}
@@ -42,7 +42,7 @@ defmodule AppWeb.MoviesLive do
 
         <!-- Movie 3 -->
         <div class="flex items-start space-x-4 bg-gray-200 p-4 rounded-lg dark:bg-gray-700">
-          <img src={~p"/images/movie3.jpg"} alt={gettext("Poolhall Junkies Movie Poster")} class="w-24 h-32 object-cover rounded-md shadow" />
+          <img src={~p"/images/final/movie3.jpg"} alt={gettext("Poolhall Junkies Movie Poster")} class="w-24 h-32 object-cover rounded-md shadow" />
           <div>
             <h3 class="text-lg font-semibold text-blue-900 dark:text-white">{gettext("Poolhall Junkies")}</h3>
             <p class="text-sm text-gray-800 dark:text-gray-300 mb-2">
@@ -58,7 +58,7 @@ defmodule AppWeb.MoviesLive do
 
         <!-- Movie 4 -->
         <div class="flex items-start space-x-4 bg-gray-200 p-4 rounded-lg dark:bg-gray-700">
-          <img src={~p"/images/movie4.jpg"} alt={gettext("Stickmen Movie Poster")} class="w-24 h-32 object-cover rounded-md shadow" />
+          <img src={~p"/images/final/movie4.jpg"} alt={gettext("Stickmen Movie Poster")} class="w-24 h-32 object-cover rounded-md shadow" />
           <div>
             <h3 class="text-lg font-semibold text-blue-900 dark:text-white">{gettext("Stickmen")}</h3>
             <p class="text-sm text-gray-800 dark:text-gray-300 mb-2">

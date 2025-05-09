@@ -1,15 +1,13 @@
 <nav class="bg-gray-800 p-4 dark:bg-gray-300">
   <div class="container mx-auto flex justify-between items-center">
-    <img src={~p"/images/cuesphere.png"} alt="Cuesphere Logo" class="w-22 h-10"/>
-
-    <a href="#main-content" class="sr-only focus:not-sr-only text-white dark:text-black">
-    Skip to main content
+    <h1 class="text-white text-xl font-bold dark:text-black" tabindex="1">Ashley Albert</h1>
+    <a href="#main-content" tabindex="1" class="sr-only focusable focus:not-sr-only text-white dark:text-black">
+      Skip to main content
     </a>
-
     <%!-- dark mode --%>
     <div class="flex items-center md:order-2 space-x-2 rtl:space-x-reverse px-2">
       <%!-- navbar --%>
-      <.navbar current_user={@current_user}/>
+      <.navbar user_id={@user_id}/>
 
       <button
         type="button"
@@ -47,7 +45,7 @@
         </svg>
       </button>
         <.language_toggle locale={@locale} />
-         <%!-- <.icon name="8-ball" /> --%>
+         <.icon name="8-ball" />
     </div>
   </div>
 </nav>

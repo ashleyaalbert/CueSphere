@@ -11,7 +11,7 @@ defmodule AppWeb.BooksLive do
       <div class="mt-6 grid grid-cols-1 gap-6">
         <!-- Book 1 -->
         <div class="flex items-start space-x-4 bg-gray-200 p-4 rounded-lg dark:bg-gray-700">
-          <img src={~p"/images/book1.jpg"} alt={gettext("Life Through Pool Book Cover")} class="w-24 h-32 object-cover rounded-md shadow" />
+          <img src={~p"/images/final/book1.jpg"} alt={gettext("Life Through Pool Book Cover")} class="w-24 h-32 object-cover rounded-md shadow" />
           <div>
             <h3 class="text-lg font-semibold text-blue-900 dark:text-white">{gettext("Life Through Pool")}</h3>
             <p class="text-sm text-gray-800 dark:text-gray-300 mb-2">
@@ -27,7 +27,7 @@ defmodule AppWeb.BooksLive do
 
         <!-- Book 2 -->
         <div class="flex items-start space-x-4 bg-gray-200 p-4 rounded-lg dark:bg-gray-700">
-          <img src={~p"/images/book2.jpg"} alt={gettext("The 99 Critical Shots in Pool: Everything You Need to Know to Learn and Master the Game Book Cover")} class="w-24 h-32 object-cover rounded-md shadow" />
+          <img src={~p"/images/final/book2.jpg"} alt={gettext("The 99 Critical Shots in Pool: Everything You Need to Know to Learn and Master the Game Book Cover")} class="w-24 h-32 object-cover rounded-md shadow" />
           <div>
             <h3 class="text-lg font-semibold text-blue-900 dark:text-white">{gettext("The 99 Critical Shots in Pool: Everything You Need to Know to Learn and Master the Game")}</h3>
             <p class="text-sm text-gray-800 dark:text-gray-300 mb-2">
@@ -55,7 +55,7 @@ defmodule AppWeb.BooksLive do
 
         <!-- Book 3 -->
         <div class="flex items-start space-x-4 bg-gray-200 p-4 rounded-lg dark:bg-gray-700">
-          <img src={~p"/images/book3.jpg"} alt={gettext("Pool and Billiards For Dummies Book Cover")} class="w-24 h-32 object-cover rounded-md shadow" />
+          <img src={~p"/images/final/book3.jpg"} alt={gettext("Pool and Billiards For Dummies Book Cover")} class="w-24 h-32 object-cover rounded-md shadow" />
           <div>
             <h3 class="text-lg font-semibold text-blue-900 dark:text-white">{gettext("Pool and Billiards For Dummies")}</h3>
             <p class="text-sm text-gray-800 dark:text-gray-300 mb-2">
@@ -74,7 +74,7 @@ defmodule AppWeb.BooksLive do
 
         <!-- Book 4 -->
         <div class="flex items-start space-x-4 bg-gray-200 p-4 rounded-lg dark:bg-gray-700">
-          <img src={~p"/images/book4.jpg"} alt={gettext("A Mind for Pool: How To Master The Mental Game Book Cover")} class="w-24 h-32 object-cover rounded-md shadow" />
+          <img src={~p"/images/final/book4.jpg"} alt={gettext("A Mind for Pool: How To Master The Mental Game Book Cover")} class="w-24 h-32 object-cover rounded-md shadow" />
           <div>
             <h3 class="text-lg font-semibold text-blue-900 dark:text-white">{gettext("A Mind for Pool: How To Master The Mental Game")}</h3>
             <p class="text-sm text-gray-800 dark:text-gray-300 mb-2">

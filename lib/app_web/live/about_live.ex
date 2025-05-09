@@ -40,13 +40,13 @@ defmodule AppWeb.AboutLive do
     <!-- Images -->
       <section class="bg-gray-50 p-6 rounded-lg shadow-md dark:bg-gray-700 dark:text-white">
         <div class="flex items-center justify-center gap-2 mb-4">
-          <img src={~p"/images/decorative-wave.png"} alt={gettext("black decorative wave")} class="h-6 w-6 block dark:hidden" />
-          <img src={~p"/images/decorative-wave-white.png"} alt={gettext("white decorative wave")} class="h-6 w-6 hidden dark:block" />
+          <img src={~p"/images/final/decorative-wave.png"} alt={gettext("black decorative wave")} class="h-6 w-6 block dark:hidden" />
+          <img src={~p"/images/final/decorative-wave-white.png"} alt={gettext("white decorative wave")} class="h-6 w-6 hidden dark:block" />
           <h2 class="text-2xl font-semibold mb-4 text-center dark:text-white">
             {gettext("Snapshots of My Journey")}
           </h2>
-          <img src={~p"/images/decorative-wave-2.png"} alt={gettext("black decorative wave")}  class="h-6 w-6 block dark:hidden" />
-          <img src={~p"/images/decorative-wave-white-2.png"} alt={gettext("white decorative wave")} class="h-6 w-6 hidden dark:block" />
+          <img src={~p"/images/final/decorative-wave-2.png"} alt={gettext("black decorative wave")}  class="h-6 w-6 block dark:hidden" />
+          <img src={~p"/images/final/decorative-wave-white-2.png"} alt={gettext("white decorative wave")} class="h-6 w-6 hidden dark:block" />
         </div>
         <.carousel />
       </section>

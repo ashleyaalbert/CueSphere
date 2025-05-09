@@ -2,94 +2,178 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ashley Albert</title>
     <script src="https://cdn.tailwindcss.com">
     </script>
   </head>
 
   <body class="bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
-    <div class="container mx-auto px-4 py-8">
-      <div class="bg-white shadow-lg rounded-xl p-6 md:p-10 text-center dark:bg-gray-800 dark:text-gray-200">
+    <div class="relative min-h-[70vh] flex items-center justify-center text-center px-4 overflow-hidden">
+      <!-- Background image with overlay -->
+      <div class="absolute inset-0">
         <img
-          src={~p"/images/SeniorPortrait.jpg"}
-          alt="High school senior portrait of Ashley Albert. Ashley is seen smiling with dark blonde hair, pale skin, and is wearing a gold cross necklace with a black off the shoulder drape."
-          class="w-48 h-48 mx-auto rounded-full border-4 border-gray-300 shadow-md object-cover
-           dark:border-gray-500"
+          src={~p"/images/final/pooltabletop.jpg"}
+          alt="Pool table background"
+          class="w-full h-full object-cover object-center brightness-110"
         />
-        <p class="mt-6 text-lg md:text-xl">
-          <strong>{gettext("About Me:")}</strong>
-          {gettext("I am a Computer Science major graduating on May 18, 2025 from Bucknell University. I grew up in Coal Township, PA and went to Our Lady of Lourdes Regional School. In my free time, I enjoy spending time with family and friends or shooting pool! My favorite song to listen to is The Sweet Escape by Gwen Stefani.")}<br /><br />
-          <strong>{gettext("Fun Fact:")}</strong>
-          {gettext("I was born in Lewisburg, PA (which means I was always meant to come to Bucknell...right?).")}
+        <!-- Overlay for better text contrast -->
+        <div class="absolute inset-0 bg-black/20 dark:bg-black/30"></div>
+      </div>
+
+<!-- Content container -->
+      <div class="relative max-w-4xl mx-auto text-gray-100 dark:text-gray-100 px-4">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6 drop-shadow-md">
+          Elevate Your <span class="text-gray-300 dark:text-gray-300">Pool Game</span>
+        </h1>
+        <p class="text-xl md:text-2xl mb-8 opacity-90 drop-shadow-md">
+          Master techniques, explore rules, and join the competitive scene
         </p>
-      </div>
-
-      <div class="mt-8 bg-white shadow-lg rounded-xl p-6 md:p-10 dark:bg-gray-800 dark:text-gray-200">
-        <h2 class="text-2xl font-semibold text-center text-gray-700 dark:text-white">
-          {gettext("Programming Languages")}
-        </h2>
-        <ol class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4 text-center">
-          <li class="bg-gray-200 rounded-lg py-2 dark:bg-gray-500">
-            <span class="font-semibold text-blue-900 dark:text-gray-300">{gettext("Python")}</span>
-          </li>
-          <li class="bg-gray-200 rounded-lg py-2 dark:bg-gray-500">
-            <span class="font-semibold text-blue-900 dark:text-gray-300">{gettext("JavaScript")}</span>
-          </li>
-          <li class="bg-gray-200 rounded-lg py-2 dark:bg-gray-500">
-            <span class="font-semibold text-blue-900 dark:text-gray-300">{gettext("Java")}</span>
-          </li>
-          <li class="bg-gray-200 rounded-lg py-2 dark:bg-gray-500">
-            <span class="font-semibold text-blue-900 dark:text-gray-300">{gettext("C")}</span>
-          </li>
-          <li class="bg-gray-200 rounded-lg py-2 dark:bg-gray-500">
-            <span class="font-semibold text-blue-900 dark:text-gray-300">{gettext("R")}</span>
-          </li>
-          <li class="bg-gray-200 rounded-lg py-2 dark:bg-gray-500">
-            <span class="font-semibold text-blue-900 dark:text-gray-300">{gettext("Haskell")}</span>
-          </li>
-          <li class="bg-gray-200 rounded-lg py-2 dark:bg-gray-500">
-            <span class="font-semibold text-blue-900 dark:text-gray-300">{gettext("Prolog")}</span>
-          </li>
-          <li class="bg-gray-200 rounded-lg py-2 dark:bg-gray-500">
-            <span class="font-semibold text-blue-900 dark:text-gray-300">{gettext("C#")}</span>
-          </li>
-          <li class="bg-gray-200 rounded-lg py-2 dark:bg-gray-500">
-            <span class="font-semibold text-blue-900 dark:text-gray-300">{gettext("C++")}</span>
-          </li>
-          <li class="bg-gray-200 rounded-lg py-2 dark:bg-gray-500">
-            <span class="font-semibold text-blue-900 dark:text-gray-300">{gettext("PHP")}</span>
-          </li>
-          <li class="bg-gray-200 rounded-lg py-2 dark:bg-gray-500">
-            <span class="font-semibold text-blue-900 dark:text-gray-300">{gettext("RISC-V")}</span>
-          </li>
-          <li class="bg-gray-200 rounded-lg py-2 dark:bg-gray-500">
-            <span class="font-semibold text-blue-900 dark:text-gray-300">{gettext("HTML")}</span>
-          </li>
-          <li class="bg-gray-200 rounded-lg py-2 dark:bg-gray-500">
-            <span class="font-semibold text-blue-900 dark:text-gray-300">{gettext("CSS")}</span>
-          </li>
-        </ol>
+        <div class="flex flex-wrap gap-4 justify-center">
+          <a
+            href={~p"/tutorials"}
+            class="bg-white/90 hover:bg-white dark:bg-gray-800/90 dark:hover:bg-gray-700 text-gray-800 dark:text-white px-8 py-3 rounded-lg text-lg font-semibold transition-all backdrop-blur-sm"
+          >
+            Start Learning
+          </a>
+          <a
+            href={~p"/tournaments"}
+            class="bg-white/90 hover:bg-white dark:bg-gray-800/90 dark:hover:bg-gray-700 text-gray-800 dark:text-white px-8 py-3 rounded-lg text-lg font-semibold transition-all backdrop-blur-sm"
+          >
+            Find Tournaments
+          </a>
+        </div>
       </div>
     </div>
 
-    <%!-- <div class="container mx-auto px-4 py-8 text-center">
-    <h2 class="text-2xl font-semibold mb-4 text-gray-700 dark:text-gray-300">Badges & Buttons</h2>
+<!-- ===== GENERAL SECTION ===== -->
+    <div class="bg-gray-100 dark:bg-gray-800 py-16 px-4">
+      <!-- Changed background to match hero -->
+      <div class="max-w-6xl mx-auto">
+        <div class="bg-white dark:bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
+          <!-- Added box container -->
+          <h2 class="text-3xl font-bold mb-12 text-center text-gray-900 dark:text-gray-100">
+            <span class="border-b-4 border-gray-800 dark:border-gray-200 pb-2">General</span>
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div>
+              <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">
+                About Cuesphere
+              </h3>
+              <p class="text-gray-700 dark:text-gray-300 mb-6">
+                Discover the story behind this platform, explore player ratings, and shop for equipment.
+              </p>
+              <div class="grid grid-cols-2 gap-4">
+                <%= for item <- [
+              %{title: "About", href: ~p"/about", icon: "ℹ️"},
+              %{title: "Fargo Rates", href: ~p"/fargo-rate", icon: "📊"},
+              %{title: "Facts", href: ~p"/facts", icon: "🔍"},
+              %{title: "Purchase Gear", href: ~p"/purchase", icon: "🛒"}
+            ] do %>
+                  <a
+                    href={item.href}
+                    class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm hover:shadow-md transition-all text-gray-900 dark:text-gray-100 border border-gray-200 dark:border-gray-700"
+                  >
+                    <div class="text-2xl mb-2">{item.icon}</div>
+                    <h4 class="font-semibold">{item.title}</h4>
+                  </a>
+                <% end %>
+              </div>
+            </div>
+            <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
+              <img
+                src={~p"/images/final/poolballs.webp"}
+                alt="Pool balls on a blue cloth pool table"
+                class="w-full h-auto rounded-lg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <div class="flex flex-wrap justify-center gap-4 mb-4">
-      <.button onclick="toggleDarkMode()">Toggle Dark Mode</.button>
+    <!-- ===== LEARN SECTION ===== -->
+    <div class="bg-gray-100 dark:bg-gray-800 py-16 px-4">
+      <!-- Changed background to match hero -->
+      <div class="max-w-6xl mx-auto">
+        <div class="bg-white dark:bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
+          <!-- Added box container -->
+          <h2 class="text-3xl font-bold mb-12 text-center text-gray-900 dark:text-gray-100">
+            <span class="border-b-4 border-gray-800 dark:border-gray-200 pb-2">Learn</span>
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <%= for item <- [
+          %{title: "Tutorials", desc: "Beginner-friendly guides.", href: ~p"/tutorials", icon: "🎯"},
+          %{title: "Drills", desc: "Advanced skill builders.", href: ~p"/drills", icon: "⏱️"},
+          %{title: "Books & Movies", desc: "Strategy resources.", href: ~p"/books", icon: "📚"}
+        ] do %>
+              <a
+                href={item.href}
+                class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-lg transition-all hover:-translate-y-1 text-gray-900 dark:text-gray-100 border border-gray-200 dark:border-gray-700"
+              >
+                <div class="text-4xl mb-4">{item.icon}</div>
+                <h3 class="text-xl font-bold mb-2">{item.title}</h3>
+                <p class="text-gray-600 dark:text-gray-400">{item.desc}</p>
+              </a>
+            <% end %>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="flex flex-wrap justify-center gap-2">
-      <.badge color="default" large>default</.badge>
-      <.badge color="dark">dark</.badge>
-      <.badge color="red" large>red</.badge>
-      <.badge color="green">green</.badge>
-      <.badge color="yellow" large>yellow</.badge>
-      <.badge color="indigo">indigo</.badge>
-      <.badge color="purple" large>purple</.badge>
-      <.badge color="pink">pink</.badge>
-      <.pill color="red">Minecraft</.pill>
-      <.tag color="red">Error Tag</.tag>
+
+    <!-- ===== PLAY SECTION ===== -->
+    <div class="bg-gray-100 dark:bg-gray-800 py-16 px-4 pb-24">
+      <!-- Changed background to match hero -->
+      <div class="max-w-6xl mx-auto">
+        <div class="bg-white dark:bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
+          <!-- Added box container -->
+          <h2 class="text-3xl font-bold mb-12 text-center text-gray-900 dark:text-gray-100">
+            <span class="border-b-4 border-gray-800 dark:border-gray-200 pb-2">Play</span>
+          </h2>
+          <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700">
+            <div class="grid grid-cols-1 md:grid-cols-2">
+              <div class="p-8">
+                <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">
+                  Ready to Play?
+                </h3>
+                <ul class="space-y-4 mb-6 text-gray-700 dark:text-gray-300">
+                  <li class="flex items-start">
+                    <div class="text-gray-800 dark:text-gray-200 mr-3">✓</div>
+                    <span>
+                      Master the <a href={~p"/rules"} class="hover:underline">rules</a>
+                      of 8-ball, 9-ball, and more.
+                    </span>
+                  </li>
+                  <li class="flex items-start">
+                    <div class="text-gray-800 dark:text-gray-200 mr-3">✓</div>
+                    <span>
+                      Explore <a href={~p"/games"} class="hover:underline">game variations</a>.
+                    </span>
+                  </li>
+                  <li class="flex items-start">
+                    <div class="text-gray-800 dark:text-gray-200 mr-3">✓</div>
+                    <span>
+                      Join <a href={~p"/leagues"} class="hover:underline">leagues</a>
+                      or <a href={~p"/tournaments"} class="hover:underline">tournaments</a>.
+                    </span>
+                  </li>
+                </ul>
+                <a
+                  href={~p"/games"}
+                  class="bg-gray-300 hover:bg-gray-400 dark:bg-gray-700 dark:hover:bg-gray-600 text-black dark:text-white px-8 py-3 rounded-lg text-lg font-semibold transition-all"
+                >
+                  Browse Games
+                </a>
+              </div>
+              <div class="bg-gray-200 dark:bg-gray-700 flex items-center justify-center p-8">
+                <img
+                  src={~p"/images/final/poolballs2.png"}
+                  alt="Pool balls on a blue cloth pool table"
+                  class="w-full h-auto rounded-lg shadow-sm"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div> --%>
   </body>
 </html>
