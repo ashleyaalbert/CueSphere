@@ -14,12 +14,12 @@ defmodule AppWeb.FactsLive do
       %{
         date: gettext("1400s"),
         title: gettext("Origins of Billiards"),
-        description: gettext("Billiards evolves from a lawn game similar to croquet, likely in France or Northern Europe. Billiards is played on a wooden table with green cloth, to represent grass, with maces (wooden sticks) to shove balls. The word billiard comes from the French billart (stick) or bille (ball)"),
+        description: gettext("Billiards evolves from a lawn game similar to croquet, likely in France or Northern Europe. Billiards is played on a wooden table with green cloth, to represent grass, with maces (wooden sticks) to shove balls. The word billiard comes from the French billart (stick) or bille (ball)."),
       },
       %{
         date: gettext("Early 1600s"),
         title: gettext("First Reference to Billiards"),
-        description: gettext("Shakespeare references billiards in Antony and Cleopatra, showing its growing popularity")
+        description: gettext("Shakespeare references billiards in Antony and Cleopatra, showing its growing popularity.")
       },
       %{
         date: gettext("Late 1600s"),

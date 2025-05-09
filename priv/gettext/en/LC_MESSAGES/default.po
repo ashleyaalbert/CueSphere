@@ -76,44 +76,9 @@ msgstr ""
 msgid "Account Settings"
 msgstr ""
 
-#: lib/app_web/live/page_live/form_component.ex:38
-#, elixir-autogen, elixir-format
-msgid "Add Tag"
-msgstr ""
-
-#: lib/app_web/controllers/planet_html/list.html.heex:12
-#, elixir-autogen, elixir-format
-msgid "All Planets' Details"
-msgstr ""
-
 #: lib/app_web/live/user_registration_live.ex:13
 #, elixir-autogen, elixir-format
 msgid "Already registered?"
-msgstr ""
-
-#: lib/app_web/controllers/page_html/courses.html.heex:2
-#, elixir-autogen, elixir-format
-msgid "Ashley's Courses"
-msgstr ""
-
-#: lib/app_web/live/item_live/show.html.heex:26
-#, elixir-autogen, elixir-format
-msgid "Back to items"
-msgstr ""
-
-#: lib/app_web/live/page_live/show.html.heex:24
-#, elixir-autogen, elixir-format
-msgid "Back to pages"
-msgstr ""
-
-#: lib/app_web/live/page_live/index.html.heex:33
-#, elixir-autogen, elixir-format
-msgid "Back to topic"
-msgstr ""
-
-#: lib/app_web/live/topic_live/show.html.heex:19
-#, elixir-autogen, elixir-format
-msgid "Back to topics"
 msgstr ""
 
 #: lib/app_web/controllers/page_html/home.html.heex:42
@@ -156,14 +121,9 @@ msgstr ""
 msgid "Confirm my account"
 msgstr ""
 
-#: lib/app_web/components/ui/navbar.ex:86
+#: lib/app_web/components/ui/navbar.ex:89
 #, elixir-autogen, elixir-format
 msgid "Contact Us"
-msgstr ""
-
-#: lib/app_web/controllers/page_html/courses.html.heex:8
-#, elixir-autogen, elixir-format
-msgid "Course"
 msgstr ""
 
 #: lib/app_web/live/user_registration_live.ex:40
@@ -171,49 +131,14 @@ msgstr ""
 msgid "Create an account"
 msgstr ""
 
-#: lib/app_web/thermostat_live.ex:11
-#, elixir-autogen, elixir-format
-msgid "Current temperature:"
-msgstr ""
-
 #: lib/app_web/controllers/message_html/index.html.heex:24
-#: lib/app_web/live/item_live/index.html.heex:28
-#: lib/app_web/live/page_live/index.html.heex:28
-#: lib/app_web/live/topic_live/index.html.heex:29
 #, elixir-autogen, elixir-format
 msgid "Delete"
-msgstr ""
-
-#: lib/app_web/controllers/planet_html/list.html.heex:19
-#, elixir-autogen, elixir-format
-msgid "Distance to Sun"
 msgstr ""
 
 #: lib/app_web/live/user_login_live.ex:10
 #, elixir-autogen, elixir-format
 msgid "Don't have an account?"
-msgstr ""
-
-#: lib/app_web/live/item_live/index.html.heex:21
-#: lib/app_web/live/page_live/index.html.heex:21
-#: lib/app_web/live/topic_live/index.html.heex:21
-#, elixir-autogen, elixir-format
-msgid "Edit"
-msgstr ""
-
-#: lib/app_web/live/item_live/show.html.heex:6
-#, elixir-autogen, elixir-format
-msgid "Edit item"
-msgstr ""
-
-#: lib/app_web/live/page_live/show.html.heex:6
-#, elixir-autogen, elixir-format
-msgid "Edit page"
-msgstr ""
-
-#: lib/app_web/live/topic_live/show.html.heex:6
-#, elixir-autogen, elixir-format
-msgid "Edit topic"
 msgstr ""
 
 #: lib/app_web/live/user_forgot_password_live.ex:10
@@ -232,22 +157,6 @@ msgstr ""
 msgid "Haskell"
 msgstr ""
 
-#: lib/app_web/controllers/planet_html/list.html.heex:17
-#: lib/app_web/live/planets_live.ex:52
-#, elixir-autogen, elixir-format
-msgid "ID"
-msgstr ""
-
-#: lib/app_web/live/item_live/show.html.heex:21
-#, elixir-autogen, elixir-format
-msgid "Invalid attributes format"
-msgstr ""
-
-#: lib/app_web/live/item_live/show.html.heex:2
-#, elixir-autogen, elixir-format
-msgid "Item"
-msgstr ""
-
 #: lib/app_web/controllers/page_html/home.html.heex:39
 #, elixir-autogen, elixir-format
 msgid "Java"
@@ -258,39 +167,8 @@ msgstr ""
 msgid "JavaScript"
 msgstr ""
 
-#: lib/app_web/live/chat_live.ex:65
-#, elixir-autogen, elixir-format
-msgid "Join"
-msgstr ""
-
-#: lib/app_web/live/chat_live.ex:38
-#: lib/app_web/live/chat_live.ex:59
-#, elixir-autogen, elixir-format
-msgid "Join Chat"
-msgstr ""
-
-#: lib/app_web/live/chat_live.ex:47
-#, elixir-autogen, elixir-format
-msgid "Leave Chat"
-msgstr ""
-
-#: lib/app_web/live/item_live/index.html.heex:2
-#, elixir-autogen, elixir-format
-msgid "Listing Items"
-msgstr ""
-
-#: lib/app_web/live/page_live/index.html.heex:2
-#, elixir-autogen, elixir-format
-msgid "Listing Pages"
-msgstr ""
-
-#: lib/app_web/live/topic_live/index.ex:31
-#: lib/app_web/live/topic_live/index.html.heex:2
-#, elixir-autogen, elixir-format
-msgid "Listing Topics"
-msgstr ""
-
-#: lib/app_web/components/ui/navbar.ex:107
+#: lib/app_web/components/ui/navbar.ex:113
+#: lib/app_web/components/ui/navbar.ex:115
 #: lib/app_web/live/user_confirmation_instructions_live.ex:25
 #: lib/app_web/live/user_confirmation_live.ex:20
 #: lib/app_web/live/user_forgot_password_live.ex:24
@@ -306,7 +184,7 @@ msgstr ""
 msgid "Log in to account"
 msgstr ""
 
-#: lib/app_web/components/ui/navbar.ex:102
+#: lib/app_web/components/ui/navbar.ex:103
 #, elixir-autogen, elixir-format
 msgid "Log out"
 msgstr ""
@@ -316,31 +194,9 @@ msgstr ""
 msgid "Manage your account email address and password settings"
 msgstr ""
 
-#: lib/app_web/components/ui/navbar.ex:90
+#: lib/app_web/components/ui/navbar.ex:91
 #, elixir-autogen, elixir-format
 msgid "Messages"
-msgstr ""
-
-#: lib/app_web/controllers/planet_html/list.html.heex:18
-#: lib/app_web/live/planets_live.ex:55
-#, elixir-autogen, elixir-format
-msgid "Name"
-msgstr ""
-
-#: lib/app_web/live/item_live/index.html.heex:5
-#, elixir-autogen, elixir-format
-msgid "New Item"
-msgstr ""
-
-#: lib/app_web/live/page_live/index.html.heex:5
-#, elixir-autogen, elixir-format
-msgid "New Page"
-msgstr ""
-
-#: lib/app_web/live/topic_live/index.ex:25
-#: lib/app_web/live/topic_live/index.html.heex:5
-#, elixir-autogen, elixir-format
-msgid "New Topic"
 msgstr ""
 
 #: lib/app_web/live/user_confirmation_instructions_live.ex:10
@@ -354,29 +210,9 @@ msgstr ""
 msgid "Oops, something went wrong! Please check the errors below."
 msgstr ""
 
-#: lib/app_web/controllers/planet_html/list.html.heex:20
-#, elixir-autogen, elixir-format
-msgid "Orbital Period"
-msgstr ""
-
 #: lib/app_web/controllers/page_html/home.html.heex:60
 #, elixir-autogen, elixir-format
 msgid "PHP"
-msgstr ""
-
-#: lib/app_web/live/page_live/show.html.heex:2
-#, elixir-autogen, elixir-format
-msgid "Page"
-msgstr ""
-
-#: lib/app_web/live/planets_live.ex:44
-#, elixir-autogen, elixir-format
-msgid "Planets List"
-msgstr ""
-
-#: lib/app_web/components/live/poll_component.ex:20
-#, elixir-autogen, elixir-format
-msgid "Poll Results"
 msgstr ""
 
 #: lib/app_web/controllers/page_html/home.html.heex:29
@@ -404,7 +240,7 @@ msgstr ""
 msgid "RISC-V"
 msgstr ""
 
-#: lib/app_web/components/ui/navbar.ex:110
+#: lib/app_web/components/ui/navbar.ex:116
 #: lib/app_web/live/user_confirmation_instructions_live.ex:24
 #: lib/app_web/live/user_confirmation_live.ex:19
 #: lib/app_web/live/user_forgot_password_live.ex:23
@@ -429,35 +265,10 @@ msgstr ""
 msgid "Reset Password"
 msgstr ""
 
-#: lib/app_web/live/item_live/form_component.ex:39
-#, elixir-autogen, elixir-format
-msgid "Save Item"
-msgstr ""
-
-#: lib/app_web/components/layouts/app.html.heex:68
+#: lib/app_web/components/layouts/app.html.heex:66
 #: lib/app_web/controllers/message_html/message_form.html.heex:9
 #, elixir-autogen, elixir-format
 msgid "Save Message"
-msgstr ""
-
-#: lib/app_web/live/page_live/form_component.ex:61
-#, elixir-autogen, elixir-format
-msgid "Save Page"
-msgstr ""
-
-#: lib/app_web/live/topic_live/form_component.ex:26
-#, elixir-autogen, elixir-format
-msgid "Save Topic"
-msgstr ""
-
-#: lib/app_web/controllers/page_html/courses.html.heex:7
-#, elixir-autogen, elixir-format
-msgid "Semester"
-msgstr ""
-
-#: lib/app_web/live/chat_live.ex:50
-#, elixir-autogen, elixir-format
-msgid "Send Message"
 msgstr ""
 
 #: lib/app_web/live/user_forgot_password_live.ex:18
@@ -471,9 +282,6 @@ msgid "Settings"
 msgstr ""
 
 #: lib/app_web/controllers/message_html/index.html.heex:19
-#: lib/app_web/live/item_live/index.html.heex:19
-#: lib/app_web/live/page_live/index.html.heex:19
-#: lib/app_web/live/topic_live/index.html.heex:19
 #, elixir-autogen, elixir-format
 msgid "Show"
 msgstr ""
@@ -483,60 +291,9 @@ msgstr ""
 msgid "Sign up"
 msgstr ""
 
-#: lib/app_web/live/planets_live.ex:45
-#, elixir-autogen, elixir-format
-msgid "Sortable list of planets"
-msgstr ""
-
-#: lib/app_web/live/item_live/show.html.heex:3
-#, elixir-autogen, elixir-format
-msgid "This is a item record from your database."
-msgstr ""
-
-#: lib/app_web/live/page_live/show.html.heex:3
-#, elixir-autogen, elixir-format
-msgid "This is a page record from your database."
-msgstr ""
-
-#: lib/app_web/live/topic_live/show.html.heex:3
-#, elixir-autogen, elixir-format
-msgid "This is a topic record from your database."
-msgstr ""
-
-#: lib/app_web/live/page_live/form_component.ex:25
-#: lib/app_web/live/topic_live/show.html.heex:2
-#, elixir-autogen, elixir-format
-msgid "Topic"
-msgstr ""
-
-#: lib/app_web/components/live/poll_component.ex:9
-#, elixir-autogen, elixir-format
-msgid "Total Votes:"
-msgstr ""
-
 #: lib/app_web/live/user_settings_live.ex:84
 #, elixir-autogen, elixir-format
 msgid "Update Profile"
-msgstr ""
-
-#: lib/app_web/live/item_live/form_component.ex:12
-#, elixir-autogen, elixir-format
-msgid "Use this form to manage item records in your database."
-msgstr ""
-
-#: lib/app_web/live/page_live/form_component.ex:12
-#, elixir-autogen, elixir-format
-msgid "Use this form to manage page records in your database."
-msgstr ""
-
-#: lib/app_web/live/topic_live/form_component.ex:12
-#, elixir-autogen, elixir-format
-msgid "Use this form to manage topic records in your database."
-msgstr ""
-
-#: lib/app_web/live/topic_live/show.html.heex:9
-#, elixir-autogen, elixir-format
-msgid "View Pages"
 msgstr ""
 
 #: lib/app_web/live/user_confirmation_instructions_live.ex:11
@@ -549,24 +306,9 @@ msgstr ""
 msgid "We'll send a password reset link to your inbox"
 msgstr ""
 
-#: lib/app_web/components/live/rate_component.ex:7
-#, elixir-autogen, elixir-format
-msgid "Where would you rather be?"
-msgstr ""
-
 #: lib/app_web/live/user_login_live.ex:14
 #, elixir-autogen, elixir-format
 msgid "for an account now."
-msgstr ""
-
-#: lib/app_web/live/chat_live.ex:14
-#, elixir-autogen, elixir-format
-msgid "joined the chat"
-msgstr ""
-
-#: lib/app_web/live/chat_live.ex:30
-#, elixir-autogen, elixir-format
-msgid "left the chat"
 msgstr ""
 
 #: lib/app_web/live/user_registration_live.ex:17
@@ -580,8 +322,6 @@ msgid "All Messages"
 msgstr ""
 
 #: lib/app_web/controllers/message_html/index.html.heex:23
-#: lib/app_web/live/page_live/index.html.heex:26
-#: lib/app_web/live/topic_live/index.html.heex:27
 #, elixir-autogen, elixir-format
 msgid "Are you sure?"
 msgstr ""
@@ -610,7 +350,7 @@ msgstr ""
 msgid "Confirm new password"
 msgstr ""
 
-#: lib/app_web/components/layouts/app.html.heex:62
+#: lib/app_web/components/layouts/app.html.heex:60
 #, elixir-autogen, elixir-format, fuzzy
 msgid "Contact us"
 msgstr ""
@@ -631,7 +371,7 @@ msgstr ""
 msgid "Edit Message"
 msgstr ""
 
-#: lib/app_web/components/layouts/app.html.heex:64
+#: lib/app_web/components/layouts/app.html.heex:62
 #: lib/app_web/controllers/message_html/index.html.heex:14
 #: lib/app_web/controllers/message_html/message_form.html.heex:5
 #: lib/app_web/controllers/message_html/show.html.heex:7
@@ -640,11 +380,6 @@ msgstr ""
 #: lib/app_web/live/user_settings_live.ex:22
 #, elixir-autogen, elixir-format
 msgid "Email"
-msgstr ""
-
-#: lib/app_web/live/chat_live.ex:64
-#, elixir-autogen, elixir-format
-msgid "Enter a username"
 msgstr ""
 
 #: lib/app_web/live/user_registration_live.ex:34
@@ -663,7 +398,7 @@ msgstr ""
 msgid "Logging in..."
 msgstr ""
 
-#: lib/app_web/components/layouts/app.html.heex:66
+#: lib/app_web/components/layouts/app.html.heex:64
 #: lib/app_web/controllers/message_html/index.html.heex:16
 #: lib/app_web/controllers/message_html/message_form.html.heex:7
 #: lib/app_web/controllers/message_html/show.html.heex:2
@@ -689,7 +424,7 @@ msgstr ""
 msgid "Password"
 msgstr ""
 
-#: lib/app_web/components/layouts/app.html.heex:65
+#: lib/app_web/components/layouts/app.html.heex:63
 #: lib/app_web/controllers/message_html/index.html.heex:15
 #: lib/app_web/controllers/message_html/message_form.html.heex:6
 #: lib/app_web/controllers/message_html/show.html.heex:8
@@ -702,11 +437,6 @@ msgstr ""
 msgid "This is a message record from your database."
 msgstr ""
 
-#: lib/app_web/live/chat_live.ex:48
-#, elixir-autogen, elixir-format, fuzzy
-msgid "Type Message"
-msgstr ""
-
 #: lib/app_web/live/user_settings_live.ex:83
 #, elixir-autogen, elixir-format
 msgid "Updating..."
@@ -716,58 +446,6 @@ msgstr ""
 #: lib/app_web/controllers/message_html/new.html.heex:8
 #, elixir-autogen, elixir-format, fuzzy
 msgid "Use this form to manage message records in your database."
-msgstr ""
-
-#: lib/app_web/components/live/poll_component.ex:31
-#, elixir-autogen, elixir-format
-msgid "votes"
-msgstr ""
-
-#: lib/app_web/live/page_live/form_component.ex:29
-#: lib/app_web/live/page_live/index.html.heex:15
-#: lib/app_web/live/page_live/show.html.heex:12
-#, elixir-autogen, elixir-format
-msgid "Content"
-msgstr ""
-
-#: lib/app_web/live/page_live/form_component.ex:61
-#: lib/app_web/live/topic_live/form_component.ex:26
-#, elixir-autogen, elixir-format, fuzzy
-msgid "Saving..."
-msgstr ""
-
-#: lib/app_web/live/topic_live/form_component.ex:22
-#: lib/app_web/live/topic_live/index.html.heex:15
-#: lib/app_web/live/topic_live/show.html.heex:15
-#, elixir-autogen, elixir-format
-msgid "Slug"
-msgstr ""
-
-#: lib/app_web/live/topic_live/form_component.ex:23
-#: lib/app_web/live/topic_live/index.html.heex:16
-#: lib/app_web/live/topic_live/show.html.heex:16
-#, elixir-autogen, elixir-format
-msgid "Title"
-msgstr ""
-
-#: lib/app_web/live/page_live/show.html.heex:13
-#, elixir-autogen, elixir-format
-msgid "Tags"
-msgstr ""
-
-#: lib/app_web/live/topic_live/index.ex:19
-#, elixir-autogen, elixir-format, fuzzy
-msgid "Edit Topic"
-msgstr ""
-
-#: lib/app_web/components/live/poll_component.ex:14
-#, elixir-autogen, elixir-format
-msgid "Hide Results"
-msgstr ""
-
-#: lib/app_web/components/live/poll_component.ex:14
-#, elixir-autogen, elixir-format, fuzzy
-msgid "Show Results"
 msgstr ""
 
 #: lib/app_web/user_auth.ex:175
@@ -811,12 +489,12 @@ msgstr ""
 msgid "A Mind for Pool: How To Master The Mental Game Book Cover"
 msgstr ""
 
-#: lib/app_web/components/ui/navbar.ex:50
+#: lib/app_web/components/ui/navbar.ex:58
 #, elixir-autogen, elixir-format, fuzzy
 msgid "About"
 msgstr ""
 
-#: lib/app_web/components/ui/navbar.ex:63
+#: lib/app_web/components/ui/navbar.ex:71
 #, elixir-autogen, elixir-format
 msgid "Books"
 msgstr ""
@@ -849,11 +527,6 @@ msgstr ""
 msgid "By Ray Martin - World Champion Pool Player Ray \"Cool Cat\" Martin shares his secrets for playing winner's pool in this classic book, which includes an introduction by the author. Written with co-author Rosser Reeves, The 99 Critical Shots in Pool remains one of the most authoritative guides to the game ever written. Over 200 illustrations show the proper form, technique, and approach to shots such as:"
 msgstr ""
 
-#: lib/app_web/live/planets_live.ex:64
-#, elixir-autogen, elixir-format
-msgid "Day (in hours)"
-msgstr ""
-
 #: lib/app_web/live/movies_live.ex:65
 #, elixir-autogen, elixir-format
 msgid "Directed by Hamish Rothwell. Three friends tour the Wellington pub scene, playing pool with ever-increasing stakes. Then they enter a tournament run by vicious crime boss 'Daddy'. Narrator Kirk Torrance (Outrageous Fortune) guides us through their mission to pocket the money. This movie is unavailable to watch online."
@@ -874,18 +547,18 @@ msgstr ""
 msgid "Directed by Robert Rossen. Hollywood icon Paul Newman stars in this all-time classic about an up-and-coming pool player, “Fast Eddie” Felson, who risks it all in a match with pool champion “Minnesota Fats,” played by Jackie Gleason."
 msgstr ""
 
-#: lib/app_web/components/ui/navbar.ex:62
+#: lib/app_web/components/ui/navbar.ex:70
 #: lib/app_web/live/drills_live.ex:8
 #, elixir-autogen, elixir-format
 msgid "Drills"
 msgstr ""
 
-#: lib/app_web/components/ui/navbar.ex:51
+#: lib/app_web/components/ui/navbar.ex:59
 #, elixir-autogen, elixir-format
 msgid "Facts"
 msgstr ""
 
-#: lib/app_web/components/ui/navbar.ex:52
+#: lib/app_web/components/ui/navbar.ex:60
 #: lib/app_web/live/fargo_rate_live.ex:24
 #, elixir-autogen, elixir-format
 msgid "Fargo Rate"
@@ -896,19 +569,14 @@ msgstr ""
 msgid "First Name"
 msgstr ""
 
-#: lib/app_web/components/ui/navbar.ex:73
+#: lib/app_web/components/ui/navbar.ex:81
 #, elixir-autogen, elixir-format
 msgid "Games"
 msgstr ""
 
-#: lib/app_web/components/ui/navbar.ex:47
+#: lib/app_web/components/ui/navbar.ex:55
 #, elixir-autogen, elixir-format
 msgid "General"
-msgstr ""
-
-#: lib/app_web/live/planets_live.ex:61
-#, elixir-autogen, elixir-format
-msgid "Gravity"
 msgstr ""
 
 #: lib/app_web/live/fargo_rate_live.ex:23
@@ -916,12 +584,12 @@ msgstr ""
 msgid "Last Name"
 msgstr ""
 
-#: lib/app_web/components/ui/navbar.ex:74
+#: lib/app_web/components/ui/navbar.ex:82
 #, elixir-autogen, elixir-format
 msgid "Leagues"
 msgstr ""
 
-#: lib/app_web/components/ui/navbar.ex:58
+#: lib/app_web/components/ui/navbar.ex:67
 #, elixir-autogen, elixir-format
 msgid "Learn"
 msgstr ""
@@ -946,12 +614,7 @@ msgstr ""
 msgid "Membership ID"
 msgstr ""
 
-#: lib/app_web/live/planets_live.ex:58
-#, elixir-autogen, elixir-format
-msgid "Moons"
-msgstr ""
-
-#: lib/app_web/components/ui/navbar.ex:64
+#: lib/app_web/components/ui/navbar.ex:72
 #, elixir-autogen, elixir-format
 msgid "Movies"
 msgstr ""
@@ -961,7 +624,7 @@ msgstr ""
 msgid "Not Rated"
 msgstr ""
 
-#: lib/app_web/components/ui/navbar.ex:69
+#: lib/app_web/components/ui/navbar.ex:78
 #, elixir-autogen, elixir-format
 msgid "Play"
 msgstr ""
@@ -986,7 +649,7 @@ msgstr ""
 msgid "Poolhall Junkies Movie Poster"
 msgstr ""
 
-#: lib/app_web/components/ui/navbar.ex:53
+#: lib/app_web/components/ui/navbar.ex:61
 #, elixir-autogen, elixir-format
 msgid "Purchase"
 msgstr ""
@@ -1018,7 +681,7 @@ msgstr ""
 msgid "Robustness"
 msgstr ""
 
-#: lib/app_web/components/ui/navbar.ex:72
+#: lib/app_web/components/ui/navbar.ex:80
 #, elixir-autogen, elixir-format
 msgid "Rules"
 msgstr ""
@@ -1108,12 +771,12 @@ msgstr ""
 msgid "The Side Pocket By-Pass Shot"
 msgstr ""
 
-#: lib/app_web/components/ui/navbar.ex:75
+#: lib/app_web/components/ui/navbar.ex:83
 #, elixir-autogen, elixir-format
 msgid "Tournaments"
 msgstr ""
 
-#: lib/app_web/components/ui/navbar.ex:61
+#: lib/app_web/components/ui/navbar.ex:69
 #: lib/app_web/live/tutorials_live.ex:8
 #, elixir-autogen, elixir-format
 msgid "Tutorials"
@@ -1135,7 +798,7 @@ msgstr ""
 msgid "13 Balls Half Square"
 msgstr ""
 
-#: lib/app_web/live/about_live.ex:9
+#: lib/app_web/live/about_live.ex:11
 #, elixir-autogen, elixir-format
 msgid "About This Project"
 msgstr ""
@@ -1145,62 +808,52 @@ msgstr ""
 msgid "All the basics in 1 minute. How to line up your shot and aim properly."
 msgstr ""
 
-#: lib/app_web/live/about_live.ex:90
+#: lib/app_web/live/about_live.ex:125
 #, elixir-autogen, elixir-format
 msgid "Although my father and grandfather have taught me a lot, I have to thank Joe Schmidt and Derek Daya for the training and advice they have been providing me. They both have been working with me for countless hours to improve my game. I am super grateful that they are willing to help me and share their knowledge. I have learned so much from them and I am excited to see how much more I can learn and improve in the future."
 msgstr ""
 
-#: lib/app_web/live/about_live.ex:18
+#: lib/app_web/live/about_live.ex:21
 #, elixir-autogen, elixir-format
 msgid "Always Around Pool"
 msgstr ""
 
-#: lib/app_web/live/about_live.ex:101
-#, elixir-autogen, elixir-format
-msgid "Ashley and her all otherwise male TAP team, Pocket Punders. Ashley stands in the center holding $2400 fanned out to show the team's win."
-msgstr ""
-
-#: lib/app_web/live/about_live.ex:105
+#: lib/app_web/components/ui/carousel.ex:36
 #, elixir-autogen, elixir-format
 msgid "Ashley and her father, Bryan, standing in a corner of the Shamokin West End with the pool cues vertically in hand."
 msgstr ""
 
-#: lib/app_web/live/about_live.ex:102
+#: lib/app_web/components/ui/carousel.ex:24
 #, elixir-autogen, elixir-format
 msgid "Ashley and her father, Bryan, standing infront of a tall Christmas tree with their pool cue cases in the Genetti hotel."
 msgstr ""
 
-#: lib/app_web/live/about_live.ex:103
+#: lib/app_web/components/ui/carousel.ex:28
 #, elixir-autogen, elixir-format
 msgid "Ashley and her father, Bryan, standing near a grey cloth pool table while holding Ashley's new pool cue. Her new pool cue case also sits on the pool table in front of them."
 msgstr ""
 
-#: lib/app_web/live/about_live.ex:104
+#: lib/app_web/components/ui/carousel.ex:32
 #, elixir-autogen, elixir-format
 msgid "Ashley and her sister, Alyssa, stand with female pro Nicole Nester in between them in front of a blue cloth pool table at Blue Mountain Billiards."
 msgstr ""
 
-#: lib/app_web/live/about_live.ex:100
-#, elixir-autogen, elixir-format
-msgid "Ashley with her Shamokin Women's 8-ball Team. They pose for a group photo near a green-cloth pool table with two pool cues making an X on the table and an 8-ball. There is 7 women in this photo including Ashley."
-msgstr ""
-
-#: lib/app_web/live/about_live.ex:53
+#: lib/app_web/live/about_live.ex:78
 #, elixir-autogen, elixir-format
 msgid "Blue Mountain Billiards"
 msgstr ""
 
-#: lib/app_web/live/about_live.ex:55
+#: lib/app_web/live/about_live.ex:80
 #, elixir-autogen, elixir-format
 msgid "Blue Mountain Billiards is a billiards hall that has at least 16 7' tables. My sister and I have attended multiple tournaments here. We have gained a lot of experiences and played women from all over. Nicole Nester, a female pro, is always here and has become one of our best friends and our biggest role model!"
 msgstr ""
 
-#: lib/app_web/live/about_live.ex:67
+#: lib/app_web/live/about_live.ex:96
 #, elixir-autogen, elixir-format
 msgid "Carisle Moose"
 msgstr ""
 
-#: lib/app_web/live/about_live.ex:60
+#: lib/app_web/live/about_live.ex:87
 #, elixir-autogen, elixir-format
 msgid "Central PA Barbox"
 msgstr ""
@@ -1210,7 +863,7 @@ msgstr ""
 msgid "Dr. Dave demonstrates the Top 10 most useful drills to test and improve your aim, alignment, and stroke."
 msgstr ""
 
-#: lib/app_web/live/about_live.ex:20
+#: lib/app_web/live/about_live.ex:23
 #, elixir-autogen, elixir-format
 msgid "Growing up, my grandfather had a pool table in the entrance of his home. Both my grandfather and father have always played, and still do play, pool. I learned how to play pool from the both of them from a young age and spent lots of time on my grandfather's Brunswick table. I got my first pool cue around the age of 13 but never took it too seriously. Since I now have two Diamond pool tables in my new home, I became serious about pool again in May 2024. Currently, I play on a few teams and am getting actively trained and guided by some of the best players in the game to reach my full potential."
 msgstr ""
@@ -1220,27 +873,27 @@ msgstr ""
 msgid "How to Aim in 1 Minute"
 msgstr ""
 
-#: lib/app_web/live/about_live.ex:76
+#: lib/app_web/live/about_live.ex:107
 #, elixir-autogen, elixir-format
 msgid "I had the privilege of joing the Saint Francis Home Association's women's 8-ball team. We competed every Thursday from October to April (with a few weeks off for holidays). I did contribute a positive amount of points to the team and we finished 19-1. We ended up as first in the league for the fourth year in a row. It was a successful first-year on the team to say the least."
 msgstr ""
 
-#: lib/app_web/live/about_live.ex:83
+#: lib/app_web/live/about_live.ex:116
 #, elixir-autogen, elixir-format
 msgid "I had the privilege of joining a TAP League team with my dad and his friends. We had the second highest amount of wins in the league and won the title holders tournament at the end of April. I did not do great on Saturday or the beginning of Sunday, but I did win my last match which put us into the championship match. My dad won the last match for us to win the championship, but it was a team effort throughout since we had to win 3/5 matches all day Sunday or else we would be eliminated. I got two T-Shirts for free as well as $300 since our team split $2.4k."
 msgstr ""
 
-#: lib/app_web/live/about_live.ex:69
+#: lib/app_web/live/about_live.ex:98
 #, elixir-autogen, elixir-format
 msgid "I traveled to the Carisle Moose for a cancer benefit tournament. I competed in the women's 8-ball singles. I played very well against a high-ranked player, but lost my matches. It was a great experience and environment, but there was not enough tables for the players. I am happy I supported a good cause, but I am unsure if I will attend again. Side note, the drive home was horrible since it was during a blizzard and I slid a few times driving but arrived home safely eventually."
 msgstr ""
 
-#: lib/app_web/live/about_live.ex:62
+#: lib/app_web/live/about_live.ex:89
 #, elixir-autogen, elixir-format
 msgid "In November 2024, my whole family attended the Genetti Hotel in Williamsport, PA for the Central PA Barbox tournament. It was one of my first big tournaments, which I was super nervous for. I played in the women's 8-ball singles and the jack and jill 8-ball doubles with Derek Daya. I did not do great in either event due to my nerves, but I will be ready for this year."
 msgstr ""
 
-#: lib/app_web/live/about_live.ex:88
+#: lib/app_web/live/about_live.ex:123
 #, elixir-autogen, elixir-format
 msgid "Joe and Derek"
 msgstr ""
@@ -1250,7 +903,7 @@ msgstr ""
 msgid "Learn to Play Pool in 3 Minutes"
 msgstr ""
 
-#: lib/app_web/live/about_live.ex:35
+#: lib/app_web/live/about_live.ex:56
 #, elixir-autogen, elixir-format
 msgid "Personal Journey"
 msgstr ""
@@ -1265,27 +918,27 @@ msgstr ""
 msgid "Pool Drills Playlist"
 msgstr ""
 
-#: lib/app_web/live/about_live.ex:46
+#: lib/app_web/live/about_live.ex:69
 #, elixir-autogen, elixir-format
 msgid "Shamokin Moose Doubles"
 msgstr ""
 
-#: lib/app_web/live/about_live.ex:81
+#: lib/app_web/live/about_live.ex:114
 #, elixir-autogen, elixir-format
 msgid "Shamokin TAP League"
 msgstr ""
 
-#: lib/app_web/live/about_live.ex:39
+#: lib/app_web/live/about_live.ex:60
 #, elixir-autogen, elixir-format
 msgid "Shamokin West End"
 msgstr ""
 
-#: lib/app_web/live/about_live.ex:74
+#: lib/app_web/live/about_live.ex:105
 #, elixir-autogen, elixir-format
 msgid "Shamokin Women's League"
 msgstr ""
 
-#: lib/app_web/live/about_live.ex:98
+#: lib/app_web/live/about_live.ex:46
 #, elixir-autogen, elixir-format
 msgid "Snapshots of My Journey"
 msgstr ""
@@ -1295,17 +948,12 @@ msgstr ""
 msgid "Something that you have learned has to be practiced until you can do it automatically. This playlists offers some useful drills that will improve certain parts of your game."
 msgstr ""
 
-#: lib/app_web/live/about_live.ex:25
+#: lib/app_web/live/about_live.ex:30
 #, elixir-autogen, elixir-format
 msgid "The One and Only"
 msgstr ""
 
-#: lib/app_web/live/about_live.ex:48
-#, elixir-autogen, elixir-format
-msgid "The Shamokin Moose is where I won my very first tournament (October 2024)! This was a partnered and single-elimination 8-ball doubles event. It was a benefit for a local player for had cancer. This was a great cause that we were happy to contribute to and give all the prize money back to as well."
-msgstr ""
-
-#: lib/app_web/live/about_live.ex:41
+#: lib/app_web/live/about_live.ex:62
 #, elixir-autogen, elixir-format
 msgid "The Shamokin West End is the first place I began seriously competing against other players. I began as a 21 year old, thus I was easily the youngest player in the bar, and also one of the only females. Each week I would put myself out there to compete against these men who were typically older and significantly better than me. Even though I have way more losses then wins, I learn a lot from each match and have grown tremendously from this opportunity."
 msgstr ""
@@ -1313,16 +961,6 @@ msgstr ""
 #: lib/app_web/live/drills_live.ex:16
 #, elixir-autogen, elixir-format
 msgid "This is a medium level drill. Remember if you cannot complete it simply mark your best score and try to beat it every time you practice it!"
-msgstr ""
-
-#: lib/app_web/live/tutorials_live.ex:10
-#, elixir-autogen, elixir-format
-msgid "This page is intended for beginners to learn the basics of pool. If you are looking for more advanced content, check out the drills page!"
-msgstr ""
-
-#: lib/app_web/live/drills_live.ex:10
-#, elixir-autogen, elixir-format
-msgid "This page is intended for moderate to advanced players to elevate their game. If you are looking for more beginner friendly content, check out the tutorials page!"
 msgstr ""
 
 #: lib/app_web/live/tutorials_live.ex:56
@@ -1335,7 +973,7 @@ msgstr ""
 msgid "This pool lesson gives a quick introduction to all of the basics from fundamentals to aiming and cue ball control in just three minutes."
 msgstr ""
 
-#: lib/app_web/live/about_live.ex:27
+#: lib/app_web/live/about_live.ex:32
 #, elixir-autogen, elixir-format
 msgid "This website is a unique, one and only type of website. This personal project shares my love of pool while being a central information place for all things pool. You can find facts about pool, your Fargo Rate, all the items you possibly need to purchase, tutorials for beginners, drills for more advanced players, books to read, movies to watch, rules of the games, the different games out there, leagues to join, and tournaments to go to."
 msgstr ""
@@ -1345,7 +983,449 @@ msgstr ""
 msgid "Top 10 Aim, Alignment, and Stroke Drills"
 msgstr ""
 
-#: lib/app_web/live/about_live.ex:14
+#: lib/app_web/live/about_live.ex:17
 #, elixir-autogen, elixir-format
 msgid "Why Did I Make a Website About Pool?"
+msgstr ""
+
+#: lib/app_web/live/games_live.ex:56
+#, elixir-autogen, elixir-format
+msgid "10-Ball"
+msgstr ""
+
+#: lib/app_web/live/games_live.ex:58
+#, elixir-autogen, elixir-format
+msgid "10-ball is a cue sport played with ten object balls and a cue ball. The objective is to legally pocket the 10-ball after hitting the lowest-numbered ball on the table."
+msgstr ""
+
+#: lib/app_web/live/facts_live.ex:67
+#, elixir-autogen, elixir-format
+msgid "14.1 Continuous Pool replaces Fifteen-Ball Pool as the championship game."
+msgstr ""
+
+#: lib/app_web/live/facts_live.ex:15
+#, elixir-autogen, elixir-format
+msgid "1400s"
+msgstr ""
+
+#: lib/app_web/live/facts_live.ex:30
+#, elixir-autogen, elixir-format
+msgid "1700s"
+msgstr ""
+
+#: lib/app_web/live/facts_live.ex:35
+#, elixir-autogen, elixir-format
+msgid "1770-1920"
+msgstr ""
+
+#: lib/app_web/live/facts_live.ex:40
+#, elixir-autogen, elixir-format
+msgid "1800s"
+msgstr ""
+
+#: lib/app_web/live/facts_live.ex:45
+#, elixir-autogen, elixir-format
+msgid "1850"
+msgstr ""
+
+#: lib/app_web/live/facts_live.ex:50
+#, elixir-autogen, elixir-format
+msgid "1870s"
+msgstr ""
+
+#: lib/app_web/live/facts_live.ex:55
+#, elixir-autogen, elixir-format
+msgid "1878"
+msgstr ""
+
+#: lib/app_web/live/facts_live.ex:60
+#, elixir-autogen, elixir-format
+msgid "1884"
+msgstr ""
+
+#: lib/app_web/live/facts_live.ex:65
+#, elixir-autogen, elixir-format
+msgid "1888"
+msgstr ""
+
+#: lib/app_web/live/facts_live.ex:75
+#, elixir-autogen, elixir-format
+msgid "1906"
+msgstr ""
+
+#: lib/app_web/live/facts_live.ex:80
+#, elixir-autogen, elixir-format
+msgid "1919-1941"
+msgstr ""
+
+#: lib/app_web/live/facts_live.ex:85
+#, elixir-autogen, elixir-format
+msgid "1941-1950s"
+msgstr ""
+
+#: lib/app_web/live/games_live.ex:16
+#, elixir-autogen, elixir-format
+msgid "8-Ball"
+msgstr ""
+
+#: lib/app_web/live/games_live.ex:18
+#, elixir-autogen, elixir-format
+msgid "8-ball is a cue sport played with 15 object balls and a cue ball. The objective is to pocket all of your designated balls (either stripes or solids) and then legally pocket the 8-ball to win."
+msgstr ""
+
+#: lib/app_web/live/games_live.ex:36
+#, elixir-autogen, elixir-format
+msgid "9-Ball"
+msgstr ""
+
+#: lib/app_web/live/games_live.ex:38
+#, elixir-autogen, elixir-format
+msgid "9-ball is a cue sport played with nine object balls and a cue ball. The objective is to legally pocket the 9-ball after hitting the lowest-numbered ball on the table."
+msgstr ""
+
+#: lib/app_web/live/facts_live.ex:11
+#, elixir-autogen, elixir-format
+msgid "A brief listing of facts and the history of billiards as it evolved over the centuries."
+msgstr ""
+
+#: lib/app_web/live/facts_live.ex:52
+#, elixir-autogen, elixir-format
+msgid "American Four-Ball Billiards is popular in the U.S., later replaced by Straight Rail (carom-based) and Fifteen-Ball Pool, the predecessor to modern pool."
+msgstr ""
+
+#: lib/app_web/components/ui/carousel.ex:20
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Ashley and her all otherwise male TAP team, Pocket Pounders. Ashley stands in the center holding $2400 fanned out to show the team's win."
+msgstr ""
+
+#: lib/app_web/components/ui/carousel.ex:16
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Ashley with her Shamokin Women's 8-ball Team. They pose for a group photo near a green-cloth pool table with two pool cues making an X on the table and an 8-ball. There are 7 women in this photo including Ashley."
+msgstr ""
+
+#: lib/app_web/live/purchase_live.ex:59
+#, elixir-autogen, elixir-format
+msgid "Billiard Balls"
+msgstr ""
+
+#: lib/app_web/live/purchase_live.ex:34
+#, elixir-autogen, elixir-format
+msgid "Billiards Equipment Sales in the U.S. by Year in Millions"
+msgstr ""
+
+#: lib/app_web/live/facts_live.ex:10
+#, elixir-autogen, elixir-format
+msgid "Billiards Facts and History"
+msgstr ""
+
+#: lib/app_web/live/games_live.ex:8
+#, elixir-autogen, elixir-format
+msgid "Billiards Games"
+msgstr ""
+
+#: lib/app_web/live/facts_live.ex:17
+#, elixir-autogen, elixir-format
+msgid "Billiards evolves from a lawn game similar to croquet, likely in France or Northern Europe. Billiards is played on a wooden table with green cloth, to represent grass, with maces (wooden sticks) to shove balls. The word billiard comes from the French billart (stick) or bille (ball)"
+msgstr ""
+
+#: lib/app_web/live/facts_live.ex:42
+#, elixir-autogen, elixir-format
+msgid "Billiards known as the \"Noble Game\", yet widely played across classes. The Industrial Revolution improves equipment, such as chalk used for friction, leather cue tips (1823), two-piece cues (1829), slate for tables (1835), and rubber cushions after Goodyear’s 1839 vulcanization discovery."
+msgstr ""
+
+#: lib/app_web/live/facts_live.ex:32
+#, elixir-autogen, elixir-format
+msgid "Billiards spreads through the American colonies; George Washington reportedly plays in 1748. English tables standardize the 2:1 length-to-width ratio. Rail banks evolve into playable surfaces, enabling bank shots. Public billiard tables become widespread in England and America."
+msgstr ""
+
+#: lib/app_web/live/purchase_live.ex:64
+#, elixir-autogen, elixir-format
+msgid "Bridge"
+msgstr ""
+
+#: lib/app_web/live/facts_live.ex:61
+#, elixir-autogen, elixir-format
+msgid "Brunswick-Balke-Collender Company"
+msgstr ""
+
+#: lib/app_web/live/purchase_live.ex:69
+#, elixir-autogen, elixir-format
+msgid "Case"
+msgstr ""
+
+#: lib/app_web/live/purchase_live.ex:74
+#, elixir-autogen, elixir-format
+msgid "Chalk"
+msgstr ""
+
+#: lib/app_web/live/purchase_live.ex:79
+#, elixir-autogen, elixir-format
+msgid "Cleaner"
+msgstr ""
+
+#: lib/app_web/components/ui/navbar.ex:92
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Contact Us Form"
+msgstr ""
+
+#: lib/app_web/live/purchase_live.ex:84
+#, elixir-autogen, elixir-format
+msgid "Cue Stick"
+msgstr ""
+
+#: lib/app_web/live/facts_live.ex:27
+#, elixir-autogen, elixir-format
+msgid "Cue sticks developed as a workaround for awkward mace positioning near rails. The term “cue” comes from the French word queue (tail). Only men were allowed to use cues initially—women had to use maces."
+msgstr ""
+
+#: lib/app_web/live/facts_live.ex:20
+#, elixir-autogen, elixir-format
+msgid "Early 1600s"
+msgstr ""
+
+#: lib/app_web/live/facts_live.ex:70
+#, elixir-autogen, elixir-format
+msgid "Early 1900s"
+msgstr ""
+
+#: lib/app_web/live/facts_live.ex:72
+#, elixir-autogen, elixir-format
+msgid "Eight-Ball invented shortly after 1900. Straight Pool appears in 1910. Nine-Ball emerges around 1920."
+msgstr ""
+
+#: lib/app_web/live/facts_live.ex:37
+#, elixir-autogen, elixir-format
+msgid "English Billiards dominates in Britain; uses 3 balls, 6 pockets. One-Pocket origins described as early as 1775."
+msgstr ""
+
+#: lib/app_web/live/facts_live.ex:36
+#, elixir-autogen, elixir-format
+msgid "Evolution"
+msgstr ""
+
+#: lib/app_web/live/purchase_live.ex:89
+#, elixir-autogen, elixir-format
+msgid "Extension"
+msgstr ""
+
+#: lib/app_web/live/facts_live.ex:57
+#, elixir-autogen, elixir-format
+msgid "First American Pool Championship held, using 61-point system (Fifteen-Ball Pool)."
+msgstr ""
+
+#: lib/app_web/live/facts_live.ex:56
+#, elixir-autogen, elixir-format
+msgid "First Championship"
+msgstr ""
+
+#: lib/app_web/live/facts_live.ex:21
+#, elixir-autogen, elixir-format
+msgid "First Reference to Billiards"
+msgstr ""
+
+#: lib/app_web/live/facts_live.ex:62
+#, elixir-autogen, elixir-format
+msgid "Formation of Brunswick-Balke-Collender Company, which dominates U.S. billiards industry."
+msgstr ""
+
+#: lib/app_web/live/purchase_live.ex:94
+#, elixir-autogen, elixir-format
+msgid "Glove"
+msgstr ""
+
+#: lib/app_web/live/facts_live.ex:81
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Greenleaf"
+msgstr ""
+
+#: lib/app_web/components/ui/navbar.ex:57
+#, elixir-autogen, elixir-format
+msgid "Home"
+msgstr ""
+
+#: lib/app_web/live/facts_live.ex:76
+#, elixir-autogen, elixir-format
+msgid "Hoppe"
+msgstr ""
+
+#: lib/app_web/live/facts_live.ex:41
+#, elixir-autogen, elixir-format
+msgid "Industrial Revolution"
+msgstr ""
+
+#: lib/app_web/live/facts_live.ex:25
+#, elixir-autogen, elixir-format
+msgid "Late 1600s"
+msgstr ""
+
+#: lib/app_web/live/purchase_live.ex:99
+#, elixir-autogen, elixir-format
+msgid "Light"
+msgstr ""
+
+#: lib/app_web/live/facts_live.ex:46
+#, elixir-autogen, elixir-format
+msgid "Michael Phelan's Legacy"
+msgstr ""
+
+#: lib/app_web/live/facts_live.ex:47
+#, elixir-autogen, elixir-format
+msgid "Michael Phelan, “Father of American Billiards,” writes first U.S. rulebook. Pioneers standardized rules, diamonds for aiming, and weekly billiard columns. Wins a major stake match in 1859 and founds a major manufacturing company."
+msgstr ""
+
+#: lib/app_web/live/facts_live.ex:51
+#, elixir-autogen, elixir-format
+msgid "More Evolution"
+msgstr ""
+
+#: lib/app_web/live/facts_live.ex:86
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Mosconi"
+msgstr ""
+
+#: lib/app_web/live/facts_live.ex:66
+#, elixir-autogen, elixir-format
+msgid "New Championship Game"
+msgstr ""
+
+#: lib/app_web/live/facts_live.ex:71
+#, elixir-autogen, elixir-format, fuzzy
+msgid "New Games"
+msgstr ""
+
+#: lib/app_web/live/games_live.ex:96
+#, elixir-autogen, elixir-format
+msgid "One Pocket"
+msgstr ""
+
+#: lib/app_web/live/games_live.ex:98
+#, elixir-autogen, elixir-format
+msgid "One pocket is a cue sport where players must pocket balls into one of their designated pockets. The objective is to score a predetermined number of points by pocketing balls into your pocket while preventing your opponent from doing the same"
+msgstr ""
+
+#: lib/app_web/live/facts_live.ex:16
+#, elixir-autogen, elixir-format
+msgid "Origins of Billiards"
+msgstr ""
+
+#: lib/app_web/live/purchase_live.ex:104
+#, elixir-autogen, elixir-format
+msgid "Powder"
+msgstr ""
+
+#: lib/app_web/live/purchase_live.ex:12
+#, elixir-autogen, elixir-format
+msgid "Purchase Billiards Equipment"
+msgstr ""
+
+#: lib/app_web/live/purchase_live.ex:109
+#, elixir-autogen, elixir-format
+msgid "Rack"
+msgstr ""
+
+#: lib/app_web/live/facts_live.ex:82
+#, elixir-autogen, elixir-format
+msgid "Ralph Greenleaf becomes U.S. pool hero, dominating for 20 years. Billiards and pool share public attention with stars like Hoppe and Greenleaf."
+msgstr ""
+
+#: lib/app_web/live/purchase_live.ex:40
+#, elixir-autogen, elixir-format
+msgid "Sales (in Millions USD)"
+msgstr ""
+
+#: lib/app_web/live/facts_live.ex:22
+#, elixir-autogen, elixir-format
+msgid "Shakespeare references billiards in Antony and Cleopatra, showing its growing popularity"
+msgstr ""
+
+#: lib/app_web/live/games_live.ex:116
+#, elixir-autogen, elixir-format
+msgid "Snooker"
+msgstr ""
+
+#: lib/app_web/live/games_live.ex:118
+#, elixir-autogen, elixir-format
+msgid "Snooker is a cue sport where the objective is to score points by potting balls in a specific order. Players must hit the cue ball to strike the object balls and score points by potting them into pockets."
+msgstr ""
+
+#: lib/app_web/live/games_live.ex:76
+#, elixir-autogen, elixir-format
+msgid "Straight Pool"
+msgstr ""
+
+#: lib/app_web/live/games_live.ex:78
+#, elixir-autogen, elixir-format
+msgid "Straight pool, also known as 14.1 continuous, is a cue sport where players can score points by pocketing any ball on the table. The objective is to reach a predetermined number of points."
+msgstr ""
+
+#: lib/app_web/live/purchase_live.ex:114
+#, elixir-autogen, elixir-format
+msgid "Table"
+msgstr ""
+
+#: lib/app_web/live/purchase_live.ex:119
+#, elixir-autogen, elixir-format
+msgid "Table Cover"
+msgstr ""
+
+#: lib/app_web/live/facts_live.ex:26
+#, elixir-autogen, elixir-format, fuzzy
+msgid "The Cue"
+msgstr ""
+
+#: lib/app_web/live/facts_live.ex:87
+#, elixir-autogen, elixir-format
+msgid "The Mosconi era begins; carom games decline as pool rises in popularity. Pool becomes a popular wartime pastime, but popularity fades after WWII. Post-war America sees a decline in poolroom culture as priorities shift."
+msgstr ""
+
+#: lib/app_web/live/about_live.ex:71
+#, elixir-autogen, elixir-format, fuzzy
+msgid "The Shamokin Moose is where I won my very first tournament (October 2024)! This was a partnered and single-elimination 8-ball doubles event. It was a benefit for a local player who had cancer. This was a great cause that we were happy to contribute to and give all the prize money back to as well."
+msgstr ""
+
+#: lib/app_web/live/purchase_live.ex:17
+#, elixir-autogen, elixir-format
+msgid "This chart demonstrates the increase in sales of billiards equipment in recent years. It highlights the growing demand for high-quality equipment and the rising popularity of billiards as a sport. Below the chart, you'll find more information about billiards equipment, along with links to purchase these items."
+msgstr ""
+
+#: lib/app_web/live/tutorials_live.ex:10
+#, elixir-autogen, elixir-format, fuzzy
+msgid "This page is intended for beginners to learn the basics of pool. If you are looking for more advanced content, check out the Drills page!"
+msgstr ""
+
+#: lib/app_web/live/drills_live.ex:10
+#, elixir-autogen, elixir-format, fuzzy
+msgid "This page is intended for moderate to advanced players to elevate their game. If you are looking for more beginner friendly content, check out the Tutorials page!"
+msgstr ""
+
+#: lib/app_web/live/games_live.ex:10
+#, elixir-autogen, elixir-format
+msgid "This page is intended to showcase the various billiards games that exist, such as 8-Ball, 9-Ball, 10-Ball, and more. Each game has its own unique rules and strategies, making them all enjoyable in their own way. Included on this page is key details to each game as well as videos to show how the game is played. To learn about the rules of each game, visit the Rules page."
+msgstr ""
+
+#: lib/app_web/live/facts_live.ex:31
+#, elixir-autogen, elixir-format
+msgid "To America"
+msgstr ""
+
+#: lib/app_web/live/facts_live.ex:77
+#, elixir-autogen, elixir-format
+msgid "Willie Hoppe, age 18, beats French champ in balkline, launching his long reign."
+msgstr ""
+
+#: lib/app_web/live/purchase_live.ex:43
+#, elixir-autogen, elixir-format
+msgid "Years"
+msgstr ""
+
+#: lib/app_web/live/about_live.ex:43
+#: lib/app_web/live/about_live.ex:48
+#, elixir-autogen, elixir-format
+msgid "black decorative wave"
+msgstr ""
+
+#: lib/app_web/live/about_live.ex:44
+#: lib/app_web/live/about_live.ex:49
+#, elixir-autogen, elixir-format
+msgid "white decorative wave"
 msgstr ""
