@@ -12,61 +12,61 @@
       <div class="absolute inset-0">
         <img
           src={~p"/images/final/pooltabletop.jpg"}
-          alt="Pool table background"
+          alt={gettext("Pool table blue cloth background")}
           class="w-full h-full object-cover object-center brightness-110"
         />
         <!-- Overlay for better text contrast -->
         <div class="absolute inset-0 bg-black/20 dark:bg-black/30"></div>
       </div>
 
-<!-- Content container -->
+      <!-- Content container -->
       <div class="relative max-w-4xl mx-auto text-gray-100 dark:text-gray-100 px-4">
         <h1 class="text-4xl md:text-6xl font-bold mb-6 drop-shadow-md">
-          Elevate Your <span class="text-gray-300 dark:text-gray-300">Pool Game</span>
+          {gettext("Elevate Your Pool Game")}
         </h1>
         <p class="text-xl md:text-2xl mb-8 opacity-90 drop-shadow-md">
-          Master techniques, explore rules, and join the competitive scene
+         {gettext("master techniques, explore rules, and join the competitive scene")}
         </p>
         <div class="flex flex-wrap gap-4 justify-center">
           <a
             href={~p"/tutorials"}
             class="bg-white/90 hover:bg-white dark:bg-gray-800/90 dark:hover:bg-gray-700 text-gray-800 dark:text-white px-8 py-3 rounded-lg text-lg font-semibold transition-all backdrop-blur-sm"
           >
-            Start Learning
+            {gettext("Start Learning")}
           </a>
           <a
             href={~p"/tournaments"}
             class="bg-white/90 hover:bg-white dark:bg-gray-800/90 dark:hover:bg-gray-700 text-gray-800 dark:text-white px-8 py-3 rounded-lg text-lg font-semibold transition-all backdrop-blur-sm"
           >
-            Find Tournaments
+            {gettext("Find Tournaments")}
           </a>
         </div>
       </div>
     </div>
 
-<!-- ===== GENERAL SECTION ===== -->
+    <!-- ===== GENERAL SECTION ===== -->
     <div class="bg-gray-100 dark:bg-gray-800 py-16 px-4">
       <!-- Changed background to match hero -->
       <div class="max-w-6xl mx-auto">
         <div class="bg-white dark:bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
           <!-- Added box container -->
           <h2 class="text-3xl font-bold mb-12 text-center text-gray-900 dark:text-gray-100">
-            <span class="border-b-4 border-gray-800 dark:border-gray-200 pb-2">General</span>
+            <span class="border-b-4 border-gray-800 dark:border-gray-200 pb-2">{gettext("General")}</span>
           </h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
               <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">
-                About Cuesphere
+                {gettext("About Cuesphere")}
               </h3>
               <p class="text-gray-700 dark:text-gray-300 mb-6">
-                Discover the story behind this platform, explore player ratings, and shop for equipment.
+                {gettext("Discover the story behind this platform, explore player ratings, and shop for equipment.")}
               </p>
               <div class="grid grid-cols-2 gap-4">
                 <%= for item <- [
-              %{title: "About", href: ~p"/about", icon: "ℹ️"},
-              %{title: "Fargo Rates", href: ~p"/fargo-rate", icon: "📊"},
-              %{title: "Facts", href: ~p"/facts", icon: "🔍"},
-              %{title: "Purchase Gear", href: ~p"/purchase", icon: "🛒"}
+              %{title: gettext("About"), href: ~p"/about", icon: "ℹ️"},
+              %{title: gettext("Fargo Rates"), href: ~p"/fargo-rate", icon: "📊"},
+              %{title: gettext("Facts"), href: ~p"/facts", icon: "🔍"},
+              %{title: gettext("Purchase Gear"), href: ~p"/purchase", icon: "🛒"}
             ] do %>
                   <a
                     href={item.href}
@@ -78,10 +78,10 @@
                 <% end %>
               </div>
             </div>
-            <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
+            <div class="relative">
               <img
                 src={~p"/images/final/poolballs.webp"}
-                alt="Pool balls on a blue cloth pool table"
+                alt={gettext("Pool balls on a blue cloth pool table")}
                 class="w-full h-auto rounded-lg"
               />
             </div>
@@ -92,18 +92,18 @@
 
     <!-- ===== LEARN SECTION ===== -->
     <div class="bg-gray-100 dark:bg-gray-800 py-16 px-4">
-      <!-- Changed background to match hero -->
       <div class="max-w-6xl mx-auto">
         <div class="bg-white dark:bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
-          <!-- Added box container -->
           <h2 class="text-3xl font-bold mb-12 text-center text-gray-900 dark:text-gray-100">
-            <span class="border-b-4 border-gray-800 dark:border-gray-200 pb-2">Learn</span>
+            <span class="border-b-4 border-gray-800 dark:border-gray-200 pb-2">{gettext("Learn")}</span>
           </h2>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Changed to 4 columns on large screens -->
             <%= for item <- [
-          %{title: "Tutorials", desc: "Beginner-friendly guides.", href: ~p"/tutorials", icon: "🎯"},
-          %{title: "Drills", desc: "Advanced skill builders.", href: ~p"/drills", icon: "⏱️"},
-          %{title: "Books & Movies", desc: "Strategy resources.", href: ~p"/books", icon: "📚"}
+          %{title: gettext("Tutorials"), desc: gettext("Beginner-friendly guides"), href: ~p"/tutorials", icon: "🎯"},
+          %{title: gettext("Drills"), desc: gettext("Advanced skill builders"), href: ~p"/drills", icon: "⏱️"},
+          %{title: gettext("Books"), desc: gettext("Strategy literature"), href: ~p"/books", icon: "📚"},
+          %{title: gettext("Movies"), desc: gettext("Inspiring films"), href: ~p"/movies", icon: "🎬"}
         ] do %>
               <a
                 href={item.href}
@@ -126,33 +126,33 @@
         <div class="bg-white dark:bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
           <!-- Added box container -->
           <h2 class="text-3xl font-bold mb-12 text-center text-gray-900 dark:text-gray-100">
-            <span class="border-b-4 border-gray-800 dark:border-gray-200 pb-2">Play</span>
+            <span class="border-b-4 border-gray-800 dark:border-gray-200 pb-2">{gettext("Play")}</span>
           </h2>
           <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700">
             <div class="grid grid-cols-1 md:grid-cols-2">
               <div class="p-8">
                 <h3 class="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">
-                  Ready to Play?
+                  {gettext("Ready to Play?")}
                 </h3>
                 <ul class="space-y-4 mb-6 text-gray-700 dark:text-gray-300">
                   <li class="flex items-start">
                     <div class="text-gray-800 dark:text-gray-200 mr-3">✓</div>
                     <span>
-                      Master the <a href={~p"/rules"} class="hover:underline">rules</a>
-                      of 8-ball, 9-ball, and more.
+                      {gettext("Master the")} <a href={~p"/rules"} class="hover:underline"> {gettext("rules")}</a>
+                      {gettext("of 8-ball, 9-ball, and more.")}
                     </span>
                   </li>
                   <li class="flex items-start">
                     <div class="text-gray-800 dark:text-gray-200 mr-3">✓</div>
                     <span>
-                      Explore <a href={~p"/games"} class="hover:underline">game variations</a>.
+                      {gettext("Explore")} <a href={~p"/games"} class="hover:underline">{gettext("game variations")}</a>.
                     </span>
                   </li>
                   <li class="flex items-start">
                     <div class="text-gray-800 dark:text-gray-200 mr-3">✓</div>
                     <span>
-                      Join <a href={~p"/leagues"} class="hover:underline">leagues</a>
-                      or <a href={~p"/tournaments"} class="hover:underline">tournaments</a>.
+                      {gettext("Join")} <a href={~p"/leagues"} class="hover:underline">{gettext("leagues")}</a>
+                      {gettext("or")} <a href={~p"/tournaments"} class="hover:underline">{gettext("tournaments")}</a>.
                     </span>
                   </li>
                 </ul>
@@ -160,13 +160,13 @@
                   href={~p"/games"}
                   class="bg-gray-300 hover:bg-gray-400 dark:bg-gray-700 dark:hover:bg-gray-600 text-black dark:text-white px-8 py-3 rounded-lg text-lg font-semibold transition-all"
                 >
-                  Browse Games
+                  {gettext("Browse Games")}
                 </a>
               </div>
-              <div class="bg-gray-200 dark:bg-gray-700 flex items-center justify-center p-8">
+              <div class="relative">
                 <img
                   src={~p"/images/final/poolballs2.png"}
-                  alt="Pool balls on a blue cloth pool table"
+                  alt={gettext("Pool balls on a blue cloth pool table")}
                   class="w-full h-auto rounded-lg shadow-sm"
                 />
               </div>
