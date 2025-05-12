@@ -8,10 +8,9 @@ defmodule AppWeb.PurchaseLive do
   def render(assigns) do
     ~H"""
     <div class="container mx-auto px-4 py-8">
-      <!-- Header -->
       <h1 class="text-4xl font-bold text-center mb-6">{gettext("Purchase Billiards Equipment")}</h1>
 
-    <!-- Chart Section -->
+      <!-- Chart Section -->
       <div class="bg-white dark:bg-gray-700 dark:text-white shadow-lg rounded-lg p-6 mb-6">
         <p class="text-lg text-gray-700 dark:text-white mb-4">
           {gettext("This chart demonstrates the increase in sales of billiards equipment in recent years. It highlights the growing demand for high-quality equipment and the rising popularity of billiards as a sport. Below the chart, you'll find more information about billiards equipment, along with links to purchase these items.")}
@@ -121,6 +120,7 @@ defmodule AppWeb.PurchaseLive do
                 "<p class='text-gray-500 dark:text-gray-400'>Check out the <a href='https://flowbite.com/figma/' class='text-blue-600 dark:text-blue-500 hover:underline'>Figma design system</a>.</p>"
             }
           ]}
+          expanded={@expanded}
         />
       </div>
     </div>
@@ -132,7 +132,19 @@ defmodule AppWeb.PurchaseLive do
     data = YamlElixir.read_from_file!("priv/billiards.yaml")
     chart_data = prepare_chart_data(data["billiards"])
 
-    {:ok, assign(socket, chart_data: chart_data)}
+    # Initialize the expanded state for each section (all collapsed initially)
+    expanded = Map.new(0..(length(data["billiards"]) - 1), fn index -> {index, false} end)
+
+    {:ok, assign(socket, chart_data: chart_data, expanded: expanded)}
+  end
+
+  @impl true
+  def handle_event("toggle_accordion", %{"index" => index}, socket) do
+    # Toggle the expanded/collapsed state of the clicked section
+    index = String.to_integer(index)
+    expanded = Map.update!(socket.assigns.expanded, index, fn state -> !state end)
+
+    {:noreply, assign(socket, expanded: expanded)}
   end
 
   defp prepare_chart_data(data) do

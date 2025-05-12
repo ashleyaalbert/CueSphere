@@ -1,10 +1,6 @@
 defmodule AppWeb.Components.UI.Accordion do
   use Phoenix.Component
 
-  attr :id, :string, default: "accordion-collapse"
-  attr :multiple, :boolean, default: false
-  attr :sections, :list, required: true, doc: "List of %{title: String.t(), content: Phoenix.HTML.Safe.t()}"
-
   # import AppWeb.Components.UI.Accordion
   # <.accordion
   #     id="faq"
@@ -21,6 +17,11 @@ defmodule AppWeb.Components.UI.Accordion do
   #     ]}
   #   />
 
+  attr :id, :string, default: "accordion-collapse"
+  attr :multiple, :boolean, default: false
+  attr :sections, :list, required: true, doc: "List of %{title: String.t(), content: Phoenix.HTML.Safe.t()}"
+  attr :expanded, :map, required: true, doc: "Map of expanded sections"
+
   def accordion(assigns) do
     ~H"""
     <div id={@id} data-accordion={if @multiple, do: "collapse", else: "single"}>
@@ -29,19 +30,20 @@ defmodule AppWeb.Components.UI.Accordion do
           <button
             type="button"
             class="flex items-center justify-between w-full p-4 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
-            data-accordion-target={"##{@id}-body-#{index}"}
-            aria-expanded="false"
+            phx-click="toggle_accordion"
+            phx-value-index={index}
+            aria-expanded={@expanded[index] |> to_string}
             aria-controls={"#{@id}-body-#{index}"}
           >
             <span><%= section.title %></span>
-            <svg data-accordion-icon class="w-3 h-3 shrink-0 rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+            <svg class="w-3 h-3 shrink-0 rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
             </svg>
           </button>
         </h2>
         <div
           id={"#{@id}-body-#{index}"}
-          class="hidden"
+          class={if @expanded[index], do: "block", else: "hidden"}
           aria-labelledby={"#{@id}-heading-#{index}"}
         >
           <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
