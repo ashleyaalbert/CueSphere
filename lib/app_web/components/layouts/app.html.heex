@@ -1,21 +1,30 @@
-<nav class="bg-gray-800 p-4 dark:bg-gray-300">
-  <div class="container mx-auto flex justify-between items-center">
-    <img src={~p"/images/final/cuesphere-dark.png"} alt={gettext("Cuesphere Logo")} class="w-40 h-auto object-contain block dark:hidden" />
-    <img src={~p"/images/final/cuesphere-light.png"} alt={gettext("Cuesphere Logo")} class="w-40 h-auto object-contain hidden dark:block" />
+<div class="min-h-screen flex flex-col">
+  <nav class="bg-gray-800 p-4 dark:bg-gray-300">
+    <div class="container mx-auto flex justify-between items-center">
+      <img
+        src={~p"/images/final/cuesphere-dark.png"}
+        alt={gettext("Cuesphere Logo")}
+        class="w-40 h-auto object-contain block dark:hidden"
+      />
+      <img
+        src={~p"/images/final/cuesphere-light.png"}
+        alt={gettext("Cuesphere Logo")}
+        class="w-40 h-auto object-contain hidden dark:block"
+      />
 
-    <a href="#main-content" class="sr-only focus:not-sr-only text-white dark:text-black">
-    Skip to main content
-    </a>
+      <a href="#main-content" class="sr-only focus:not-sr-only text-white dark:text-black">
+        Skip to main content
+      </a>
 
-    <%!-- dark mode --%>
-    <div class="flex items-center md:order-2 space-x-2 rtl:space-x-reverse px-2">
-      <%!-- navbar --%>
-      <.navbar user_id={@user_id}/>
+      <%!-- dark mode --%>
+      <div class="flex items-center md:order-2 space-x-2 rtl:space-x-reverse px-2">
+        <%!-- navbar --%>
+        <.navbar user_id={@user_id} />
 
-      <button
-        type="button"
-        onclick="toggleDarkMode()"
-        class="[
+        <button
+          type="button"
+          onclick="toggleDarkMode()"
+          class="[
             items-center w-10 h-10 justify-center text-normal font-medium
           text-gray-700 rounded-lg hover:text-blue-700 focus-visible:z-10
             focus-visible:ring-2 focus-visible:ring-gray-300 dark:focus-visible:ring-gray-500
@@ -25,55 +34,61 @@
 
             user_id && 'hidden sm:flex'
             ]"
-      >
-        <svg
-          data-toggle-icon="moon"
-          class="W-4 h-4 dark:hidden"
-          aria-hidden="true"
-          fill="currentColor"
-          viewBox="0 0 18 20"
         >
-          <path d="M17.8 13.75a1 1 0 0 0-.859-.5A7.488 7.488 0 0 1 10.52 2a1 1 0 0 0 0-.969A1.035 1.035 0 0 0 9.687.5h-.113a9.5 9.5 0 1 0 8.222 14.247 1 1 0 0 0 .004-.997Z">
-          </path>
-        </svg>
-        <svg
-          data-toggle-icon="sun"
-          class="hidden dark:block w-4 h-4"
-          aria-hidden="true"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-        >
-          <path d="M10 15a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0-11a1 1 0 0 0 1-1V1a1 1 0 0 0-2 0v2a1 1 0 0 0 1 1Zm0 12a1 1 0 0 0-1 1v2a1 1 0 1 0 2 0v-2a1 1 0 0 0-1-1ZM4.343 5.757a1 1 0 0 0 1.414-1.414L4.343 2.929a1 1 0 0 0-1.414 1.414l1.414 1.414Zm11.314 8.486a1 1 0 0 0-1.414 1.414l1.414 1.414a1 1 0 0 0 1.414-1.414l-1.414-1.414ZM4 10a1 1 0 0 0-1-1H1a1 1 0 0 0 0 2h2a1 1 0 0 0 1-1Zm15-1h-2a1 1 0 1 0 0 2h2a1 1 0 0 0 0-2ZM4.343 14.243l-1.414 1.414a1 1 0 1 0 1.414 1.414l1.414-1.414a1 1 0 0 0-1.414-1.414ZM14.95 6.05a1 1 0 0 0 .707-.293l1.414-1.414a1 1 0 1 0-1.414-1.414l-1.414 1.414a1 1 0 0 0 .707 1.707Z">
-          </path>
-        </svg>
-      </button>
+          <svg
+            data-toggle-icon="moon"
+            class="W-4 h-4 dark:hidden"
+            aria-hidden="true"
+            fill="currentColor"
+            viewBox="0 0 18 20"
+          >
+            <path d="M17.8 13.75a1 1 0 0 0-.859-.5A7.488 7.488 0 0 1 10.52 2a1 1 0 0 0 0-.969A1.035 1.035 0 0 0 9.687.5h-.113a9.5 9.5 0 1 0 8.222 14.247 1 1 0 0 0 .004-.997Z">
+            </path>
+          </svg>
+          <svg
+            data-toggle-icon="sun"
+            class="hidden dark:block w-4 h-4"
+            aria-hidden="true"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path d="M10 15a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0-11a1 1 0 0 0 1-1V1a1 1 0 0 0-2 0v2a1 1 0 0 0 1 1Zm0 12a1 1 0 0 0-1 1v2a1 1 0 1 0 2 0v-2a1 1 0 0 0-1-1ZM4.343 5.757a1 1 0 0 0 1.414-1.414L4.343 2.929a1 1 0 0 0-1.414 1.414l1.414 1.414Zm11.314 8.486a1 1 0 0 0-1.414 1.414l1.414 1.414a1 1 0 0 0 1.414-1.414l-1.414-1.414ZM4 10a1 1 0 0 0-1-1H1a1 1 0 0 0 0 2h2a1 1 0 0 0 1-1Zm15-1h-2a1 1 0 1 0 0 2h2a1 1 0 0 0 0-2ZM4.343 14.243l-1.414 1.414a1 1 0 1 0 1.414 1.414l1.414-1.414a1 1 0 0 0-1.414-1.414ZM14.95 6.05a1 1 0 0 0 .707-.293l1.414-1.414a1 1 0 1 0-1.414-1.414l-1.414 1.414a1 1 0 0 0 .707 1.707Z">
+            </path>
+          </svg>
+        </button>
         <.language_toggle locale={@locale} />
-         <%!-- <.icon name="8-ball" /> --%>
+        <%!-- <.icon name="8-ball" /> --%>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<main id="main-content" class="px-4 py-20 sm:px-6 lg:px-8">
-  <%!-- <div class="mx-auto max-w-2xl"> --%>
-  <div class="mx-auto max-w-4xl">
-    <.flash_group flash={@flash} />
-    {@inner_content}
-  </div>
-</main>
+  <main id="main-content" class="px-4 py-20 sm:px-6 lg:px-8">
+    <%!-- <div class="mx-auto max-w-2xl"> --%>
+    <div class="mx-auto max-w-4xl">
+      <.flash_group flash={@flash} />
+      {@inner_content}
+    </div>
+  </main>
 
-<.footer year={2025} brand="Cuesphere" brand_link="/" links={[
-  %{label: "About", href: "/about"},
-  %{label: "Privacy Policy", href: "/privacy-policy"},
-  %{label: "Licensing", href: "/licensing"},
-]} />
+  <.footer
+    year={2025}
+    brand="Cuesphere"
+    brand_link="/"
+    links={[
+      %{label: "About", href: "/about"},
+      %{label: "Privacy Policy", href: "/privacy-policy"},
+      %{label: "Licensing", href: "/licensing"}
+    ]}
+  />
+</div>
 
 <.modal id="contact-modal" heading={gettext("Contact us")} backdrop="static">
- <.simple_form :let={f} for={@message_changeset} action={~p"/messages"} class="mb-6">
-  <.input field={f[:email]} class="dark:text-white" type="text" label={gettext("Email")} />
-  <.input field={f[:subject]} class="dark:text-white" type="text" label={gettext("Subject")} />
-  <.input field={f[:message]} class="dark:text-white" type="text" label={gettext("Message")} />
-  <:actions>
-    <.button type="submit" color="alternative"> {gettext("Save Message")} </.button>
-  </:actions>
-</.simple_form>
+  <.simple_form :let={f} for={@message_changeset} action={~p"/messages"} class="mb-6">
+    <.input field={f[:email]} class="dark:text-white" type="text" label={gettext("Email")} />
+    <.input field={f[:subject]} class="dark:text-white" type="text" label={gettext("Subject")} />
+    <.input field={f[:message]} class="dark:text-white" type="text" label={gettext("Message")} />
+    <:actions>
+      <.button type="submit" color="alternative">{gettext("Save Message")}</.button>
+    </:actions>
+  </.simple_form>
 </.modal>
