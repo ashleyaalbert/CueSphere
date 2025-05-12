@@ -1,5 +1,6 @@
 defmodule AppWeb.Components.UI.Footer do
   use Phoenix.Component
+  use Gettext, backend: AppWeb.Gettext
 
   # import AppWeb.Components.UI.Footer
   # <.footer year={2025} brand="MyApp" brand_link="/" links={[
@@ -24,7 +25,7 @@ defmodule AppWeb.Components.UI.Footer do
       <div class="max-w-screen-xl mx-auto p-4 md:flex md:items-center md:justify-between">
         <span class="text-sm text-gray-300 sm:text-center dark:text-gray-600">
           © <%= @year %>
-          <a href={@brand_link} class="hover:underline"><%= @brand %></a>. All Rights Reserved.
+          <a href={@brand_link} class="hover:underline"><%= @brand %></a>. {gettext("All Rights Reserved.")}
         </span>
         <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-300 dark:text-gray-600 sm:mt-0">
           <%= for link <- @links do %>
