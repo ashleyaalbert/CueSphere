@@ -42,17 +42,66 @@ Hooks.AutoScroll = {
   }
 };
 
-// Hooks.Chart = {
-//   mounted() {
-//     this.el._chart = new Chart(this.el, JSON.parse(this.el.dataset.config));
-//   },
+Hooks.DropdownToggle = {
+  mounted() {
+    const button = this.el
+    const dropdown = document.getElementById(this.el.dataset.target)
 
-//   updated() {
-//     const new_config = JSON.parse(this.el.dataset.config)
-//     this.el._chart.data = new_config.data
-//     this.el._chart.update()
-//   }
-// }
+    const transitionDuration = 200 // match your CSS duration in ms
+
+    const closeDropdown = () => {
+      dropdown.classList.remove("scale-y-100", "opacity-100")
+      dropdown.classList.add("scale-y-0", "opacity-0")
+      dropdown.setAttribute("aria-hidden", "true")
+      button.setAttribute("aria-expanded", "false")
+
+      // Delay hiding until animation ends
+      setTimeout(() => {
+        if (!dropdown.classList.contains("scale-y-100")) {
+          dropdown.classList.add("hidden")
+        }
+      }, transitionDuration)
+    }
+
+    const openDropdown = () => {
+      dropdown.classList.remove("hidden")
+      // Allow browser to register the removal of `hidden`
+      requestAnimationFrame(() => {
+        dropdown.classList.remove("scale-y-0", "opacity-0")
+        dropdown.classList.add("scale-y-100", "opacity-100")
+        dropdown.setAttribute("aria-hidden", "false")
+        button.setAttribute("aria-expanded", "true")
+      })
+    }
+
+    button.addEventListener("click", () => {
+      const expanded = dropdown.classList.contains("scale-y-100")
+      if (expanded) {
+        closeDropdown()
+      } else {
+        openDropdown()
+      }
+    })
+
+    // Close when tabbing out
+    dropdown.addEventListener("focusout", () => {
+      setTimeout(() => {
+        if (!dropdown.contains(document.activeElement)) {
+          closeDropdown()
+        }
+      }, 50)
+    })
+
+    // Close when clicking outside
+    document.addEventListener("click", (e) => {
+      const clickedOutside = !dropdown.contains(e.target) && !button.contains(e.target)
+      const isOpen = dropdown.classList.contains("scale-y-100")
+      if (isOpen && clickedOutside) {
+        closeDropdown()
+      }
+    })
+  }
+}
 
 window._live_charts = [];
 

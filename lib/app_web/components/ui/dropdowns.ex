@@ -17,18 +17,18 @@ defmodule AppWeb.Components.UI.Dropdowns do
       %{label: "Sign out", href: "#"}
     ]
 
-  # how to use:
-  # import AppWeb.Components.UI.Dropdowns
-  # <.dropdown id="myDropdown" label="Menu" items={[
-  #   %{label: "Profile", href: "/about"},
-  #   %{label: "Settings", href: "/about"},
-  #   %{label: "Log out", href: "/about"}
-  # ]} />
-
   def dropdown(assigns) do
     ~H"""
-    <div class="relative inline-block text-left #{@class}">
-      <button id={@id <> "Button"} data-dropdown-toggle={@id} type="button" class={@button_class}>
+    <div id={@id <> "-wrapper"} class={"relative inline-block text-left #{@class}"}>
+      <button
+        id={@id <> "-button"}
+        type="button"
+        class={@button_class}
+        phx-hook="DropdownToggle"
+        data-target={@id}
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
         {@label}
         <svg
           class="w-2.5 h-2.5 ms-3"
@@ -49,11 +49,12 @@ defmodule AppWeb.Components.UI.Dropdowns do
 
       <div
         id={@id}
-        class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700"
+        class="absolute right-0 z-10 mt-2 w-44 origin-top-right transform transition-all duration-200 ease-out bg-white divide-y divide-gray-100 rounded-lg shadow-sm dark:bg-gray-700 hidden"
+        aria-hidden="true"
       >
         <ul
           class="py-2 text-sm text-gray-300 dark:text-gray-900 bg-gray-800 dark:bg-gray-300"
-          aria-labelledby={@id <> "Button"}
+          aria-labelledby={@id <> "-button"}
         >
           <%= for item <- @items do %>
             <li>
