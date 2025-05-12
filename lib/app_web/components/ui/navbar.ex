@@ -48,7 +48,7 @@ defmodule AppWeb.Components.UI.Navbar do
           </svg>
         </button>
 
-        <div id="menu" class="hidden w-full md:flex md:items-center">
+        <div id="menu" class="hidden w-full md:flex md:items-center transition-all duration-300 ease-in-out">
           <ol class="flex flex-col md:flex-row md:space-x-8 text-gray-300 dark:text-gray-900">
             <.dropdown
               id="generalDropdown"
@@ -126,6 +126,8 @@ defmodule AppWeb.Components.UI.Navbar do
 
   defp toggle_menu do
     %JS{}
+    |> JS.toggle_class("translate-x-full", to: "#menu")
+    |> JS.toggle_class("translate-x-0", to: "#menu")
     |> JS.toggle_class("hidden", to: "#menu")
     |> JS.toggle_attribute({"aria-expanded", "true", "false"}, to: "#menu-button")
   end
