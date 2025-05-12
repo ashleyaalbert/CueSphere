@@ -125,6 +125,8 @@ defmodule AppWeb.Router do
       live "/games", GamesLive
       live "/leagues", LeaguesLive
       live "/tournaments", TournamentsLive
+      live "/privacy-policy", PrivacyPolicyLive
+      live "/licensing", LicensingLive
 
       # legacy routes, files need to be removed from legacy folder
       # also need to remove the .tmp extension

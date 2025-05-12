@@ -61,6 +61,12 @@
   </div>
 </main>
 
+<.footer year={2025} brand="Cuesphere" brand_link="/" links={[
+  %{label: "About", href: "/about"},
+  %{label: "Privacy Policy", href: "/privacy-policy"},
+  %{label: "Licensing", href: "/licensing"},
+]} />
+
 <.modal id="contact-modal" heading={gettext("Contact us")} backdrop="static">
  <.simple_form :let={f} for={@message_changeset} action={~p"/messages"} class="mb-6">
   <.input field={f[:email]} class="dark:text-white" type="text" label={gettext("Email")} />
