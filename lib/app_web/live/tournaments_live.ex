@@ -23,11 +23,15 @@ defmodule AppWeb.TournamentsLive do
   @impl true
   def render(assigns) do
     ~H"""
-    <div class="container mx-auto px-4 py-8 text-gray-900 dark:text-gray-100 bg-gray-50 rounded-lg shadow-md dark:bg-gray-700">
-      <h1 class="text-3xl font-bold mb-8">{gettext("Tournaments")}</h1>
-      <p class="mb-4">{gettext("Log in to join tournaments or create tournaments to play with others!")}</p>
+    <div class="flex flex-col items-center justify-center w-full h-full p-4">
+      <h1 class="text-4xl font-bold text-center text-gray-700 dark:text-white mb-6">
+        {gettext("Tournaments")}
+      </h1>
 
-      <!-- Create Tournament Button (only shows when logged in) -->
+      <p class="text-gray-700 dark:text-gray-300 text-center max-w-2xl mb-6">
+        {gettext("Log in to join tournaments or create tournaments to play with others!")}
+      </p>
+
       <%= if @current_user do %>
         <.button
           color="alternative"
@@ -38,35 +42,42 @@ defmodule AppWeb.TournamentsLive do
         </.button>
       <% end %>
 
-      <!-- Tournaments List -->
-      <div class="grid gap-6">
+    <!-- Tournaments List -->
+      <div class="bg-white shadow-lg rounded-xl p-6 md:p-10 dark:bg-gray-800 dark:text-gray-200 w-full max-w-4xl grid gap-6">
         <%= for tournament <- @tournaments do %>
-          <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow p-6">
-            <h2 class="text-xl font-bold mb-2">{tournament.name}</h2>
-            <p class="text-gray-700 dark:text-gray-300 mb-1">{gettext("Location: ")} {tournament.location}</p>
-            <p class="text-gray-700 dark:text-gray-300 mb-1">{gettext("Date: ")} {tournament.date}</p>
-            <p class="text-gray-700 dark:text-gray-300 mb-1">{gettext("Type: ")} {tournament.type}</p>
-            <p class="text-gray-700 dark:text-gray-300 mb-4">
+          <div class="flex flex-col bg-gray-200 p-6 rounded-lg dark:bg-gray-700">
+            <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+              {tournament.name}
+            </h2>
+            <p class="text-sm text-gray-800 dark:text-gray-300 mb-1">
+              {gettext("Location: ")} {tournament.location}
+            </p>
+            <p class="text-sm text-gray-800 dark:text-gray-300 mb-1">
+              {gettext("Date: ")} {tournament.date}
+            </p>
+            <p class="text-sm text-gray-800 dark:text-gray-300 mb-1">
+              {gettext("Type: ")} {tournament.type}
+            </p>
+            <p class="text-sm text-gray-800 dark:text-gray-300 mb-4">
               {gettext("Created by: ")} {tournament.creator.email}
             </p>
 
             <div class="mb-4">
-              <h3 class="font-semibold">{gettext("Players: ")}</h3>
-              <ul class="list-disc pl-5">
+              <h3 class="font-semibold text-gray-800 dark:text-gray-200">{gettext("Players: ")}</h3>
+              <ul class="list-disc list-inside text-sm text-gray-800 dark:text-gray-300">
                 <%= for player <- tournament.players do %>
                   <li>{player.email}</li>
                 <% end %>
               </ul>
             </div>
 
-            <div class="flex flex-wrap gap-2">
+            <div class="flex flex-wrap gap-2 mt-2">
               <%= if @current_user do %>
                 <%= if Tournaments.player_in_tournament?(tournament.id, @current_user.id) do %>
                   <.button
                     color="alternative"
                     phx-click="leave_tournament"
                     phx-value-tournament_id={tournament.id}
-                    class="mb-6 font-bold py-2 px-4 rounded"
                   >
                     {gettext("Leave Tournament")}
                   </.button>
@@ -75,19 +86,16 @@ defmodule AppWeb.TournamentsLive do
                     color="alternative"
                     phx-click="join_tournament"
                     phx-value-tournament_id={tournament.id}
-                    class="mb-6 font-bold py-2 px-4 rounded"
                   >
                     {gettext("Join Tournament")}
                   </.button>
                 <% end %>
 
-                <!-- Delete Tournament Button (only shows for creator) -->
                 <%= if tournament.creator_id == @current_user.id do %>
                   <.button
                     color="alternative"
                     phx-click="delete_tournament"
                     phx-value-tournament_id={tournament.id}
-                    class="mb-6 font-bold py-2 px-4 rounded"
                     data-confirm="Are you sure you want to delete this tournament?"
                   >
                     {gettext("Delete Tournament")}
@@ -99,7 +107,7 @@ defmodule AppWeb.TournamentsLive do
         <% end %>
       </div>
 
-      <!-- Create Tournament Modal -->
+    <!-- Create Tournament Modal -->
       <%= if @current_user do %>
         <.modal
           id="create-tournament-modal"
@@ -123,11 +131,10 @@ defmodule AppWeb.TournamentsLive do
                 type="button"
                 color="alternative"
                 phx-click={AppWeb.Components.UI.Modal.hide_modal("create-tournament-modal")}
-                class="mb-6 font-bold py-2 px-4 rounded"
               >
                 {gettext("Cancel")}
               </.button>
-              <.button type="submit" color="alternative" class="mb-6 font-bold py-2 px-4 rounded">
+              <.button type="submit" color="alternative">
                 {gettext("Create")}
               </.button>
             </div>

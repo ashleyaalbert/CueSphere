@@ -4,13 +4,13 @@ defmodule AppWeb.GamesLive do
   @impl true
   def render(assigns) do
     ~H"""
-    <div class="p-8">
+    <div class="flex flex-col items-center justify-center w-full h-full p-4">
       <h1 class="text-4xl font-bold mb-6 dark:text-white">{gettext("Billiards Games")}</h1>
-      <p class="text-gray-700 mb-4 dark:text-white">
+      <p class="text-gray-700 mb-4 dark:text-white flex flex-col items-center justify-center w-full h-full">
         {gettext(
           "This page is intended to showcase the various billiards games that exist, such as 8-Ball, 9-Ball, 10-Ball, and more. Each game has its own unique rules and strategies, making them all enjoyable in their own way. Included on this page is key details to each game as well as videos to show how the game is played. To learn about the rules of each game, visit the Rules page.")}
       </p>
-      <div class="space-y-10">
+      <div class="space-y-10 bg-gray-50 p-6 rounded-lg shadow-md dark:bg-gray-700 dark:text-white">
         <%!-- 8-Ball --%>
         <div>
           <h2 class="text-4xl font-semibold mb-2 dark:text-white">{gettext("8-Ball")}</h2>

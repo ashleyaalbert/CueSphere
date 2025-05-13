@@ -153,7 +153,7 @@ defmodule AppWeb.Components.UI.Button do
   end
 
   defp color_classes("alternative") do
-    "text-white bg-gray-400 hover:bg-gray-600 focus:z-10 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-600 dark:text-gray-100 dark:border-gray-400 dark:hover:bg-gray-400"
+    "text-white bg-gray-400 hover:bg-gray-600 focus:z-10 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-100 dark:border-gray-400 dark:hover:bg-gray-400"
   end
 
   defp icon_color_classes("default"), do: "text-white"

@@ -7,8 +7,15 @@ defmodule AppWeb.PurchaseLive do
   @impl true
   def render(assigns) do
     ~H"""
-    <div class="container mx-auto px-4 py-8">
-      <h1 class="text-4xl font-bold text-center mb-6">{gettext("Purchase Billiards Equipment")}</h1>
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col items-center justify-center w-full h-full p-4">
+        <h1 class="text-4xl font-bold text-center mb-6">{gettext("Purchase Billiards Equipment")}</h1>
+        <p class="mt-4 text-lg text-gray-700 dark:text-gray-300">
+          {gettext(
+            "A chart of billiards sales and a listing of links for billiards items to be purchased."
+          )}
+        </p>
+      </div>
 
     <!-- Chart Section -->
       <div class="bg-white dark:bg-gray-700 dark:text-white shadow-lg rounded-lg p-6 mb-6">
