@@ -24,13 +24,13 @@ defmodule AppWeb.Components.UI.Navbar do
   def navbar(assigns) do
     ~H"""
     <nav class="bg-gray-800 dark:bg-gray-300">
-      <div class="max-w-screen-xl flex items-center justify-between mx-auto p-4">
+      <div class="container mx-auto p-2">
 
         <!-- Mobile Menu Button -->
         <button
           id="menu-button"
           type="button"
-          class="md:hidden p-2 w-10 h-10 text-gray-500 rounded-lg hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700"
+          class="lg:hidden p-2 w-10 h-10 text-gray-500 rounded-lg hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700"
           aria-controls="menu"
           aria-expanded="false"
           phx-click={toggle_menu()}
@@ -48,8 +48,8 @@ defmodule AppWeb.Components.UI.Navbar do
           </svg>
         </button>
 
-        <div id="menu" class="hidden w-full md:flex md:items-center transition-all duration-300 ease-in-out">
-          <ol class="flex flex-col md:flex-row md:space-x-8 text-gray-300 dark:text-gray-900">
+        <div id="menu" class="hidden w-full lg:flex lg:items-center transition-all duration-300 ease-in-out">
+          <ol class="flex flex-col lg:flex-row lg:space-x-8 text-gray-300 dark:text-gray-900">
             <.dropdown
               id="generalDropdown"
               label={gettext("General")}
@@ -126,7 +126,7 @@ defmodule AppWeb.Components.UI.Navbar do
 
   defp toggle_menu do
     %JS{}
-    |> JS.toggle_class("translate-x-full", to: "#menu")
+    # |> JS.toggle_class("translate-x-full", to: "#menu")
     |> JS.toggle_class("translate-x-0", to: "#menu")
     |> JS.toggle_class("hidden", to: "#menu")
     |> JS.toggle_attribute({"aria-expanded", "true", "false"}, to: "#menu-button")
