@@ -3,21 +3,20 @@ defmodule AppWeb.TournamentsLive do
   alias App.Tournaments
   alias App.Tournaments.Tournament
   import AppWeb.Components.UI.Modal
-  import AppWeb.CoreComponents
+  alias App.Accounts
   import AppWeb.Components.UI.Button
   use Gettext, backend: AppWeb.Gettext
 
   @impl true
-  def mount(_params, session, socket) do
-    current_user = get_current_user(session)
+  def mount(_params, _session, socket) do
+    IO.inspect(socket.assigns)
 
     socket =
       socket
-      |> assign(:current_user, current_user)
+      |> assign(:current_user, Accounts.get_user!(socket.assigns.user_id.id))
       |> assign(:tournaments, Tournaments.list_tournaments())
-      |> assign(:changeset, Tournaments.change_tournament(%Tournament{}))
-
-    # |> allow_upload(:pictures, accept: ~w(image/jpeg image/png image/gif), max_entries: 3)
+      |> assign(:form, to_form(Tournaments.change_tournament(%Tournament{})))
+      |> allow_upload(:pictures, accept: ~w(image/jpeg image/png image/gif), max_entries: 3)
 
     {:ok, socket}
   end
@@ -43,7 +42,7 @@ defmodule AppWeb.TournamentsLive do
           {gettext("Create Tournament")}
         </.button>
       <% end %>
-
+      
     <!-- Tournaments List -->
       <div class="bg-white shadow-lg rounded-xl p-6 md:p-10 dark:bg-gray-800 dark:text-gray-200 w-full max-w-4xl grid gap-6">
         <%= for tournament <- @tournaments do %>
@@ -120,7 +119,7 @@ defmodule AppWeb.TournamentsLive do
           </div>
         <% end %>
       </div>
-
+      
     <!-- Create Tournament Modal -->
       <%= if @current_user do %>
         <.modal
@@ -128,20 +127,21 @@ defmodule AppWeb.TournamentsLive do
           heading={gettext("Create New Tournament")}
           on_cancel={AppWeb.Components.UI.Modal.hide_modal("create-tournament-modal")}
         >
-          <.simple_form
-            :let={f}
-            for={@changeset}
+          <.form
+            for={@form}
+            phx-change="validate"
             phx-submit="create_tournament"
             id="tournament-form"
             class="space-y-4"
           >
-            <.input field={f[:name]} type="text" label={gettext("Name")} required />
-            <.input field={f[:location]} type="text" label={gettext("Location")} required />
-            <.input field={f[:date]} type="date" label={gettext("Date")} required />
-            <.input field={f[:type]} type="text" label={gettext("Type")} required />
-            <%!-- <.live_file_input upload={@uploads.pictures} /> --%>
+            <.input field={@form[:name]} type="text" label={gettext("Name")} />
+            <.input field={@form[:location]} type="text" label={gettext("Location")} />
+            <.input field={@form[:date]} type="date" label={gettext("Date")} />
+            <.input field={@form[:type]} type="text" label={gettext("Type")} />
 
-            <%!-- <section phx-drop-target={@uploads.pictures.ref}>
+            <.live_file_input upload={@uploads.pictures} />
+
+            <section phx-drop-target={@uploads.pictures.ref}>
               <article :for={entry <- @uploads.pictures.entries} class="upload-entry">
                 <figure>
                   <.live_img_preview entry={entry} />
@@ -167,7 +167,7 @@ defmodule AppWeb.TournamentsLive do
               <p :for={err <- upload_errors(@uploads.pictures)} class="alert alert-danger">
                 {error_to_string(err)}
               </p>
-            </section> --%>
+            </section>
 
             <div class="mt-4 flex justify-end space-x-2">
               <.button
@@ -181,27 +181,11 @@ defmodule AppWeb.TournamentsLive do
                 {gettext("Create")}
               </.button>
             </div>
-          </.simple_form>
+          </.form>
         </.modal>
       <% end %>
     </div>
     """
-  end
-
-  @impl true
-  def handle_event("create_tournament", %{"tournament" => tournament_params}, socket) do
-    case Tournaments.create_tournament(
-           Map.put(tournament_params, "creator_id", socket.assigns.current_user.id)
-         ) do
-      {:ok, _tournament} ->
-        {:noreply,
-         socket
-         |> put_flash(:info, "Tournament created successfully!")
-         |> push_navigate(to: ~p"/tournaments")}
-
-      {:error, changeset} ->
-        {:noreply, assign(socket, :changeset, changeset)}
-    end
   end
 
   # uploaded_files =
@@ -236,6 +220,51 @@ defmodule AppWeb.TournamentsLive do
   #     {:noreply, assign(socket, :changeset, changeset)}
   # end
   # end
+
+  @impl true
+  def handle_event("create_tournament", %{"tournament" => tournament_params}, socket) do
+    # case Tournaments.create_tournament(
+    #        Map.put(tournament_params, "creator_id", socket.assigns.current_user.id)
+    #      ) do
+    #   {:ok, _tournament} ->
+    #     {:noreply,
+    #      socket
+    #      |> put_flash(:info, "Tournament created successfully!")
+    #      |> push_navigate(to: ~p"/tournaments")}
+
+    #   {:error, changeset} ->
+    #     {:noreply, assign(socket, :changeset, changeset)}
+    # end
+
+    changeset = Tournaments.change_tournament(%Tournaments.Tournament{}, tournament_params)
+
+    IO.inspect(changeset)
+
+    if changeset.valid? do
+      uploaded_files =
+        consume_uploaded_entries(socket, :pictures, fn %{path: path}, entry ->
+          id = Ecto.UUID.generate()
+
+          file_ending =
+            case entry.client_type do
+              "image/jpeg" -> ".jpg"
+              "image/png" -> ".png"
+              "image/gif" -> ".gif"
+            end
+
+          dest = Path.join(Application.app_dir(:app, "priv/static/uploads"), id <> file_ending)
+
+          # You will need to create `priv/static/uploads` for `File.cp!/2` to work.
+          File.cp!(path, dest)
+
+          %{id: id, file_ending: file_ending}
+        end)
+
+      save_tournament(socket, :new, tournament_params, uploaded_files)
+    else
+      {:noreply, assign(socket, form: to_form(changeset, action: :validate))}
+    end
+  end
 
   def handle_event("join_tournament", %{"tournament_id" => tournament_id}, socket) do
     # Convert string to integer
@@ -285,22 +314,41 @@ defmodule AppWeb.TournamentsLive do
     end
   end
 
-  # def handle_event("cancel-upload", %{"ref" => ref}, socket) do
-  #   {:noreply, cancel_upload(socket, :pictures, ref)}
-  # end
+  def handle_event("cancel-upload", %{"ref" => ref}, socket) do
+    {:noreply, cancel_upload(socket, :pictures, ref)}
+  end
 
-  # def handle_event("validate", _params, socket) do
-  #   {:noreply, socket}
-  # end
+  def handle_event("validate", %{"tournament" => tournament_params}, socket) do
+    IO.inspect(socket.assigns)
+    changeset = Tournaments.change_tournament(%Tournament{}, tournament_params)
+    {:noreply, assign(socket, form: to_form(changeset, action: :validate))}
+  end
 
-  # defp error_to_string(:too_large), do: "Too large"
-  # defp error_to_string(:not_accepted), do: "You have selected an unacceptable file type"
-  # defp error_to_string(:too_many_files), do: "You have selected too many files"
+  defp error_to_string(:too_large), do: "Too large"
+  defp error_to_string(:not_accepted), do: "You have selected an unacceptable file type"
+  defp error_to_string(:too_many_files), do: "You have selected too many files"
 
   defp get_current_user(session) do
     case session do
       %{"user_token" => token} -> App.Accounts.get_user_by_session_token(token)
       _ -> nil
+    end
+  end
+
+  defp save_tournament(socket, :new, tournament_params, uploaded_files) do
+    case Tournaments.create_tournament(
+           socket.assigns.current_user,
+           tournament_params,
+           uploaded_files
+         ) do
+      {:ok, _tournament} ->
+        {:noreply,
+         socket
+         |> assign(:form, to_form(Tournaments.change_tournament(%Tournament{})))
+         |> put_flash(:info, "Tournament created successfully")}
+
+      {:error, %Ecto.Changeset{} = changeset} ->
+        {:noreply, assign(socket, form: to_form(changeset))}
     end
   end
 end

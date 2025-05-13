@@ -21,7 +21,7 @@ defmodule App.Tournaments.Tournament do
 
   def changeset(tournament, attrs) do
     tournament
-    |> cast(attrs, [:name, :location, :date, :type, :creator_id])
-    |> validate_required([:name, :location, :date, :type, :creator_id])
+    |> cast(attrs, [:name, :location, :date, :type])
+    |> validate_required([:name, :location, :date, :type])
   end
 end

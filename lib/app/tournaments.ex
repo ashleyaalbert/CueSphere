@@ -11,10 +11,11 @@ defmodule App.Tournaments do
 
   def get_tournament!(id), do: Repo.get!(Tournament, id) |> Repo.preload([:creator, :players])
 
-  def create_tournament(attrs \\ %{}, uploaded_files) do
+  def create_tournament(user, attrs, uploaded_files) do
     %Tournament{}
     |> Tournament.changeset(attrs)
     |> Ecto.Changeset.put_embed(:pictures, uploaded_files)
+    |> Ecto.Changeset.put_assoc(:creator, user)
     |> Repo.insert()
   end
 
