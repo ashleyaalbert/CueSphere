@@ -29,7 +29,7 @@ defmodule AppWeb.Components.UI.Accordion do
         <h2 id={"#{@id}-heading-#{index}"}>
           <button
             type="button"
-            class="flex items-center justify-between w-full p-4 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
+            class="flex items-center justify-between w-full p-4 font-medium rtl:text-right text-gray-900 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
             phx-click="toggle_accordion"
             phx-value-index={index}
             aria-expanded={@expanded[index] |> to_string}
