@@ -73,11 +73,11 @@
   <.footer
     year={2025}
     brand={gettext("Cuesphere")}
-    brand_link="/"
+    brand_link={~p"/"}
     links={[
-      %{label: gettext("About"), href: "/about"},
-      %{label: gettext("Privacy Policy"), href: "/privacy-policy"},
-      %{label: gettext("Licensing"), href: "/licensing"}
+      %{label: gettext("About"), href: ~p"/about"},
+      %{label: gettext("Privacy Policy"), href: ~p"/privacy-policy"},
+      %{label: gettext("Licensing"), href: ~p"/licensing"}
     ]}
   />
 </div>
