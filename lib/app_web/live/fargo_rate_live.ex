@@ -7,39 +7,58 @@ defmodule AppWeb.FargoRateLive do
   @impl true
   def render(assigns) do
     ~H"""
-    <div class="p-4">
-    <.form for={} phx-submit="search">
-      <input name="query" type="text" value={@query} placeholder={gettext("Search for a player...")} class="border rounded p-2 mr-2" />
-      <.button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">{gettext("Search")}</.button>
-    </.form>
+    <div class="max-w-5xl mx-auto p-4 space-y-12 text-gray-800 dark:text-white">
+      <section>
+        <h1 class="text-4xl font-bold mb-4 text-center dark:text-white">
+          {gettext("Fargo Rate Lookup")}
+        </h1>
+      </section>
 
-      <%= if @error do %>
-        <p class="text-red-600 mt-4"><%= inspect(@error) %></p>
-      <% end %>
-      <table class="mt-4 w-full table-auto border-collapse border border-gray-300">
-        <thead>
-          <tr>
-            <th class="border p-2">{gettext("First Name")}</th>
-            <th class="border p-2">{gettext("Last Name")}</th>
-            <th class="border p-2">{gettext("Fargo Rate")}</th>
-            <th class="border p-2">{gettext("Robustness")}</th>
-            <th class="border p-2">{gettext("Membership ID")}</th>
-            <th class="border p-2">{gettext("Location")}</th>
-          </tr>
-        </thead>
-        <tbody>
-          <%= for player <- @players do %>
+      <section class="bg-gray-50 p-6 rounded-lg shadow-md dark:bg-gray-700 dark:text-white">
+        <.form for={} phx-submit="search" class="flex flex-wrap items-center gap-4">
+          <input
+            name="query"
+            type="text"
+            value={@query}
+            placeholder={gettext("Search for a player...")}
+            class="flex-1 border rounded p-2 dark:bg-gray-800 dark:text-white mr-2"
+          />
+          <.button type="submit" color="alternative" class="px-4 py-2 rounded">
+            {gettext("Search")}
+          </.button>
+        </.form>
+
+        <%= if @error do %>
+          <p class="text-red-500 mt-4">{inspect(@error)}</p>
+        <% end %>
+
+        <div class="overflow-x-auto mt-6">
+        <table class="w-full table-auto border-collapse border border-gray-300 dark:border-gray-600">
+          <thead>
             <tr>
-              <td class="border p-2"><%= player["firstName"] %></td>
-              <td class="border p-2"><%= player["lastName"] %></td>
-              <td class="border p-2"><%= player["effectiveRating"] %></td>
-              <td class="border p-2"><%= player["robustness"] %></td>
-              <td class="border p-2"><%= player["membershipId"] %></td>
-              <td class="border p-2"><%= player["location"] || "N/A" %></td>
+              <th class="border p-2">{gettext("First Name")}</th>
+              <th class="border p-2">{gettext("Last Name")}</th>
+              <th class="border p-2">{gettext("Fargo Rate")}</th>
+              <th class="border p-2">{gettext("Robustness")}</th>
+              <th class="border p-2">{gettext("Membership ID")}</th>
+              <th class="border p-2">{gettext("Location")}</th>
             </tr>
-          <% end %>
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            <%= for player <- @players do %>
+              <tr>
+                <td class="border p-2">{player["firstName"]}</td>
+                <td class="border p-2">{player["lastName"]}</td>
+                <td class="border p-2">{player["effectiveRating"]}</td>
+                <td class="border p-2">{player["robustness"]}</td>
+                <td class="border p-2">{player["membershipId"]}</td>
+                <td class="border p-2">{player["location"] || "N/A"}</td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+        </div>
+      </section>
     </div>
     """
   end
@@ -70,14 +89,18 @@ defmodule AppWeb.FargoRateLive do
 
             {:ok, %{players: filtered_players, last_id: last_id}}
 
-          {:ok, _other} -> {:error, "Unexpected JSON structure"}
-          {:error, err} -> {:error, err}
+          {:ok, _other} ->
+            {:error, "Unexpected JSON structure"}
+
+          {:error, err} ->
+            {:error, err}
         end
 
       {:ok, %HTTPoison.Response{status_code: code}} ->
         {:error, "Received status #{code}"}
 
-      {:error, error} -> {:error, error}
+      {:error, error} ->
+        {:error, error}
     end
   end
 

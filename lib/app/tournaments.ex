@@ -9,12 +9,12 @@ defmodule App.Tournaments do
     Repo.all(Tournament) |> Repo.preload([:creator, :players])
   end
 
- def get_tournament!(id), do: Repo.get!(Tournament, id) |> Repo.preload([:creator, :players])
+  def get_tournament!(id), do: Repo.get!(Tournament, id) |> Repo.preload([:creator, :players])
 
-
-  def create_tournament(attrs \\ %{}) do
+  def create_tournament(attrs \\ %{}, uploaded_files) do
     %Tournament{}
     |> Tournament.changeset(attrs)
+    |> Ecto.Changeset.put_embed(:pictures, uploaded_files)
     |> Repo.insert()
   end
 
@@ -45,10 +45,13 @@ defmodule App.Tournaments do
   end
 
   def player_in_tournament?(tournament_id, player_id) do
-    Repo.exists?(from tp in TournamentPlayer, where: tp.tournament_id == ^tournament_id and tp.player_id == ^player_id)
+    Repo.exists?(
+      from tp in TournamentPlayer,
+        where: tp.tournament_id == ^tournament_id and tp.player_id == ^player_id
+    )
   end
 
-   def change_tournament(%Tournament{} = tournament, attrs \\ %{}) do
+  def change_tournament(%Tournament{} = tournament, attrs \\ %{}) do
     Tournament.changeset(tournament, attrs)
   end
 end

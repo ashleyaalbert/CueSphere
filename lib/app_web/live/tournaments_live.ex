@@ -17,6 +17,8 @@ defmodule AppWeb.TournamentsLive do
       |> assign(:tournaments, Tournaments.list_tournaments())
       |> assign(:changeset, Tournaments.change_tournament(%Tournament{}))
 
+    # |> allow_upload(:pictures, accept: ~w(image/jpeg image/png image/gif), max_entries: 3)
+
     {:ok, socket}
   end
 
@@ -46,6 +48,18 @@ defmodule AppWeb.TournamentsLive do
       <div class="bg-white shadow-lg rounded-xl p-6 md:p-10 dark:bg-gray-800 dark:text-gray-200 w-full max-w-4xl grid gap-6">
         <%= for tournament <- @tournaments do %>
           <div class="flex flex-col bg-gray-200 p-6 rounded-lg dark:bg-gray-700">
+            <%!-- <%= if tournament.pictures && length(tournament.pictures) > 0 do %>
+              <div class="mb-4">
+                <div class="flex flex-wrap gap-2">
+                  <%= for picture <- tournament.pictures do %>
+                    <div class="w-full sm:w-48 h-48 rounded-lg overflow-hidden">
+                      <img src={picture.url} alt="Tournament image" class="w-full h-full object-cover" />
+                    </div>
+                  <% end %>
+                </div>
+              </div>
+            <% end %> --%>
+
             <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">
               {tournament.name}
             </h2>
@@ -125,6 +139,35 @@ defmodule AppWeb.TournamentsLive do
             <.input field={f[:location]} type="text" label={gettext("Location")} required />
             <.input field={f[:date]} type="date" label={gettext("Date")} required />
             <.input field={f[:type]} type="text" label={gettext("Type")} required />
+            <%!-- <.live_file_input upload={@uploads.pictures} /> --%>
+
+            <%!-- <section phx-drop-target={@uploads.pictures.ref}>
+              <article :for={entry <- @uploads.pictures.entries} class="upload-entry">
+                <figure>
+                  <.live_img_preview entry={entry} />
+                  <figcaption>{entry.client_name}</figcaption>
+                </figure>
+
+                <progress value={entry.progress} max="100">{entry.progress}%</progress>
+
+                <button
+                  type="button"
+                  phx-click="cancel-upload"
+                  phx-value-ref={entry.ref}
+                  aria-label="cancel"
+                >
+                  &times;
+                </button>
+
+                <p :for={err <- upload_errors(@uploads.pictures, entry)} class="alert alert-danger">
+                  {error_to_string(err)}
+                </p>
+              </article>
+
+              <p :for={err <- upload_errors(@uploads.pictures)} class="alert alert-danger">
+                {error_to_string(err)}
+              </p>
+            </section> --%>
 
             <div class="mt-4 flex justify-end space-x-2">
               <.button
@@ -160,6 +203,39 @@ defmodule AppWeb.TournamentsLive do
         {:noreply, assign(socket, :changeset, changeset)}
     end
   end
+
+  # uploaded_files =
+  #   consume_uploaded_entries(socket, :pictures, fn %{path: path}, entry ->
+  #     id = Ecto.UUID.generate()
+
+  #     file_ending =
+  #       case entry.client_type do
+  #         "image/jpeg" -> ".jpg"
+  #         "image/png" -> ".png"
+  #         "image/gif" -> ".gif"
+  #       end
+
+  #     dest = Path.join(Application.app_dir(:app, "priv/static/uploads"), id <> file_ending)
+  #     File.cp!(path, dest)
+  #     %{id: id, file_ending: file_ending}
+  #   end)
+
+  # tournament_params =
+  #   tournament_params
+  #   |> Map.put("creator_id", socket.assigns.current_user.id)
+  #   |> Map.put("images", uploaded_files)
+
+  # case Tournaments.create_tournament(tournament_params) do
+  #   {:ok, _tournament} ->
+  #     {:noreply,
+  #      socket
+  #      |> put_flash(:info, "Tournament created successfully!")
+  #      |> push_navigate(to: ~p"/tournaments")}
+
+  #   {:error, changeset} ->
+  #     {:noreply, assign(socket, :changeset, changeset)}
+  # end
+  # end
 
   def handle_event("join_tournament", %{"tournament_id" => tournament_id}, socket) do
     # Convert string to integer
@@ -208,6 +284,18 @@ defmodule AppWeb.TournamentsLive do
          |> put_flash(:error, "You can only delete tournaments you created")}
     end
   end
+
+  # def handle_event("cancel-upload", %{"ref" => ref}, socket) do
+  #   {:noreply, cancel_upload(socket, :pictures, ref)}
+  # end
+
+  # def handle_event("validate", _params, socket) do
+  #   {:noreply, socket}
+  # end
+
+  # defp error_to_string(:too_large), do: "Too large"
+  # defp error_to_string(:not_accepted), do: "You have selected an unacceptable file type"
+  # defp error_to_string(:too_many_files), do: "You have selected too many files"
 
   defp get_current_user(session) do
     case session do

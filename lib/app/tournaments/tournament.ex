@@ -14,6 +14,8 @@ defmodule App.Tournaments.Tournament do
       join_keys: [tournament_id: :id, player_id: :id],
       on_replace: :delete
 
+    embeds_many :pictures, App.Tournaments.Upload, on_replace: :delete
+
     timestamps()
   end
 
