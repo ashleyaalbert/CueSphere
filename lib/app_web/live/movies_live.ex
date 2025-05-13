@@ -1,5 +1,6 @@
 defmodule AppWeb.MoviesLive do
   use AppWeb, :live_view
+  import AppWeb.Components.UI.Rating
 
   @impl true
   def render(assigns) do
@@ -14,6 +15,7 @@ defmodule AppWeb.MoviesLive do
           <img src={~p"/images/final/movie1.jpg"} alt={gettext("The Hustler Movie Poster")} class="w-24 h-32 object-cover rounded-md shadow" />
           <div>
             <h3 class="text-lg font-semibold text-blue-900 dark:text-white">{gettext("The Hustler")}</h3>
+            <.rating value={7.9} out_of={10}/>
             <p class="text-sm text-gray-800 dark:text-gray-300 mb-2">
             {gettext("Directed by Robert Rossen. Hollywood icon Paul Newman stars in this all-time classic about an up-and-coming pool player, “Fast Eddie” Felson, who risks it all in a match with pool champion “Minnesota Fats,” played by Jackie Gleason.")}
             </p>
@@ -30,6 +32,7 @@ defmodule AppWeb.MoviesLive do
           <img src={~p"/images/final/movie2.jpg"} alt={gettext("The Color of Money Movie Poster")} class="w-24 h-32 object-cover rounded-md shadow" />
           <div>
             <h3 class="text-lg font-semibold text-blue-900 dark:text-white">{gettext("The Color of Money")}</h3>
+            <.rating value={7.0} out_of={10}/>
             <p class="text-sm text-gray-800 dark:text-gray-300 mb-2">{gettext("Directed by Martin Scorsese. Former pool hustler \"Fast Eddie\" Felson (Paul Newman) decides he wants to return to the game by taking a pupil. He meets talented but green Vincent Lauria (Tom Cruise) and proposes a partnership. As they tour pool halls, Eddie teaches Vincent the tricks of scamming, but he eventually grows frustrated with Vincent's showboat antics, leading to an argument and a falling-out. Eddie takes up playing again and soon crosses paths with Vincent as an opponent.")}
            </p>
             <a href="https://www.youtube.com/watch?v=nNeTb11wRmw" target="_blank"
@@ -45,6 +48,7 @@ defmodule AppWeb.MoviesLive do
           <img src={~p"/images/final/movie3.jpg"} alt={gettext("Poolhall Junkies Movie Poster")} class="w-24 h-32 object-cover rounded-md shadow" />
           <div>
             <h3 class="text-lg font-semibold text-blue-900 dark:text-white">{gettext("Poolhall Junkies")}</h3>
+            <.rating value={6.8} out_of={10}/>
             <p class="text-sm text-gray-800 dark:text-gray-300 mb-2">
             {gettext("Directed by Mars Callahan. A talented pool hustler who has stayed out of the game for years must return to his old ways when his little brother gets involved with his enemy--the very man who held him back from greatness.")}
             </p>
@@ -61,6 +65,7 @@ defmodule AppWeb.MoviesLive do
           <img src={~p"/images/final/movie4.jpg"} alt={gettext("Stickmen Movie Poster")} class="w-24 h-32 object-cover rounded-md shadow" />
           <div>
             <h3 class="text-lg font-semibold text-blue-900 dark:text-white">{gettext("Stickmen")}</h3>
+            <.rating value={6.6} out_of={10}/>
             <p class="text-sm text-gray-800 dark:text-gray-300 mb-2">
               {gettext("Directed by Hamish Rothwell. Three friends tour the Wellington pub scene, playing pool with ever-increasing stakes. Then they enter a tournament run by vicious crime boss 'Daddy'. Narrator Kirk Torrance (Outrageous Fortune) guides us through their mission to pocket the money. This movie is unavailable to watch online.")}
             </p>

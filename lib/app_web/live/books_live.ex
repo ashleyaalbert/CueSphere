@@ -1,5 +1,6 @@
 defmodule AppWeb.BooksLive do
   use AppWeb, :live_view
+  import AppWeb.Components.UI.Rating
 
   @impl true
   def render(assigns) do
@@ -14,6 +15,7 @@ defmodule AppWeb.BooksLive do
           <img src={~p"/images/final/book1.jpg"} alt={gettext("Life Through Pool Book Cover")} class="w-24 h-32 object-cover rounded-md shadow" />
           <div>
             <h3 class="text-lg font-semibold text-blue-900 dark:text-white">{gettext("Life Through Pool")}</h3>
+            <.rating value={5.0} out_of={5}/>
             <p class="text-sm text-gray-800 dark:text-gray-300 mb-2">
               {gettext("By Jospeh Schmidt — Life Through Pool by Joseph Schmidt uses the game of pool as a powerful metaphor for resilience, mindset, and personal growth. Once a promising pool prodigy, Schmidt's life changed drastically after suffering a severe brain injury from an assault. Initially feeling powerless, he later discovered the transformative power of language and mindset, learning that reframing his internal dialogue could help him regain his abilities and reshape his future.
               The book explores key themes such as self-control, patience, and discipline, showing how the principles of pool apply to life's challenges. Schmidt emphasizes that success is not just about skill but about the way we think, adapt, and overcome setbacks. Through personal experiences and practical insights, he encourages readers to embrace both victories and failures as opportunities for growth, making Life Through Pool both a guide to mastering the game and a deeper reflection on achieving success in life.")}
@@ -30,6 +32,7 @@ defmodule AppWeb.BooksLive do
           <img src={~p"/images/final/book2.jpg"} alt={gettext("The 99 Critical Shots in Pool: Everything You Need to Know to Learn and Master the Game Book Cover")} class="w-24 h-32 object-cover rounded-md shadow" />
           <div>
             <h3 class="text-lg font-semibold text-blue-900 dark:text-white">{gettext("The 99 Critical Shots in Pool: Everything You Need to Know to Learn and Master the Game")}</h3>
+            <.rating value={4.6} out_of={5}/>
             <p class="text-sm text-gray-800 dark:text-gray-300 mb-2">
             {gettext("By Ray Martin - World Champion Pool Player Ray \"Cool Cat\" Martin shares his secrets for playing winner's pool in this classic book, which includes an introduction by the author. Written with co-author Rosser Reeves, The 99 Critical Shots in Pool remains one of the most authoritative guides to the game ever written. Over 200 illustrations show the proper form, technique, and approach to shots such as:")} </p>
 
@@ -58,6 +61,7 @@ defmodule AppWeb.BooksLive do
           <img src={~p"/images/final/book3.jpg"} alt={gettext("Pool and Billiards For Dummies Book Cover")} class="w-24 h-32 object-cover rounded-md shadow" />
           <div>
             <h3 class="text-lg font-semibold text-blue-900 dark:text-white">{gettext("Pool and Billiards For Dummies")}</h3>
+            <.rating value={4.6} out_of={5}/>
             <p class="text-sm text-gray-800 dark:text-gray-300 mb-2">
             {gettext("By Nicholas Leider - Practical, step-by-step tips for players of all levels
             From Snooker to Carom to good-old-fashioned 8- or 9-Ball, Pool & Billiards For Dummies reveals the tips, tricks, and rules of play, covering the variety of the ever-popular games that make up pool and billiards. This hands-on guide discusses everything from the rules and strategies of the games to how to set up a pool room to choosing the right equipment, and is accompanied by dozens of photos and line drawings.
@@ -77,6 +81,7 @@ defmodule AppWeb.BooksLive do
           <img src={~p"/images/final/book4.jpg"} alt={gettext("A Mind for Pool: How To Master The Mental Game Book Cover")} class="w-24 h-32 object-cover rounded-md shadow" />
           <div>
             <h3 class="text-lg font-semibold text-blue-900 dark:text-white">{gettext("A Mind for Pool: How To Master The Mental Game")}</h3>
+            <.rating value={4.5} out_of={5}/>
             <p class="text-sm text-gray-800 dark:text-gray-300 mb-2">
               {gettext("By Philip B Capelle — Pool is largely a mental game. So if you want to realise your full potential, you have got to eliminate the mental mistakes that are holding you back. A Mind for Pool will show you how to think pool like a champion. In the process you will learn how to: play under pressure; handle troublesome opponents; concentrate fully on every shot; overcome anger; adapt to the playing conditions; complete successfully in leagues, tournaments, and money games; evaluate and improve your game have much more fun; experience a quantum leap in your game.")}
             </p>
