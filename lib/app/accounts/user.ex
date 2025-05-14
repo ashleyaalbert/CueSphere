@@ -168,4 +168,14 @@ defmodule App.Accounts.User do
     |> cast(attrs, [:name, :birthday])
     |> validate_required([:name, :birthday])
   end
+
+  @doc """
+  A user changeset for creating or updating a user from OAuth data.
+  """
+  def oauth_changeset(user, attrs) do
+    user
+    |> cast(attrs, [:email, :name])
+    |> validate_required([:email, :name])
+    |> unique_constraint(:email)
+  end
 end

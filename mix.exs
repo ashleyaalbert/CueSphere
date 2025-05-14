@@ -70,7 +70,8 @@ defmodule App.MixProject do
       {:dns_cluster, "~> 0.1.1"},
       {:bandit, "~> 1.5"},
       {:yaml_elixir, "~> 2.9"},
-      {:excoveralls, "~> 0.18", only: :test}
+      {:excoveralls, "~> 0.18", only: :test},
+      {:ueberauth_google, "~> 0.10"}
     ]
   end
 

@@ -361,4 +361,26 @@ defmodule App.Accounts do
       {:error, :user, changeset, _} -> {:error, changeset}
     end
   end
+
+  def get_or_create_user_from_auth(%Ueberauth.Auth{info: info}) do
+    Repo.transaction(fn ->
+      attrs = %{
+        email:  info.email,
+        name:   info.name,
+        avatar: info.image
+      }
+
+      case Repo.get_by(User, email: info.email) do
+        nil ->
+          %User{}
+          |> User.oauth_changeset(attrs)
+          |> Repo.insert!()
+
+        user ->
+          user
+          |> User.oauth_changeset(attrs)
+          |> Repo.update!()
+      end
+    end)
+  end
 end

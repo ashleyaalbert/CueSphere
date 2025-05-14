@@ -20,12 +20,24 @@ defmodule AppWeb.Router do
     plug :accepts, ["json"]
   end
 
+  # scope "/", AppWeb do
+  #   get "/auth/google", GoogleAuthController, :request
+  # end
+
+  scope "/", AppWeb do
+    pipe_through [:browser]
+    get "/auth/:provider", GoogleAuthController, :request
+    get "/auth/:provider/callback", GoogleAuthController, :callback
+  end
+
   scope "/", AppWeb do
     pipe_through :browser
 
     get "/", PageController, :home
     resources "/messages", MessageController, only: [:create, :new, :show]
     put "/locale/:locale", LocaleController, :update
+
+    # get "/auth/google/callback", GoogleAuthController, :callback
 
     # legacy routes
     # get "/courses", PageController, :courses

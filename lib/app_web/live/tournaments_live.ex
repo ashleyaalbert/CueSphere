@@ -3,15 +3,16 @@ defmodule AppWeb.TournamentsLive do
   alias App.Tournaments
   alias App.Tournaments.Tournament
   import AppWeb.Components.UI.Modal
-  alias App.Accounts
   import AppWeb.Components.UI.Button
   use Gettext, backend: AppWeb.Gettext
 
   @impl true
-  def mount(_params, _session, socket) do
+  def mount(_params, session, socket) do
+    current_user = get_current_user(session)
+
     socket =
       socket
-      |> assign(:current_user, Accounts.get_user!(socket.assigns.user_id.id))
+      |> assign(:current_user, current_user)
       |> assign(:tournaments, Tournaments.list_tournaments())
       |> assign(:form, to_form(Tournaments.change_tournament(%Tournament{})))
       |> allow_upload(:pictures, accept: ~w(image/jpeg image/png image/gif), max_entries: 3)
@@ -113,7 +114,7 @@ defmodule AppWeb.TournamentsLive do
                   <%= for picture <- tournament.pictures do %>
                     <img
                       src={"/uploads/#{picture.id}#{picture.file_ending}"}
-                      alt="Tournament image"
+                      alt={gettext("Tournament image")}
                       class="max-h-48 w-full object-contain rounded-lg"
                     />
                   <% end %>
@@ -300,6 +301,13 @@ defmodule AppWeb.TournamentsLive do
 
       {:error, %Ecto.Changeset{} = changeset} ->
         {:noreply, assign(socket, form: to_form(changeset))}
+    end
+  end
+
+  defp get_current_user(session) do
+    case session do
+      %{"user_token" => token} -> App.Accounts.get_user_by_session_token(token)
+      _ -> nil
     end
   end
 end
