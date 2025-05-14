@@ -9,8 +9,6 @@ defmodule AppWeb.TournamentsLive do
 
   @impl true
   def mount(_params, _session, socket) do
-    IO.inspect(socket.assigns)
-
     socket =
       socket
       |> assign(:current_user, Accounts.get_user!(socket.assigns.user_id.id))
@@ -42,200 +40,160 @@ defmodule AppWeb.TournamentsLive do
           {gettext("Create Tournament")}
         </.button>
       <% end %>
-      
+
     <!-- Tournaments List -->
-      <div class="bg-white shadow-lg rounded-xl p-6 md:p-10 dark:bg-gray-800 dark:text-gray-200 w-full max-w-4xl grid gap-6">
+      <div class="bg-white shadow-lg rounded-xl p-6 md:p-10 dark:bg-gray-800 dark:text-gray-200 w-full max-w-4xl space-y-6">
         <%= for tournament <- @tournaments do %>
-          <div class="flex flex-col bg-gray-200 p-6 rounded-lg dark:bg-gray-700">
-            <%!-- <%= if tournament.pictures && length(tournament.pictures) > 0 do %>
+          <div class="flex flex-col md:flex-row gap-6 bg-gray-200 p-6 rounded-lg dark:bg-gray-700">
+            <!-- Left side - Tournament info -->
+            <div class="flex-1">
+              <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                {tournament.name}
+              </h2>
+              <p class="text-sm text-gray-800 dark:text-gray-300 mb-1">
+                {gettext("Location: ")} {tournament.location}
+              </p>
+              <p class="text-sm text-gray-800 dark:text-gray-300 mb-1">
+                {gettext("Date: ")} {tournament.date}
+              </p>
+              <p class="text-sm text-gray-800 dark:text-gray-300 mb-1">
+                {gettext("Type: ")} {tournament.type}
+              </p>
+              <p class="text-sm text-gray-800 dark:text-gray-300 mb-4">
+                {gettext("Created by: ")} {tournament.creator.email}
+              </p>
+
               <div class="mb-4">
-                <div class="flex flex-wrap gap-2">
+                <h3 class="font-semibold text-gray-800 dark:text-gray-200">{gettext("Players: ")}</h3>
+                <ul class="list-disc list-inside text-sm text-gray-800 dark:text-gray-300">
+                  <%= for player <- tournament.players do %>
+                    <li>{player.email}</li>
+                  <% end %>
+                </ul>
+              </div>
+
+              <div class="flex flex-wrap gap-2 mt-2">
+                <%= if @current_user do %>
+                  <%= if Tournaments.player_in_tournament?(tournament.id, @current_user.id) do %>
+                    <.button
+                      color="alternative"
+                      phx-click="leave_tournament"
+                      phx-value-tournament_id={tournament.id}
+                    >
+                      {gettext("Leave Tournament")}
+                    </.button>
+                  <% else %>
+                    <.button
+                      color="alternative"
+                      phx-click="join_tournament"
+                      phx-value-tournament_id={tournament.id}
+                    >
+                      {gettext("Join Tournament")}
+                    </.button>
+                  <% end %>
+
+                  <%= if tournament.creator_id == @current_user.id do %>
+                    <.button
+                      color="alternative"
+                      phx-click="delete_tournament"
+                      phx-value-tournament_id={tournament.id}
+                      data-confirm="Are you sure you want to delete this tournament?"
+                    >
+                      {gettext("Delete Tournament")}
+                    </.button>
+                  <% end %>
+                <% end %>
+              </div>
+            </div>
+
+            <!-- Right side - Image (only when present) -->
+            <%= if tournament.pictures && length(tournament.pictures) > 0 do %>
+              <div class="md:w-1/3 flex flex-col">
+                <div class="flex-1 flex items-center justify-center bg-gray-300 dark:bg-gray-600 rounded-lg overflow-hidden">
                   <%= for picture <- tournament.pictures do %>
-                    <div class="w-full sm:w-48 h-48 rounded-lg overflow-hidden">
-                      <img src={picture.url} alt="Tournament image" class="w-full h-full object-cover" />
-                    </div>
+                    <img
+                      src={"/uploads/#{picture.id}#{picture.file_ending}"}
+                      alt="Tournament image"
+                      class="max-h-48 w-full object-contain rounded-lg"
+                    />
                   <% end %>
                 </div>
               </div>
-            <% end %> --%>
-
-            <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-              {tournament.name}
-            </h2>
-            <p class="text-sm text-gray-800 dark:text-gray-300 mb-1">
-              {gettext("Location: ")} {tournament.location}
-            </p>
-            <p class="text-sm text-gray-800 dark:text-gray-300 mb-1">
-              {gettext("Date: ")} {tournament.date}
-            </p>
-            <p class="text-sm text-gray-800 dark:text-gray-300 mb-1">
-              {gettext("Type: ")} {tournament.type}
-            </p>
-            <p class="text-sm text-gray-800 dark:text-gray-300 mb-4">
-              {gettext("Created by: ")} {tournament.creator.email}
-            </p>
-
-            <div class="mb-4">
-              <h3 class="font-semibold text-gray-800 dark:text-gray-200">{gettext("Players: ")}</h3>
-              <ul class="list-disc list-inside text-sm text-gray-800 dark:text-gray-300">
-                <%= for player <- tournament.players do %>
-                  <li>{player.email}</li>
-                <% end %>
-              </ul>
-            </div>
-
-            <div class="flex flex-wrap gap-2 mt-2">
-              <%= if @current_user do %>
-                <%= if Tournaments.player_in_tournament?(tournament.id, @current_user.id) do %>
-                  <.button
-                    color="alternative"
-                    phx-click="leave_tournament"
-                    phx-value-tournament_id={tournament.id}
-                  >
-                    {gettext("Leave Tournament")}
-                  </.button>
-                <% else %>
-                  <.button
-                    color="alternative"
-                    phx-click="join_tournament"
-                    phx-value-tournament_id={tournament.id}
-                  >
-                    {gettext("Join Tournament")}
-                  </.button>
-                <% end %>
-
-                <%= if tournament.creator_id == @current_user.id do %>
-                  <.button
-                    color="alternative"
-                    phx-click="delete_tournament"
-                    phx-value-tournament_id={tournament.id}
-                    data-confirm="Are you sure you want to delete this tournament?"
-                  >
-                    {gettext("Delete Tournament")}
-                  </.button>
-                <% end %>
-              <% end %>
-            </div>
+            <% end %>
           </div>
         <% end %>
       </div>
-      
+    </div>
+
     <!-- Create Tournament Modal -->
-      <%= if @current_user do %>
-        <.modal
-          id="create-tournament-modal"
-          heading={gettext("Create New Tournament")}
-          on_cancel={AppWeb.Components.UI.Modal.hide_modal("create-tournament-modal")}
+    <%= if @current_user do %>
+      <.modal
+        id="create-tournament-modal"
+        heading={gettext("Create New Tournament")}
+        on_cancel={AppWeb.Components.UI.Modal.hide_modal("create-tournament-modal")}
+      >
+        <.form
+          for={@form}
+          phx-change="validate"
+          phx-submit="create_tournament"
+          id="tournament-form"
+          class="space-y-4"
         >
-          <.form
-            for={@form}
-            phx-change="validate"
-            phx-submit="create_tournament"
-            id="tournament-form"
-            class="space-y-4"
-          >
-            <.input field={@form[:name]} type="text" label={gettext("Name")} />
-            <.input field={@form[:location]} type="text" label={gettext("Location")} />
-            <.input field={@form[:date]} type="date" label={gettext("Date")} />
-            <.input field={@form[:type]} type="text" label={gettext("Type")} />
+          <.input field={@form[:name]} type="text" label={gettext("Name")} />
+          <.input field={@form[:location]} type="text" label={gettext("Location")} />
+          <.input field={@form[:date]} type="date" label={gettext("Date")} />
+          <.input field={@form[:type]} type="text" label={gettext("Type")} />
 
-            <.live_file_input upload={@uploads.pictures} />
+          <.live_file_input upload={@uploads.pictures} />
 
-            <section phx-drop-target={@uploads.pictures.ref}>
-              <article :for={entry <- @uploads.pictures.entries} class="upload-entry">
-                <figure>
-                  <.live_img_preview entry={entry} />
-                  <figcaption>{entry.client_name}</figcaption>
-                </figure>
+          <section phx-drop-target={@uploads.pictures.ref}>
+            <article :for={entry <- @uploads.pictures.entries} class="upload-entry">
+              <figure>
+                <.live_img_preview entry={entry} />
+                <figcaption>{entry.client_name}</figcaption>
+              </figure>
 
-                <progress value={entry.progress} max="100">{entry.progress}%</progress>
+              <progress value={entry.progress} max="100">{entry.progress}%</progress>
 
-                <button
-                  type="button"
-                  phx-click="cancel-upload"
-                  phx-value-ref={entry.ref}
-                  aria-label="cancel"
-                >
-                  &times;
-                </button>
+              <button
+                type="button"
+                phx-click="cancel-upload"
+                phx-value-ref={entry.ref}
+                aria-label="cancel"
+              >
+                &times;
+              </button>
 
-                <p :for={err <- upload_errors(@uploads.pictures, entry)} class="alert alert-danger">
-                  {error_to_string(err)}
-                </p>
-              </article>
-
-              <p :for={err <- upload_errors(@uploads.pictures)} class="alert alert-danger">
+              <p :for={err <- upload_errors(@uploads.pictures, entry)} class="alert alert-danger">
                 {error_to_string(err)}
               </p>
-            </section>
+            </article>
 
-            <div class="mt-4 flex justify-end space-x-2">
-              <.button
-                type="button"
-                color="alternative"
-                phx-click={AppWeb.Components.UI.Modal.hide_modal("create-tournament-modal")}
-              >
-                {gettext("Cancel")}
-              </.button>
-              <.button type="submit" color="alternative">
-                {gettext("Create")}
-              </.button>
-            </div>
-          </.form>
-        </.modal>
-      <% end %>
-    </div>
+            <p :for={err <- upload_errors(@uploads.pictures)} class="alert alert-danger">
+              {error_to_string(err)}
+            </p>
+          </section>
+
+          <div class="mt-4 flex justify-end space-x-2">
+            <.button
+              type="button"
+              color="alternative"
+              phx-click={AppWeb.Components.UI.Modal.hide_modal("create-tournament-modal")}
+            >
+              {gettext("Cancel")}
+            </.button>
+            <.button type="submit" color="alternative">
+              {gettext("Create")}
+            </.button>
+          </div>
+        </.form>
+      </.modal>
+    <% end %>
     """
   end
 
-  # uploaded_files =
-  #   consume_uploaded_entries(socket, :pictures, fn %{path: path}, entry ->
-  #     id = Ecto.UUID.generate()
-
-  #     file_ending =
-  #       case entry.client_type do
-  #         "image/jpeg" -> ".jpg"
-  #         "image/png" -> ".png"
-  #         "image/gif" -> ".gif"
-  #       end
-
-  #     dest = Path.join(Application.app_dir(:app, "priv/static/uploads"), id <> file_ending)
-  #     File.cp!(path, dest)
-  #     %{id: id, file_ending: file_ending}
-  #   end)
-
-  # tournament_params =
-  #   tournament_params
-  #   |> Map.put("creator_id", socket.assigns.current_user.id)
-  #   |> Map.put("images", uploaded_files)
-
-  # case Tournaments.create_tournament(tournament_params) do
-  #   {:ok, _tournament} ->
-  #     {:noreply,
-  #      socket
-  #      |> put_flash(:info, "Tournament created successfully!")
-  #      |> push_navigate(to: ~p"/tournaments")}
-
-  #   {:error, changeset} ->
-  #     {:noreply, assign(socket, :changeset, changeset)}
-  # end
-  # end
-
   @impl true
   def handle_event("create_tournament", %{"tournament" => tournament_params}, socket) do
-    # case Tournaments.create_tournament(
-    #        Map.put(tournament_params, "creator_id", socket.assigns.current_user.id)
-    #      ) do
-    #   {:ok, _tournament} ->
-    #     {:noreply,
-    #      socket
-    #      |> put_flash(:info, "Tournament created successfully!")
-    #      |> push_navigate(to: ~p"/tournaments")}
-
-    #   {:error, changeset} ->
-    #     {:noreply, assign(socket, :changeset, changeset)}
-    # end
-
     changeset = Tournaments.change_tournament(%Tournaments.Tournament{}, tournament_params)
 
     IO.inspect(changeset)
@@ -327,13 +285,6 @@ defmodule AppWeb.TournamentsLive do
   defp error_to_string(:too_large), do: "Too large"
   defp error_to_string(:not_accepted), do: "You have selected an unacceptable file type"
   defp error_to_string(:too_many_files), do: "You have selected too many files"
-
-  defp get_current_user(session) do
-    case session do
-      %{"user_token" => token} -> App.Accounts.get_user_by_session_token(token)
-      _ -> nil
-    end
-  end
 
   defp save_tournament(socket, :new, tournament_params, uploaded_files) do
     case Tournaments.create_tournament(

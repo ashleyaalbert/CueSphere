@@ -163,7 +163,9 @@ defmodule AppWeb.UserAuth do
     socket = mount_user_id(socket, session)
 
     if socket.assigns.user_id do
-      Phoenix.PubSub.subscribe(App.PubSub, "user:" <> Integer.to_string(socket.assigns.user_id))
+      user_id = socket.assigns.user_id.id
+      Phoenix.PubSub.subscribe(App.PubSub, "user:" <> Integer.to_string(user_id))
+
 
       {:cont, socket}
     else
@@ -202,8 +204,9 @@ defmodule AppWeb.UserAuth do
   defp mount_user_id(socket, session) do
     Phoenix.Component.assign_new(socket, :user_id, fn ->
       if user_token = session["user_token"] do
-        user = Accounts.get_user_by_session_token(user_token)
-        user.id
+        Accounts.get_user_by_session_token(user_token)
+        # user = Accounts.get_user_by_session_token(user_token)
+        # user.id
       end
     end)
   end
@@ -212,7 +215,8 @@ defmodule AppWeb.UserAuth do
   Used for routes that require the user to not be authenticated.
   """
   def redirect_if_user_is_authenticated(conn, _opts) do
-    if conn.assigns[:current_user] do
+    if conn.assigns[:user_id] do
+    # if conn.assigns[:current_user] do
       conn
       |> redirect(to: signed_in_path(conn))
       |> halt()
@@ -228,7 +232,8 @@ defmodule AppWeb.UserAuth do
   they use the application at all, here would be a good place.
   """
   def require_authenticated_user(conn, _opts) do
-    if conn.assigns[:current_user] do
+     if conn.assigns[:user_id] do
+    # if conn.assigns[:current_user] do
       conn
     else
       conn
