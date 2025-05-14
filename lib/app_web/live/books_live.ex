@@ -33,6 +33,7 @@ defmodule AppWeb.BooksLive do
                 href="https://www.amazon.com/dp/B0F4KRZHVC?ref=cm_sw_r_ffobk_cp_ud_dp_TA38KNPSQQGXK3T05HOX&ref_=cm_sw_r_ffobk_cp_ud_dp_TA38KNPSQQGXK3T05HOX&social_share=cm_sw_r_ffobk_cp_ud_dp_TA38KNPSQQGXK3T05HOX&bestFormat=true&previewDoh=1"
                 target="_blank"
                 class="inline-block px-3 py-1 text-white text-sm rounded bg-gray-400 hover:bg-gray-600 dark:bg-gray-800 dark:hover:bg-gray-600 transition"
+                aria-label={gettext("Buy Life Through Pool Now")}
               >
                 {gettext("Buy Now")}
               </a>
@@ -82,6 +83,9 @@ defmodule AppWeb.BooksLive do
                 href="https://www.amazon.com/99-Critical-Shots-Pool-Everything/dp/0812922417/ref=zg_bs_g_16536_d_sccl_1/131-5361470-6018031?psc=1"
                 target="_blank"
                 class="inline-block px-3 py-1 text-white text-sm rounded bg-gray-400 hover:bg-gray-600 dark:bg-gray-800 dark:hover:bg-gray-600 transition"
+                aria-label={gettext(
+                  "Buy The 99 Critical Shots in Pool: Everything You Need to Know to Learn and Master the Game Now"
+                )}
               >
                 {gettext("Buy Now")}
               </a>
@@ -111,6 +115,7 @@ defmodule AppWeb.BooksLive do
                 href="https://www.amazon.com/Pool-Billiards-Dummies-Nicholas-Leider/dp/0470565535/ref=zg_bs_g_16536_d_sccl_3/131-5361470-6018031?psc=1"
                 target="_blank"
                 class="inline-block px-3 py-1 text-white text-sm rounded bg-gray-400 hover:bg-gray-600 dark:bg-gray-800 dark:hover:bg-gray-600 transition"
+                aria-label={gettext("Buy Pool and Billiards For Dummies Book Cover Now")}
               >
                 {gettext("Buy Now")}
               </a>
@@ -138,6 +143,7 @@ defmodule AppWeb.BooksLive do
                 href="https://www.amazon.com/Mind-Pool-Master-Mental-Game/dp/0964920417/ref=zg_bs_g_16536_d_sccl_11/131-5361470-6018031?psc=1"
                 target="_blank"
                 class="inline-block px-3 py-1 text-white text-sm rounded bg-gray-400 hover:bg-gray-600 dark:bg-gray-800 dark:hover:bg-gray-600 transition"
+                aria-label={gettext("Buy A Mind for Pool: How To Master The Mental Game Now")}
               >
                 {gettext("Buy Now")}
               </a>

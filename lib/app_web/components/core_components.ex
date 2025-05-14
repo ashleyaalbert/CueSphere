@@ -430,10 +430,10 @@ defmodule AppWeb.CoreComponents do
     ~H"""
     <header class={[@actions != [] && "flex items-center justify-between gap-6", @class]}>
       <div>
-        <h1 class="text-lg font-semibold leading-8 text-gray-800 dark:text-white">
+        <h1 class="text-lg font-semibold leading-8 text-black dark:text-white">
           {render_slot(@inner_block)}
         </h1>
-        <p :if={@subtitle != []} class="mt-2 text-sm leading-6 text-gray-700 dark:text-gray-200">
+        <p :if={@subtitle != []} class="mt-2 text-sm leading-6 text-gray-900 dark:text-gray-100">
           {render_slot(@subtitle)}
         </p>
       </div>
@@ -476,7 +476,7 @@ defmodule AppWeb.CoreComponents do
     ~H"""
     <div class="overflow-y-auto px-4 sm:overflow-visible sm:px-0">
       <table class="w-[40rem] mt-11 sm:w-full">
-        <thead class="text-sm text-left leading-6 text-zinc-500">
+        <thead class="text-sm text-left leading-6 text-black dark:text-white">
           <tr>
             <th :for={col <- @col} class="p-0 pb-4 pr-6 font-normal">{col[:label]}</th>
             <th :if={@action != []} class="relative p-0 pb-4">
@@ -487,7 +487,7 @@ defmodule AppWeb.CoreComponents do
         <tbody
           id={@id}
           phx-update={match?(%Phoenix.LiveView.LiveStream{}, @rows) && "stream"}
-          class="relative divide-y divide-zinc-100 border-t border-zinc-200 text-sm leading-6 text-zinc-700"
+          class="relative divide-y divide-zinc-100 border-t border-zinc-200 text-sm leading-6 text-black dark:text-white"
         >
           <tr
             :for={row <- @rows}
@@ -501,7 +501,7 @@ defmodule AppWeb.CoreComponents do
             >
               <div class="block py-4 pr-6">
                 <span class="absolute -inset-y-px right-0 -left-4 group-hover:bg-gray-200 dark:group-hover:bg-gray-600 sm:rounded-l-xl" />
-                <span class={["relative", i == 0 && "font-semibold text-zinc-900"]}>
+                <span class={["relative", i == 0 && "font-semibold text-black dark:text-white"]}>
                   {render_slot(col, @row_item.(row))}
                 </span>
               </div>
@@ -511,7 +511,7 @@ defmodule AppWeb.CoreComponents do
                 <span class="absolute -inset-y-px -right-4 left-0 group-hover:bg-gray-200 dark:group-hover:bg-gray-600 sm:rounded-r-xl" />
                 <span
                   :for={action <- @action}
-                  class="relative ml-4 font-semibold leading-6 text-zinc-900 hover:text-gray-200 dark:hover:text-gray-600"
+                  class="relative ml-4 font-semibold leading-6 text-black dark:text-white"
                 >
                   {render_slot(action, @row_item.(row))}
                 </span>
@@ -543,8 +543,8 @@ defmodule AppWeb.CoreComponents do
     <div class="mt-14">
       <dl class="-my-4 divide-y divide-zinc-100">
         <div :for={item <- @item} class="flex gap-4 py-4 text-sm leading-6 sm:gap-8">
-          <dt class="w-1/4 flex-none text-zinc-500">{item.title}</dt>
-          <dd class="text-zinc-700">{render_slot(item)}</dd>
+          <dt class="w-1/4 flex-none text-black dark:text-white">{item.title}</dt>
+          <dd class="text-black dark:text-white">{render_slot(item)}</dd>
         </div>
       </dl>
     </div>
@@ -566,7 +566,7 @@ defmodule AppWeb.CoreComponents do
     <div class="mt-16">
       <.link
         navigate={@navigate}
-        class="text-sm font-semibold leading-6 text-zinc-900 hover:text-zinc-700"
+        class="text-sm font-semibold leading-6 text-black dark:text-white"
       >
         <.icon name="hero-arrow-left-solid" class="h-3 w-3" />
         {render_slot(@inner_block)}

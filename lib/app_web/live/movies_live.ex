@@ -32,6 +32,7 @@ defmodule AppWeb.MoviesLive do
                 href="https://watch.sling.com/1/program/0fe256933f3ed6afb92ee17b969bab48/watch?trackingid=google-feed"
                 target="_blank"
                 class="inline-block px-3 py-1 text-white text-sm rounded bg-gray-400 hover:bg-gray-600 dark:bg-gray-800 dark:hover:bg-gray-600 transition"
+                aria-label={gettext("Watch The Hustler Movie Now Free")}
               >
                 {gettext("Watch Now Free")}
               </a>
@@ -60,6 +61,7 @@ defmodule AppWeb.MoviesLive do
                 href="https://www.youtube.com/watch?v=nNeTb11wRmw"
                 target="_blank"
                 class="inline-block px-3 py-1 text-white text-sm rounded bg-gray-400 hover:bg-gray-600 dark:bg-gray-800 dark:hover:bg-gray-600 transition"
+                aria-label={gettext("Watch The Color of Money Now $3.99")}
               >
                 {gettext("Watch Now $3.99")}
               </a>
@@ -88,6 +90,7 @@ defmodule AppWeb.MoviesLive do
                 href="https://watch.sling.com/1/program/8a28f075fa45de0cb83f4982c0ef8231/watch?trackingid=google-feed"
                 target="_blank"
                 class="inline-block px-3 py-1 bg-gray-400 hover:bg-gray-600 dark:bg-gray-800 dark:hover:bg-gray-600 text-white text-sm rounded transition"
+                aria-label={gettext("Watch Poolhall Junkies Now Free")}
               >
                 {gettext("Watch Now Free")}
               </a>
