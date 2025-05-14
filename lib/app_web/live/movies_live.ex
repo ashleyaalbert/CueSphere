@@ -6,75 +6,117 @@ defmodule AppWeb.MoviesLive do
   def render(assigns) do
     ~H"""
     <div class="flex flex-col items-center justify-center w-full h-full p-4">
-    <h1 class="text-4xl font-bold text-center text-gray-700 dark:text-white">
+      <h1 class="text-4xl font-bold text-center text-gray-700 dark:text-white">
         {gettext("Recommended Billiard Movies")}
       </h1>
-    <div class="mt-8 bg-white shadow-lg rounded-xl p-6 md:p-10 dark:bg-gray-800 dark:text-gray-200">
-      <div class="mt-6 grid grid-cols-1 gap-6">
-        <!-- Movie 1 -->
-        <div class="flex items-start space-x-4 bg-gray-200 p-4 rounded-lg dark:bg-gray-700">
-          <img src={~p"/images/final/movie1.jpg"} alt={gettext("The Hustler Movie Poster")} class="w-24 h-32 object-cover rounded-md shadow" />
-          <div>
-            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">{gettext("The Hustler")}</h3>
-            <.rating value={7.9} out_of={10}/>
-            <p class="text-sm text-gray-800 dark:text-gray-300 mb-2">
-            {gettext("Directed by Robert Rossen. Hollywood icon Paul Newman stars in this all-time classic about an up-and-coming pool player, “Fast Eddie” Felson, who risks it all in a match with pool champion “Minnesota Fats,” played by Jackie Gleason.")}
-            </p>
-            <a href="https://watch.sling.com/1/program/0fe256933f3ed6afb92ee17b969bab48/watch?trackingid=google-feed" target="_blank"
-              class="inline-block px-3 py-1 text-white text-sm rounded bg-gray-400 hover:bg-gray-600 dark:bg-gray-800 dark:hover:bg-gray-600 transition">
-              {gettext("Watch Now Free")}
-            </a>
-            <.tag color="red">{gettext("Not Rated")}</.tag>
+      <div class="mt-8 bg-white shadow-lg rounded-xl p-6 md:p-10 dark:bg-gray-800 dark:text-gray-200">
+        <div class="mt-6 grid grid-cols-1 gap-6">
+          <!-- Movie 1 -->
+          <div class="flex items-start space-x-4 bg-gray-200 p-4 rounded-lg dark:bg-gray-700">
+            <img
+              src={~p"/images/final/movie1.jpg"}
+              alt={gettext("The Hustler Movie Poster")}
+              class="w-24 h-32 object-cover rounded-md shadow"
+            />
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                {gettext("The Hustler")}
+              </h3>
+              <.rating value={7.9} out_of={10} />
+              <p class="text-sm text-gray-800 dark:text-gray-300 mb-2 p-4">
+                {gettext(
+                  "Directed by Robert Rossen. Hollywood icon Paul Newman stars in this all-time classic about an up-and-coming pool player, “Fast Eddie” Felson, who risks it all in a match with pool champion “Minnesota Fats,” played by Jackie Gleason."
+                )}
+              </p>
+              <a
+                href="https://watch.sling.com/1/program/0fe256933f3ed6afb92ee17b969bab48/watch?trackingid=google-feed"
+                target="_blank"
+                class="inline-block px-3 py-1 text-white text-sm rounded bg-gray-400 hover:bg-gray-600 dark:bg-gray-800 dark:hover:bg-gray-600 transition"
+              >
+                {gettext("Watch Now Free")}
+              </a>
+              <.tag color="red">{gettext("Not Rated")}</.tag>
+            </div>
           </div>
-        </div>
 
-        <!-- Movie 2 -->
-        <div class="flex items-start space-x-4 bg-gray-200 p-4 rounded-lg dark:bg-gray-700">
-          <img src={~p"/images/final/movie2.jpg"} alt={gettext("The Color of Money Movie Poster")} class="w-24 h-32 object-cover rounded-md shadow" />
-          <div>
-            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">{gettext("The Color of Money")}</h3>
-            <.rating value={7.0} out_of={10}/>
-            <p class="text-sm text-gray-800 dark:text-gray-300 mb-2">{gettext("Directed by Martin Scorsese. Former pool hustler \"Fast Eddie\" Felson (Paul Newman) decides he wants to return to the game by taking a pupil. He meets talented but green Vincent Lauria (Tom Cruise) and proposes a partnership. As they tour pool halls, Eddie teaches Vincent the tricks of scamming, but he eventually grows frustrated with Vincent's showboat antics, leading to an argument and a falling-out. Eddie takes up playing again and soon crosses paths with Vincent as an opponent.")}
-           </p>
-            <a href="https://www.youtube.com/watch?v=nNeTb11wRmw" target="_blank"
-              class="inline-block px-3 py-1 text-white text-sm rounded bg-gray-400 hover:bg-gray-600 dark:bg-gray-800 dark:hover:bg-gray-600 transition">
-              {gettext("Watch Now $3.99")}
-            </a>
-            <.tag color="red">{gettext("Rated R")}</.tag>
+          <!-- Movie 2 -->
+          <div class="flex items-start space-x-4 bg-gray-200 p-4 rounded-lg dark:bg-gray-700">
+            <img
+              src={~p"/images/final/movie2.jpg"}
+              alt={gettext("The Color of Money Movie Poster")}
+              class="w-24 h-32 object-cover rounded-md shadow"
+            />
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                {gettext("The Color of Money")}
+              </h3>
+              <.rating value={7.0} out_of={10} />
+              <p class="text-sm text-gray-800 dark:text-gray-300 mb-2 p-4">
+                {gettext(
+                  "Directed by Martin Scorsese. Former pool hustler \"Fast Eddie\" Felson (Paul Newman) decides he wants to return to the game by taking a pupil. He meets talented but green Vincent Lauria (Tom Cruise) and proposes a partnership. As they tour pool halls, Eddie teaches Vincent the tricks of scamming, but he eventually grows frustrated with Vincent's showboat antics, leading to an argument and a falling-out. Eddie takes up playing again and soon crosses paths with Vincent as an opponent."
+                )}
+              </p>
+              <a
+                href="https://www.youtube.com/watch?v=nNeTb11wRmw"
+                target="_blank"
+                class="inline-block px-3 py-1 text-white text-sm rounded bg-gray-400 hover:bg-gray-600 dark:bg-gray-800 dark:hover:bg-gray-600 transition"
+              >
+                {gettext("Watch Now $3.99")}
+              </a>
+              <.tag color="red">{gettext("Rated R")}</.tag>
+            </div>
           </div>
-        </div>
 
-        <!-- Movie 3 -->
-        <div class="flex items-start space-x-4 bg-gray-200 p-4 rounded-lg dark:bg-gray-700">
-          <img src={~p"/images/final/movie3.jpg"} alt={gettext("Poolhall Junkies Movie Poster")} class="w-24 h-32 object-cover rounded-md shadow" />
-          <div>
-            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">{gettext("Poolhall Junkies")}</h3>
-            <.rating value={6.8} out_of={10}/>
-            <p class="text-sm text-gray-800 dark:text-gray-300 mb-2">
-            {gettext("Directed by Mars Callahan. A talented pool hustler who has stayed out of the game for years must return to his old ways when his little brother gets involved with his enemy--the very man who held him back from greatness.")}
-            </p>
-            <a href="https://watch.sling.com/1/program/8a28f075fa45de0cb83f4982c0ef8231/watch?trackingid=google-feed" target="_blank"
-              class="inline-block px-3 py-1 bg-gray-400 hover:bg-gray-600 dark:bg-gray-800 dark:hover:bg-gray-600 text-white text-sm rounded transition">
-              {gettext("Watch Now Free")}
-            </a>
-            <.tag color="red">{gettext("Rated R")}</.tag>
+          <!-- Movie 3 -->
+          <div class="flex items-start space-x-4 bg-gray-200 p-4 rounded-lg dark:bg-gray-700">
+            <img
+              src={~p"/images/final/movie3.jpg"}
+              alt={gettext("Poolhall Junkies Movie Poster")}
+              class="w-24 h-32 object-cover rounded-md shadow"
+            />
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                {gettext("Poolhall Junkies")}
+              </h3>
+              <.rating value={6.8} out_of={10} />
+              <p class="text-sm text-gray-800 dark:text-gray-300 mb-2 p-4">
+                {gettext(
+                  "Directed by Mars Callahan. A talented pool hustler who has stayed out of the game for years must return to his old ways when his little brother gets involved with his enemy--the very man who held him back from greatness."
+                )}
+              </p>
+              <a
+                href="https://watch.sling.com/1/program/8a28f075fa45de0cb83f4982c0ef8231/watch?trackingid=google-feed"
+                target="_blank"
+                class="inline-block px-3 py-1 bg-gray-400 hover:bg-gray-600 dark:bg-gray-800 dark:hover:bg-gray-600 text-white text-sm rounded transition"
+              >
+                {gettext("Watch Now Free")}
+              </a>
+              <.tag color="red">{gettext("Rated R")}</.tag>
+            </div>
           </div>
-        </div>
 
-        <!-- Movie 4 -->
-        <div class="flex items-start space-x-4 bg-gray-200 p-4 rounded-lg dark:bg-gray-700">
-          <img src={~p"/images/final/movie4.jpg"} alt={gettext("Stickmen Movie Poster")} class="w-24 h-32 object-cover rounded-md shadow" />
-          <div>
-            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">{gettext("Stickmen")}</h3>
-            <.rating value={6.6} out_of={10}/>
-            <p class="text-sm text-gray-800 dark:text-gray-300 mb-2">
-              {gettext("Directed by Hamish Rothwell. Three friends tour the Wellington pub scene, playing pool with ever-increasing stakes. Then they enter a tournament run by vicious crime boss 'Daddy'. Narrator Kirk Torrance (Outrageous Fortune) guides us through their mission to pocket the money. This movie is unavailable to watch online.")}
-            </p>
-            <.tag color="red">{gettext("Rated R")}</.tag>
+          <!-- Movie 4 -->
+          <div class="flex items-start space-x-4 bg-gray-200 p-4 rounded-lg dark:bg-gray-700">
+            <img
+              src={~p"/images/final/movie4.jpg"}
+              alt={gettext("Stickmen Movie Poster")}
+              class="w-24 h-32 object-cover rounded-md shadow"
+            />
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                {gettext("Stickmen")}
+              </h3>
+              <.rating value={6.6} out_of={10} />
+              <p class="text-sm text-gray-800 dark:text-gray-300 mb-2 p-4">
+                {gettext(
+                  "Directed by Hamish Rothwell. Three friends tour the Wellington pub scene, playing pool with ever-increasing stakes. Then they enter a tournament run by vicious crime boss 'Daddy'. Narrator Kirk Torrance (Outrageous Fortune) guides us through their mission to pocket the money. This movie is unavailable to watch online."
+                )}
+              </p>
+              <.tag color="red">{gettext("Rated R")}</.tag>
+            </div>
           </div>
         </div>
       </div>
-    </div>
     </div>
     """
   end

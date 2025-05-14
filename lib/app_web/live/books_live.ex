@@ -23,10 +23,10 @@ defmodule AppWeb.BooksLive do
                 {gettext("Life Through Pool")}
               </h3>
               <.rating value={5.0} out_of={5} />
-              <p class="text-sm text-gray-800 dark:text-gray-300 mb-2">
+              <p class="text-sm text-gray-800 dark:text-gray-300 mb-2 p-4">
                 {gettext(
                   "By Jospeh Schmidt — Life Through Pool by Joseph Schmidt uses the game of pool as a powerful metaphor for resilience, mindset, and personal growth. Once a promising pool prodigy, Schmidt's life changed drastically after suffering a severe brain injury from an assault. Initially feeling powerless, he later discovered the transformative power of language and mindset, learning that reframing his internal dialogue could help him regain his abilities and reshape his future.
-              The book explores key themes such as self-control, patience, and discipline, showing how the principles of pool apply to life's challenges. Schmidt emphasizes that success is not just about skill but about the way we think, adapt, and overcome setbacks. Through personal experiences and practical insights, he encourages readers to embrace both victories and failures as opportunities for growth, making Life Through Pool both a guide to mastering the game and a deeper reflection on achieving success in life."
+                  The book explores key themes such as self-control, patience, and discipline, showing how the principles of pool apply to life's challenges. Schmidt emphasizes that success is not just about skill but about the way we think, adapt, and overcome setbacks. Through personal experiences and practical insights, he encourages readers to embrace both victories and failures as opportunities for growth, making Life Through Pool both a guide to mastering the game and a deeper reflection on achieving success in life."
                 )}
               </p>
               <a
@@ -39,7 +39,7 @@ defmodule AppWeb.BooksLive do
             </div>
           </div>
 
-    <!-- Book 2 -->
+          <!-- Book 2 -->
           <div class="flex items-start space-x-4 bg-gray-200 p-4 rounded-lg dark:bg-gray-700">
             <img
               src={~p"/images/final/book2.jpg"}
@@ -57,13 +57,13 @@ defmodule AppWeb.BooksLive do
                 )}
               </h3>
               <.rating value={4.6} out_of={5} />
-              <p class="text-sm text-gray-800 dark:text-gray-300 mb-2">
+              <p class="text-sm text-gray-800 dark:text-gray-300 mb-2 p-4">
                 {gettext(
                   "By Ray Martin - World Champion Pool Player Ray \"Cool Cat\" Martin shares his secrets for playing winner's pool in this classic book, which includes an introduction by the author. Written with co-author Rosser Reeves, The 99 Critical Shots in Pool remains one of the most authoritative guides to the game ever written. Over 200 illustrations show the proper form, technique, and approach to shots such as:"
                 )}
               </p>
 
-              <ul class="list-disc list-inside text-sm text-gray-800 dark:text-gray-300 mb-2">
+              <ul class="list-disc list-inside text-sm text-gray-800 dark:text-gray-300 mb-2 p-4">
                 <li>{gettext("The Center Ball Cheat-the-Pocket")}</li>
                 <li>{gettext("The Hook Shot")}</li>
                 <li>{gettext("The Seven Ball Stop Shot")}</li>
@@ -73,7 +73,7 @@ defmodule AppWeb.BooksLive do
                 <li>{gettext("The Side Pocket By-Pass Shot")}</li>
               </ul>
 
-              <p class="text-sm text-gray-800 dark:text-gray-300 mb-2">
+              <p class="text-sm text-gray-800 dark:text-gray-300 mb-2 p-4">
                 {gettext(
                   "Ray Martin, a Billiards Congress of America Hall of Fame inductee, is one of only seven players in the twentieth century to win three or more world 14.1 titles. He co-wrote this book with Rosser Reeves in 1976."
                 )}
@@ -88,7 +88,7 @@ defmodule AppWeb.BooksLive do
             </div>
           </div>
 
-    <!-- Book 3 -->
+          <!-- Book 3 -->
           <div class="flex items-start space-x-4 bg-gray-200 p-4 rounded-lg dark:bg-gray-700">
             <img
               src={~p"/images/final/book3.jpg"}
@@ -100,12 +100,12 @@ defmodule AppWeb.BooksLive do
                 {gettext("Pool and Billiards For Dummies")}
               </h3>
               <.rating value={4.6} out_of={5} />
-              <p class="text-sm text-gray-800 dark:text-gray-300 mb-2">
+              <p class="text-sm text-gray-800 dark:text-gray-300 mb-2 p-4">
                 {gettext("By Nicholas Leider - Practical, step-by-step tips for players of all levels
-            From Snooker to Carom to good-old-fashioned 8- or 9-Ball, Pool & Billiards For Dummies reveals the tips, tricks, and rules of play, covering the variety of the ever-popular games that make up pool and billiards. This hands-on guide discusses everything from the rules and strategies of the games to how to set up a pool room to choosing the right equipment, and is accompanied by dozens of photos and line drawings.
-            See how hard to hit the cue ball and where to hit it, the angle to hold the cue stick and how much chalk to use, how to use a bridge, and how to put spin on the ball
-            Includes advanced pool techniques and trick shots for the seasoned pool sharp
-            With Pool & Billiards For Dummies, even a novice can play like a champion!")}
+              From Snooker to Carom to good-old-fashioned 8- or 9-Ball, Pool & Billiards For Dummies reveals the tips, tricks, and rules of play, covering the variety of the ever-popular games that make up pool and billiards. This hands-on guide discusses everything from the rules and strategies of the games to how to set up a pool room to choosing the right equipment, and is accompanied by dozens of photos and line drawings.
+              See how hard to hit the cue ball and where to hit it, the angle to hold the cue stick and how much chalk to use, how to use a bridge, and how to put spin on the ball
+              Includes advanced pool techniques and trick shots for the seasoned pool sharp
+              With Pool & Billiards For Dummies, even a novice can play like a champion!")}
               </p>
               <a
                 href="https://www.amazon.com/Pool-Billiards-Dummies-Nicholas-Leider/dp/0470565535/ref=zg_bs_g_16536_d_sccl_3/131-5361470-6018031?psc=1"
@@ -117,7 +117,7 @@ defmodule AppWeb.BooksLive do
             </div>
           </div>
 
-    <!-- Book 4 -->
+          <!-- Book 4 -->
           <div class="flex items-start space-x-4 bg-gray-200 p-4 rounded-lg dark:bg-gray-700">
             <img
               src={~p"/images/final/book4.jpg"}
@@ -129,7 +129,7 @@ defmodule AppWeb.BooksLive do
                 {gettext("A Mind for Pool: How To Master The Mental Game")}
               </h3>
               <.rating value={4.5} out_of={5} />
-              <p class="text-sm text-gray-800 dark:text-gray-300 mb-2">
+              <p class="text-sm text-gray-800 dark:text-gray-300 mb-2 p-4">
                 {gettext(
                   "By Philip B Capelle — Pool is largely a mental game. So if you want to realise your full potential, you have got to eliminate the mental mistakes that are holding you back. A Mind for Pool will show you how to think pool like a champion. In the process you will learn how to: play under pressure; handle troublesome opponents; concentrate fully on every shot; overcome anger; adapt to the playing conditions; complete successfully in leagues, tournaments, and money games; evaluate and improve your game have much more fun; experience a quantum leap in your game."
                 )}

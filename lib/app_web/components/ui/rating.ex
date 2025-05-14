@@ -46,13 +46,13 @@ defmodule AppWeb.Components.UI.Rating do
       <% end %>
 
       <%= if @show_numeric do %>
-        <p class="ms-1 text-sm font-medium text-gray-500 dark:text-gray-400">
+        <p class="hidden md:inline ms-1 text-sm font-medium text-gray-500 dark:text-gray-400">
           <%= @numeric_value %>
         </p>
-        <p class="ms-1 text-sm font-medium text-gray-500 dark:text-gray-400">
+        <p class="hidden md:inline ms-1 text-sm font-medium text-gray-500 dark:text-gray-400">
           <%= gettext("out of") %>
         </p>
-        <p class="ms-1 text-sm font-medium text-gray-500 dark:text-gray-400">
+        <p class="hidden md:inline ms-1 text-sm font-medium text-gray-500 dark:text-gray-400">
           <%= @out_of %>
         </p>
       <% end %>
