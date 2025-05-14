@@ -5,20 +5,20 @@ defmodule AppWeb.RulesLive do
   def render(assigns) do
     ~H"""
     <div class="flex flex-col items-center justify-center w-full h-full p-4">
-      <h1 class="text-4xl font-bold mb-6 dark:text-white">
-        {gettext("Official Rules of Billiards Games")}
+      <h1 class="text-center text-4xl font-bold mb-6 text-gray-900 dark:text-white">
+        {gettext("Official Game Rules")}
       </h1>
-      <p class="text-gray-700 mb-8 dark:text-white text-center max-w-3xl">
+      <p class="text-lg text-gray-900 mb-8 dark:text-white text-center max-w-3xl">
         {gettext(
           "Explore the official rules for the popular billiards games 8-Ball, 9-Ball, 10-Ball, and Straight Pool. These rules are based on standards by the World Pool-Billiard Association (WPA) and the Billiard Congress of America (BCA)."
         )}
       </p>
 
-      <div class="space-y-10 bg-gray-50 p-6 rounded-lg shadow-md dark:bg-gray-700 dark:text-white w-full max-w-4xl">
+      <div class="space-y-10 bg-gray-100 p-6 rounded-lg shadow-md dark:bg-gray-800 dark:text-white w-full max-w-4xl">
         <%!-- General Rules --%>
-        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+        <div class="bg-gray-200 dark:bg-gray-700 p-6 rounded-lg shadow-md">
           <h2 class="text-3xl font-semibold mb-4">{gettext("General Rules")}</h2>
-          <ul class="list-disc list-inside space-y-4 text-gray-800 dark:text-white">
+          <ul class="list-disc list-inside space-y-4 text-gray-900 dark:text-white">
             <li>
               <strong>{gettext("Player Responsibility: ")}</strong>
               {gettext(
@@ -91,9 +91,9 @@ defmodule AppWeb.RulesLive do
         </div>
 
         <%!-- 8-Ball Rules --%>
-        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+        <div class="bg-gray-200 dark:bg-gray-700 p-6 rounded-lg shadow-md">
           <h2 class="text-3xl font-semibold mb-4">{gettext("8-Ball Rules")}</h2>
-          <ul class="list-disc list-inside space-y-4 text-gray-800 dark:text-white">
+          <ul class="list-disc list-inside space-y-4 text-gray-900 dark:text-white">
             <li>
               <strong>{gettext("Objective: ")}</strong>
               {gettext(
@@ -144,9 +144,9 @@ defmodule AppWeb.RulesLive do
         </div>
 
         <%!-- 9-Ball Rules --%>
-        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+        <div class="bg-gray-200 dark:bg-gray-700 p-6 rounded-lg shadow-md">
           <h2 class="text-3xl font-semibold mb-4">{gettext("9-Ball Rules")}</h2>
-          <ul class="list-disc list-inside space-y-4 text-gray-800 dark:text-white">
+          <ul class="list-disc list-inside space-y-4 text-gray-900 dark:text-white">
             <li>
               <strong>{gettext("Objective: ")}</strong>
               {gettext(
@@ -198,9 +198,9 @@ defmodule AppWeb.RulesLive do
         </div>
 
         <%!-- 10-Ball Rules --%>
-        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+        <div class="bg-gray-200 dark:bg-gray-700 p-6 rounded-lg shadow-md">
           <h2 class="text-3xl font-semibold mb-4">{gettext("10-Ball Rules")}</h2>
-          <ul class="list-disc list-inside space-y-4 text-gray-800 dark:text-white">
+          <ul class="list-disc list-inside space-y-4 text-gray-900 dark:text-white">
             <li>
               <strong>{gettext("Objective: ")}</strong>
               {gettext(
@@ -268,11 +268,11 @@ defmodule AppWeb.RulesLive do
         </div>
 
         <%!-- 14.1 Continuous / Straight Pool Rules --%>
-        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+        <div class="bg-gray-200 dark:bg-gray-700 p-6 rounded-lg shadow-md">
           <h2 class="text-3xl font-semibold mb-4">
             {gettext("Straight Pool Rules")}
           </h2>
-          <ul class="list-disc list-inside space-y-4 text-gray-800 dark:text-white">
+          <ul class="list-disc list-inside space-y-4 text-gray-900 dark:text-white">
             <li>
               <strong>{gettext("Objective: ")}</strong>
               {gettext(

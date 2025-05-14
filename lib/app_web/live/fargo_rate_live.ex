@@ -7,14 +7,19 @@ defmodule AppWeb.FargoRateLive do
   @impl true
   def render(assigns) do
     ~H"""
-    <div class="max-w-5xl mx-auto p-4 space-y-12 text-gray-800 dark:text-white">
+    <div class="max-w-4xl mx-auto p-2 space-y-12 text-gray-800 dark:text-white">
       <section>
-        <h1 class="text-4xl font-bold mb-4 text-center dark:text-white">
-          {gettext("Fargo Rate Lookup")}
-        </h1>
+        <div class="flex flex-col items-center justify-center w-full h-full p-4">
+          <h1 class="text-center text-4xl font-bold mb-6 text-gray-900 dark:text-white">
+            {gettext("Fargo Rate Lookup")}
+          </h1>
+          <p class="text-lg text-gray-900 dark:text-white text-center max-w-3xl">
+            {gettext("Find out the Fargo Rate of players by searching for their first or last name.")}
+          </p>
+        </div>
       </section>
 
-      <section class="bg-gray-50 p-6 rounded-lg shadow-md dark:bg-gray-700 dark:text-white">
+      <section class="bg-gray-100 p-4 rounded-lg shadow-md dark:bg-gray-700 dark:text-white">
         <.form for={} phx-submit="search" class="flex flex-wrap items-center gap-4">
           <input
             name="query"
@@ -32,31 +37,31 @@ defmodule AppWeb.FargoRateLive do
           <p class="text-red-500 mt-4">{inspect(@error)}</p>
         <% end %>
 
-        <div class="overflow-x-auto mt-6">
-        <table class="w-full table-auto border-collapse border border-gray-300 dark:border-gray-600">
-          <thead>
-            <tr>
-              <th class="border p-2">{gettext("First Name")}</th>
-              <th class="border p-2">{gettext("Last Name")}</th>
-              <th class="border p-2">{gettext("Fargo Rate")}</th>
-              <th class="border p-2">{gettext("Robustness")}</th>
-              <th class="border p-2">{gettext("Membership ID")}</th>
-              <th class="border p-2">{gettext("Location")}</th>
-            </tr>
-          </thead>
-          <tbody>
-            <%= for player <- @players do %>
+        <div class="overflow-x-auto mt-4">
+          <table class="w-full table-auto border-collapse border border-gray-300 dark:border-gray-600">
+            <thead>
               <tr>
-                <td class="border p-2">{player["firstName"]}</td>
-                <td class="border p-2">{player["lastName"]}</td>
-                <td class="border p-2">{player["effectiveRating"]}</td>
-                <td class="border p-2">{player["robustness"]}</td>
-                <td class="border p-2">{player["membershipId"]}</td>
-                <td class="border p-2">{player["location"] || "N/A"}</td>
+                <th class="border p-2">{gettext("First Name")}</th>
+                <th class="border p-2">{gettext("Last Name")}</th>
+                <th class="border p-2">{gettext("Fargo Rate")}</th>
+                <th class="border p-2">{gettext("Robustness")}</th>
+                <th class="border p-2">{gettext("Membership ID")}</th>
+                <th class="border p-2">{gettext("Location")}</th>
               </tr>
-            <% end %>
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              <%= for player <- @players do %>
+                <tr>
+                  <td class="border p-2">{player["firstName"]}</td>
+                  <td class="border p-2">{player["lastName"]}</td>
+                  <td class="border p-2">{player["effectiveRating"]}</td>
+                  <td class="border p-2">{player["robustness"]}</td>
+                  <td class="border p-2">{player["membershipId"]}</td>
+                  <td class="border p-2">{player["location"] || "N/A"}</td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
         </div>
       </section>
     </div>

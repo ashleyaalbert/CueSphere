@@ -5,11 +5,13 @@ defmodule AppWeb.BooksLive do
   @impl true
   def render(assigns) do
     ~H"""
-    <div class="flex flex-col items-center justify-center w-full h-full p-4">
-      <h1 class="text-4xl font-bold text-center text-gray-700 dark:text-white">
-        {gettext("Recommended Billiard Books")}
-      </h1>
-      <div class="mt-8 bg-white shadow-lg rounded-xl p-6 md:p-10 dark:bg-gray-800 dark:text-gray-200">
+    <div>
+      <div class="flex flex-col items-center justify-center w-full h-full p-4">
+          <h1 class="text-center text-4xl font-bold mb-6 text-gray-900 dark:text-white">
+            {gettext("Recommended Billiard Books")}
+          </h1>
+        </div>
+      <div class="mt-4 bg-gray-100 shadow-lg rounded-xl p-6 md:p-10 dark:bg-gray-800 dark:text-gray-200">
         <div class="mt-6 grid grid-cols-1 gap-6">
           <!-- Book 1 -->
           <div class="flex items-start space-x-4 bg-gray-200 p-4 rounded-lg dark:bg-gray-700">

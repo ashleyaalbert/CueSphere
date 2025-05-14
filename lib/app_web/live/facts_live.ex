@@ -7,16 +7,16 @@ defmodule AppWeb.FactsLive do
   def render(assigns) do
     ~H"""
     <div class="flex flex-col items-center justify-center w-full h-full p-4">
-      <h1 class="text-4xl font-bold text-gray-900 dark:text-white">
+      <h1 class="text-center text-4xl font-bold mb-6 text-gray-900 dark:text-white">
         {gettext("Billiards Facts and History")}
       </h1>
-      <p class="mt-4 text-lg text-gray-700 dark:text-gray-300">
+      <p class="text-lg text-gray-900 mb-4 dark:text-white text-center max-w-3xl">
         {gettext(
           "A brief listing of facts and the history of billiards as it evolved over the centuries."
         )}
       </p>
     </div>
-    <div class="bg-gray-50 p-6 rounded-lg shadow-md dark:bg-gray-700 dark:text-white">
+    <div class="bg-gray-100 p-6 rounded-lg shadow-md dark:bg-gray-700 dark:text-white">
     <.timeline entries={[
       %{
         date: gettext("1400s"),

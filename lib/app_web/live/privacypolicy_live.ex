@@ -4,10 +4,10 @@ defmodule AppWeb.PrivacyPolicyLive do
   @impl true
   def render(assigns) do
     ~H"""
-    <h1 class="text-4xl font-semibold text-center text-gray-700 dark:text-white">
+    <h1 class="text-center text-4xl font-bold mb-6 text-gray-900 dark:text-white">
       {gettext("Privacy Policy")}
     </h1>
-    <div class="mt-8 bg-white shadow-lg rounded-xl p-6 md:p-10 dark:bg-gray-800 dark:text-gray-200">
+    <div class="mt-8 bg-gray-100 shadow-lg rounded-xl p-6 md:p-10 dark:bg-gray-800 dark:text-gray-200">
       <div class="mt-6 space-y-8">
         <!-- Introduction -->
         <div class="bg-gray-200 p-6 rounded-lg dark:bg-gray-700">
@@ -25,7 +25,7 @@ defmodule AppWeb.PrivacyPolicyLive do
             </p>
           </div>
         </div>
-        
+
     <!-- Data Collection -->
         <div class="bg-gray-200 p-6 rounded-lg dark:bg-gray-700">
           <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">
@@ -45,7 +45,7 @@ defmodule AppWeb.PrivacyPolicyLive do
             </ul>
           </div>
         </div>
-        
+
     <!-- How We Use Data -->
         <div class="bg-gray-200 p-6 rounded-lg dark:bg-gray-700">
           <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">
@@ -67,7 +67,7 @@ defmodule AppWeb.PrivacyPolicyLive do
             </ul>
           </div>
         </div>
-        
+
     <!-- Data Security -->
         <div class="bg-gray-200 p-6 rounded-lg dark:bg-gray-700">
           <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">
@@ -86,7 +86,7 @@ defmodule AppWeb.PrivacyPolicyLive do
             </p>
           </div>
         </div>
-        
+
     <!-- Your Rights -->
         <div class="bg-gray-200 p-6 rounded-lg dark:bg-gray-700">
           <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">
@@ -114,7 +114,7 @@ defmodule AppWeb.PrivacyPolicyLive do
             </p>
           </div>
         </div>
-        
+
     <!-- Changes to Policy -->
         <div class="bg-gray-200 p-6 rounded-lg dark:bg-gray-700">
           <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">
@@ -133,7 +133,7 @@ defmodule AppWeb.PrivacyPolicyLive do
             </p>
           </div>
         </div>
-        
+
     <!-- Contact -->
         <div class="bg-gray-200 p-6 rounded-lg dark:bg-gray-700">
           <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">

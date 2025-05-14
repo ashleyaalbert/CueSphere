@@ -5,18 +5,19 @@ defmodule AppWeb.DrillsLive do
   def render(assigns) do
     ~H"""
     <div class="flex flex-col items-center justify-center w-full h-full p-4">
-      <h1 class="text-4xl font-bold mb-6 dark:text-white">{gettext("Drills")}</h1>
-      <p class="text-gray-700 mb-4 dark:text-white flex flex-col items-center justify-center w-full h-full">
+      <h1 class="text-center text-4xl font-bold mb-6 text-gray-900 dark:text-white">{gettext("Drills")}</h1>
+      <p class="text-lg text-gray-900 mb-8 dark:text-white text-center max-w-3xl">
         {gettext(
           "This page is intended for moderate to advanced players to elevate their game. If you are looking for more beginner friendly content, check out the Tutorials page!"
         )}
       </p>
-      <div class="space-y-10 bg-gray-50 p-6 rounded-lg shadow-md dark:bg-gray-700 dark:text-white">
+
+      <div class="mt-4 space-y-10 bg-gray-100 p-6 rounded-lg shadow-md dark:bg-gray-700 dark:text-white">
         <div>
           <h2 class="text-4xl font-semibold mb-2 dark:text-white">
             {gettext("13 Balls Half Square")}
           </h2>
-          <p class="text-gray-700 mb-4 dark:text-white">
+          <p class="text-gray-900 mb-4 dark:text-white">
             {gettext(
               "This is a medium level drill. Remember if you cannot complete it simply mark your best score and try to beat it every time you practice it!"
             )}
@@ -41,7 +42,7 @@ defmodule AppWeb.DrillsLive do
           <h2 class="text-4xl font-semibold mb-2 dark:text-white">
             {gettext("Top 10 Aim, Alignment, and Stroke Drills")}
           </h2>
-          <p class="text-gray-700 mb-4 dark:text-white">
+          <p class="text-gray-900 mb-4 dark:text-white">
             {gettext(
               "Dr. Dave demonstrates the Top 10 most useful drills to test and improve your aim, alignment, and stroke."
             )}
@@ -66,7 +67,7 @@ defmodule AppWeb.DrillsLive do
           <h2 class="text-4xl font-semibold mb-2 dark:text-white">
             {gettext("Pool Drills Playlist")}
           </h2>
-          <p class="text-gray-700 mb-4 dark:text-white">
+          <p class="text-gray-900 mb-4 dark:text-white">
             {gettext(
               "Something that you have learned has to be practiced until you can do it automatically. This playlists offers some useful drills that will improve certain parts of your game."
             )}

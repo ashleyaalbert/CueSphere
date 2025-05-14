@@ -3,19 +3,19 @@ defmodule AppWeb.LeaguesLive do
 
   def render(assigns) do
     ~H"""
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-      <h1 class="text-4xl font-bold text-center text-gray-700 dark:text-white">
-        {gettext("Billiards Leagues Overview")}
+    <div class="flex flex-col items-center justify-center w-full h-full p-4">
+      <h1 class="text-center text-4xl font-bold mb-6 text-gray-900 dark:text-white">
+        {gettext("Billiards Leagues")}
       </h1>
-      <p class="text-center mt-4 text-gray-700 dark:text-white max-w-3xl mx-auto">
+      <p class="text-lg text-gray-900 mb-8 dark:text-white text-center max-w-3xl">
         {gettext(
           "Explore popular billiards leagues like APA, TAP, BCA, and more. Each league has unique formats, rules, and competitive structures."
         )}
       </p>
 
-      <div class="space-y-10 bg-gray-50 p-6 rounded-lg shadow-md dark:bg-gray-700 dark:text-white w-full max-w-4xl mx-auto mt-10">
+      <div class="space-y-10 bg-gray-100 p-6 rounded-lg shadow-md dark:bg-gray-800 dark:text-white w-full max-w-4xl mx-auto mt-10">
         <%= for league <- @leagues do %>
-          <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md flex flex-col md:flex-row gap-6 items-start">
+          <div class="bg-gray-200 dark:bg-gray-700 p-6 rounded-xl shadow-md flex flex-col md:flex-row gap-6 items-start">
             <!-- Logo -->
             <div class="w-full md:w-28 flex-shrink-0">
               <img
@@ -30,16 +30,16 @@ defmodule AppWeb.LeaguesLive do
               <h2 class="text-2xl font-bold text-black dark:text-white mb-2">
                 {league.name}
               </h2>
-              <div class="mt-4 text-base text-black dark:text-gray-300 space-y-1">
+              <div class="mt-4 text-base text-black dark:text-gray-100 space-y-1">
                 <p>
-                  <span class="font-semibold text-gray-800 dark:text-white">{gettext("Games:")}</span>
+                  <span class="font-semibold text-gray-900 dark:text-white">{gettext("Games:")}</span>
                   {Enum.join(league.games, ", ")}
                 </p>
                 <p>
                   <a
                     href={league.website}
                     target="_blank"
-                    class="text-lg font-medium hover:underline text-gray-800 dark:text-white"
+                    class="text-lg font-medium hover:underline text-gray-900 dark:text-white"
                     aria-label={"Visit #{league.name} website"}
                   >
                     {gettext("Visit League Website")}

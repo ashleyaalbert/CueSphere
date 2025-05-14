@@ -4,10 +4,10 @@ defmodule AppWeb.LicensingLive do
   @impl true
   def render(assigns) do
     ~H"""
-    <h1 class="text-4xl font-semibold text-center text-gray-700 dark:text-white">
+    <h1 class="text-center text-4xl font-bold mb-6 text-gray-900 dark:text-white">
       {gettext("Software Licensing")}
     </h1>
-    <div class="mt-8 bg-white shadow-lg rounded-xl p-6 md:p-10 dark:bg-gray-800 dark:text-gray-200">
+    <div class="mt-8 bg-gray-100 shadow-lg rounded-xl p-6 md:p-10 dark:bg-gray-800 dark:text-gray-200">
       <div class="mt-6 space-y-6">
         <!-- MIT License Section -->
         <div class="bg-gray-200 p-6 rounded-lg dark:bg-gray-700">
@@ -35,7 +35,7 @@ defmodule AppWeb.LicensingLive do
             </p>
           </div>
         </div>
-        
+
     <!-- Third-Party Licenses Section -->
         <div class="bg-gray-200 p-6 rounded-lg dark:bg-gray-700">
           <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">
@@ -47,7 +47,7 @@ defmodule AppWeb.LicensingLive do
               <h4 class="font-medium">Phoenix Framework</h4>
               <p>MIT License - Copyright (c) 2014 Chris McCord</p>
             </div>
-            
+
     <!-- Tailwind CSS -->
             <div>
               <h4 class="font-medium">Tailwind CSS</h4>
@@ -55,7 +55,7 @@ defmodule AppWeb.LicensingLive do
             </div>
           </div>
         </div>
-        
+
     <!-- Additional Licensing Information -->
         <div class="bg-gray-200 p-6 rounded-lg dark:bg-gray-700">
           <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">

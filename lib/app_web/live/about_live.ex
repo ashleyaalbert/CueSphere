@@ -5,7 +5,7 @@ defmodule AppWeb.AboutLive do
   @impl true
   def render(assigns) do
     ~H"""
-    <div class="max-w-5xl mx-auto p-6 space-y-12 text-gray-800">
+    <div class="max-w-5xl mx-auto p-6 space-y-12 text-gray-900">
       <section>
         <h1 class="text-4xl font-bold mb-4 text-center dark:text-white">
           {gettext("About This Project")}
@@ -13,7 +13,7 @@ defmodule AppWeb.AboutLive do
       </section>
 
     <!-- Why -->
-      <section class="bg-gray-50 p-6 rounded-lg shadow-md dark:bg-gray-700 dark:text-white">
+      <section class="bg-gray-100 p-6 rounded-lg shadow-md dark:bg-gray-700 dark:text-white">
         <h2 class="text-2xl font-semibold mb-4">{gettext("Why Did I Make a Website About Pool?")}</h2>
 
         <div class="space-y-6">
@@ -38,7 +38,7 @@ defmodule AppWeb.AboutLive do
       </section>
 
     <!-- Images -->
-      <section class="bg-gray-50 p-6 rounded-lg shadow-md dark:bg-gray-700 dark:text-white">
+      <section class="bg-gray-100 p-6 rounded-lg shadow-md dark:bg-gray-700 dark:text-white">
         <div class="flex items-center justify-center gap-2 mb-4">
           <img src={~p"/images/final/decorative-wave.png"} alt="" class="h-6 w-6 block dark:hidden" />
           <img src={~p"/images/final/decorative-wave-white.png"} alt="" class="h-6 w-6 hidden dark:block" />
@@ -52,7 +52,7 @@ defmodule AppWeb.AboutLive do
       </section>
 
     <!-- Stories -->
-      <section class="bg-gray-50 p-6 rounded-lg shadow-md dark:bg-gray-700 dark:text-white">
+      <section class="bg-gray-100 p-6 rounded-lg shadow-md dark:bg-gray-700 dark:text-white">
         <h2 class="text-2xl font-semibold mb-4">{gettext("Personal Journey")}</h2>
 
         <div class="space-y-6">

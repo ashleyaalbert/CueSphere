@@ -9,8 +9,8 @@ defmodule AppWeb.PurchaseLive do
     ~H"""
     <div class="container mx-auto px-4">
       <div class="flex flex-col items-center justify-center w-full h-full p-4">
-        <h1 class="text-4xl font-bold text-center mb-6">{gettext("Purchase Billiards Equipment")}</h1>
-        <p class="mt-4 text-lg text-gray-700 dark:text-gray-300">
+        <h1 class="text-center text-4xl font-bold mb-6 text-gray-900 dark:text-white">{gettext("Purchase Billiards Equipment")}</h1>
+        <p class="text-lg text-gray-900 mb-8 dark:text-white text-center max-w-3xl">
           {gettext(
             "A chart of billiards sales and a listing of links for billiards items to be purchased."
           )}
@@ -18,7 +18,7 @@ defmodule AppWeb.PurchaseLive do
       </div>
 
     <!-- Chart Section -->
-      <div class="bg-white dark:bg-gray-700 dark:text-white shadow-lg rounded-lg p-6 mb-6">
+      <div class="bg-gray-100 dark:bg-gray-700 dark:text-white shadow-lg rounded-lg p-6 mb-6">
         <p class="text-lg text-gray-700 dark:text-white mb-4">
           {gettext(
             "This chart demonstrates the increase in sales of billiards equipment in recent years. It highlights the growing demand for high-quality equipment and the rising popularity of billiards as a sport. Below the chart, you'll find more information about billiards equipment, along with links to purchase these items."

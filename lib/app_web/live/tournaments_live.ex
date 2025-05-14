@@ -24,11 +24,10 @@ defmodule AppWeb.TournamentsLive do
   def render(assigns) do
     ~H"""
     <div class="flex flex-col items-center justify-center w-full h-full p-4">
-      <h1 class="text-4xl font-bold text-center text-gray-700 dark:text-white mb-6">
+      <h1 class="text-center text-4xl font-bold mb-6 text-gray-900 dark:text-white">
         {gettext("Tournaments")}
       </h1>
-
-      <p class="text-gray-700 dark:text-gray-300 text-center max-w-2xl mb-6">
+      <p class="text-lg text-gray-900 mb-8 dark:text-white text-center max-w-3xl">
         {gettext("Log in to join tournaments or create tournaments to play with others!")}
       </p>
 
@@ -43,7 +42,7 @@ defmodule AppWeb.TournamentsLive do
       <% end %>
 
     <!-- Tournaments List -->
-      <div class="bg-white shadow-lg rounded-xl p-6 md:p-10 dark:bg-gray-800 dark:text-gray-200 w-full max-w-4xl space-y-6">
+      <div class="bg-gray-100 shadow-lg rounded-xl p-6 md:p-10 dark:bg-gray-800 dark:text-gray-100 w-full max-w-4xl space-y-6">
         <%= for tournament <- @tournaments do %>
           <div class="flex flex-col md:flex-row gap-6 bg-gray-200 p-6 rounded-lg dark:bg-gray-700">
             <!-- Left side - Tournament info -->
