@@ -107,7 +107,7 @@ defmodule AppWeb.TournamentsLive do
               </div>
             </div>
 
-            <!-- Right side - Image (only when present) -->
+    <!-- Right side - Image (only when present) -->
             <%= if tournament.pictures && length(tournament.pictures) > 0 do %>
               <div class="md:w-1/3 flex flex-col">
                 <div class="flex-1 flex items-center justify-center bg-gray-300 dark:bg-gray-600 rounded-lg overflow-hidden">
@@ -183,7 +183,11 @@ defmodule AppWeb.TournamentsLive do
             >
               {gettext("Cancel")}
             </.button>
-            <.button type="submit" color="alternative">
+            <.button
+              type="submit"
+              color="alternative"
+              phx-click={AppWeb.Components.UI.Modal.hide_modal("create-tournament-modal")}
+            >
               {gettext("Create")}
             </.button>
           </div>
@@ -196,8 +200,6 @@ defmodule AppWeb.TournamentsLive do
   @impl true
   def handle_event("create_tournament", %{"tournament" => tournament_params}, socket) do
     changeset = Tournaments.change_tournament(%Tournaments.Tournament{}, tournament_params)
-
-    IO.inspect(changeset)
 
     if changeset.valid? do
       uploaded_files =
@@ -278,7 +280,6 @@ defmodule AppWeb.TournamentsLive do
   end
 
   def handle_event("validate", %{"tournament" => tournament_params}, socket) do
-    IO.inspect(socket.assigns)
     changeset = Tournaments.change_tournament(%Tournament{}, tournament_params)
     {:noreply, assign(socket, form: to_form(changeset, action: :validate))}
   end
@@ -297,6 +298,7 @@ defmodule AppWeb.TournamentsLive do
         {:noreply,
          socket
          |> assign(:form, to_form(Tournaments.change_tournament(%Tournament{})))
+         |> assign(:tournaments, Tournaments.list_tournaments())
          |> put_flash(:info, "Tournament created successfully")}
 
       {:error, %Ecto.Changeset{} = changeset} ->
