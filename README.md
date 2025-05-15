@@ -25,3 +25,5 @@ I have the following:
  - Google OAuth Integration
  - Displaying fancy Charts via e.g. charts.js
  - File Uploads
+ ## Additional Note
+ I was having difficulties getting this on linuxremote thus the full version seen in the video is from my local host.
