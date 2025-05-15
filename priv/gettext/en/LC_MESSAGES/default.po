@@ -51,26 +51,6 @@ msgstr ""
 msgid "close"
 msgstr ""
 
-#: lib/app_web/controllers/page_html/home.html.heex:20
-#, elixir-autogen, elixir-format
-msgid "About Me:"
-msgstr ""
-
-#: lib/app_web/controllers/page_html/home.html.heex:22
-#, elixir-autogen, elixir-format
-msgid "Fun Fact:"
-msgstr ""
-
-#: lib/app_web/controllers/page_html/home.html.heex:21
-#, elixir-autogen, elixir-format
-msgid "I am a Computer Science major graduating on May 18, 2025 from Bucknell University. I grew up in Coal Township, PA and went to Our Lady of Lourdes Regional School. In my free time, I enjoy spending time with family and friends or shooting pool! My favorite song to listen to is The Sweet Escape by Gwen Stefani."
-msgstr ""
-
-#: lib/app_web/controllers/page_html/home.html.heex:23
-#, elixir-autogen, elixir-format
-msgid "I was born in Lewisburg, PA (which means I was always meant to come to Bucknell...right?)."
-msgstr ""
-
 #: lib/app_web/live/user_settings_live.ex:10
 #, elixir-autogen, elixir-format
 msgid "Account Settings"
@@ -79,26 +59,6 @@ msgstr ""
 #: lib/app_web/live/user_registration_live.ex:13
 #, elixir-autogen, elixir-format
 msgid "Already registered?"
-msgstr ""
-
-#: lib/app_web/controllers/page_html/home.html.heex:42
-#, elixir-autogen, elixir-format
-msgid "C"
-msgstr ""
-
-#: lib/app_web/controllers/page_html/home.html.heex:54
-#, elixir-autogen, elixir-format
-msgid "C#"
-msgstr ""
-
-#: lib/app_web/controllers/page_html/home.html.heex:57
-#, elixir-autogen, elixir-format
-msgid "C++"
-msgstr ""
-
-#: lib/app_web/controllers/page_html/home.html.heex:69
-#, elixir-autogen, elixir-format
-msgid "CSS"
 msgstr ""
 
 #: lib/app_web/live/user_settings_live.ex:33
@@ -122,6 +82,7 @@ msgid "Confirm my account"
 msgstr ""
 
 #: lib/app_web/components/ui/navbar.ex:89
+#: lib/app_web/live/privacypolicy_live.ex:140
 #, elixir-autogen, elixir-format
 msgid "Contact Us"
 msgstr ""
@@ -129,11 +90,6 @@ msgstr ""
 #: lib/app_web/live/user_registration_live.ex:40
 #, elixir-autogen, elixir-format
 msgid "Create an account"
-msgstr ""
-
-#: lib/app_web/controllers/message_html/index.html.heex:24
-#, elixir-autogen, elixir-format
-msgid "Delete"
 msgstr ""
 
 #: lib/app_web/live/user_login_live.ex:10
@@ -145,26 +101,6 @@ msgstr ""
 #: lib/app_web/live/user_login_live.ex:25
 #, elixir-autogen, elixir-format
 msgid "Forgot your password?"
-msgstr ""
-
-#: lib/app_web/controllers/page_html/home.html.heex:66
-#, elixir-autogen, elixir-format
-msgid "HTML"
-msgstr ""
-
-#: lib/app_web/controllers/page_html/home.html.heex:48
-#, elixir-autogen, elixir-format
-msgid "Haskell"
-msgstr ""
-
-#: lib/app_web/controllers/page_html/home.html.heex:39
-#, elixir-autogen, elixir-format
-msgid "Java"
-msgstr ""
-
-#: lib/app_web/controllers/page_html/home.html.heex:36
-#, elixir-autogen, elixir-format
-msgid "JavaScript"
 msgstr ""
 
 #: lib/app_web/components/ui/navbar.ex:113
@@ -210,36 +146,6 @@ msgstr ""
 msgid "Oops, something went wrong! Please check the errors below."
 msgstr ""
 
-#: lib/app_web/controllers/page_html/home.html.heex:60
-#, elixir-autogen, elixir-format
-msgid "PHP"
-msgstr ""
-
-#: lib/app_web/controllers/page_html/home.html.heex:29
-#, elixir-autogen, elixir-format
-msgid "Programming Languages"
-msgstr ""
-
-#: lib/app_web/controllers/page_html/home.html.heex:51
-#, elixir-autogen, elixir-format
-msgid "Prolog"
-msgstr ""
-
-#: lib/app_web/controllers/page_html/home.html.heex:33
-#, elixir-autogen, elixir-format
-msgid "Python"
-msgstr ""
-
-#: lib/app_web/controllers/page_html/home.html.heex:45
-#, elixir-autogen, elixir-format
-msgid "R"
-msgstr ""
-
-#: lib/app_web/controllers/page_html/home.html.heex:63
-#, elixir-autogen, elixir-format
-msgid "RISC-V"
-msgstr ""
-
 #: lib/app_web/components/ui/navbar.ex:116
 #: lib/app_web/live/user_confirmation_instructions_live.ex:24
 #: lib/app_web/live/user_confirmation_live.ex:19
@@ -265,7 +171,7 @@ msgstr ""
 msgid "Reset Password"
 msgstr ""
 
-#: lib/app_web/components/layouts/app.html.heex:66
+#: lib/app_web/components/layouts/app.html.heex:91
 #: lib/app_web/controllers/message_html/message_form.html.heex:9
 #, elixir-autogen, elixir-format
 msgid "Save Message"
@@ -321,11 +227,6 @@ msgstr ""
 msgid "All Messages"
 msgstr ""
 
-#: lib/app_web/controllers/message_html/index.html.heex:23
-#, elixir-autogen, elixir-format
-msgid "Are you sure?"
-msgstr ""
-
 #: lib/app_web/controllers/message_html/edit.html.heex:8
 #: lib/app_web/controllers/message_html/new.html.heex:18
 #: lib/app_web/controllers/message_html/show.html.heex:12
@@ -350,7 +251,7 @@ msgstr ""
 msgid "Confirm new password"
 msgstr ""
 
-#: lib/app_web/components/layouts/app.html.heex:60
+#: lib/app_web/components/layouts/app.html.heex:85
 #, elixir-autogen, elixir-format, fuzzy
 msgid "Contact us"
 msgstr ""
@@ -371,7 +272,7 @@ msgstr ""
 msgid "Edit Message"
 msgstr ""
 
-#: lib/app_web/components/layouts/app.html.heex:62
+#: lib/app_web/components/layouts/app.html.heex:87
 #: lib/app_web/controllers/message_html/index.html.heex:14
 #: lib/app_web/controllers/message_html/message_form.html.heex:5
 #: lib/app_web/controllers/message_html/show.html.heex:7
@@ -398,7 +299,7 @@ msgstr ""
 msgid "Logging in..."
 msgstr ""
 
-#: lib/app_web/components/layouts/app.html.heex:64
+#: lib/app_web/components/layouts/app.html.heex:89
 #: lib/app_web/controllers/message_html/index.html.heex:16
 #: lib/app_web/controllers/message_html/message_form.html.heex:7
 #: lib/app_web/controllers/message_html/show.html.heex:2
@@ -407,7 +308,6 @@ msgstr ""
 msgid "Message"
 msgstr ""
 
-#: lib/app_web/controllers/message_html/index.html.heex:7
 #: lib/app_web/controllers/message_html/new.html.heex:4
 #, elixir-autogen, elixir-format, fuzzy
 msgid "New Message"
@@ -424,17 +324,12 @@ msgstr ""
 msgid "Password"
 msgstr ""
 
-#: lib/app_web/components/layouts/app.html.heex:63
+#: lib/app_web/components/layouts/app.html.heex:88
 #: lib/app_web/controllers/message_html/index.html.heex:15
 #: lib/app_web/controllers/message_html/message_form.html.heex:6
 #: lib/app_web/controllers/message_html/show.html.heex:8
 #, elixir-autogen, elixir-format
 msgid "Subject"
-msgstr ""
-
-#: lib/app_web/controllers/message_html/show.html.heex:3
-#, elixir-autogen, elixir-format, fuzzy
-msgid "This is a message record from your database."
 msgstr ""
 
 #: lib/app_web/live/user_settings_live.ex:83
@@ -443,13 +338,12 @@ msgid "Updating..."
 msgstr ""
 
 #: lib/app_web/controllers/message_html/edit.html.heex:3
-#: lib/app_web/controllers/message_html/new.html.heex:8
 #, elixir-autogen, elixir-format, fuzzy
 msgid "Use this form to manage message records in your database."
 msgstr ""
 
-#: lib/app_web/user_auth.ex:175
-#: lib/app_web/user_auth.ex:237
+#: lib/app_web/user_auth.ex:174
+#: lib/app_web/user_auth.ex:240
 #, elixir-autogen, elixir-format
 msgid "You must log in to access this page."
 msgstr ""
@@ -479,92 +373,87 @@ msgstr ""
 msgid "Welcome back!"
 msgstr ""
 
-#: lib/app_web/live/books_live.ex:79
+#: lib/app_web/live/books_live.ex:136
 #, elixir-autogen, elixir-format
 msgid "A Mind for Pool: How To Master The Mental Game"
 msgstr ""
 
-#: lib/app_web/live/books_live.ex:77
+#: lib/app_web/live/books_live.ex:131
 #, elixir-autogen, elixir-format
 msgid "A Mind for Pool: How To Master The Mental Game Book Cover"
 msgstr ""
 
+#: lib/app_web/components/layouts/app.html.heex:78
 #: lib/app_web/components/ui/navbar.ex:58
+#: lib/app_web/controllers/page_html/home.html.heex:66
 #, elixir-autogen, elixir-format, fuzzy
 msgid "About"
 msgstr ""
 
 #: lib/app_web/components/ui/navbar.ex:71
+#: lib/app_web/controllers/page_html/home.html.heex:105
 #, elixir-autogen, elixir-format
 msgid "Books"
 msgstr ""
 
-#: lib/app_web/live/books_live.ex:23
-#: lib/app_web/live/books_live.ex:51
-#: lib/app_web/live/books_live.ex:70
-#: lib/app_web/live/books_live.ex:85
+#: lib/app_web/live/books_live.ex:40
+#: lib/app_web/live/books_live.ex:92
+#: lib/app_web/live/books_live.ex:122
+#: lib/app_web/live/books_live.ex:150
 #, elixir-autogen, elixir-format
 msgid "Buy Now"
 msgstr ""
 
-#: lib/app_web/live/books_live.ex:18
-#, elixir-autogen, elixir-format
-msgid "By Jospeh Schmidt — Life Through Pool by Joseph Schmidt uses the game of pool as a powerful metaphor for resilience, mindset, and personal growth. Once a promising pool prodigy, Schmidt's life changed drastically after suffering a severe brain injury from an assault. Initially feeling powerless, he later discovered the transformative power of language and mindset, learning that reframing his internal dialogue could help him regain his abilities and reshape his future.\n          The book explores key themes such as self-control, patience, and discipline, showing how the principles of pool apply to life's challenges. Schmidt emphasizes that success is not just about skill but about the way we think, adapt, and overcome setbacks. Through personal experiences and practical insights, he encourages readers to embrace both victories and failures as opportunities for growth, making Life Through Pool both a guide to mastering the game and a deeper reflection on achieving success in life."
-msgstr ""
-
-#: lib/app_web/live/books_live.ex:62
-#, elixir-autogen, elixir-format
-msgid "By Nicholas Leider - Practical, step-by-step tips for players of all levels\n        From Snooker to Carom to good-old-fashioned 8- or 9-Ball, Pool & Billiards For Dummies reveals the tips, tricks, and rules of play, covering the variety of the ever-popular games that make up pool and billiards. This hands-on guide discusses everything from the rules and strategies of the games to how to set up a pool room to choosing the right equipment, and is accompanied by dozens of photos and line drawings.\n        See how hard to hit the cue ball and where to hit it, the angle to hold the cue stick and how much chalk to use, how to use a bridge, and how to put spin on the ball\n        Includes advanced pool techniques and trick shots for the seasoned pool sharp\n        With Pool & Billiards For Dummies, even a novice can play like a champion!"
-msgstr ""
-
-#: lib/app_web/live/books_live.ex:81
+#: lib/app_web/live/books_live.ex:140
 #, elixir-autogen, elixir-format
 msgid "By Philip B Capelle — Pool is largely a mental game. So if you want to realise your full potential, you have got to eliminate the mental mistakes that are holding you back. A Mind for Pool will show you how to think pool like a champion. In the process you will learn how to: play under pressure; handle troublesome opponents; concentrate fully on every shot; overcome anger; adapt to the playing conditions; complete successfully in leagues, tournaments, and money games; evaluate and improve your game have much more fun; experience a quantum leap in your game."
 msgstr ""
 
-#: lib/app_web/live/books_live.ex:34
+#: lib/app_web/live/books_live.ex:64
 #, elixir-autogen, elixir-format
 msgid "By Ray Martin - World Champion Pool Player Ray \"Cool Cat\" Martin shares his secrets for playing winner's pool in this classic book, which includes an introduction by the author. Written with co-author Rosser Reeves, The 99 Critical Shots in Pool remains one of the most authoritative guides to the game ever written. Over 200 illustrations show the proper form, technique, and approach to shots such as:"
 msgstr ""
 
-#: lib/app_web/live/movies_live.ex:65
+#: lib/app_web/live/movies_live.ex:116
 #, elixir-autogen, elixir-format
 msgid "Directed by Hamish Rothwell. Three friends tour the Wellington pub scene, playing pool with ever-increasing stakes. Then they enter a tournament run by vicious crime boss 'Daddy'. Narrator Kirk Torrance (Outrageous Fortune) guides us through their mission to pocket the money. This movie is unavailable to watch online."
 msgstr ""
 
-#: lib/app_web/live/movies_live.ex:49
+#: lib/app_web/live/movies_live.ex:87
 #, elixir-autogen, elixir-format
 msgid "Directed by Mars Callahan. A talented pool hustler who has stayed out of the game for years must return to his old ways when his little brother gets involved with his enemy--the very man who held him back from greatness."
 msgstr ""
 
-#: lib/app_web/live/movies_live.ex:33
+#: lib/app_web/live/movies_live.ex:58
 #, elixir-autogen, elixir-format
 msgid "Directed by Martin Scorsese. Former pool hustler \"Fast Eddie\" Felson (Paul Newman) decides he wants to return to the game by taking a pupil. He meets talented but green Vincent Lauria (Tom Cruise) and proposes a partnership. As they tour pool halls, Eddie teaches Vincent the tricks of scamming, but he eventually grows frustrated with Vincent's showboat antics, leading to an argument and a falling-out. Eddie takes up playing again and soon crosses paths with Vincent as an opponent."
 msgstr ""
 
-#: lib/app_web/live/movies_live.ex:18
+#: lib/app_web/live/movies_live.ex:29
 #, elixir-autogen, elixir-format
 msgid "Directed by Robert Rossen. Hollywood icon Paul Newman stars in this all-time classic about an up-and-coming pool player, “Fast Eddie” Felson, who risks it all in a match with pool champion “Minnesota Fats,” played by Jackie Gleason."
 msgstr ""
 
 #: lib/app_web/components/ui/navbar.ex:70
+#: lib/app_web/controllers/page_html/home.html.heex:104
 #: lib/app_web/live/drills_live.ex:8
 #, elixir-autogen, elixir-format
 msgid "Drills"
 msgstr ""
 
 #: lib/app_web/components/ui/navbar.ex:59
+#: lib/app_web/controllers/page_html/home.html.heex:68
 #, elixir-autogen, elixir-format
 msgid "Facts"
 msgstr ""
 
 #: lib/app_web/components/ui/navbar.ex:60
-#: lib/app_web/live/fargo_rate_live.ex:24
+#: lib/app_web/live/fargo_rate_live.ex:46
 #, elixir-autogen, elixir-format
 msgid "Fargo Rate"
 msgstr ""
 
-#: lib/app_web/live/fargo_rate_live.ex:22
+#: lib/app_web/live/fargo_rate_live.ex:44
 #, elixir-autogen, elixir-format
 msgid "First Name"
 msgstr ""
@@ -575,11 +464,12 @@ msgid "Games"
 msgstr ""
 
 #: lib/app_web/components/ui/navbar.ex:55
+#: lib/app_web/controllers/page_html/home.html.heex:54
 #, elixir-autogen, elixir-format
 msgid "General"
 msgstr ""
 
-#: lib/app_web/live/fargo_rate_live.ex:23
+#: lib/app_web/live/fargo_rate_live.ex:45
 #, elixir-autogen, elixir-format
 msgid "Last Name"
 msgstr ""
@@ -590,61 +480,65 @@ msgid "Leagues"
 msgstr ""
 
 #: lib/app_web/components/ui/navbar.ex:67
+#: lib/app_web/controllers/page_html/home.html.heex:98
 #, elixir-autogen, elixir-format
 msgid "Learn"
 msgstr ""
 
-#: lib/app_web/live/books_live.ex:16
+#: lib/app_web/live/books_live.ex:25
 #, elixir-autogen, elixir-format
 msgid "Life Through Pool"
 msgstr ""
 
-#: lib/app_web/live/books_live.ex:14
+#: lib/app_web/live/books_live.ex:20
 #, elixir-autogen, elixir-format
 msgid "Life Through Pool Book Cover"
 msgstr ""
 
-#: lib/app_web/live/fargo_rate_live.ex:27
+#: lib/app_web/live/fargo_rate_live.ex:49
+#: lib/app_web/live/tournaments_live.ex:143
 #, elixir-autogen, elixir-format
 msgid "Location"
 msgstr ""
 
-#: lib/app_web/live/fargo_rate_live.ex:26
+#: lib/app_web/live/fargo_rate_live.ex:48
 #, elixir-autogen, elixir-format
 msgid "Membership ID"
 msgstr ""
 
 #: lib/app_web/components/ui/navbar.ex:72
+#: lib/app_web/controllers/page_html/home.html.heex:106
 #, elixir-autogen, elixir-format
 msgid "Movies"
 msgstr ""
 
-#: lib/app_web/live/movies_live.ex:24
+#: lib/app_web/live/movies_live.ex:41
 #, elixir-autogen, elixir-format
 msgid "Not Rated"
 msgstr ""
 
 #: lib/app_web/components/ui/navbar.ex:78
+#: lib/app_web/controllers/page_html/home.html.heex:129
 #, elixir-autogen, elixir-format
 msgid "Play"
 msgstr ""
 
-#: lib/app_web/live/books_live.ex:60
+#: lib/app_web/live/books_live.ex:106
 #, elixir-autogen, elixir-format
 msgid "Pool and Billiards For Dummies"
 msgstr ""
 
-#: lib/app_web/live/books_live.ex:58
+#: lib/app_web/live/books_live.ex:101
 #, elixir-autogen, elixir-format
 msgid "Pool and Billiards For Dummies Book Cover"
 msgstr ""
 
-#: lib/app_web/live/movies_live.ex:47
+#: lib/app_web/live/movies_live.ex:83
 #, elixir-autogen, elixir-format
 msgid "Poolhall Junkies"
 msgstr ""
 
-#: lib/app_web/live/movies_live.ex:45
+#: lib/app_web/live/movies_live.ex:78
 #, elixir-autogen, elixir-format
 msgid "Poolhall Junkies Movie Poster"
 msgstr ""
@@ -654,29 +548,29 @@ msgstr ""
 msgid "Purchase"
 msgstr ""
 
-#: lib/app_web/live/movies_live.ex:39
-#: lib/app_web/live/movies_live.ex:55
-#: lib/app_web/live/movies_live.ex:67
+#: lib/app_web/live/movies_live.ex:70
+#: lib/app_web/live/movies_live.ex:99
+#: lib/app_web/live/movies_live.ex:120
 #, elixir-autogen, elixir-format
 msgid "Rated R"
 msgstr ""
 
-#: lib/app_web/live/books_live.ex:47
+#: lib/app_web/live/books_live.ex:80
 #, elixir-autogen, elixir-format
 msgid "Ray Martin, a Billiards Congress of America Hall of Fame inductee, is one of only seven players in the twentieth century to win three or more world 14.1 titles. He co-wrote this book with Rosser Reeves in 1976."
 msgstr ""
 
-#: lib/app_web/live/books_live.ex:9
+#: lib/app_web/live/books_live.ex:11
 #, elixir-autogen, elixir-format
 msgid "Recommended Billiard Books"
 msgstr ""
 
-#: lib/app_web/live/movies_live.ex:9
+#: lib/app_web/live/movies_live.ex:11
 #, elixir-autogen, elixir-format
 msgid "Recommended Billiard Movies"
 msgstr ""
 
-#: lib/app_web/live/fargo_rate_live.ex:25
+#: lib/app_web/live/fargo_rate_live.ex:47
 #, elixir-autogen, elixir-format
 msgid "Robustness"
 msgstr ""
@@ -686,114 +580,116 @@ msgstr ""
 msgid "Rules"
 msgstr ""
 
-#: lib/app_web/live/fargo_rate_live.ex:13
+#: lib/app_web/live/fargo_rate_live.ex:32
 #, elixir-autogen, elixir-format
 msgid "Search"
 msgstr ""
 
-#: lib/app_web/live/fargo_rate_live.ex:12
+#: lib/app_web/live/fargo_rate_live.ex:28
 #, elixir-autogen, elixir-format
 msgid "Search for a player..."
 msgstr ""
 
-#: lib/app_web/live/movies_live.ex:63
+#: lib/app_web/live/movies_live.ex:112
 #, elixir-autogen, elixir-format
 msgid "Stickmen"
 msgstr ""
 
-#: lib/app_web/live/movies_live.ex:61
+#: lib/app_web/live/movies_live.ex:107
 #, elixir-autogen, elixir-format
 msgid "Stickmen Movie Poster"
 msgstr ""
 
-#: lib/app_web/live/books_live.ex:32
+#: lib/app_web/live/books_live.ex:58
 #, elixir-autogen, elixir-format
 msgid "The 99 Critical Shots in Pool: Everything You Need to Know to Learn and Master the Game"
 msgstr ""
 
-#: lib/app_web/live/books_live.ex:30
+#: lib/app_web/live/books_live.ex:50
 #, elixir-autogen, elixir-format
 msgid "The 99 Critical Shots in Pool: Everything You Need to Know to Learn and Master the Game Book Cover"
 msgstr ""
 
-#: lib/app_web/live/books_live.ex:37
+#: lib/app_web/live/books_live.ex:70
 #, elixir-autogen, elixir-format
 msgid "The Center Ball Cheat-the-Pocket"
 msgstr ""
 
-#: lib/app_web/live/movies_live.ex:32
+#: lib/app_web/live/movies_live.ex:54
 #, elixir-autogen, elixir-format
 msgid "The Color of Money"
 msgstr ""
 
-#: lib/app_web/live/movies_live.ex:30
+#: lib/app_web/live/movies_live.ex:49
 #, elixir-autogen, elixir-format
 msgid "The Color of Money Movie Poster"
 msgstr ""
 
-#: lib/app_web/live/books_live.ex:41
+#: lib/app_web/live/books_live.ex:74
 #, elixir-autogen, elixir-format
 msgid "The Frozen Kiss Shot"
 msgstr ""
 
-#: lib/app_web/live/books_live.ex:38
+#: lib/app_web/live/books_live.ex:71
 #, elixir-autogen, elixir-format
 msgid "The Hook Shot"
 msgstr ""
 
-#: lib/app_web/live/movies_live.ex:16
+#: lib/app_web/live/movies_live.ex:25
 #, elixir-autogen, elixir-format
 msgid "The Hustler"
 msgstr ""
 
-#: lib/app_web/live/movies_live.ex:14
+#: lib/app_web/live/movies_live.ex:20
 #, elixir-autogen, elixir-format
 msgid "The Hustler Movie Poster"
 msgstr ""
 
-#: lib/app_web/live/books_live.ex:40
+#: lib/app_web/live/books_live.ex:73
 #, elixir-autogen, elixir-format
 msgid "The Jump Shot"
 msgstr ""
 
-#: lib/app_web/live/books_live.ex:42
+#: lib/app_web/live/books_live.ex:75
 #, elixir-autogen, elixir-format
 msgid "The Nudge Shot"
 msgstr ""
 
-#: lib/app_web/live/books_live.ex:39
+#: lib/app_web/live/books_live.ex:72
 #, elixir-autogen, elixir-format
 msgid "The Seven Ball Stop Shot"
 msgstr ""
 
-#: lib/app_web/live/books_live.ex:43
+#: lib/app_web/live/books_live.ex:76
 #, elixir-autogen, elixir-format
 msgid "The Side Pocket By-Pass Shot"
 msgstr ""
 
 #: lib/app_web/components/ui/navbar.ex:83
+#: lib/app_web/live/tournaments_live.ex:28
 #, elixir-autogen, elixir-format
 msgid "Tournaments"
 msgstr ""
 
 #: lib/app_web/components/ui/navbar.ex:69
+#: lib/app_web/controllers/page_html/home.html.heex:103
 #: lib/app_web/live/tutorials_live.ex:8
 #, elixir-autogen, elixir-format
 msgid "Tutorials"
 msgstr ""
 
-#: lib/app_web/live/movies_live.ex:37
+#: lib/app_web/live/movies_live.ex:68
 #, elixir-autogen, elixir-format
 msgid "Watch Now $3.99"
 msgstr ""
 
-#: lib/app_web/live/movies_live.ex:22
-#: lib/app_web/live/movies_live.ex:53
+#: lib/app_web/live/movies_live.ex:39
+#: lib/app_web/live/movies_live.ex:97
 #, elixir-autogen, elixir-format
 msgid "Watch Now Free"
 msgstr ""
 
-#: lib/app_web/live/drills_live.ex:14
+#: lib/app_web/live/drills_live.ex:18
 #, elixir-autogen, elixir-format
 msgid "13 Balls Half Square"
 msgstr ""
@@ -803,7 +699,7 @@ msgstr ""
 msgid "About This Project"
 msgstr ""
 
-#: lib/app_web/live/tutorials_live.ex:35
+#: lib/app_web/live/tutorials_live.ex:46
 #, elixir-autogen, elixir-format
 msgid "All the basics in 1 minute. How to line up your shot and aim properly."
 msgstr ""
@@ -818,22 +714,22 @@ msgstr ""
 msgid "Always Around Pool"
 msgstr ""
 
-#: lib/app_web/components/ui/carousel.ex:36
+#: lib/app_web/components/ui/carousel.ex:80
 #, elixir-autogen, elixir-format
 msgid "Ashley and her father, Bryan, standing in a corner of the Shamokin West End with the pool cues vertically in hand."
 msgstr ""
 
-#: lib/app_web/components/ui/carousel.ex:24
+#: lib/app_web/components/ui/carousel.ex:44
 #, elixir-autogen, elixir-format
 msgid "Ashley and her father, Bryan, standing infront of a tall Christmas tree with their pool cue cases in the Genetti hotel."
 msgstr ""
 
-#: lib/app_web/components/ui/carousel.ex:28
+#: lib/app_web/components/ui/carousel.ex:56
 #, elixir-autogen, elixir-format
 msgid "Ashley and her father, Bryan, standing near a grey cloth pool table while holding Ashley's new pool cue. Her new pool cue case also sits on the pool table in front of them."
 msgstr ""
 
-#: lib/app_web/components/ui/carousel.ex:32
+#: lib/app_web/components/ui/carousel.ex:68
 #, elixir-autogen, elixir-format
 msgid "Ashley and her sister, Alyssa, stand with female pro Nicole Nester in between them in front of a blue cloth pool table at Blue Mountain Billiards."
 msgstr ""
@@ -858,17 +754,12 @@ msgstr ""
 msgid "Central PA Barbox"
 msgstr ""
 
-#: lib/app_web/live/drills_live.ex:35
+#: lib/app_web/live/drills_live.ex:46
 #, elixir-autogen, elixir-format
 msgid "Dr. Dave demonstrates the Top 10 most useful drills to test and improve your aim, alignment, and stroke."
 msgstr ""
 
-#: lib/app_web/live/about_live.ex:23
-#, elixir-autogen, elixir-format
-msgid "Growing up, my grandfather had a pool table in the entrance of his home. Both my grandfather and father have always played, and still do play, pool. I learned how to play pool from the both of them from a young age and spent lots of time on my grandfather's Brunswick table. I got my first pool cue around the age of 13 but never took it too seriously. Since I now have two Diamond pool tables in my new home, I became serious about pool again in May 2024. Currently, I play on a few teams and am getting actively trained and guided by some of the best players in the game to reach my full potential."
-msgstr ""
-
-#: lib/app_web/live/tutorials_live.ex:33
+#: lib/app_web/live/tutorials_live.ex:43
 #, elixir-autogen, elixir-format
 msgid "How to Aim in 1 Minute"
 msgstr ""
@@ -898,7 +789,7 @@ msgstr ""
 msgid "Joe and Derek"
 msgstr ""
 
-#: lib/app_web/live/tutorials_live.ex:14
+#: lib/app_web/live/tutorials_live.ex:18
 #, elixir-autogen, elixir-format
 msgid "Learn to Play Pool in 3 Minutes"
 msgstr ""
@@ -908,12 +799,12 @@ msgstr ""
 msgid "Personal Journey"
 msgstr ""
 
-#: lib/app_web/live/tutorials_live.ex:53
+#: lib/app_web/live/tutorials_live.ex:66
 #, elixir-autogen, elixir-format
 msgid "Pool Basics for Beginners Playlist"
 msgstr ""
 
-#: lib/app_web/live/drills_live.ex:53
+#: lib/app_web/live/drills_live.ex:68
 #, elixir-autogen, elixir-format
 msgid "Pool Drills Playlist"
 msgstr ""
@@ -943,7 +834,7 @@ msgstr ""
 msgid "Snapshots of My Journey"
 msgstr ""
 
-#: lib/app_web/live/drills_live.ex:56
+#: lib/app_web/live/drills_live.ex:71
 #, elixir-autogen, elixir-format
 msgid "Something that you have learned has to be practiced until you can do it automatically. This playlists offers some useful drills that will improve certain parts of your game."
 msgstr ""
@@ -958,17 +849,17 @@ msgstr ""
 msgid "The Shamokin West End is the first place I began seriously competing against other players. I began as a 21 year old, thus I was easily the youngest player in the bar, and also one of the only females. Each week I would put myself out there to compete against these men who were typically older and significantly better than me. Even though I have way more losses then wins, I learn a lot from each match and have grown tremendously from this opportunity."
 msgstr ""
 
-#: lib/app_web/live/drills_live.ex:16
+#: lib/app_web/live/drills_live.ex:21
 #, elixir-autogen, elixir-format
 msgid "This is a medium level drill. Remember if you cannot complete it simply mark your best score and try to beat it every time you practice it!"
 msgstr ""
 
-#: lib/app_web/live/tutorials_live.ex:56
+#: lib/app_web/live/tutorials_live.ex:69
 #, elixir-autogen, elixir-format
 msgid "This playlist contains 14 videos that cover the basics of pool, including grip, stance, stroke, and follow-through. It is perfect for beginners who want to learn the fundamentals of the game."
 msgstr ""
 
-#: lib/app_web/live/tutorials_live.ex:16
+#: lib/app_web/live/tutorials_live.ex:21
 #, elixir-autogen, elixir-format
 msgid "This pool lesson gives a quick introduction to all of the basics from fundamentals to aiming and cue ball control in just three minutes."
 msgstr ""
@@ -978,92 +869,95 @@ msgstr ""
 msgid "This website is a unique, one and only type of website. This personal project shares my love of pool while being a central information place for all things pool. You can find facts about pool, your Fargo Rate, all the items you possibly need to purchase, tutorials for beginners, drills for more advanced players, books to read, movies to watch, rules of the games, the different games out there, leagues to join, and tournaments to go to."
 msgstr ""
 
-#: lib/app_web/live/drills_live.ex:33
+#: lib/app_web/live/drills_live.ex:43
 #, elixir-autogen, elixir-format
 msgid "Top 10 Aim, Alignment, and Stroke Drills"
 msgstr ""
 
-#: lib/app_web/live/about_live.ex:17
-#, elixir-autogen, elixir-format
-msgid "Why Did I Make a Website About Pool?"
-msgstr ""
-
-#: lib/app_web/live/games_live.ex:56
+#: lib/app_web/live/games_live.ex:58
+#: lib/app_web/live/leagues_live.ex:68
+#: lib/app_web/live/leagues_live.ex:74
+#: lib/app_web/live/leagues_live.ex:86
 #, elixir-autogen, elixir-format
 msgid "10-Ball"
 msgstr ""
 
-#: lib/app_web/live/games_live.ex:58
+#: lib/app_web/live/games_live.ex:60
 #, elixir-autogen, elixir-format
 msgid "10-ball is a cue sport played with ten object balls and a cue ball. The objective is to legally pocket the 10-ball after hitting the lowest-numbered ball on the table."
 msgstr ""
 
-#: lib/app_web/live/facts_live.ex:67
+#: lib/app_web/live/facts_live.ex:103
 #, elixir-autogen, elixir-format
 msgid "14.1 Continuous Pool replaces Fifteen-Ball Pool as the championship game."
 msgstr ""
 
-#: lib/app_web/live/facts_live.ex:15
+#: lib/app_web/live/facts_live.ex:22
 #, elixir-autogen, elixir-format
 msgid "1400s"
 msgstr ""
 
-#: lib/app_web/live/facts_live.ex:30
+#: lib/app_web/live/facts_live.ex:46
 #, elixir-autogen, elixir-format
 msgid "1700s"
 msgstr ""
 
-#: lib/app_web/live/facts_live.ex:35
+#: lib/app_web/live/facts_live.ex:54
 #, elixir-autogen, elixir-format
 msgid "1770-1920"
 msgstr ""
 
-#: lib/app_web/live/facts_live.ex:40
+#: lib/app_web/live/facts_live.ex:62
 #, elixir-autogen, elixir-format
 msgid "1800s"
 msgstr ""
 
-#: lib/app_web/live/facts_live.ex:45
+#: lib/app_web/live/facts_live.ex:70
 #, elixir-autogen, elixir-format
 msgid "1850"
 msgstr ""
 
-#: lib/app_web/live/facts_live.ex:50
+#: lib/app_web/live/facts_live.ex:78
 #, elixir-autogen, elixir-format
 msgid "1870s"
 msgstr ""
 
-#: lib/app_web/live/facts_live.ex:55
+#: lib/app_web/live/facts_live.ex:86
 #, elixir-autogen, elixir-format
 msgid "1878"
 msgstr ""
 
-#: lib/app_web/live/facts_live.ex:60
+#: lib/app_web/live/facts_live.ex:92
 #, elixir-autogen, elixir-format
 msgid "1884"
 msgstr ""
 
-#: lib/app_web/live/facts_live.ex:65
+#: lib/app_web/live/facts_live.ex:100
 #, elixir-autogen, elixir-format
 msgid "1888"
 msgstr ""
 
-#: lib/app_web/live/facts_live.ex:75
+#: lib/app_web/live/facts_live.ex:114
 #, elixir-autogen, elixir-format
 msgid "1906"
 msgstr ""
 
-#: lib/app_web/live/facts_live.ex:80
+#: lib/app_web/live/facts_live.ex:120
 #, elixir-autogen, elixir-format
 msgid "1919-1941"
 msgstr ""
 
-#: lib/app_web/live/facts_live.ex:85
+#: lib/app_web/live/facts_live.ex:128
 #, elixir-autogen, elixir-format
 msgid "1941-1950s"
 msgstr ""
 
 #: lib/app_web/live/games_live.ex:16
+#: lib/app_web/live/leagues_live.ex:62
+#: lib/app_web/live/leagues_live.ex:68
+#: lib/app_web/live/leagues_live.ex:74
+#: lib/app_web/live/leagues_live.ex:80
+#: lib/app_web/live/leagues_live.ex:86
 #, elixir-autogen, elixir-format
 msgid "8-Ball"
 msgstr ""
@@ -1073,47 +967,52 @@ msgstr ""
 msgid "8-ball is a cue sport played with 15 object balls and a cue ball. The objective is to pocket all of your designated balls (either stripes or solids) and then legally pocket the 8-ball to win."
 msgstr ""
 
-#: lib/app_web/live/games_live.ex:36
+#: lib/app_web/live/games_live.ex:37
+#: lib/app_web/live/leagues_live.ex:62
+#: lib/app_web/live/leagues_live.ex:68
+#: lib/app_web/live/leagues_live.ex:74
+#: lib/app_web/live/leagues_live.ex:80
+#: lib/app_web/live/leagues_live.ex:86
 #, elixir-autogen, elixir-format
 msgid "9-Ball"
 msgstr ""
 
-#: lib/app_web/live/games_live.ex:38
+#: lib/app_web/live/games_live.ex:39
 #, elixir-autogen, elixir-format
 msgid "9-ball is a cue sport played with nine object balls and a cue ball. The objective is to legally pocket the 9-ball after hitting the lowest-numbered ball on the table."
 msgstr ""
 
-#: lib/app_web/live/facts_live.ex:11
+#: lib/app_web/live/facts_live.ex:14
 #, elixir-autogen, elixir-format
 msgid "A brief listing of facts and the history of billiards as it evolved over the centuries."
 msgstr ""
 
-#: lib/app_web/live/facts_live.ex:52
+#: lib/app_web/live/facts_live.ex:81
 #, elixir-autogen, elixir-format
 msgid "American Four-Ball Billiards is popular in the U.S., later replaced by Straight Rail (carom-based) and Fifteen-Ball Pool, the predecessor to modern pool."
 msgstr ""
 
-#: lib/app_web/components/ui/carousel.ex:20
+#: lib/app_web/components/ui/carousel.ex:32
 #, elixir-autogen, elixir-format, fuzzy
 msgid "Ashley and her all otherwise male TAP team, Pocket Pounders. Ashley stands in the center holding $2400 fanned out to show the team's win."
 msgstr ""
 
-#: lib/app_web/components/ui/carousel.ex:16
+#: lib/app_web/components/ui/carousel.ex:20
 #, elixir-autogen, elixir-format, fuzzy
 msgid "Ashley with her Shamokin Women's 8-ball Team. They pose for a group photo near a green-cloth pool table with two pool cues making an X on the table and an 8-ball. There are 7 women in this photo including Ashley."
 msgstr ""
 
-#: lib/app_web/live/purchase_live.ex:59
+#: lib/app_web/live/purchase_live.ex:67
 #, elixir-autogen, elixir-format
 msgid "Billiard Balls"
 msgstr ""
 
-#: lib/app_web/live/purchase_live.ex:34
+#: lib/app_web/live/purchase_live.ex:42
 #, elixir-autogen, elixir-format
 msgid "Billiards Equipment Sales in the U.S. by Year in Millions"
 msgstr ""
 
-#: lib/app_web/live/facts_live.ex:10
+#: lib/app_web/live/facts_live.ex:11
 #, elixir-autogen, elixir-format
 msgid "Billiards Facts and History"
 msgstr ""
@@ -1123,42 +1022,37 @@ msgstr ""
 msgid "Billiards Games"
 msgstr ""
 
-#: lib/app_web/live/facts_live.ex:17
-#, elixir-autogen, elixir-format
-msgid "Billiards evolves from a lawn game similar to croquet, likely in France or Northern Europe. Billiards is played on a wooden table with green cloth, to represent grass, with maces (wooden sticks) to shove balls. The word billiard comes from the French billart (stick) or bille (ball)"
-msgstr ""
-
-#: lib/app_web/live/facts_live.ex:42
+#: lib/app_web/live/facts_live.ex:65
 #, elixir-autogen, elixir-format
 msgid "Billiards known as the \"Noble Game\", yet widely played across classes. The Industrial Revolution improves equipment, such as chalk used for friction, leather cue tips (1823), two-piece cues (1829), slate for tables (1835), and rubber cushions after Goodyear’s 1839 vulcanization discovery."
 msgstr ""
 
-#: lib/app_web/live/facts_live.ex:32
+#: lib/app_web/live/facts_live.ex:49
 #, elixir-autogen, elixir-format
 msgid "Billiards spreads through the American colonies; George Washington reportedly plays in 1748. English tables standardize the 2:1 length-to-width ratio. Rail banks evolve into playable surfaces, enabling bank shots. Public billiard tables become widespread in England and America."
 msgstr ""
 
-#: lib/app_web/live/purchase_live.ex:64
+#: lib/app_web/live/purchase_live.ex:80
 #, elixir-autogen, elixir-format
 msgid "Bridge"
 msgstr ""
 
-#: lib/app_web/live/facts_live.ex:61
+#: lib/app_web/live/facts_live.ex:93
 #, elixir-autogen, elixir-format
 msgid "Brunswick-Balke-Collender Company"
 msgstr ""
 
-#: lib/app_web/live/purchase_live.ex:69
+#: lib/app_web/live/purchase_live.ex:92
 #, elixir-autogen, elixir-format
 msgid "Case"
 msgstr ""
 
-#: lib/app_web/live/purchase_live.ex:74
+#: lib/app_web/live/purchase_live.ex:105
 #, elixir-autogen, elixir-format
 msgid "Chalk"
 msgstr ""
 
-#: lib/app_web/live/purchase_live.ex:79
+#: lib/app_web/live/purchase_live.ex:118
 #, elixir-autogen, elixir-format
 msgid "Cleaner"
 msgstr ""
@@ -1168,72 +1062,72 @@ msgstr ""
 msgid "Contact Us Form"
 msgstr ""
 
-#: lib/app_web/live/purchase_live.ex:84
+#: lib/app_web/live/purchase_live.ex:157
 #, elixir-autogen, elixir-format
 msgid "Cue Stick"
 msgstr ""
 
-#: lib/app_web/live/facts_live.ex:27
+#: lib/app_web/live/facts_live.ex:41
 #, elixir-autogen, elixir-format
 msgid "Cue sticks developed as a workaround for awkward mace positioning near rails. The term “cue” comes from the French word queue (tail). Only men were allowed to use cues initially—women had to use maces."
 msgstr ""
 
-#: lib/app_web/live/facts_live.ex:20
+#: lib/app_web/live/facts_live.ex:30
 #, elixir-autogen, elixir-format
 msgid "Early 1600s"
 msgstr ""
 
-#: lib/app_web/live/facts_live.ex:70
+#: lib/app_web/live/facts_live.ex:106
 #, elixir-autogen, elixir-format
 msgid "Early 1900s"
 msgstr ""
 
-#: lib/app_web/live/facts_live.ex:72
+#: lib/app_web/live/facts_live.ex:109
 #, elixir-autogen, elixir-format
 msgid "Eight-Ball invented shortly after 1900. Straight Pool appears in 1910. Nine-Ball emerges around 1920."
 msgstr ""
 
-#: lib/app_web/live/facts_live.ex:37
+#: lib/app_web/live/facts_live.ex:57
 #, elixir-autogen, elixir-format
 msgid "English Billiards dominates in Britain; uses 3 balls, 6 pockets. One-Pocket origins described as early as 1775."
 msgstr ""
 
-#: lib/app_web/live/facts_live.ex:36
+#: lib/app_web/live/facts_live.ex:55
 #, elixir-autogen, elixir-format
 msgid "Evolution"
 msgstr ""
 
-#: lib/app_web/live/purchase_live.ex:89
+#: lib/app_web/live/purchase_live.ex:176
 #, elixir-autogen, elixir-format
 msgid "Extension"
 msgstr ""
 
-#: lib/app_web/live/facts_live.ex:57
+#: lib/app_web/live/facts_live.ex:89
 #, elixir-autogen, elixir-format
 msgid "First American Pool Championship held, using 61-point system (Fifteen-Ball Pool)."
 msgstr ""
 
-#: lib/app_web/live/facts_live.ex:56
+#: lib/app_web/live/facts_live.ex:87
 #, elixir-autogen, elixir-format
 msgid "First Championship"
 msgstr ""
 
-#: lib/app_web/live/facts_live.ex:21
+#: lib/app_web/live/facts_live.ex:31
 #, elixir-autogen, elixir-format
 msgid "First Reference to Billiards"
 msgstr ""
 
-#: lib/app_web/live/facts_live.ex:62
+#: lib/app_web/live/facts_live.ex:95
 #, elixir-autogen, elixir-format
 msgid "Formation of Brunswick-Balke-Collender Company, which dominates U.S. billiards industry."
 msgstr ""
 
-#: lib/app_web/live/purchase_live.ex:94
+#: lib/app_web/live/purchase_live.ex:189
 #, elixir-autogen, elixir-format
 msgid "Glove"
 msgstr ""
 
-#: lib/app_web/live/facts_live.ex:81
+#: lib/app_web/live/facts_live.ex:121
 #, elixir-autogen, elixir-format, fuzzy
 msgid "Greenleaf"
 msgstr ""
@@ -1243,72 +1137,72 @@ msgstr ""
 msgid "Home"
 msgstr ""
 
-#: lib/app_web/live/facts_live.ex:76
+#: lib/app_web/live/facts_live.ex:115
 #, elixir-autogen, elixir-format
 msgid "Hoppe"
 msgstr ""
 
-#: lib/app_web/live/facts_live.ex:41
+#: lib/app_web/live/facts_live.ex:63
 #, elixir-autogen, elixir-format
 msgid "Industrial Revolution"
 msgstr ""
 
-#: lib/app_web/live/facts_live.ex:25
+#: lib/app_web/live/facts_live.ex:38
 #, elixir-autogen, elixir-format
 msgid "Late 1600s"
 msgstr ""
 
-#: lib/app_web/live/purchase_live.ex:99
+#: lib/app_web/live/purchase_live.ex:203
 #, elixir-autogen, elixir-format
 msgid "Light"
 msgstr ""
 
-#: lib/app_web/live/facts_live.ex:46
+#: lib/app_web/live/facts_live.ex:71
 #, elixir-autogen, elixir-format
 msgid "Michael Phelan's Legacy"
 msgstr ""
 
-#: lib/app_web/live/facts_live.ex:47
+#: lib/app_web/live/facts_live.ex:73
 #, elixir-autogen, elixir-format
 msgid "Michael Phelan, “Father of American Billiards,” writes first U.S. rulebook. Pioneers standardized rules, diamonds for aiming, and weekly billiard columns. Wins a major stake match in 1859 and founds a major manufacturing company."
 msgstr ""
 
-#: lib/app_web/live/facts_live.ex:51
+#: lib/app_web/live/facts_live.ex:79
 #, elixir-autogen, elixir-format
 msgid "More Evolution"
 msgstr ""
 
-#: lib/app_web/live/facts_live.ex:86
+#: lib/app_web/live/facts_live.ex:129
 #, elixir-autogen, elixir-format, fuzzy
 msgid "Mosconi"
 msgstr ""
 
-#: lib/app_web/live/facts_live.ex:66
+#: lib/app_web/live/facts_live.ex:101
 #, elixir-autogen, elixir-format
 msgid "New Championship Game"
 msgstr ""
 
-#: lib/app_web/live/facts_live.ex:71
+#: lib/app_web/live/facts_live.ex:107
 #, elixir-autogen, elixir-format, fuzzy
 msgid "New Games"
 msgstr ""
 
-#: lib/app_web/live/games_live.ex:96
+#: lib/app_web/live/games_live.ex:100
 #, elixir-autogen, elixir-format
 msgid "One Pocket"
 msgstr ""
 
-#: lib/app_web/live/games_live.ex:98
+#: lib/app_web/live/games_live.ex:102
 #, elixir-autogen, elixir-format
 msgid "One pocket is a cue sport where players must pocket balls into one of their designated pockets. The objective is to score a predetermined number of points by pocketing balls into your pocket while preventing your opponent from doing the same"
 msgstr ""
 
-#: lib/app_web/live/facts_live.ex:16
+#: lib/app_web/live/facts_live.ex:23
 #, elixir-autogen, elixir-format
 msgid "Origins of Billiards"
 msgstr ""
 
-#: lib/app_web/live/purchase_live.ex:104
+#: lib/app_web/live/purchase_live.ex:216
 #, elixir-autogen, elixir-format
 msgid "Powder"
 msgstr ""
@@ -1318,62 +1212,57 @@ msgstr ""
 msgid "Purchase Billiards Equipment"
 msgstr ""
 
-#: lib/app_web/live/purchase_live.ex:109
+#: lib/app_web/live/purchase_live.ex:229
 #, elixir-autogen, elixir-format
 msgid "Rack"
 msgstr ""
 
-#: lib/app_web/live/facts_live.ex:82
+#: lib/app_web/live/facts_live.ex:123
 #, elixir-autogen, elixir-format
 msgid "Ralph Greenleaf becomes U.S. pool hero, dominating for 20 years. Billiards and pool share public attention with stars like Hoppe and Greenleaf."
 msgstr ""
 
-#: lib/app_web/live/purchase_live.ex:40
+#: lib/app_web/live/purchase_live.ex:48
 #, elixir-autogen, elixir-format
 msgid "Sales (in Millions USD)"
 msgstr ""
 
-#: lib/app_web/live/facts_live.ex:22
-#, elixir-autogen, elixir-format
-msgid "Shakespeare references billiards in Antony and Cleopatra, showing its growing popularity"
-msgstr ""
-
-#: lib/app_web/live/games_live.ex:116
+#: lib/app_web/live/games_live.ex:121
 #, elixir-autogen, elixir-format
 msgid "Snooker"
 msgstr ""
 
-#: lib/app_web/live/games_live.ex:118
+#: lib/app_web/live/games_live.ex:123
 #, elixir-autogen, elixir-format
 msgid "Snooker is a cue sport where the objective is to score points by potting balls in a specific order. Players must hit the cue ball to strike the object balls and score points by potting them into pockets."
 msgstr ""
 
-#: lib/app_web/live/games_live.ex:76
+#: lib/app_web/live/games_live.ex:79
 #, elixir-autogen, elixir-format
 msgid "Straight Pool"
 msgstr ""
 
-#: lib/app_web/live/games_live.ex:78
+#: lib/app_web/live/games_live.ex:81
 #, elixir-autogen, elixir-format
 msgid "Straight pool, also known as 14.1 continuous, is a cue sport where players can score points by pocketing any ball on the table. The objective is to reach a predetermined number of points."
 msgstr ""
 
-#: lib/app_web/live/purchase_live.ex:114
+#: lib/app_web/live/purchase_live.ex:245
 #, elixir-autogen, elixir-format
 msgid "Table"
 msgstr ""
 
-#: lib/app_web/live/purchase_live.ex:119
+#: lib/app_web/live/purchase_live.ex:262
 #, elixir-autogen, elixir-format
 msgid "Table Cover"
 msgstr ""
 
-#: lib/app_web/live/facts_live.ex:26
+#: lib/app_web/live/facts_live.ex:39
 #, elixir-autogen, elixir-format, fuzzy
 msgid "The Cue"
 msgstr ""
 
-#: lib/app_web/live/facts_live.ex:87
+#: lib/app_web/live/facts_live.ex:131
 #, elixir-autogen, elixir-format
 msgid "The Mosconi era begins; carom games decline as pool rises in popularity. Pool becomes a popular wartime pastime, but popularity fades after WWII. Post-war America sees a decline in poolroom culture as priorities shift."
 msgstr ""
@@ -1383,7 +1272,7 @@ msgstr ""
 msgid "The Shamokin Moose is where I won my very first tournament (October 2024)! This was a partnered and single-elimination 8-ball doubles event. It was a benefit for a local player who had cancer. This was a great cause that we were happy to contribute to and give all the prize money back to as well."
 msgstr ""
 
-#: lib/app_web/live/purchase_live.ex:17
+#: lib/app_web/live/purchase_live.ex:23
 #, elixir-autogen, elixir-format
 msgid "This chart demonstrates the increase in sales of billiards equipment in recent years. It highlights the growing demand for high-quality equipment and the rising popularity of billiards as a sport. Below the chart, you'll find more information about billiards equipment, along with links to purchase these items."
 msgstr ""
@@ -1398,34 +1287,1144 @@ msgstr ""
 msgid "This page is intended for moderate to advanced players to elevate their game. If you are looking for more beginner friendly content, check out the Tutorials page!"
 msgstr ""
 
-#: lib/app_web/live/games_live.ex:10
-#, elixir-autogen, elixir-format
-msgid "This page is intended to showcase the various billiards games that exist, such as 8-Ball, 9-Ball, 10-Ball, and more. Each game has its own unique rules and strategies, making them all enjoyable in their own way. Included on this page is key details to each game as well as videos to show how the game is played. To learn about the rules of each game, visit the Rules page."
-msgstr ""
-
-#: lib/app_web/live/facts_live.ex:31
+#: lib/app_web/live/facts_live.ex:47
 #, elixir-autogen, elixir-format
 msgid "To America"
 msgstr ""
 
-#: lib/app_web/live/facts_live.ex:77
+#: lib/app_web/live/facts_live.ex:117
 #, elixir-autogen, elixir-format
 msgid "Willie Hoppe, age 18, beats French champ in balkline, launching his long reign."
 msgstr ""
 
-#: lib/app_web/live/purchase_live.ex:43
+#: lib/app_web/live/purchase_live.ex:51
 #, elixir-autogen, elixir-format
 msgid "Years"
 msgstr ""
 
-#: lib/app_web/live/about_live.ex:43
-#: lib/app_web/live/about_live.ex:48
-#, elixir-autogen, elixir-format
-msgid "black decorative wave"
+#: lib/app_web/live/rules_live.ex:202
+#, elixir-autogen, elixir-format, fuzzy
+msgid "10-Ball Rules"
 msgstr ""
 
-#: lib/app_web/live/about_live.ex:44
-#: lib/app_web/live/about_live.ex:49
+#: lib/app_web/live/rules_live.ex:193
+#: lib/app_web/live/rules_live.ex:263
 #, elixir-autogen, elixir-format
-msgid "white decorative wave"
+msgid "3 fouls in one rack results in loss of rack."
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:95
+#, elixir-autogen, elixir-format, fuzzy
+msgid "8-Ball Rules"
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:148
+#, elixir-autogen, elixir-format, fuzzy
+msgid "9-Ball Rules"
+msgstr ""
+
+#: lib/app_web/live/purchase_live.ex:69
+#, elixir-autogen, elixir-format
+msgid "<p class='mb-2 text-gray-900 dark:text-gray-100'> Billiard Balls, also known as object balls, are used in games of pool, such as 8-ball, 9-ball, Snooker, etc..</p>\n            <ul class='list-disc list-inside'>\n           <li><a href=\"https://www.brunswickbilliards.com/products/centennial-premium-individual-pocket-balls\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Centennial® Premium Individual Pocket Balls</a></li>\n           <li><a href=\"https://www.billiards.com/collections/aramith/products/aramith-super-pro-set\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Aramith Super Pro Set</a></li>\n           <li><a href=\"https://www.deltabilliards.com/cyclop-tv-edition-zeus-billiard-ball-set-040-101/\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Cyclop TV Edition ZEUS Billiard Ball Set - 040-101</a></li>\n           <li><a href=\"https://www.billiards.com/products/aramith-snooker-ball-set-2-18th-inch?variant=43822634959077&country=US&currency=USD&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&dg=b&utm_source=google&utm_medium=cpc&utm_term=&utm_campaign=1147327343&gad_source=1&gad_campaignid=1147327343&gbraid=0AAAAAD9jFlAJ0XIPFPdN607PqglBT7xej&gclid=CjwKCAjwuIbBBhBvEiwAsNypvelfVVejpaLAfRN68Xz7F93NWlzAZ0B1iBA_X-8PpMBXYALwlA2CMhoC9agQAvD_BwE\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Aramith Snooker Ball Set 2 1/8th Inch</a></li>\n          </ul>"
+msgstr ""
+
+#: lib/app_web/live/purchase_live.ex:82
+#, elixir-autogen, elixir-format
+msgid "<p class='mb-2 text-gray-900 dark:text-gray-100'>A bridge is a device used to support the cue stick when the cue ball is out of comfortable reach.</p>  <ul class='list-disc list-inside'>\n           <li><a href=\"https://seyberts.com/collections/bridges/products/telescoping-pocket-bridge-stick-color-options-available?variant=41789055762630\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Telescoping Pocket Bridge Stick</a></li>\n           <li><a href=\"https://www.pooldawg.com/moosehead-billiards-bridge-head-black?gad_source=1&gad_campaignid=22296243070&gbraid=0AAAAAD_OY0-kc8uNPI_0HlcKK_JhKIAWD&gclid=CjwKCAjwuIbBBhBvEiwAsNypvVpSCvxfWB5XaOW1wCSZvCyYQ6XV2hr2OCa-Hx6gjS5lAxMpa0qzxxoCqIcQAvD_BwE\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Moosehead Billiards Bridge Head</a></li>\n            <li><a href=\"https://www.amazon.com/Accuplay-Billiards-Piece-Bridge-Regular/dp/B0DHT8YY7R/ref=asc_df_B0DHT8YY7R?mcid=0ec8b010e7473ac69eb37fa190f71f48&hvocijid=12584880496154204185-B0DHT8YY7R-&hvexpln=73&tag=hyprod-20&linkCode=df0&hvadid=721245378154&hvpos=&hvnetw=g&hvrand=12584880496154204185&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9190944&hvtargid=pla-2281435180258&th=1&psc=1\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Accuplay Billiards 57\" 2 Piece Maple Pool Bridge Stick</a></li>\n             <li><a href=\"https://www.pooldawg.com/cue-buddy-bridge?srsltid=AfmBOopomh1KmmaAUZhj5A9Gk4JoyliSChRdiiEeGdQc78FOqrKyHSVWYeg&gQT=1\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Cue Buddy Adaptive Bridge</a></li>\n          </ul>"
+msgstr ""
+
+#: lib/app_web/live/purchase_live.ex:94
+#, elixir-autogen, elixir-format
+msgid "<p class='mb-2 text-gray-900 dark:text-gray-100'>A cue case is used to protect and transport cue sticks. They come in various styles including soft, hard, and box cases.</p>\n              <ul class='list-disc list-inside'>\n           <li><a href=\"https://fcibilliards.com/instroke-vinyl-cowboy-black-pool-cue-case-3x5/\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Instroke 3x5 Vinyl Cowboy Black Pool Cue Case</a></li>\n           <li><a href=\"https://www.omegabilliards.com/3x5-Acme-Piggyback-Case-red-p/3952.htm\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">4x6 Acme Piggyback Case Bk</a></li>\n           <li><a href=\"https://www.predatorcues.com/usa/predator-urbain-blue-hard-pool-cue-case-2-butts-x-4-shafts.html\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Predator Urbain Blue Hard Pool Cue Case</a></li>\n           <li><a href=\"https://www.amazon.com/PEKREWS-Pool-Cue-Case-2x2/dp/B0D2W2D81X/ref=sr_1_3_sspa?crid=24LLIRNFF77E9&dib=eyJ2IjoiMSJ9.GE6Zc1dmUBNAjLC4qml8zxUzs6fhFYcqvUHftOKqwkOPmu91JXzF0VNuJeOy5AinStu5OO73SoP2SBKYAaZYcn2OY6FjhrEa0UdrfYgDZCDuZb3VbKTE1K6QbgJy5EuAuiBbwEajmc3060PQtb2MLcXc8f8q3v4pjUIhwNHzOx1HjDFV5JZVRZL_stkiCUBCp4Zl9jQgGWUNR3mjCbas7TBTvuQAurmzWvPhLqphwhhLC_d9fwYo5GS1jKvocDIiCs03XmjdXnC3qTpKPDJjULSri2n0-Adx-Hkg7ram1Ew._kIjH4sxxJw8hCMWUvefC_WIRQvw3VReAZr4NpZo6jA&dib_tag=se&keywords=pool%2Bcase&qid=1747114713&sprefix=pool%2Bcase%2Caps%2C79&sr=8-3-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Pekrews Pool Cue Case</a></li>\n          </ul>"
+msgstr ""
+
+#: lib/app_web/live/purchase_live.ex:146
+#, elixir-autogen, elixir-format
+msgid "<p class='mb-2 text-gray-900 dark:text-gray-100'>A cue holder is an accessory that can be set onto tables or other flat surfaces to safely secure your sticks vertically and ensure they do not fall.</p>\n              <ul class='list-disc list-inside'>\n           <li><a href=\"https://www.billiards.com/collections/cue-holders/products/q-claw-cue-holder?variant=43811580805349\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Q-Claw Cue Holder</a></li>\n           <li><a href=https://www.predatorcues.com/usa/predator-folding-cue-holder-with-case.html?utm_source=shopping&utm_medium=cpc&utm_campaign=16740474638&utm_content=&gad_source=1&gad_campaignid=16740474638&gbraid=0AAAAAC9s9aIEEKqu1rKs_6ybNHGmwPacN&gclid=CjwKCAjwuIbBBhBvEiwAsNypvTsomzbt18E8DWGUzkt1VOerStLvGD71o_bLRsr9dk_Gm71CeiPlCxoCNNgQAvD_BwE\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Predator Folding Pool Cue Holder with Case</a></li>\n           <li><a href=\"https://seyberts.com/products/extreme-3-pool-cue-holder?variant=41791570182342\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Extreme 3 Pool Cue Holder</a></li>\n           <li><a href=\"https://www.amazon.com/Naissgo-Rest-Stick-Holder-Holes/dp/B08QV66YNF/ref=sr_1_5?dib=eyJ2IjoiMSJ9.8i3rQHNQ4S81bl5Kjz_mMj82C0MTCX2Ylx7UqyI0zSttUUvPsvsobGmJP0MItYx_4E9RIwjj8ivW7CMq0s30Sr_qpZxYYJ92tcguKtoe7L7UrDV2h2uW_3wZPh_kDJy-ukYbI5TuCwwum0HtndUJXwf7X__aZ8RMbqgnCXALk__Q9mJfKwFN8COwRsxseoAPWWuB4yGlivn28VWCuyVvLQTyQyr_bm7cv_rJVvvFkKqgWvG8AgJuyUfrfTdVTApnC9imntmSja7UHWdOIdHqHNimkZQMSs1Jm3S8jC3QqY4.7QSYoaZTHIuMFkBLISn8Ikk1lNEI6ibFEwMqj4kwL1w&dib_tag=se&keywords=cue%2Bholder&qid=1747115668&sr=8-5&th=1\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Naissgo Cue Stick Holder</a></li>\n          </ul>"
+msgstr ""
+
+#: lib/app_web/live/purchase_live.ex:159
+#, elixir-autogen, elixir-format
+msgid "<p class='mb-2 text-gray-900 dark:text-gray-100'>A cue stick is the main tool used in billiards to strike the cue ball. Cues come in different weights, lengths, and materials.</p>\n              <ul class='list-disc list-inside'>\n           <li><a href=\"https://www.meuccicues.com/products/97-10-meucci-cue\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">97-10 Meucci Cue</a></li>\n           <li><a href=\"https://www.mcdermottcue.com/gs06.php\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">gs06</a></li>\n           <li><a href=\"https://www.vikingcue.com/viking-ovation-ov0300/\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Viking Ovation OV0300</a></li>\n           <li><a href=\"https://www.predatorcues.com/usa/predator-4-point-sneaky-pete-black-blue-points-no-wrap-pool-cue.html\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Predator 4 Point Sneaky Pete Black / Blue Points No Wrap Pool Cue</a></li>\n           <li><a href=\"https://pechauer.com/product/al2/\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Pechauer AL2</a></li>\n           <li><a href=\"https://www.pooldawg.com/brand/action/pool-cues/action-bw01-pool-cue\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Action BW01 Pool Cue</a></li>\n           <li><a href=\"https://schoncues.com/product/stl-03/\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Schön STL 03</a></li>\n           <li><a href=\"https://jacobycustomcues.com/JacobyCMS/jacoby-blackout-cues/65-96-blackout-black-jump-break.html#/23-sport_grip-no_wrap\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">BlaCkOut Black Jump/Break</a></li>\n           <li><a href=\"https://www.omegabilliards.com/OMEGA-JUMP-5-p/1993.htm\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">OMEGA JUMP 5</a></li>\n           <li><a href=\"https://www.predatorcues.com/usa/predator-bk-rush-break-cue-no-wrap.html\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Predator Black BK Rush® Break Cue - No Wrap</a></li>\n          </ul>"
+msgstr ""
+
+#: lib/app_web/live/purchase_live.ex:218
+#, elixir-autogen, elixir-format
+msgid "<p class='mb-2 text-gray-900 dark:text-gray-100'>A rack is a frame used to arrange the balls in their starting positions for games like 8-ball, 9-ball, and straight pool.</p>\n              <ul class='list-disc list-inside'>\n           <li><a href=\"https://www.amazon.com/Johnsons-Baby-Naturally-Cornstarch-Hypoallergenic/dp/B005IHT880/ref=zg_bs_g_322266011_d_sccl_1/131-5361470-6018031?th=1\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Johnson's Baby Naturally Derived Cornstarch Baby Powder</a></li>\n           <li><a href=\"https://www.amazon.com/Silver-Cup-Billiard-Pool-Chalk/dp/B000OECJGK/ref=sr_1_5?dib=eyJ2IjoiMSJ9.Dl-EX_ctu756_qYy1jl70WEKxa4_v3l5IokkrayaZ16yHEfoq4AEJElxPH-xMGx8Z0dYWcogtdc_VseHOabKIPxwzR_aPVWRJNpKI5Uc3Fka5Bit3zAnpOlR2aVBAWeaRLL85kAOQkupfkcFemzOhQaH8IVelMBCkmbhJqthaV1HNT9HO__p49QmCTrIN3-lDHpWF2STa_2_lqTSxgFO6MjBeWfcGWDgPWHYSfmmID1dqY9aP2nsnTxgE05owvbN1q64VDWStzm4r9mCrThle3RIrYqGSfOCgqu_aOCmHgs.TEmrX_O32gnNV17nfGbEY8bDgM0T4aafYdkkuGk9bcw&dib_tag=se&keywords=cone+chalk&qid=1747117752&sr=8-5\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Silver Cup Billiard/Pool Cone Chalk</a></li>\n           <li><a href=\"https://www.amazon.com/Master-Tweeten-Velvet-Glide-Billiard/dp/B007GC3GB0/ref=sr_1_9?dib=eyJ2IjoiMSJ9.Dl-EX_ctu756_qYy1jl70WEKxa4_v3l5IokkrayaZ16yHEfoq4AEJElxPH-xMGx8Z0dYWcogtdc_VseHOabKIPxwzR_aPVWRJNpKI5Uc3Fka5Bit3zAnpOlR2aVBAWeaRLL85kAOQkupfkcFemzOhQaH8IVelMBCkmbhJqthaV1HNT9HO__p49QmCTrIN3-lDHpWF2STa_2_lqTSxgFO6MjBeWfcGWDgPWHYSfmmID1dqY9aP2nsnTxgE05owvbN1q64VDWStzm4r9mCrThle3RIrYqGSfOCgqu_aOCmHgs.TEmrX_O32gnNV17nfGbEY8bDgM0T4aafYdkkuGk9bcw&dib_tag=se&keywords=cone+chalk&qid=1747117752&sr=8-9\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Master Velvet Glide Cone Talc</a></li>\n           <li><a href=\"https://www.amazon.com/Silver-Cup-Billiard-Premium-Powder/dp/B07WYJQMSM/ref=sr_1_15?dib=eyJ2IjoiMSJ9.Dl-EX_ctu756_qYy1jl70WEKxa4_v3l5IokkrayaZ16yHEfoq4AEJElxPH-xMGx8Z0dYWcogtdc_VseHOabKIPxwzR_aPVWRJNpKI5Uc3Fka5Bit3zAnpOlR2aVBAWeaRLL85kAOQkupfkcFemzOhQaH8IVelMBCkmbhJqthaV1HNT9HO__p49QmCTrIN3-lDHpWF2STa_2_lqTSxgFO6MjBeWfcGWDgPWHYSfmmID1dqY9aP2nsnTxgE05owvbN1q64VDWStzm4r9mCrThle3RIrYqGSfOCgqu_aOCmHgs.TEmrX_O32gnNV17nfGbEY8bDgM0T4aafYdkkuGk9bcw&dib_tag=se&keywords=cone+chalk&qid=1747117752&sr=8-15\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Silver Cup Billiard/Pool Premium Powder Hand Chalk</a></li>\n          </ul>"
+msgstr ""
+
+#: lib/app_web/live/purchase_live.ex:191
+#, elixir-autogen, elixir-format
+msgid "<p class='mb-2 text-gray-900 dark:text-gray-100'>Billiard gloves help reduce friction between the cue and the player’s bridge hand, promoting smoother strokes.</p>\n              <ul class='list-disc list-inside'>\n           <li><a href=\"https://www.predatorcues.com/usa/predator-second-skin-black-gold-billiard-glove-30-anniversary-edition-left.html\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Predator Second Skin Black & Gold Billiard Glove 30th Anniversary - Left Hand</a></li>\n           <li><a href=\"https://www.predatorcues.com/usa/predator-second-skin-black-gold-billiard-glove-30-anniversary-edition-right.html\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Predator Second Skin Black & Gold Billiard Glove 30th Anniversary - Right Hand</a></li>\n           <li><a href=\"https://www.cuetec.com/products/axis-high-performance-billiard-gloves/axis-glove-noir/\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Cuetec Axis Glove Noir</a></li>\n           <li><a href=\"https://www.amazon.com/Molinari-Billiard-Pool-Cue-Glove/dp/B0CXS9WTHV\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Molinari Billiard Pool Cue Glove - for Left Hand</a></li>\n            <li><a href=\"https://www.amazon.com/Molinari-Billiard-Pool-Cue-Glove/dp/B0CXZKL71F/ref=sr_1_4?crid=1506K0YLCJVO4&dib=eyJ2IjoiMSJ9.k80MFGazpbij29gXUg7RqVM-BAcA75singOcXvLM4VY1mgtF3WcFzoDcuHFpRN6NjogjkbEVFX1MCwJj9toEBnOM-36LoTtW7-VLq_9uFekCoNkapoHoYEj1JQ5mqZB621uEr_PWns9P_IOqe7vqSWuGMJMmYTUx-q4aBUIVK3nSvMRcrh1EotbrQi-EaJsAoP0ymt7DonN7A6m3ft-SxsZ7Eqvr_ltvjTKl-TED5QyizNTgMpUA0MAlqKTPtbPIGcR9wDCCGoNOS7UUfL8YgsyEH8aKXo9bDx13P6Ms02o.bPdR6FqUsXIYDZzAF4Ca2MLGzedEYKd0MJUkitPo458&dib_tag=se&keywords=Molinari%2BBilliard%2BPool%2BCue%2BGlove%2B-%2Bfor%2BRight%2BHand&qid=1747117265&s=sporting-goods&sprefix=molinari%2Bbilliard%2Bpool%2Bcue%2Bglove%2B-%2Bfor%2Bright%2Bhand%2Csporting%2C51&sr=1-4&th=1\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Molinari Billiard Pool Cue Glove - for Right Hand</a></li>\n          </ul>"
+msgstr ""
+
+#: lib/app_web/live/purchase_live.ex:231
+#, elixir-autogen, elixir-format
+msgid "<p class='mb-2 text-gray-900 dark:text-gray-100'>Bridge powder reduces friction on a player’s bridge hand, making cue strokes smoother, especially in humid conditions.</p>\n              <ul class='list-disc list-inside'>\n           <li><a href=\"https://shop.diamondbilliards.com/products/diamond-8-ball-rack\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Diamond Wood 8-Ball Rack</a></li>\n           <li><a href=\"https://shop.diamondbilliards.com/collections/all-products/products/diamond-cr-1-commercial-polycarbonate-8-ball-rack\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Diamond CR-1 Commercial Polycarbonate 8-Ball Rack</a></li>\n           <li><a href=\"https://www.billiards.com/collections/racks-and-triangles/products/spencer-marston-8-ball-plastic-rack\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Spencer Marston 8 Ball Plastic Rack</a></li>\n           <li><a href=\"https://www.billiards.com/collections/racks-and-triangles/products/billiardscom-magic-rack-combo-set\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Magic Rack Combo Set</a></li>\n           <li><a href=\"https://www.amazon.com/TIHOOD-Billiards-Triangle-Accessories-Snooker/dp/B07PSPFVP1/ref=sr_1_23?c=ts&dib=eyJ2IjoiMSJ9.HyLd9o1EhG2LQrK1cjfMfMEc8gxqAlBtFlD2mvdztdg7b8ZMJ9q5E2C5DXYPOxrNkhX0uFMC6EEhxc1d1UX0YsNICohc3WWbYtgoCzwKiNPF5tkzB-xppHpg9R1W6_SiEc7C3mYtdVMyrUGOHgMKzMEZ-Q1F4Hj2A6lrbNhJhe9a1snKjkSsjEPbjLAwbynNqmydrx--kwUVOm9ogbbFpp4zVMnwNpxRxhERMedZsYsMjEgi8Iv6XLUoHqNrXy8BKOKFXQNvMnp6Pz0PfK80bVSy7YuVY73X2k9C93BzUGA.RVJXgbMe5f5uR-cS2G2HoNlbpU5q13UIgrpODwKgFw0&dib_tag=se&keywords=Billiard+Ball+Racks&qid=1747118213&s=leisure-sports-games&sr=1-23&ts_id=3397071\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">TIHOOD 6PCS Magic Ball Rack Holder Sheet</a></li>\n           <li><a href=\"https://www.pooldawg.com/pool-table-accessories/standard-pool-table-accessories/pool-ball-racks/heavy-duty-wood-9-ball-rack\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Wood Heavy Duty 9 Ball Rack</a></li>\n           <li><a href=\"https://www.predatorcues.com/usa/predator-pool-table-aero-rack-black.html\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Black Predator AeroRack Pool Ball Rack</a></li>\n          </ul>"
+msgstr ""
+
+#: lib/app_web/live/purchase_live.ex:107
+#, elixir-autogen, elixir-format
+msgid "<p class='mb-2 text-gray-900 dark:text-gray-100'>Chalk is applied to the cue tip to increase friction between the tip and the cue ball, reducing miscues.</p>\n              <ul class='list-disc list-inside'>\n           <li><a href=\"https://www.amazon.com/TAOM-Billiard-Chalk-Handmade-Finland/dp/B07PWVBRTF?th=1\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">TAOM Pyro Chalk</a></li>\n           <li><a href=\"https://www.pooldawg.com/master-chalk-box-of-12-cubes?gad_source=1&gad_campaignid=22296243070&gbraid=0AAAAAD_OY0-kc8uNPI_0HlcKK_JhKIAWD&gclid=CjwKCAjwuIbBBhBvEiwAsNypvUK--jFMVSW-zbNyz6vdeo0c5CCLvza8vTI-m-WyeuGjZt_nl_7wyhoC47MQAvD_BwE\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Master Chalk (Box of 12 Cubes)</a></li>\n           <li><a href=\"https://www.predatorcues.com/usa/predator-1080-performance-billiard-chalk-5-pc-tube.html\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Predator 1080 Performance Billiard Chalk - 5 pc Tube</a></li>\n           <li><a href=\"https://www.pooldawg.com/kamui-chalk-98-1-cube?gad_source=1&gad_campaignid=22307326487&gbraid=0AAAAAD_OY0-A_gbivD_hL75WEz1RkD0mi&gclid=CjwKCAjwuIbBBhBvEiwAsNypvRC1zeIBCFp4Ds3ImpEmt9Rq3FHdfR283E6CFG-GGrqWHTwPaGnxvRoCPbwQAvD_BwE\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Kamui Chalk .98</a></li>\n          </ul>"
+msgstr ""
+
+#: lib/app_web/live/purchase_live.ex:178
+#, elixir-autogen, elixir-format
+msgid "<p class='mb-2 text-gray-900 dark:text-gray-100'>Extensions can be attached to a cue stick to increase its length for hard-to-reach shots.</p>\n              <ul class='list-disc list-inside'>\n           <li><a href=\"https://www.pooldawg.com/telescopic-cue-extender?gad_source=1&gad_campaignid=22296243070&gbraid=0AAAAAD_OY0-kc8uNPI_0HlcKK_JhKIAWD&gclid=CjwKCAjwuIbBBhBvEiwAsNypvd4sSdR9QS9FLcm9j4X1hS58MutO6acnuHlCIbqIlHKXf8QACyYT0hoCO3cQAvD_BwE\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Telescopic Cue Extender</a></li>\n           <li><a href=\"https://www.predatorcues.com/usa/predator-qr-2-pool-cue-extension.html?utm_source=shopping&utm_medium=cpc&utm_campaign=16740474638&utm_content=&gad_source=1&gad_campaignid=16740474638&gbraid=0AAAAAC9s9aIEEKqu1rKs_6ybNHGmwPacN&gclid=CjwKCAjwuIbBBhBvEiwAsNypvQig1_CXqdW9MyvQwE-rsYqqC26qYcMmpJ8O96e9WW0FG2-cgFp6GhoCyXEQAvD_BwE\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Predator 8\" QR2 Cue Extension with Bumper</a></li>\n           <li><a href=\"https://www.pooldawg.com/x10r-slip-on-extension?gad_source=1&gad_campaignid=22296243070&gbraid=0AAAAAD_OY0-kc8uNPI_0HlcKK_JhKIAWD&gclid=CjwKCAjwuIbBBhBvEiwAsNypvQTU_su8x3c7H5fVdWjxyMLTvraQBd3LghO0nHF4lauYnK9WPuzu9xoCLeMQAvD_BwE\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">X10R Slip-On 12\" Pool Cue Extension</a></li>\n           <li><a href=\"https://www.pooldawg.com/pool-cue-accessories/x5-extfx5b-extension\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">X5 Black Pool Cue Extension</a></li>\n          </ul>"
+msgstr ""
+
+#: lib/app_web/live/purchase_live.ex:205
+#, elixir-autogen, elixir-format
+msgid "<p class='mb-2 text-gray-900 dark:text-gray-100'>Proper lighting is essential for accurate aiming and overall visibility. Billiard lights are usually installed directly above the table.</p>\n              <ul class='list-disc list-inside'>\n           <li><a href=\"https://weststatebilliards.com/product/diamond-light-7-foot/\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Diamond Littman Tournament Light</a></li>\n           <li><a href=\"https://seyberts.com/collections/pool-table-lights/products/predator-7-foot-arena-light-predlight7ft4seg?variant=44211555008710\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Predator 7 Foot Arena Light</a></li>\n           <li><a href=\"https://seyberts.com/products/predator-arena-7-light-4-segments?variant=43001230688454\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Predator 9 Foot Arena Light</a></li>\n           <li><a href=\"https://seyberts.com/collections/pool-table-lights/products/t60-triple-1x8-led-light-9-foot-tables?variant=42790421364934\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Triple 60 Aluminum LED Billiard Light</a></li>\n          </ul>"
+msgstr ""
+
+#: lib/app_web/live/purchase_live.ex:120
+#, elixir-autogen, elixir-format
+msgid "<p class='mb-2 text-gray-900 dark:text-gray-100'>Table and ball cleaners help maintain the condition of billiard equipment, ensuring smooth and consistent play.</p>\n              <ul class='list-disc list-inside'>\n           <li><a href=\"https://www.pooldawg.com/pool-table-accessories/pool-and-billiard-balls/billiards-and-pool-ball-cleaning-tools/ballstar-pool-and-billiards-ball-cleaner\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">BallStar Pool Ball Cleaner</a></li>\n           <li><a href=\"https://www.pooldawg.com/pool-table-accessories/pool-and-billiard-balls/billiards-and-pool-ball-cleaning-tools/aramith-billiard-ball-cleaning-solution\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Aramith Billiard Ball Cleaning Solution</a></li>\n           <li><a href=\"https://quick-clean.com/quick-clean-single-can.html\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Quick-Clean (Single Can)</a></li>\n           <li><a href=\"https://seyberts.com/collections/ball-cleaners/products/tiger-crystal-ball-cleaner-polisher?variant=41733360779462\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Tiger Crystal Ball Cleaner & Polisher</a></li>\n          </ul>"
+msgstr ""
+
+#: lib/app_web/live/purchase_live.ex:264
+#, elixir-autogen, elixir-format
+msgid "<p class='mb-2 text-gray-900 dark:text-gray-100'>Table covers protect billiard tables from dust, spills, and sunlight when not in use.</p>\n              <ul class='list-disc list-inside'>\n           <li><a href=\"https://www.cueandcase.com/products/pool-table-cover\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Pool Table Cover</a></li>\n           <li><a href=\"https://seyberts.com/collections/diamond-table-accessories/products/black-duratex-fitted-covered-for-diamond-pro-am-pool-tables?variant=41787646542022\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Diamond Logo Duratex Fitted Cover For Diamond Pro Am Pool Tables</a></li>\n           <li><a href=\"https://seyberts.com/products/pro-series-black-leatherette-pool-table-cover?variant=43844783898822\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Pro Series Leatherette Pool Table Cover</a></li>\n           <li><a href=\"https://www.johnsonfitness.com/Brunswick-Billiards-Table-Cover-P1965.aspx?srsltid=AfmBOoqGfCVfTz1ZKgKqXiuLVbuncNNE2b-zQXdt4ZH3QNJ0mJOVPGKh\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Brunswick Billiards Table Cover</a></li>\n          </ul>"
+msgstr ""
+
+#: lib/app_web/live/purchase_live.ex:247
+#, elixir-autogen, elixir-format
+msgid "<p class='mb-2 text-gray-900 dark:text-gray-100'>The billiard table is where games are played. Tables vary in size and material, and are covered with a felt surface.</p>\n              <ul class='list-disc list-inside'>\n           <li><a href=\"https://www.spotonbilliards.com/collections/diamond-pool-tables/products/diamond-proam-pool-table\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Diamond ProAm Pool Table</a></li>\n           <li><a href=\"https://www.brunswickbilliards.com/products/allenton-7-foot-pool-table-with-ball-and-claw-leg\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Allenton 7' Pool Table with Ball & Claw Leg</a></li>\n           <li><a href=\"https://www.gameworldplanet.com/collections/valley-pool-tables/products/valley-pro-cat-pool-table\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Valley Pro Cat Pool Table</a></li>\n           <li><a href=\"https://www.predatorcues.com/usa/predator-apex-premier-league-edition-7-foot-pool-table.html\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Predator Apex Premier League Edition 7-Foot Pool Table</a></li>\n           <li><a href=\"https://www.pooltablesplus.com/shop/pool-table-collection/olhausen-billiards/reno-pool-table/\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Olhausen Reno Pool Table</a></li>\n           <li><a href=\"https://prestigebilliardsaz.com/acurra-pool-table-7-8-or-9-foot-rasson/\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Rasson Acurra Pool Table</a></li>\n           <li><a href=\"https://www.sawyertwain.com/nixon-billiards-kemp-slate-pool-table-weathered-slate/\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Nixon Billiards Kemp Slate Pool Table – Weathered Slate</a></li>\n           <li><a href=\"https://www.sawyertwain.com/plank-hide-saxon-steel-slate-pool-table-gunmetal-grey-finish/\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Plank & Hide Saxon Steel Slate Pool Table</a></li>\n          </ul>"
+msgstr ""
+
+#: lib/app_web/live/purchase_live.ex:133
+#, elixir-autogen, elixir-format
+msgid "<p class='mb-2 text-gray-900 dark:text-gray-100'>The cue ball is the white ball struck with the cue stick. It is used to hit the object balls during gameplay.</p>\n              <ul class='list-disc list-inside'>\n           <li><a href=\"https://www.billiards.com/collections/cue-balls-8-balls/products/aramith-tournament-magnetic-cue-ball?_pos=1&_fid=f00dae785&_ss=c\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Aramith Tournament Magnetic Cue Ball</a></li>\n           <li><a href=\"https://billiardsuperstore.com/aramith-tournament-black-dot-cue-ball/\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Aramith Tournament Black Dot Cue Ball</a></li>\n           <li><a href=\"https://www.pooldawg.com/aramith-pro-cup-6-red-dot-tv-measles-cue-ball?gad_source=1&gad_campaignid=22307326487&gbraid=0AAAAAD_OY0-A_gbivD_hL75WEz1RkD0mi&gclid=CjwKCAjwuIbBBhBvEiwAsNypvZ3jPygkVAzc6osCqaAyFYlDgw42ltpK10AoLvAeVK8Kj4wtGuq2yhoCDOYQAvD_BwE\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Aramith Pro Cup 6 Red Dot TV 'Measles' Cue Ball</a></li>\n           <li><a href=\"https://seyberts.com/products/aramith-red-circle-cue-ball?variant=41732478173382\" class='hover:underline' target=\"_blank\" rel=\"noopener noreferrer\">Aramith Red Circle Cue Ball</a></li>\n          </ul>"
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:60
+#, elixir-autogen, elixir-format
+msgid "A ball may settle slightly after it appears to have stopped, possibly due to slight imperfections in the ball or the table. Ball movement post-shot may be restored under certain conditions."
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:326
+#, elixir-autogen, elixir-format
+msgid "A breaking foul is penalized by the loss of two points, as well as a possible re-break. If both a standard foul and a breaking foul happen on one shot, it is considered a breaking foul. "
+msgstr ""
+
+#: lib/app_web/live/purchase_live.ex:14
+#, elixir-autogen, elixir-format
+msgid "A chart of billiards sales and a listing of links for billiards items to be purchased."
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:72
+#, elixir-autogen, elixir-format
+msgid "A conceded game is a loss. For example, if a player unscrews their jointed playing cue stick while the opponent is at the table and during the opponent’s decisive rack of a match, it will be considered a concession of the match."
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:139
+#, elixir-autogen, elixir-format
+msgid "A shooter losses the game if the eight ball is pocketed while fouling, is pocketed before their group is cleared, is pocketed in an uncalled pocket, or is driven off of the table."
+msgstr ""
+
+#: lib/app_web/live/leagues_live.ex:60
+#, elixir-autogen, elixir-format
+msgid "APA: The American Poolplayers Association"
+msgstr ""
+
+#: lib/app_web/controllers/page_html/home.html.heex:59
+#, elixir-autogen, elixir-format
+msgid "About Cue Sphere"
+msgstr ""
+
+#: lib/app_web/live/licensing_live.ex:62
+#, elixir-autogen, elixir-format
+msgid "Additional Information"
+msgstr ""
+
+#: lib/app_web/controllers/page_html/home.html.heex:104
+#, elixir-autogen, elixir-format
+msgid "Advanced skill builders"
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:176
+#, elixir-autogen, elixir-format
+msgid "After a legal break, the shooter may choose to play a “push out” as their shot. They must tell the refree so that the wrong ball first and no rail contact rules do not apply. The other player then decides who will shoot next by accepting or rejecting the \"push out\" shot."
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:230
+#, elixir-autogen, elixir-format
+msgid "After a legal break, the shooter may choose to play a “push out” as their shot. They must tell the refree so that the wrong ball first and no rail contact rules do not apply. The other player then decides who will shoot next by accepting or rejecting the \"push out\" shot. The ten ball pocketed during a \"push out\" is re-spotted, without penalty"
+msgstr ""
+
+#: lib/app_web/components/ui/footer.ex:28
+#, elixir-autogen, elixir-format
+msgid "All Rights Reserved."
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:310
+#, elixir-autogen, elixir-format
+msgid "All balls pocketed on fouls, or on safeties, or without a called ball having been pocketed, and all balls driven off the table are spotted. If the fifteenth ball of a rack needs to be spotted and the fourteen balls have not been touched, the fifteenth ball will spot on the apex spot and the referee may use the triangle to assure a tight rack."
+msgstr ""
+
+#: lib/app_web/live/licensing_live.ex:74
+#, elixir-autogen, elixir-format
+msgid "All trademarks and registered trademarks are the property of their respective owners."
+msgstr ""
+
+#: lib/app_web/live/leagues_live.ex:72
+#, elixir-autogen, elixir-format
+msgid "BCA: The Billiards Congress of America"
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:41
+#, elixir-autogen, elixir-format
+msgid "Ball Spotting: "
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:59
+#, elixir-autogen, elixir-format
+msgid "Balls Settling: "
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:42
+#, elixir-autogen, elixir-format
+msgid "Balls are spotted (returned to play on the table) by placing them on the long string (long axis of the table) as close as possible to the foot spot and between the foot spot and the foot rail, without moving any interfering ball."
+msgstr ""
+
+#: lib/app_web/controllers/page_html/home.html.heex:103
+#, elixir-autogen, elixir-format
+msgid "Beginner-friendly guides"
+msgstr ""
+
+#: lib/app_web/live/leagues_live.ex:8
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Billiards Leagues"
+msgstr ""
+
+#: lib/app_web/live/facts_live.ex:25
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Billiards evolves from a lawn game similar to croquet, likely in France or Northern Europe. Billiards is played on a wooden table with green cloth, to represent grass, with maces (wooden sticks) to shove balls. The word billiard comes from the French billart (stick) or bille (ball)."
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:116
+#: lib/app_web/live/rules_live.ex:169
+#: lib/app_web/live/rules_live.ex:223
+#, elixir-autogen, elixir-format
+msgid "Break: "
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:326
+#, elixir-autogen, elixir-format
+msgid "Breaking Foul: "
+msgstr ""
+
+#: lib/app_web/controllers/page_html/home.html.heex:163
+#, elixir-autogen, elixir-format
+msgid "Browse Games"
+msgstr ""
+
+#: lib/app_web/live/books_live.ex:148
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Buy A Mind for Pool: How To Master The Mental Game Now"
+msgstr ""
+
+#: lib/app_web/live/books_live.ex:38
+#, elixir-autogen, elixir-format
+msgid "Buy Life Through Pool Now"
+msgstr ""
+
+#: lib/app_web/live/books_live.ex:120
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Buy Pool and Billiards For Dummies Book Cover Now"
+msgstr ""
+
+#: lib/app_web/live/books_live.ex:88
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Buy The 99 Critical Shots in Pool: Everything You Need to Know to Learn and Master the Game Now"
+msgstr ""
+
+#: lib/app_web/live/books_live.ex:29
+#, elixir-autogen, elixir-format, fuzzy
+msgid "By Jospeh Schmidt — Life Through Pool by Joseph Schmidt uses the game of pool as a powerful metaphor for resilience, mindset, and personal growth. Once a promising pool prodigy, Schmidt's life changed drastically after suffering a severe brain injury from an assault. Initially feeling powerless, he later discovered the transformative power of language and mindset, learning that reframing his internal dialogue could help him regain his abilities and reshape his future.\n              The book explores key themes such as self-control, patience, and discipline, showing how the principles of pool apply to life's challenges. Schmidt emphasizes that success is not just about skill but about the way we think, adapt, and overcome setbacks. Through personal experiences and practical insights, he encourages readers to embrace both victories and failures as opportunities for growth, making Life Through Pool both a guide to mastering the game and a deeper reflection on achieving success in life."
+msgstr ""
+
+#: lib/app_web/live/books_live.ex:110
+#, elixir-autogen, elixir-format, fuzzy
+msgid "By Nicholas Leider - Practical, step-by-step tips for players of all levels\n          From Snooker to Carom to good-old-fashioned 8- or 9-Ball, Pool & Billiards For Dummies reveals the tips, tricks, and rules of play, covering the variety of the ever-popular games that make up pool and billiards. This hands-on guide discusses everything from the rules and strategies of the games to how to set up a pool room to choosing the right equipment, and is accompanied by dozens of photos and line drawings.\n          See how hard to hit the cue ball and where to hit it, the angle to hold the cue stick and how much chalk to use, how to use a bridge, and how to put spin on the ball\n          Includes advanced pool techniques and trick shots for the seasoned pool sharp\n          With Pool & Billiards For Dummies, even a novice can play like a champion!"
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:134
+#: lib/app_web/live/rules_live.ex:235
+#: lib/app_web/live/rules_live.ex:305
+#, elixir-autogen, elixir-format
+msgid "Call Shot: "
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:53
+#, elixir-autogen, elixir-format
+msgid "Call Shots: "
+msgstr ""
+
+#: lib/app_web/live/tournaments_live.ex:183
+#, elixir-autogen, elixir-format
+msgid "Cancel"
+msgstr ""
+
+#: lib/app_web/live/privacypolicy_live.ex:121
+#, elixir-autogen, elixir-format
+msgid "Changes to This Policy"
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:71
+#, elixir-autogen, elixir-format
+msgid "Concession: "
+msgstr ""
+
+#: lib/app_web/live/privacypolicy_live.ex:42
+#, elixir-autogen, elixir-format
+msgid "Contact Data: email address"
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:128
+#: lib/app_web/live/rules_live.ex:181
+#: lib/app_web/live/rules_live.ex:251
+#: lib/app_web/live/rules_live.ex:299
+#, elixir-autogen, elixir-format
+msgid "Continuous Play: "
+msgstr ""
+
+#: lib/app_web/live/licensing_live.ex:19
+#, elixir-autogen, elixir-format
+msgid "Copyright © 2025 Cuesphere"
+msgstr ""
+
+#: lib/app_web/live/tournaments_live.ex:190
+#, elixir-autogen, elixir-format
+msgid "Create"
+msgstr ""
+
+#: lib/app_web/live/tournaments_live.ex:132
+#, elixir-autogen, elixir-format
+msgid "Create New Tournament"
+msgstr ""
+
+#: lib/app_web/live/tournaments_live.ex:40
+#, elixir-autogen, elixir-format
+msgid "Create Tournament"
+msgstr ""
+
+#: lib/app_web/live/tournaments_live.ex:63
+#, elixir-autogen, elixir-format
+msgid "Created by: "
+msgstr ""
+
+#: lib/app_web/live/purchase_live.ex:131
+#, elixir-autogen, elixir-format
+msgid "Cue Ball"
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:47
+#, elixir-autogen, elixir-format
+msgid "Cue Ball in Hand: "
+msgstr ""
+
+#: lib/app_web/live/purchase_live.ex:144
+#, elixir-autogen, elixir-format
+msgid "Cue Holder"
+msgstr ""
+
+#: lib/app_web/components/layouts/app.html.heex:75
+#, elixir-autogen, elixir-format
+msgid "Cue Sphere"
+msgstr ""
+
+#: lib/app_web/components/layouts/app.html.heex:6
+#: lib/app_web/components/layouts/app.html.heex:11
+#, elixir-autogen, elixir-format
+msgid "Cue Sphere Logo"
+msgstr ""
+
+#: lib/app_web/live/about_live.ex:23
+#, elixir-autogen, elixir-format
+msgid "Cue Sphere represents all things pool for people around the world. I myself have grown to love the game of pool. Growing up, my grandfather had a pool table in the entrance of his home. Both my grandfather and father have always played, and still do play, pool. I learned how to play pool from the both of them from a young age and spent lots of time on my grandfather's Brunswick table. I got my first pool cue around the age of 13 but never took it too seriously. Since I now have two Diamond pool tables in my new home, I became serious about pool again in May 2024. Currently, I play on a few teams and am getting actively trained and guided by some of the best players in the game to reach my full potential."
+msgstr ""
+
+#: lib/app_web/live/privacypolicy_live.ex:74
+#, elixir-autogen, elixir-format
+msgid "Data Security"
+msgstr ""
+
+#: lib/app_web/live/privacypolicy_live.ex:32
+#, elixir-autogen, elixir-format
+msgid "Data We Collect"
+msgstr ""
+
+#: lib/app_web/live/tournaments_live.ex:144
+#, elixir-autogen, elixir-format
+msgid "Date"
+msgstr ""
+
+#: lib/app_web/live/tournaments_live.ex:57
+#, elixir-autogen, elixir-format
+msgid "Date: "
+msgstr ""
+
+#: lib/app_web/live/tournaments_live.ex:102
+#, elixir-autogen, elixir-format
+msgid "Delete Tournament"
+msgstr ""
+
+#: lib/app_web/controllers/page_html/home.html.heex:62
+#, elixir-autogen, elixir-format
+msgid "Discover the story behind this platform, explore player ratings, and shop for equipment."
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:110
+#, elixir-autogen, elixir-format
+msgid "Eight Ball Rack: "
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:99
+#, elixir-autogen, elixir-format
+msgid "Eight ball is played with fifteen numbered object balls and the cue ball. The shooter’s group of seven balls (one through seven or nine through fifteen) must all be off the table before they attempt to pocket the eight ball to win. Shots are called."
+msgstr ""
+
+#: lib/app_web/controllers/page_html/home.html.heex:25
+#, elixir-autogen, elixir-format
+msgid "Elevate Your Pool Game"
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:35
+#, elixir-autogen, elixir-format
+msgid "Equipment Use: "
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:134
+#: lib/app_web/live/rules_live.ex:236
+#, elixir-autogen, elixir-format
+msgid "Every shot (except the break) must be called, including \"safety\" shots."
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:305
+#, elixir-autogen, elixir-format
+msgid "Every shot must be called, including \"safety\" shots. Any object ball pocketed on the safety is spotted."
+msgstr ""
+
+#: lib/app_web/controllers/page_html/home.html.heex:148
+#, elixir-autogen, elixir-format
+msgid "Explore"
+msgstr ""
+
+#: lib/app_web/live/leagues_live.ex:11
+#, elixir-autogen, elixir-format
+msgid "Explore popular billiards leagues like APA, TAP, BCA, and more. Each league has unique formats, rules, and competitive structures."
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:12
+#, elixir-autogen, elixir-format
+msgid "Explore the official rules for the popular billiards games 8-Ball, 9-Ball, 10-Ball, and Straight Pool. These rules are based on standards by the World Pool-Billiard Association (WPA) and the Billiard Congress of America (BCA)."
+msgstr ""
+
+#: lib/app_web/live/games_live.ex:10
+#, elixir-autogen, elixir-format
+msgid "Explore the various games billiards has to offer."
+msgstr ""
+
+#: lib/app_web/live/fargo_rate_live.ex:14
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Fargo Rate Lookup"
+msgstr ""
+
+#: lib/app_web/controllers/page_html/home.html.heex:67
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Fargo Rates"
+msgstr ""
+
+#: lib/app_web/controllers/page_html/home.html.heex:41
+#, elixir-autogen, elixir-format
+msgid "Find Tournaments"
+msgstr ""
+
+#: lib/app_web/live/fargo_rate_live.ex:17
+#, elixir-autogen, elixir-format
+msgid "Find out the Fargo Rate of players by searching for their first or last name."
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:290
+#, elixir-autogen, elixir-format
+msgid "For an opening break shot, the fifteen balls are racked in a triangle with the apex ball on the foot spot. When the balls are re-racked, the apex ball is committed if only fourteen balls are being racked. The marked outline of the triangle will be used to determine whether an intended break ball is in the rack area. When ball rack template is used at 14.1 the outline of a triangle will still be drawn for the purpose of deciding whether a ball is in the rack area."
+msgstr ""
+
+#: lib/app_web/live/licensing_live.ex:66
+#, elixir-autogen, elixir-format
+msgid "For questions about licensing or to request a commercial license, please contact us at:"
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:331
+#, elixir-autogen, elixir-format
+msgid "For the 3 Consecutive Fouls Rule, only standard fouls are counted, so a breaking foul does not count as one of the three fouls. A point is subtracted for the third foul as usual, and then the additional fifteen-point penalty is subtracted and the offending player’s consecutive foul count is reset to zero. All fifteen balls are re-racked and the offending player is required to shoot under the requirements of the opening break"
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:187
+#: lib/app_web/live/rules_live.ex:257
+#: lib/app_web/live/rules_live.ex:320
+#, elixir-autogen, elixir-format
+msgid "Fouls: "
+msgstr ""
+
+#: lib/app_web/live/leagues_live.ex:35
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Games:"
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:20
+#, elixir-autogen, elixir-format, fuzzy
+msgid "General Rules"
+msgstr ""
+
+#: lib/app_web/live/privacypolicy_live.ex:52
+#, elixir-autogen, elixir-format
+msgid "How We Use Your Data"
+msgstr ""
+
+#: lib/app_web/live/privacypolicy_live.ex:41
+#, elixir-autogen, elixir-format
+msgid "Identity Data: name, username, or similar identifier"
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:246
+#, elixir-autogen, elixir-format
+msgid "If a player misses their intended ball and pocket, and either makes the nominated ball in the wrong pocket or pockets another ball, their inning has finished and the incoming player has the option to take the shot as is, or hand it back to their opponent."
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:78
+#, elixir-autogen, elixir-format
+msgid "If the referee observes that no progress is being made towards a conclusion, they will announce their decision, and each player will have three more turns at the table. Then, if the referee determines that there is still no progress, they will declare a stalemate. If both players agree, they may accept the stalemate without taking their three additional turns."
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:252
+#, elixir-autogen, elixir-format
+msgid "If the shooter legally pockets a called/nominated ball on a shot, any additional balls pocketed remain pocketed, and they continue at the table for the next shot. If a player nominates and legally pockets the ten ball prior to the ten ball being the last remaining ball, the ten ball is re-spotted and the shooter continues, while pocketing the ten ball as a final ball at the table, they win the rack. If the shooter fails to pocket the called ball or fouls, play passes to the other player, and if no foul was committed, the incoming player must play the cue ball from the position left by the other player."
+msgstr ""
+
+#: lib/app_web/live/privacypolicy_live.ex:144
+#, elixir-autogen, elixir-format
+msgid "If you have any questions about this Privacy Policy, please contact us at privacy@cuesphere.com"
+msgstr ""
+
+#: lib/app_web/live/privacypolicy_live.ex:111
+#, elixir-autogen, elixir-format
+msgid "If you wish to exercise any of these rights, please contact us at privacy@cuesphere.com"
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:54
+#, elixir-autogen, elixir-format
+msgid "In games in which the shooter is required to call shots, the intended ball and pocket must be indicated for each shot if they are not obvious. Details of the shot, such as cushions struck or other balls contacted or pocketed are irrelevant. Only one ball may be called on each shot."
+msgstr ""
+
+#: lib/app_web/controllers/page_html/home.html.heex:106
+#, elixir-autogen, elixir-format
+msgid "Inspiring films"
+msgstr ""
+
+#: lib/app_web/live/privacypolicy_live.ex:15
+#, elixir-autogen, elixir-format
+msgid "Introduction"
+msgstr ""
+
+#: lib/app_web/controllers/page_html/home.html.heex:154
+#, elixir-autogen, elixir-format
+msgid "Join"
+msgstr ""
+
+#: lib/app_web/live/tournaments_live.ex:91
+#, elixir-autogen, elixir-format
+msgid "Join Tournament"
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:24
+#, elixir-autogen, elixir-format
+msgid "Know all rules, schedules, and equipment use. The ultimate responsibility rests with the player."
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:104
+#: lib/app_web/live/rules_live.ex:157
+#: lib/app_web/live/rules_live.ex:211
+#: lib/app_web/live/rules_live.ex:283
+#, elixir-autogen, elixir-format
+msgid "Lag: "
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:29
+#, elixir-autogen, elixir-format
+msgid "Lagging: "
+msgstr ""
+
+#: lib/app_web/live/privacypolicy_live.ex:19
+#, elixir-autogen, elixir-format
+msgid "Last Updated: "
+msgstr ""
+
+#: lib/app_web/controllers/message_html/index.html.heex:7
+#, elixir-autogen, elixir-format
+msgid "Leave Feedback"
+msgstr ""
+
+#: lib/app_web/live/tournaments_live.ex:83
+#, elixir-autogen, elixir-format
+msgid "Leave Tournament"
+msgstr ""
+
+#: lib/app_web/controllers/message_html/index.html.heex:11
+#, elixir-autogen, elixir-format
+msgid "Leave feedback on Cue Sphere!"
+msgstr ""
+
+#: lib/app_web/components/layouts/app.html.heex:80
+#, elixir-autogen, elixir-format
+msgid "Licensing"
+msgstr ""
+
+#: lib/app_web/live/tournaments_live.ex:54
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Location: "
+msgstr ""
+
+#: lib/app_web/live/tournaments_live.ex:31
+#, elixir-autogen, elixir-format
+msgid "Log in to join tournaments or create tournaments to play with others!"
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:139
+#, elixir-autogen, elixir-format
+msgid "Losing: "
+msgstr ""
+
+#: lib/app_web/live/licensing_live.ex:15
+#, elixir-autogen, elixir-format
+msgid "MIT License"
+msgstr ""
+
+#: lib/app_web/controllers/page_html/home.html.heex:141
+#, elixir-autogen, elixir-format
+msgid "Master the"
+msgstr ""
+
+#: lib/app_web/live/tournaments_live.ex:142
+#, elixir-autogen, elixir-format
+msgid "Name"
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:163
+#, elixir-autogen, elixir-format
+msgid "Nine Ball Rack: "
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:152
+#, elixir-autogen, elixir-format
+msgid "Nine ball is played with nine object balls numbered one through nine and the cue ball. The balls are played in ascending numerical order. The player legally pocketing the nine ball wins the rack."
+msgstr ""
+
+#: lib/app_web/live/privacypolicy_live.ex:105
+#, elixir-autogen, elixir-format
+msgid "Object to processing of your personal data"
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:98
+#: lib/app_web/live/rules_live.ex:151
+#: lib/app_web/live/rules_live.ex:205
+#: lib/app_web/live/rules_live.ex:277
+#, elixir-autogen, elixir-format
+msgid "Objective: "
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:9
+#, elixir-autogen, elixir-format
+msgid "Official Game Rules"
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:36
+#, elixir-autogen, elixir-format
+msgid "Only WPA-approved equipment may be used. Equipement that is considered normal includes a cue stick, which can be changed throughout the match, gloves, powder, chalk that is compatible with the cloth color, and up to two mechanical bridges"
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:122
+#, elixir-autogen, elixir-format
+msgid "Open Table: "
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:295
+#, elixir-autogen, elixir-format
+msgid "Opening Break: "
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:65
+#, elixir-autogen, elixir-format
+msgid "Outside Interference: "
+msgstr ""
+
+#: lib/app_web/live/licensing_live.ex:22
+#, elixir-autogen, elixir-format
+msgid "Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:"
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:23
+#, elixir-autogen, elixir-format
+msgid "Player Responsibility: "
+msgstr ""
+
+#: lib/app_web/live/tournaments_live.ex:67
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Players: "
+msgstr ""
+
+#: lib/app_web/controllers/page_html/home.html.heex:84
+#: lib/app_web/controllers/page_html/home.html.heex:169
+#, elixir-autogen, elixir-format
+msgid "Pool balls on a blue cloth pool table"
+msgstr ""
+
+#: lib/app_web/controllers/page_html/home.html.heex:15
+#, elixir-autogen, elixir-format
+msgid "Pool table blue cloth background"
+msgstr ""
+
+#: lib/app_web/components/layouts/app.html.heex:79
+#: lib/app_web/live/privacypolicy_live.ex:8
+#, elixir-autogen, elixir-format
+msgid "Privacy Policy"
+msgstr ""
+
+#: lib/app_web/controllers/page_html/home.html.heex:69
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Purchase Gear"
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:175
+#: lib/app_web/live/rules_live.ex:229
+#, elixir-autogen, elixir-format
+msgid "Push Out: "
+msgstr ""
+
+#: lib/app_web/controllers/page_html/home.html.heex:135
+#, elixir-autogen, elixir-format
+msgid "Ready to Play?"
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:66
+#, elixir-autogen, elixir-format
+msgid "Referee restores position of the balls that were interfered with or calls stalemate if the balls cannot be restored to their original positions."
+msgstr ""
+
+#: lib/app_web/live/privacypolicy_live.ex:102
+#, elixir-autogen, elixir-format
+msgid "Request access to your personal data"
+msgstr ""
+
+#: lib/app_web/live/privacypolicy_live.ex:103
+#, elixir-autogen, elixir-format
+msgid "Request correction of your personal data"
+msgstr ""
+
+#: lib/app_web/live/privacypolicy_live.ex:104
+#, elixir-autogen, elixir-format
+msgid "Request erasure of your personal data"
+msgstr ""
+
+#: lib/app_web/live/privacypolicy_live.ex:106
+#, elixir-autogen, elixir-format
+msgid "Request restriction of processing your personal data"
+msgstr ""
+
+#: lib/app_web/live/privacypolicy_live.ex:107
+#, elixir-autogen, elixir-format
+msgid "Request transfer of your personal data"
+msgstr ""
+
+#: lib/app_web/live/privacypolicy_live.ex:108
+#, elixir-autogen, elixir-format
+msgid "Right to withdraw consent"
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:239
+#, elixir-autogen, elixir-format
+msgid "Safety: "
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:315
+#, elixir-autogen, elixir-format
+msgid "Scoring: "
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:193
+#: lib/app_web/live/rules_live.ex:263
+#: lib/app_web/live/rules_live.ex:331
+#, elixir-autogen, elixir-format
+msgid "Serious Foul: "
+msgstr ""
+
+#: lib/app_web/live/facts_live.ex:33
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Shakespeare references billiards in Antony and Cleopatra, showing its growing popularity."
+msgstr ""
+
+#: lib/app_web/components/layouts/app.html.heex:16
+#, elixir-autogen, elixir-format
+msgid "Skip to main content"
+msgstr ""
+
+#: lib/app_web/live/licensing_live.ex:8
+#, elixir-autogen, elixir-format
+msgid "Software Licensing"
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:310
+#, elixir-autogen, elixir-format
+msgid "Spotting Balls: "
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:77
+#, elixir-autogen, elixir-format
+msgid "Stalemate: "
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:188
+#, elixir-autogen, elixir-format
+msgid "Standard fouls of nine ball include cue ball scratch, wrong ball first, no rail after contact, no foot on floor, ball driven off the table, touched ball, double hit, push shot, balls still moving, bad cue ball placement, cue stick on the table, playing out of turn, slow play, and ball rack template foul."
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:321
+#, elixir-autogen, elixir-format
+msgid "Standard fouls of ten ball include cue ball scratch, no rail after contact, no foot on floor, ball driven off the table, touched ball, double hit, push shot, balls still moving, bad cue ball placement, bad play from behind head string, cue stick on the table, playing out of turn, slow play, and ball rack template foul."
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:258
+#, elixir-autogen, elixir-format
+msgid "Standard fouls of ten ball include cue ball scratch, wrong ball first, no rail after contact, no foot on floor, ball driven off the table, touched ball, double hit, push shot, balls still moving, bad cue ball placement, cue stick on the table, playing out of turn, slow play, and ball rack template foul."
+msgstr ""
+
+#: lib/app_web/controllers/page_html/home.html.heex:35
+#, elixir-autogen, elixir-format
+msgid "Start Learning"
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:289
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Straight Pool Rack: "
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:273
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Straight Pool Rules"
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:278
+#, elixir-autogen, elixir-format
+msgid "Straight pool, also known as 14.1 Continuous Pool, is played with fifteen numbered balls and the cue ball. Each ball pocketed on a legal called shot counts one point and the first player to reach the required score wins the match. Straight pool is continuous in that after fourteen balls are pocketed, they are re-racked and the shooter continues."
+msgstr ""
+
+#: lib/app_web/controllers/page_html/home.html.heex:105
+#, elixir-autogen, elixir-format
+msgid "Strategy literature"
+msgstr ""
+
+#: lib/app_web/live/leagues_live.ex:66
+#, elixir-autogen, elixir-format
+msgid "TAP: The Association for Pool"
+msgstr ""
+
+#: lib/app_web/live/licensing_live.ex:32
+#, elixir-autogen, elixir-format
+msgid "THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
+msgstr ""
+
+#: lib/app_web/live/privacypolicy_live.ex:43
+#, elixir-autogen, elixir-format
+msgid "Technical Data: browser type and version, time zone setting"
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:217
+#, elixir-autogen, elixir-format
+msgid "Ten Ball Rack: "
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:206
+#, elixir-autogen, elixir-format
+msgid "Ten ball is a call shot game played with ten object balls numbered one through ten and the cue ball. The balls are played in ascending numerical order and the lowest numbered ball must be contacted by the cue ball in order to establish a legal hit. If the ten ball is pocketed on a legal break shot, it will be re-spotted and the player continues with his inning. Only one ball may be called on each shot, except on the break shot where no ball may be called."
+msgstr ""
+
+#: lib/app_web/live/licensing_live.ex:27
+#, elixir-autogen, elixir-format
+msgid "The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software."
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:117
+#: lib/app_web/live/rules_live.ex:170
+#: lib/app_web/live/rules_live.ex:224
+#, elixir-autogen, elixir-format
+msgid "The cue ball must be behind the head string. Four balls need to touch a rail (or rails) or a pocketed ball is required for the break to be valid."
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:111
+#, elixir-autogen, elixir-format
+msgid "The fifteen object balls are racked as tightly as possible in a triangle, with the apex ball on the foot spot and the eight ball as the first ball that is directly below the apex ball. One from each group of seven will be on the two lower corners of the triangle. The other balls are placed in the triangle randomly."
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:164
+#, elixir-autogen, elixir-format
+msgid "The object balls are racked as tightly as possible in a diamond shape, with the one ball at the apex of the diamond and on the foot spot and the nine ball in the middle of the diamond. The other balls will be placed in the diamond randomly."
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:218
+#, elixir-autogen, elixir-format
+msgid "The object balls are racked as tightly as possible in a triangular shape, with the one ball at the apex of the triangle and on the foot spot and the ten ball in the middle of the triangle. The other balls will be placed in the triangle randomly."
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:300
+#, elixir-autogen, elixir-format
+msgid "The shooter remains at the table as long as he continues to legally pocket called balls or wins the game by scoring the required number of points. When fourteen balls from a rack have been legally pocketed, play is suspended until the balls are re-racked."
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:129
+#, elixir-autogen, elixir-format
+msgid "The shooter remains at the table until they fail to legally pocket a ball. If the shooter fails to legally pocket a ball, the opponent takes their turn at the table."
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:182
+#, elixir-autogen, elixir-format
+msgid "The shooter remains at the table until they fail to legally pocket a ball. If the shooter fails to legally pocket a ball, the opponent takes their turn at the table. If they legally pocket the nine ball on any shot (except a push out), they win the rack"
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:315
+#, elixir-autogen, elixir-format
+msgid "The shooter scores one point for legally pocketing a called shot. Each additional ball pocketed on such a shot also counts one point. Fouls are penalized by subtracting points from the offending player’s score. Scores may be negative due to penalties from fouls."
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:240
+#, elixir-autogen, elixir-format
+msgid "The shooter, after the break at any time may call “safety” which permits them to make contact with the legal object ball without pocketing a ball and end their inning. However, if the shooter pockets the legal object ball the incoming player has the option to play the shot as left, or hand it back to their opponent."
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:123
+#, elixir-autogen, elixir-format
+msgid "The table is said to be “open” before groups are determined. Before each shot, the shooter must call their intended ball. If the shooter legally pockets their called ball, the corresponding group becomes theirs, and their opponent is assigned the other group. If they fail to legally pocket their called ball, the table remains open and play passes to the other player. When the table is “open”, any object ball may be struck first except the eight ball."
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:105
+#: lib/app_web/live/rules_live.ex:158
+#: lib/app_web/live/rules_live.ex:284
+#, elixir-autogen, elixir-format
+msgid "The winnning player of the lag has the option to break or pass the break to the opponent."
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:212
+#, elixir-autogen, elixir-format
+msgid "The winnning player of the lag has the option to break or pass the break to the opponent. The standard format is to alternate the break."
+msgstr ""
+
+#: lib/app_web/live/licensing_live.ex:42
+#, elixir-autogen, elixir-format
+msgid "Third-Party Licenses"
+msgstr ""
+
+#: lib/app_web/controllers/message_html/show.html.heex:3
+#, elixir-autogen, elixir-format
+msgid "This is a piece of feedback on Cue Sphere."
+msgstr ""
+
+#: lib/app_web/live/privacypolicy_live.ex:62
+#, elixir-autogen, elixir-format
+msgid "To allow you to participate in interactive features"
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:296
+#, elixir-autogen, elixir-format
+msgid "To break, the cue ball is in hand behind the head string and a called ball must be pocketed. If no called ball is pocketed, the cue ball and two object balls must each be driven to a rail after the cue ball contacts the rack or the shot is a breaking foul. This is penalized by subtracting two points from the breaker’s score. The non-breaking player may accept the balls in position or may require the breaker to play another opening break shot, until they satisfy the requirements for an opening break or the non-shooting player accepts the table in position."
+msgstr ""
+
+#: lib/app_web/live/privacypolicy_live.ex:66
+#, elixir-autogen, elixir-format
+msgid "To detect, prevent and address technical issues"
+msgstr ""
+
+#: lib/app_web/live/privacypolicy_live.ex:64
+#, elixir-autogen, elixir-format
+msgid "To gather analysis or valuable information"
+msgstr ""
+
+#: lib/app_web/live/privacypolicy_live.ex:65
+#, elixir-autogen, elixir-format
+msgid "To monitor the usage of our service"
+msgstr ""
+
+#: lib/app_web/live/privacypolicy_live.ex:61
+#, elixir-autogen, elixir-format
+msgid "To provide and maintain our service"
+msgstr ""
+
+#: lib/app_web/live/privacypolicy_live.ex:63
+#, elixir-autogen, elixir-format
+msgid "To provide customer support"
+msgstr ""
+
+#: lib/app_web/live/tournaments_live.ex:116
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Tournament image"
+msgstr ""
+
+#: lib/app_web/live/tournaments_live.ex:145
+#, elixir-autogen, elixir-format
+msgid "Type"
+msgstr ""
+
+#: lib/app_web/live/tournaments_live.ex:60
+#, elixir-autogen, elixir-format
+msgid "Type: "
+msgstr ""
+
+#: lib/app_web/live/leagues_live.ex:84
+#, elixir-autogen, elixir-format
+msgid "UPA: United States Professional Poolplayers Association"
+msgstr ""
+
+#: lib/app_web/live/privacypolicy_live.ex:97
+#, elixir-autogen, elixir-format
+msgid "Under certain circumstances, you have rights under data protection laws in relation to your personal data:"
+msgstr ""
+
+#: lib/app_web/live/privacypolicy_live.ex:44
+#, elixir-autogen, elixir-format
+msgid "Usage Data: information about how you use our website and services"
+msgstr ""
+
+#: lib/app_web/controllers/message_html/new.html.heex:8
+#, elixir-autogen, elixir-format
+msgid "Use this form to leave feedback on Cue Sphere."
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:30
+#, elixir-autogen, elixir-format
+msgid "Used to determine the first shooter. The referee will place a ball on each side of the table behind the head string and near the head string. The players will shoot at about the same time to make each ball contact the foot cushion with the goal of returning the ball closer to the head cushion than the opponent."
+msgstr ""
+
+#: lib/app_web/live/leagues_live.ex:78
+#, elixir-autogen, elixir-format
+msgid "VNEA: Valley National 8-Ball League Association"
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:89
+#, elixir-autogen, elixir-format
+msgid "View WPA's full rules"
+msgstr ""
+
+#: lib/app_web/live/leagues_live.ex:45
+#, elixir-autogen, elixir-format
+msgid "Visit League Website"
+msgstr ""
+
+#: lib/app_web/live/movies_live.ex:95
+#, elixir-autogen, elixir-format
+msgid "Watch Poolhall Junkies Now Free"
+msgstr ""
+
+#: lib/app_web/live/movies_live.ex:66
+#, elixir-autogen, elixir-format
+msgid "Watch The Color of Money Now $3.99"
+msgstr ""
+
+#: lib/app_web/live/movies_live.ex:37
+#, elixir-autogen, elixir-format
+msgid "Watch The Hustler Movie Now Free"
+msgstr ""
+
+#: lib/app_web/live/privacypolicy_live.ex:78
+#, elixir-autogen, elixir-format
+msgid "We have implemented appropriate security measures to prevent your personal data from being accidentally lost, used or accessed in an unauthorized way, altered or disclosed."
+msgstr ""
+
+#: lib/app_web/live/privacypolicy_live.ex:83
+#, elixir-autogen, elixir-format
+msgid "We limit access to your personal data to those employees, agents, contractors and other third parties who have a business need to know. They will only process your personal data on our instructions and they are subject to a duty of confidentiality."
+msgstr ""
+
+#: lib/app_web/live/privacypolicy_live.ex:36
+#, elixir-autogen, elixir-format
+msgid "We may collect, use, store and transfer different kinds of personal data about you:"
+msgstr ""
+
+#: lib/app_web/live/privacypolicy_live.ex:125
+#, elixir-autogen, elixir-format
+msgid "We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the \"Last Updated\" date."
+msgstr ""
+
+#: lib/app_web/live/privacypolicy_live.ex:22
+#, elixir-autogen, elixir-format
+msgid "We respect your privacy and are committed to protecting your personal data. This privacy policy will inform you about how we look after your personal data when you visit our website or use our services, and tell you about your privacy rights and how the law protects you."
+msgstr ""
+
+#: lib/app_web/live/privacypolicy_live.ex:56
+#, elixir-autogen, elixir-format
+msgid "We will only use your personal data when the law allows us to. Most commonly, we will use your personal data:"
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:48
+#, elixir-autogen, elixir-format
+msgid "When the cue ball is in hand, the shooter may place the cue ball anywhere on the playing surface and may continue to move the cue ball until they execute a shot."
+msgstr ""
+
+#: lib/app_web/live/about_live.ex:17
+#, elixir-autogen, elixir-format
+msgid "Why Did I Make Cue Sphere?"
+msgstr ""
+
+#: lib/app_web/live/rules_live.ex:245
+#, elixir-autogen, elixir-format
+msgid "Wrongfully Pocketed Balls: "
+msgstr ""
+
+#: lib/app_web/live/privacypolicy_live.ex:130
+#, elixir-autogen, elixir-format
+msgid "You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page."
+msgstr ""
+
+#: lib/app_web/live/privacypolicy_live.ex:93
+#, elixir-autogen, elixir-format
+msgid "Your Legal Rights"
+msgstr ""
+
+#: lib/app_web/controllers/page_html/home.html.heex:148
+#, elixir-autogen, elixir-format
+msgid "game variations"
+msgstr ""
+
+#: lib/app_web/controllers/page_html/home.html.heex:154
+#, elixir-autogen, elixir-format, fuzzy
+msgid "leagues"
+msgstr ""
+
+#: lib/app_web/controllers/page_html/home.html.heex:28
+#, elixir-autogen, elixir-format
+msgid "master techniques, explore rules, and join the competitive scene"
+msgstr ""
+
+#: lib/app_web/controllers/page_html/home.html.heex:142
+#, elixir-autogen, elixir-format
+msgid "of 8-ball, 9-ball, and more."
+msgstr ""
+
+#: lib/app_web/controllers/page_html/home.html.heex:155
+#, elixir-autogen, elixir-format
+msgid "or"
+msgstr ""
+
+#: lib/app_web/components/ui/rating.ex:53
+#, elixir-autogen, elixir-format
+msgid "out of"
+msgstr ""
+
+#: lib/app_web/controllers/page_html/home.html.heex:141
+#, elixir-autogen, elixir-format, fuzzy
+msgid "rules"
+msgstr ""
+
+#: lib/app_web/controllers/page_html/home.html.heex:155
+#, elixir-autogen, elixir-format, fuzzy
+msgid "tournaments"
 msgstr ""

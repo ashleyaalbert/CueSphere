@@ -16,7 +16,7 @@ defmodule AppWeb.LicensingLive do
           </h3>
           <div class="text-sm text-gray-800 dark:text-gray-300 space-y-4">
             <p>
-              {gettext("Copyright © 2025 Cuesphere")}
+              {gettext("Copyright © 2025 Cue Sphere")}
             </p>
             <p>
               {gettext(

@@ -34,7 +34,7 @@ defmodule AppWeb.RulesLive do
             <li>
               <strong>{gettext("Equipment Use: ")}</strong>
               {gettext(
-                "Only WPA-approved equipment may be used. Equipement that is considered normal includes a cue stick, which can be changed throughout the match, gloves, powder, chalk that is compatible with the cloth color, and up to two mechanical bridges"
+                "Only WPA-approved equipment may be used. Equipement that is considered normal includes a cue stick, which can be changed throughout the match, gloves, powder, chalk that is compatible with the cloth color, and up to two mechanical bridges."
               )}
             </li>
             <li>
@@ -180,7 +180,7 @@ defmodule AppWeb.RulesLive do
             <li>
               <strong>{gettext("Continuous Play: ")}</strong>
               {gettext(
-                "The shooter remains at the table until they fail to legally pocket a ball. If the shooter fails to legally pocket a ball, the opponent takes their turn at the table. If they legally pocket the nine ball on any shot (except a push out), they win the rack"
+                "The shooter remains at the table until they fail to legally pocket a ball. If the shooter fails to legally pocket a ball, the opponent takes their turn at the table. If they legally pocket the nine ball on any shot (except a push out), they win the rack."
               )}
             </li>
             <li>
@@ -228,7 +228,7 @@ defmodule AppWeb.RulesLive do
             <li>
               <strong>{gettext("Push Out: ")}</strong>
               {gettext(
-                "After a legal break, the shooter may choose to play a \“push out\” as their shot. They must tell the refree so that the wrong ball first and no rail contact rules do not apply. The other player then decides who will shoot next by accepting or rejecting the \"push out\" shot. The ten ball pocketed during a \"push out\" is re-spotted, without penalty"
+                "After a legal break, the shooter may choose to play a \“push out\” as their shot. They must tell the refree so that the wrong ball first and no rail contact rules do not apply. The other player then decides who will shoot next by accepting or rejecting the \"push out\" shot. The ten ball pocketed during a \"push out\" is re-spotted, without penalty."
               )}
             </li>
             <li>
@@ -329,7 +329,7 @@ defmodule AppWeb.RulesLive do
             </li>
             <li>
               <strong>{gettext("Serious Foul: ")}</strong> {gettext(
-                "For the 3 Consecutive Fouls Rule, only standard fouls are counted, so a breaking foul does not count as one of the three fouls. A point is subtracted for the third foul as usual, and then the additional fifteen-point penalty is subtracted and the offending player’s consecutive foul count is reset to zero. All fifteen balls are re-racked and the offending player is required to shoot under the requirements of the opening break"
+                "For the 3 Consecutive Fouls Rule, only standard fouls are counted, so a breaking foul does not count as one of the three fouls. A point is subtracted for the third foul as usual, and then the additional fifteen-point penalty is subtracted and the offending player’s consecutive foul count is reset to zero. All fifteen balls are re-racked and the offending player is required to shoot under the requirements of the opening break."
               )}
             </li>
           </ul>
