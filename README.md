@@ -10,7 +10,7 @@ I have the following:
 	 - The only part of my website that requires a log in is creating, joining, or deleting tournaments from the tournaments page. Everything else is open for eveyone to explore.
  - Live View Real Time event sending and page updates
  - Layout, Menus, Functional Components
-	 - I have added the accordion, carousel, dropdowns, footer, and ratings, however only the accordion replicates javascript behavior using liveview.
+	 - I have added the accordion, carousel, dropdowns, footer, ratings, and timeline, however only the accordion replicates javascript behavior using liveview from my understanding (but another ui component might as well).
 	 - If this does not fulfill the requirement, I did an additional "Choose Any" to cover for that
  - Transition Animations for modals, navbars, and dropdowns
 	  - I used ease-in-out, as well as custom transitions, for these items.
