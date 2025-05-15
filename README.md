@@ -1,18 +1,27 @@
-# App
+# Cue Sphere
+Cue Sphere is a website application that allows for users to explore all things pool. It offers users the ability to learn historical facts and about the variations of games, purchase equipment or books, watch pool videos and movies, post and join tournaments, read up on rules and leagues, or search for a player's Fargo Rate.
 
-To start your Phoenix server:
+Video:
 
-  * Run `mix setup` to install and setup dependencies
-  * Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
-
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
-
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
-
-## Learn more
-
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
+## Project Requirements
+### Must Haves
+I have the following:
+ - Live View based Authentication
+	 - The only part of my website that requires a log in is creating, joining, or deleting tournaments from the tournaments page. Everything else is open for eveyone to explore.
+ - Live View Real Time event sending and page updates
+ - Layout, Menus, Functional Components
+	 - I have added the accordion, carousel, dropdowns, footer, and ratings, however only the accordion replicates javascript behavior using liveview.
+	 - If this does not fulfill the requirement, I did an additional "Choose Any" to cover for that
+ - Transition Animations for modals, navbars, and dropdowns
+	  - I used ease-in-out, as well as custom transitions, for these items.
+ - Dark Mode
+ - Proper use of Breakpoints and mobile first philosophy
+ - Associative Schemas
+	  - 1:n - One user can make many tournaments
+	  - n:m - Many users can join many tournaments
+### Choose Any
+ - Internationalization
+ - JSON API
+ - Google OAuth Integration
+ - Displaying fancy Charts via e.g. charts.js
+ - File Uploads

@@ -14,14 +14,14 @@ defmodule AppWeb.AboutLive do
 
     <!-- Why -->
       <section class="bg-gray-100 p-6 rounded-lg shadow-md dark:bg-gray-700 dark:text-white">
-        <h2 class="text-2xl font-semibold mb-4">{gettext("Why Did I Make a Website About Pool?")}</h2>
+        <h2 class="text-2xl font-semibold mb-4">{gettext("Why Did I Make Cue Sphere?")}</h2>
 
         <div class="space-y-6">
           <div>
             <h3 class="text-xl font-medium mb-2">{gettext("Always Around Pool")}</h3>
             <p>
               {gettext(
-                "Growing up, my grandfather had a pool table in the entrance of his home. Both my grandfather and father have always played, and still do play, pool. I learned how to play pool from the both of them from a young age and spent lots of time on my grandfather's Brunswick table. I got my first pool cue around the age of 13 but never took it too seriously. Since I now have two Diamond pool tables in my new home, I became serious about pool again in May 2024. Currently, I play on a few teams and am getting actively trained and guided by some of the best players in the game to reach my full potential."
+                "Cue Sphere represents all things pool for people around the world. I myself have grown to love the game of pool. Growing up, my grandfather had a pool table in the entrance of his home. Both my grandfather and father have always played, and still do play, pool. I learned how to play pool from the both of them from a young age and spent lots of time on my grandfather's Brunswick table. I got my first pool cue around the age of 13 but never took it too seriously. Since I now have two Diamond pool tables in my new home, I became serious about pool again in May 2024. Currently, I play on a few teams and am getting actively trained and guided by some of the best players in the game to reach my full potential."
               )}
             </p>
           </div>
