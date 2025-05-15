@@ -16,7 +16,7 @@ defmodule Mix.Tasks.ResetTables do
     drop_all_tables()
 
     # Run migrations
-    Mix.Task.run("ecto.migrate")
+    Mix.Task.run("ecto.migrate", ["--pool-size", "2"])
 
     # Seed the database
     # Mix.Task.run("run", ["priv/repo/seeds.exs"])
