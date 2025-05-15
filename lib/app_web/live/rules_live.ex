@@ -82,7 +82,7 @@ defmodule AppWeb.RulesLive do
           </ul>
           <a
             href="https://wpapool.com/rules-of-play/"
-            class="hover:underline mt-2 inline-block"
+            class="underline hover:underline mt-2 inline-block"
             target="_blank"
             rel="noopener noreferrer"
           >

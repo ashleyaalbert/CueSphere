@@ -692,12 +692,12 @@ msgstr "Ver Ahora Gratis"
 #: lib/app_web/live/drills_live.ex:18
 #, elixir-autogen, elixir-format
 msgid "13 Balls Half Square"
-msgstr "13 bolas medio cuadrado"
+msgstr "13 Bolas Medio Cuadrado"
 
 #: lib/app_web/live/about_live.ex:11
 #, elixir-autogen, elixir-format
 msgid "About This Project"
-msgstr "Acerca de este proyecto"
+msgstr "Acerca de Este Proyecto"
 
 #: lib/app_web/live/tutorials_live.ex:46
 #, elixir-autogen, elixir-format
@@ -1555,7 +1555,7 @@ msgstr "Por Nicholas Leider - Consejos prácticos paso a paso para jugadores de 
 #: lib/app_web/live/rules_live.ex:305
 #, elixir-autogen, elixir-format
 msgid "Call Shot: "
-msgstr "Disparo de Llamada:"
+msgstr "Disparo de Llamada: "
 
 #: lib/app_web/live/rules_live.ex:53
 #, elixir-autogen, elixir-format
@@ -1958,7 +1958,7 @@ msgstr "Descanso de Apertura: "
 #: lib/app_web/live/rules_live.ex:65
 #, elixir-autogen, elixir-format
 msgid "Outside Interference: "
-msgstr "Interferencia externa: "
+msgstr "Interferencia Externa: "
 
 #: lib/app_web/live/licensing_live.ex:22
 #, elixir-autogen, elixir-format
@@ -2143,7 +2143,7 @@ msgstr "Datos técnicos: tipo y versión del navegador, configuración de zona h
 #: lib/app_web/live/rules_live.ex:217
 #, elixir-autogen, elixir-format
 msgid "Ten Ball Rack: "
-msgstr "Estante de diez bolas: "
+msgstr "Estante de Diez Bolas: "
 
 #: lib/app_web/live/rules_live.ex:206
 #, elixir-autogen, elixir-format

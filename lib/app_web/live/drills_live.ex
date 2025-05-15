@@ -11,7 +11,7 @@ defmodule AppWeb.DrillsLive do
           "This page is intended for moderate to advanced players to elevate their game. If you are looking for more beginner friendly content, check out the Tutorials page!"
         )}
       </p>
-
+      <!-- First Video -->
       <div class="mt-4 space-y-10 bg-gray-100 p-6 rounded-lg shadow-md dark:bg-gray-700 dark:text-white">
         <div>
           <h2 class="text-4xl font-semibold mb-2 dark:text-white">
@@ -37,7 +37,7 @@ defmodule AppWeb.DrillsLive do
             </iframe>
           </div>
         </div>
-
+        <!-- Second Video -->
         <div>
           <h2 class="text-4xl font-semibold mb-2 dark:text-white">
             {gettext("Top 10 Aim, Alignment, and Stroke Drills")}
@@ -62,7 +62,7 @@ defmodule AppWeb.DrillsLive do
             </iframe>
           </div>
         </div>
-
+        <!-- Third Video -->
         <div>
           <h2 class="text-4xl font-semibold mb-2 dark:text-white">
             {gettext("Pool Drills Playlist")}

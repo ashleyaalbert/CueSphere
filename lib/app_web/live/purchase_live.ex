@@ -17,7 +17,7 @@ defmodule AppWeb.PurchaseLive do
         </p>
       </div>
 
-    <!-- Chart Section -->
+      <!-- Chart Section -->
       <div class="bg-gray-100 dark:bg-gray-700 dark:text-white shadow-lg rounded-lg p-6 mb-6">
         <p class="text-lg text-gray-700 dark:text-white mb-4">
           {gettext(

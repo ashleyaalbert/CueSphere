@@ -12,7 +12,7 @@ defmodule AppWeb.AboutLive do
         </h1>
       </section>
 
-    <!-- Why -->
+      <!-- Why -->
       <section class="bg-gray-100 p-6 rounded-lg shadow-md dark:bg-gray-700 dark:text-white">
         <h2 class="text-2xl font-semibold mb-4">{gettext("Why Did I Make Cue Sphere?")}</h2>
 
@@ -37,7 +37,7 @@ defmodule AppWeb.AboutLive do
         </div>
       </section>
 
-    <!-- Images -->
+      <!-- Images -->
       <section class="bg-gray-100 p-6 rounded-lg shadow-md dark:bg-gray-700 dark:text-white">
         <div class="flex items-center justify-center gap-2 mb-4">
           <img src={~p"/images/final/decorative-wave.png"} alt="" class="h-6 w-6 block dark:hidden" />
@@ -51,7 +51,7 @@ defmodule AppWeb.AboutLive do
         <.carousel />
       </section>
 
-    <!-- Stories -->
+      <!-- Stories -->
       <section class="bg-gray-100 p-6 rounded-lg shadow-md dark:bg-gray-700 dark:text-white">
         <h2 class="text-2xl font-semibold mb-4">{gettext("Personal Journey")}</h2>
 

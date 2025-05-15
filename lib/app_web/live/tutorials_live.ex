@@ -11,7 +11,7 @@ defmodule AppWeb.TutorialsLive do
           "This page is intended for beginners to learn the basics of pool. If you are looking for more advanced content, check out the Drills page!"
         )}
       </p>
-
+      <!-- First Video -->
       <div class="mt-4 space-y-10 bg-gray-100 p-6 rounded-lg shadow-md dark:bg-gray-700 dark:text-white">
         <div>
           <h2 class="text-2xl font-semibold mb-2 dark:text-white">
@@ -37,7 +37,7 @@ defmodule AppWeb.TutorialsLive do
             </iframe>
           </div>
         </div>
-
+        <!-- Second Video -->
         <div>
           <h2 class="text-2xl font-semibold mb-2 dark:text-white">
             {gettext("How to Aim in 1 Minute")}
@@ -60,7 +60,7 @@ defmodule AppWeb.TutorialsLive do
             </iframe>
           </div>
         </div>
-
+        <!-- Third Video -->
         <div>
           <h2 class="text-2xl font-semibold mb-2 dark:text-white">
             {gettext("Pool Basics for Beginners Playlist")}

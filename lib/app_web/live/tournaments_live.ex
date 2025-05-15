@@ -30,7 +30,7 @@ defmodule AppWeb.TournamentsLive do
       <p class="text-lg text-gray-900 mb-8 dark:text-white text-center max-w-3xl">
         {gettext("Log in to join tournaments or create tournaments to play with others!")}
       </p>
-
+      <!-- Log in for Button -->
       <%= if @current_user do %>
         <.button
           color="alternative"
@@ -41,7 +41,7 @@ defmodule AppWeb.TournamentsLive do
         </.button>
       <% end %>
 
-    <!-- Tournaments List -->
+      <!-- Tournaments List -->
       <div class="bg-gray-100 shadow-lg rounded-xl p-6 md:p-10 dark:bg-gray-800 dark:text-gray-100 w-full max-w-4xl space-y-6">
         <%= for tournament <- @tournaments do %>
           <div class="flex flex-col md:flex-row gap-6 bg-gray-200 p-6 rounded-lg dark:bg-gray-700">
@@ -106,7 +106,7 @@ defmodule AppWeb.TournamentsLive do
               </div>
             </div>
 
-    <!-- Right side - Image (only when present) -->
+            <!-- Right side - Image (only when present) -->
             <%= if tournament.pictures && length(tournament.pictures) > 0 do %>
               <div class="md:w-1/3 flex flex-col">
                 <div class="flex-1 flex items-center justify-center bg-gray-300 dark:bg-gray-600 rounded-lg overflow-hidden">
