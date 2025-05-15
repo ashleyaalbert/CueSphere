@@ -4,11 +4,11 @@
   </div>
   <:actions>
     <.link class="dark:text-white" href={~p"/messages/new"}>
-      <.button color="alternative">{gettext("New Message")}</.button>
+      <.button color="alternative">{gettext("Leave Feedback")}</.button>
     </.link>
   </:actions>
 </.header>
-
+<p>{gettext("Leave feedback on Cue Sphere!")}</p>
 
 <.table id="messages" rows={@messages} row_click={&JS.navigate(~p"/messages/#{&1}")}>
   <:col :let={message} label={gettext("Email")}><span class="text-black dark:text-white">{message.email}</span></:col>
@@ -19,9 +19,10 @@
       <.link navigate={~p"/messages/#{message}"} class="text-black dark:text-white">{gettext("Show")}</.link>
     </div>
   </:action>
-  <:action :let={message}>
+  <%!-- ability to delete message removed for this project --%>
+  <%!-- <:action :let={message}>
     <.link href={~p"/messages/#{message}"} method="delete" data-confirm={gettext("Are you sure?")} class="text-black dark:text-white">
       {gettext("Delete")}
     </.link>
-  </:action>
+  </:action> --%>
 </.table>
